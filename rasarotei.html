@@ -141,6 +141,32 @@
       margin: 16px auto 0;
     }
 
+    /* 店内・大将・外観セクション */
+    .gallery { background: #111; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s, opacity 0.4s;
+    }
+    .gallery-item img:hover { transform: scale(1.03); opacity: 0.85; }
+    .gallery-item p {
+      color: #aaa;
+      font-size: 12px;
+      text-align: center;
+      padding: 8px 0;
+    }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item img { height: 200px; }
+    }
+
     /* 強み */
     .features { background: #f8f5f0; }
     .features-grid {
@@ -300,7 +326,7 @@
   </header>
 
   <!-- ヒーロー -->
-  <section class="hero">
+  <section class="hero" style="background-image: url('rasaro-hero.png');">
     <div class="hero-content fade-in">
       <div class="hero-tag">福岡市早良区飯倉 | 食べログ口コミ 32 件</div>
       <h1>らさろ亭</h1>
@@ -345,11 +371,13 @@
       </div>
       <div class="menu-grid">
         <div class="menu-card fade-in">
+          <img src="rasaro-menu-yomogi.png" alt="よもぎ麺ラーメン" style="width:100%;height:180px;object-fit:cover;margin-bottom:16px;">
           <div class="price">¥750</div>
           <h3>よもぎ麺ラーメン</h3>
           <p>国産よもぎ練り込みの特製麺に、豚骨ベースのあっさりスープ。</p>
         </div>
         <div class="menu-card fade-in">
+          <img src="rasaro-menu-spicy.png" alt="スパイシーラーメン" style="width:100%;height:180px;object-fit:cover;margin-bottom:16px;">
           <div class="price">¥800</div>
           <h3>スパイシーラーメン</h3>
           <p>メキシコ由来のスパイスを使った他店にない辛旨ラーメン。</p>
@@ -373,6 +401,30 @@
           <div class="price">¥300</div>
           <h3>チャーシュー丼</h3>
           <p>ラーメンと一緒にどうぞ。ランチに人気のサイドメニュー。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ギャラリー -->
+  <section class="gallery">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>GALLERY</p>
+        <h2 style="color:#fff;">店内・料理ギャラリー</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in">
+          <img src="rasaro-interior.png" alt="店内の様子">
+          <p>温かみある木のカウンター</p>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="rasaro-chef.png" alt="大将の調理風景">
+          <p>毎日丁寧に仕込む大将</p>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="rasaro-exterior.png" alt="外観">
+          <p>赤い提灯が目印の外観</p>
         </div>
       </div>
     </div>
