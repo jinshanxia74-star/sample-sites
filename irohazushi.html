@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>いろは寿司 | 東京・匠の仕事と極上の一貫</title>
+  <meta name="description" content="東京の高級寿司「いろは寿司」。熟練の職人が厳選した旬の素材を握る、静寂の中の極上体験。カウンター席でご堪能ください。">
+  <meta property="og:title" content="いろは寿司 | 東京・匠の仕事と極上の一貫">
+  <meta property="og:description" content="職人の技と旬の素材が織りなす極上の寿司体験。漆黒の静寂の中で一貫一貫を。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="irohazushi-hero.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "いろは寿司",
+    "description": "熟練の職人が握る東京の高級寿司店",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "東京都",
+      "addressCountry": "JP"
+    },
+    "servesCuisine": "寿司",
+    "priceRange": "¥¥¥¥",
+    "telephone": "03-0000-0000"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@300;400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : 最高級寿司
+       見出し  : Shippori Mincho（格調・静寂・日本の美）
+       本文    : Noto Serif JP（品格・読みやすさ）
+       数字/英語: Cinzel（神秘・プレミアム・格調）
+       世界観  : 漆黒の静寂 × 金箔の輝き × 白磁の純粋 × 職人の間
+    */
+    :root {
+      --color-bg:          #0a0a0a;
+      --color-surface:     #111111;
+      --color-surface-2:   #181818;
+      --color-primary:     #d4af37;
+      --color-accent:      #f0d060;
+      --color-accent-glow: rgba(212,175,55,0.2);
+      --color-text:        #f9f7f4;
+      --color-text-muted:  #9a9890;
+      --color-border:      rgba(212,175,55,0.15);
+      --color-border-soft: rgba(255,255,255,0.06);
+      --font-heading: 'Shippori Mincho', serif;
+      --font-body:    'Noto Serif JP', serif;
+      --font-accent:  'Cinzel', serif;
+      --radius: 2px;
+      --transition: 0.4s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card:
+        0 2px 8px rgba(0,0,0,0.6),
+        0 12px 28px rgba(0,0,0,0.5),
+        0 40px 80px rgba(0,0,0,0.4);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.85;
+      letter-spacing: 0.05em;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      backdrop-filter: blur(20px) saturate(140%);
+      -webkit-backdrop-filter: blur(20px) saturate(140%);
+      background: rgba(10,10,10,0.88);
+      border-bottom: 1px solid var(--color-border);
+      padding: 18px 0;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+    .logo-jp {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      color: var(--color-primary);
+    }
+    .logo-en {
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      color: var(--color-text-muted);
+      margin-top: 3px;
+    }
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a {
+      font-family: var(--font-body);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    nav a:hover { color: var(--color-primary); }
+    .nav-reserve {
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--color-bg);
+      background: var(--color-primary);
+      padding: 9px 22px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      display: inline-block;
+    }
+    .nav-reserve:hover {
+      background: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--color-accent-glow);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(to bottom, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.55) 50%, rgba(10,10,10,0.96) 100%),
+        url('irohazushi-hero.jpg') center/cover no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 70%, rgba(212,175,55,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 160px 32px 100px;
+      max-width: 720px;
+    }
+    .hero-kamon {
+      font-size: 32px;
+      margin-bottom: 24px;
+      opacity: 0.7;
+      display: block;
+    }
+    .hero-label {
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.55em;
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(54px, 8vw, 96px);
+      font-weight: 800;
+      letter-spacing: 0.4em;
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: 20px;
+      text-shadow: 0 6px 32px rgba(0,0,0,0.7);
+    }
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+      margin: 0 auto 28px;
+    }
+    .hero-catch {
+      font-family: var(--font-heading);
+      font-size: clamp(13px, 1.8vw, 17px);
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      color: var(--color-text-muted);
+      line-height: 2.4;
+      margin-bottom: 48px;
+    }
+    .hero-catch strong {
+      color: var(--color-text);
+      font-weight: 500;
+    }
+    .btn-reserve {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--color-bg);
+      background: var(--color-primary);
+      padding: 18px 52px;
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      border: 1px solid transparent;
+    }
+    .btn-reserve:hover {
+      background: transparent;
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px var(--color-accent-glow);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-scroll span {
+      font-family: var(--font-accent);
+      font-size: 8px;
+      letter-spacing: 0.45em;
+      color: var(--color-text-muted);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--color-primary), transparent);
+      animation: scrollAnim 2.2s ease infinite;
+    }
+    @keyframes scrollAnim {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ── SECTION COMMONS ── */
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 110px 32px;
+    }
+    .section-head {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .section-en {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.6em;
+      color: var(--color-primary);
+      margin-bottom: 18px;
+    }
+    .section-head h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(26px, 3vw, 38px);
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--color-text);
+    }
+    .section-line {
+      width: 36px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-primary), transparent);
+      margin: 22px auto 0;
+    }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+    }
+    .philosophy-item {
+      background: var(--color-surface);
+      padding: 52px 36px;
+      text-align: center;
+      transition: background var(--transition);
+    }
+    .philosophy-item:hover { background: var(--color-surface-2); }
+    .philosophy-num {
+      font-family: var(--font-accent);
+      font-size: 40px;
+      font-weight: 400;
+      color: var(--color-primary);
+      opacity: 0.4;
+      display: block;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+    .philosophy-item h3 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+    .philosophy-item p {
+      font-size: 13px;
+      color: var(--color-text-muted);
+      line-height: 2;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── OMAKASE ── */
+    .omakase { background: var(--color-bg); }
+    .omakase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .omakase-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+    .omakase-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(212,175,55,0.4);
+    }
+    .omakase-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.95);
+      transition: filter var(--transition);
+    }
+    .omakase-card:hover img { filter: brightness(1.05); }
+    .omakase-placeholder {
+      width: 100%;
+      height: 200px;
+      background: var(--color-surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    .omakase-body { padding: 28px 24px 32px; }
+    .omakase-price {
+      font-family: var(--font-accent);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .omakase-price span { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); font-weight: 300; }
+    .omakase-card h3 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--color-text);
+      margin-bottom: 10px;
+    }
+    .omakase-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.9; }
+    .course-tag {
+      display: inline-block;
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+      padding: 3px 12px;
+      margin-bottom: 12px;
+    }
+
+    /* ── CHEF ── */
+    .chef {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .chef-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 110px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .chef-img {
+      aspect-ratio: 4/5;
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      position: relative;
+    }
+    .chef-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .chef-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      opacity: 0.3;
+    }
+    .chef-text { }
+    .chef-label {
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.55em;
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .chef-text h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--color-text);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+    .chef-text p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      line-height: 2.2;
+      margin-bottom: 16px;
+    }
+    .chef-line { width: 36px; height: 1px; background: var(--color-primary); margin: 28px 0; }
+    .chef-name {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--color-text);
+    }
+    .chef-title { font-size: 12px; color: var(--color-text-muted); letter-spacing: 0.1em; margin-top: 4px; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-bg); }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 40px 30px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+    .review-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 14px; left: 20px;
+      font-family: var(--font-accent);
+      font-size: 70px;
+      color: var(--color-primary);
+      opacity: 0.2;
+      line-height: 1;
+    }
+    .stars {
+      font-family: var(--font-accent);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+    }
+    .review-text {
+      font-size: 13.5px;
+      color: var(--color-text-muted);
+      line-height: 2;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .review-author {
+      font-family: var(--font-accent);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--color-primary);
+      border-top: 1px solid var(--color-border);
+      padding-top: 14px;
+    }
+
+    /* ── INFO ── */
+    .info {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .info-box {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 40px 30px;
+      box-shadow: var(--shadow-card);
+    }
+    .info-box h3 {
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.45em;
+      color: var(--color-primary);
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .info-row {
+      margin-bottom: 14px;
+    }
+    .info-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--color-text-muted);
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--font-accent);
+    }
+    .info-value {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--color-text);
+    }
+    .info-note { font-size: 11px; color: var(--color-text-muted); margin-top: 3px; font-family: var(--font-body); font-weight: 300; }
+    .tel-link {
+      font-family: var(--font-accent);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color var(--transition);
+    }
+    .tel-link:hover { color: var(--color-accent); }
+
+    /* ── RESERVATION ── */
+    .reservation { background: var(--color-bg); }
+    .reservation-form {
+      max-width: 660px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 56px 52px;
+      box-shadow: var(--shadow-card);
+    }
+    .form-group { margin-bottom: 26px; }
+    .form-group label {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: var(--color-text-muted);
+      margin-bottom: 10px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      padding: 13px 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-accent-glow);
+    }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: var(--color-surface); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .submit-btn {
+      width: 100%;
+      background: var(--color-primary);
+      border: 1px solid var(--color-primary);
+      padding: 18px;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--color-bg);
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .submit-btn:hover {
+      background: transparent;
+      color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px var(--color-accent-glow);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #060606;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      padding: 60px 32px;
+    }
+    .footer-logo-jp {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 0.45em;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+    .footer-logo-en {
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.55em;
+      color: var(--color-text-muted);
+      margin-bottom: 32px;
+      display: block;
+    }
+    .footer-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--color-border), transparent);
+      margin: 0 auto 28px;
+    }
+    .footer-info {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      letter-spacing: 0.12em;
+      line-height: 2.2;
+      margin-bottom: 32px;
+      font-family: var(--font-body);
+      font-weight: 300;
+    }
+    .footer-copy {
+      font-family: var(--font-accent);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      color: rgba(154,152,144,0.4);
+    }
+
+    /* ── ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.12s; }
+    .fade-in:nth-child(3) { transition-delay: 0.24s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .philosophy-grid, .omakase-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
+      .chef-inner { grid-template-columns: 1fr; gap: 48px; }
+      .chef-img { max-height: 360px; aspect-ratio: auto; }
+      nav { display: none; }
+      .reservation-form { padding: 36px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-jp">いろは寿司</span>
+        <span class="logo-en">IROHA SUSHI · TOKYO</span>
+      </a>
+      <nav>
+        <a href="#philosophy">こだわり</a>
+        <a href="#menu">コース</a>
+        <a href="#chef">職人</a>
+        <a href="#reviews">お声</a>
+        <a href="#info">アクセス</a>
+        <a href="#reservation" class="nav-reserve">ご予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <span class="hero-kamon">⬡</span>
+      <span class="hero-label">EST. TOKYO · AUTHENTIC EDOMAE SUSHI</span>
+      <h1>いろは寿司</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-catch">
+        <strong>旬の素材</strong>と<strong>職人の技</strong>が出会う場所<br>
+        静寂の中に、極上の一貫がある<br>
+        言葉よりも、舌で感じてください
+      </p>
+      <a href="#reservation" class="btn-reserve">ご予約はこちら</a>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <section class="philosophy" id="philosophy">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Philosophy</span>
+        <h2>いろは寿司の 3 つの心</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="philosophy-grid">
+        <div class="philosophy-item fade-in">
+          <span class="philosophy-num">I</span>
+          <h3>素材</h3>
+          <p>全国の信頼する漁師・生産者と直接連携し、旬の食材のみを仕入れます。最高の素材は、最高の一貫を生みます。</p>
+        </div>
+        <div class="philosophy-item fade-in">
+          <span class="philosophy-num">II</span>
+          <h3>技</h3>
+          <p>二十年の修業で培った江戸前の仕事。シャリの温度・酢の加減・握りの強さ、すべてに意味があります。</p>
+        </div>
+        <div class="philosophy-item fade-in">
+          <span class="philosophy-num">III</span>
+          <h3>間</h3>
+          <p>握りと握りの間にある時間。お客様と職人の間に流れる静寂。それが最高の食体験を完成させます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="omakase" id="menu">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Omakase Course</span>
+        <h2>おまかせコース</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="omakase-grid">
+        <div class="omakase-card fade-in">
+          <div class="omakase-placeholder">🌸</div>
+          <div class="omakase-body">
+            <span class="course-tag">STANDARD</span>
+            <div class="omakase-price">¥15,000 <span>〜 / 税込</span></div>
+            <h3>花 コース</h3>
+            <p>旬の握り10貫・巻物・汁物。四季の素材を感じる定番おまかせコース。初めての方にもおすすめです。</p>
+          </div>
+        </div>
+        <div class="omakase-card fade-in">
+          <div class="omakase-placeholder">🌕</div>
+          <div class="omakase-body">
+            <span class="course-tag">PREMIUM</span>
+            <div class="omakase-price">¥25,000 <span>〜 / 税込</span></div>
+            <h3>月 コース</h3>
+            <p>旬の握り15貫・前菜・吸物・デザート。特上ネタをふんだんに使った贅沢なおまかせコースです。</p>
+          </div>
+        </div>
+        <div class="omakase-card fade-in">
+          <div class="omakase-placeholder">✦</div>
+          <div class="omakase-body">
+            <span class="course-tag">EXCLUSIVE</span>
+            <div class="omakase-price">¥40,000 <span>〜 / 税込</span></div>
+            <h3>極 コース</h3>
+            <p>最高峰の食材のみを使った特別おまかせ。大間のまぐろ・生うに・いくら。記念日に最上の体験を。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chef" id="chef">
+    <div class="chef-inner">
+      <div class="chef-img fade-in">
+        <div class="chef-img-placeholder">🍣</div>
+      </div>
+      <div class="chef-text fade-in">
+        <span class="chef-label">CRAFTSMAN</span>
+        <h2>職人の<br>二十年</h2>
+        <div class="chef-line"></div>
+        <p>銀座の名店で二十年間修業を積み、江戸前寿司の技と精神を受け継ぎました。</p>
+        <p>食材との対話、シャリとの調和、そしてお客様との一期一会。すべてが一貫の中に宿っています。</p>
+        <p>「素材の声を聞き、手が自然に動く。その境地に至るまでに二十年かかった。」</p>
+        <div class="chef-line"></div>
+        <div class="chef-name">山田 太郎</div>
+        <div class="chef-title">主人・板前</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Guest Voices</span>
+        <h2>お客様の声</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「シャリの温かさとネタの新鮮さが絶妙。職人さんの佇まいが美しく、食べ終わった後も余韻が続きました。東京でこれほどの寿司は初めてです。」</p>
+          <div class="review-author">— ご来店のお客様</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「記念日に利用しました。カウンター越しに職人さんの仕事を見ながら食べる体験は格別。妻もとても喜んでくれました。また必ず来ます。」</p>
+          <div class="review-author">— ご来店のお客様</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「大間のまぐろが口の中でとろける瞬間、時間が止まったような感覚になりました。料理ではなく芸術です。東京に来たら必ず寄ります。」</p>
+          <div class="review-author">— ご来店のお客様</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Information</span>
+        <h2>ご案内・アクセス</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>HOURS</h3>
+          <div class="info-row">
+            <span class="info-label">Lunch</span>
+            <div class="info-value">12:00 〜 14:00</div>
+            <div class="info-note">（要予約）</div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Dinner</span>
+            <div class="info-value">18:00 〜 22:00</div>
+            <div class="info-note">L.O. 21:00</div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">定休日</span>
+            <div class="info-value">月曜日・火曜日</div>
+          </div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>ACCESS</h3>
+          <div class="info-row">
+            <span class="info-label">住所</span>
+            <div class="info-value">東京都中央区銀座</div>
+            <div class="info-note">（ご予約時に詳細をご案内）</div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">席数</span>
+            <div class="info-value">カウンター8席のみ</div>
+            <div class="info-note">完全予約制</div>
+          </div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>CONTACT</h3>
+          <div class="info-row">
+            <span class="info-label">Tel</span>
+            <div class="info-value">
+              <a href="tel:0300000000" class="tel-link">03-0000-0000</a>
+            </div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Email</span>
+            <div class="info-value" style="font-size:13px;">info@irohazushi.jp</div>
+          </div>
+          <div class="info-row">
+            <span class="info-label">支払い</span>
+            <div class="info-value">現金・カード・QR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation" id="reservation">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Reservation</span>
+        <h2>ご予約</h2>
+        <div class="section-line"></div>
+      </div>
+      <form class="reservation-form fade-in">
+        <div class="form-row">
+          <div class="form-group">
+            <label>お名前</label>
+            <input type="text" placeholder="山田 太郎" required>
+          </div>
+          <div class="form-group">
+            <label>人数</label>
+            <select>
+              <option>1名</option>
+              <option>2名</option>
+              <option>3名</option>
+              <option>4名以上</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>ご希望日</label>
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <label>ご希望時間</label>
+            <select>
+              <option>ランチ（12:00〜）</option>
+              <option>ディナー（18:00〜）</option>
+              <option>ディナー（19:00〜）</option>
+              <option>ディナー（20:00〜）</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>コース</label>
+          <select>
+            <option>花コース（¥15,000〜）</option>
+            <option>月コース（¥25,000〜）</option>
+            <option>極コース（¥40,000〜）</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>電話番号</label>
+          <input type="tel" placeholder="090-0000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>アレルギー・ご要望</label>
+          <textarea placeholder="アレルギーや記念日のご利用など、お気軽にご記載ください"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">予約リクエストを送る</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo-jp">いろは寿司</div>
+    <span class="footer-logo-en">IROHA SUSHI · TOKYO</span>
+    <div class="footer-divider"></div>
+    <div class="footer-info">
+      東京都中央区銀座（完全予約制）<br>
+      Tel: 03-0000-0000　Email: info@irohazushi.jp<br>
+      営業時間 Lunch 12:00〜14:00 / Dinner 18:00〜22:00　定休 月・火
+    </div>
+    <div class="footer-copy">&copy; 2026 IROHA SUSHI. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
