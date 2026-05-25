@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>らさろ亭 | 福岡・早良区の個性派ラーメン</title>
+  <meta name="description" content="福岡市早良区飯倉の個性派ラーメン店「らさろ亭」。よもぎ麺・スパイシーラーメンなど他にはない独自メニューが大人気。食べログ口コミ32件の地元人気店。">
+  <meta property="og:title" content="らさろ亭 | 福岡・早良区の個性派ラーメン">
+  <meta property="og:description" content="よもぎ麺・スパイシーラーメンで話題。福岡市早良区飯倉の個性派ラーメン店。">
+  <meta property="og:type" content="restaurant">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "らさろ亭",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "福岡市早良区飯倉7-28-10",
+      "addressCountry": "JP"
+    },
+    "telephone": "092-864-1318",
+    "servesCuisine": "ラーメン",
+    "openingHours": ["Mo,Th,Fr,Sa,Su 11:30-15:00", "Mo,Th,Fr,Sa,Su 18:00-22:00"]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo { font-size: 24px; font-weight: 900; letter-spacing: 3px; color: #e8a020; }
+    .logo span { font-size: 12px; display: block; color: #aaa; font-weight: 400; letter-spacing: 1px; }
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 13px;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #e8a020; }
+
+    /* ヒーロー */
+    .hero {
+      min-height: 520px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d1a00 60%, #1a1a1a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero-content { position: relative; z-index: 2; padding: 40px 24px; }
+    .hero-tag {
+      display: inline-block;
+      background: #e8a020;
+      color: #fff;
+      padding: 4px 14px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 80px);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+      text-shadow: 2px 4px 12px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 16px;
+      color: #ddd;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: #e8a020;
+      color: #fff;
+      padding: 14px 40px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 2px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .hero-cta:hover { background: #c8881a; transform: translateY(-2px); }
+
+    /* セクション共通 */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-title {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .section-title p { font-size: 13px; color: #888; letter-spacing: 2px; }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: #e8a020;
+      margin: 16px auto 0;
+    }
+
+    /* 強み */
+    .features { background: #f8f5f0; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 36px 28px;
+      text-align: center;
+      border-bottom: 3px solid #e8a020;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+    .feature-icon { font-size: 40px; margin-bottom: 16px; }
+    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .feature-card p { font-size: 14px; color: #666; line-height: 1.8; }
+
+    /* メニュー */
+    .menu { background: #1a1a1a; }
+    .menu .section-title h2 { color: #fff; }
+    .menu .section-title p { color: #888; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .menu-card {
+      background: #2a2a2a;
+      border: 1px solid #333;
+      padding: 28px 24px;
+      transition: border-color 0.3s;
+    }
+    .menu-card:hover { border-color: #e8a020; }
+    .menu-card .price {
+      font-size: 22px;
+      font-weight: 900;
+      color: #e8a020;
+      margin-bottom: 6px;
+    }
+    .menu-card h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .menu-card p { font-size: 13px; color: #aaa; line-height: 1.7; }
+
+    /* 口コミ */
+    .reviews { background: #f8f5f0; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .review-card {
+      background: #fff;
+      padding: 28px 24px;
+      border-left: 4px solid #e8a020;
+    }
+    .review-stars { color: #e8a020; font-size: 18px; margin-bottom: 8px; }
+    .review-text { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 16px; }
+    .review-author { font-size: 12px; color: #888; }
+
+    /* 営業情報 */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+    .info-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8a020;
+    }
+    .info-box p { font-size: 14px; color: #555; margin-bottom: 8px; }
+    .info-box strong { color: #1a1a1a; }
+
+    /* フォーム */
+    .contact { background: #1a1a1a; }
+    .contact .section-title h2 { color: #fff; }
+    .contact .section-title p { color: #888; }
+    .contact-form { max-width: 600px; margin: 0 auto; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; color: #aaa; margin-bottom: 6px; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      background: #2a2a2a;
+      border: 1px solid #444;
+      color: #fff;
+      font-size: 14px;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { outline: none; border-color: #e8a020; }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group select option { background: #2a2a2a; }
+    .submit-btn {
+      width: 100%;
+      background: #e8a020;
+      color: #fff;
+      border: none;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: background 0.3s;
+    }
+    .submit-btn:hover { background: #c8881a; }
+
+    /* フッター */
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer p { margin-bottom: 6px; }
+    footer .tel { font-size: 20px; color: #e8a020; font-weight: 700; margin: 8px 0; }
+
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; gap: 12px; }
+      nav a { margin-left: 12px; font-size: 12px; }
+      .hero h1 { font-size: 40px; }
+      section { padding: 56px 16px; }
+      .section-title h2 { font-size: 28px; }
+    }
+
+    /* フェードイン */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        らさろ亭
+        <span>個性派ラーメン | 早良区飯倉</span>
+      </div>
+      <nav>
+        <a href="#features">特徴</a>
+        <a href="#menu">メニュー</a>
+        <a href="#reviews">口コミ</a>
+        <a href="#info">営業情報</a>
+        <a href="#contact">お問合せ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <div class="hero-tag">福岡市早良区飯倉 | 食べログ口コミ 32 件</div>
+      <h1>らさろ亭</h1>
+      <p>よもぎ麺・スパイシーラーメン<br>ここにしかない一杯があります</p>
+      <a href="#menu" class="hero-cta">メニューを見る</a>
+    </div>
+  </section>
+
+  <!-- 強み -->
+  <section class="features" id="features">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>FEATURES</p>
+        <h2>らさろ亭の 3 つの特徴</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌿</div>
+          <h3>よもぎ麺</h3>
+          <p>国産よもぎを練り込んだ独自の麺。香り豊かで他では食べられない特別な味わいです。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌶️</div>
+          <h3>スパイシーラーメン</h3>
+          <p>メキシコ仕込みのスパイスをラーメンに融合。クセになる辛さと旨みが絶妙です。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">👨‍🍳</div>
+          <h3>大将の人柄</h3>
+          <p>真面目で誠実な大将が毎日丁寧に仕込む。地元に長年愛され続ける理由がここにあります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- メニュー -->
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>MENU</p>
+        <h2>おすすめメニュー</h2>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card fade-in">
+          <div class="price">¥750</div>
+          <h3>よもぎ麺ラーメン</h3>
+          <p>国産よもぎ練り込みの特製麺に、豚骨ベースのあっさりスープ。</p>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="price">¥800</div>
+          <h3>スパイシーラーメン</h3>
+          <p>メキシコ由来のスパイスを使った他店にない辛旨ラーメン。</p>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="price">¥650</div>
+          <h3>よもぎ麺 ざるそば風</h3>
+          <p>よもぎ麺を冷やしてつけ汁でいただく夏の人気メニュー。</p>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="price">¥700</div>
+          <h3>定番 とんこつラーメン</h3>
+          <p>福岡らしいクリア豚骨スープ。細麺との相性が絶品です。</p>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="price">¥200</div>
+          <h3>替え玉</h3>
+          <p>麺の量を増やしてボリューム満点に。</p>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="price">¥300</div>
+          <h3>チャーシュー丼</h3>
+          <p>ラーメンと一緒にどうぞ。ランチに人気のサイドメニュー。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 口コミ -->
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>REVIEWS</p>
+        <h2>お客様の声</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">「よもぎ麺が本当に独特で美味しい。福岡でこんなラーメンがあるとは思わなかった。大将の人柄も最高で、また来たいと思わせるお店です。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">「スパイシーラーメンは本当にクセになる。辛いのに後を引く旨さ。地元の常連さんも多く、アットホームな雰囲気が好きです。」</p>
+          <div class="review-author">— エキテンユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">「スープが濃厚で麺も太くて食べごたえある。店内も清潔感があって落ち着ける。コスパが良くてランチに最高です。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 営業情報 -->
+  <section id="info">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>INFO</p>
+        <h2>営業情報・アクセス</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <p><strong>ランチ:</strong> 11:30 〜 15:00</p>
+          <p><strong>ディナー:</strong> 18:00 〜 22:00（L.O. 21:30）</p>
+          <p><strong>定休日:</strong> 火曜日・水曜日</p>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <p><strong>住所:</strong> 福岡市早良区飯倉7-28-10</p>
+          <p><strong>電話:</strong> 092-864-1318</p>
+          <p><strong>駐車場:</strong> 店舗前 1 台・裏 1 台</p>
+        </div>
+        <div class="info-box fade-in">
+          <h3>お支払い</h3>
+          <p>現金・QRコード決済対応</p>
+          <p>※ クレジットカード不可</p>
+          <br>
+          <p><strong>席数:</strong> カウンター 9 席、小上がり 2・4 名卓</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-title fade-in">
+        <p>CONTACT</p>
+        <h2>お問い合わせ</h2>
+      </div>
+      <form class="contact-form fade-in">
+        <div class="form-group">
+          <label>お名前</label>
+          <input type="text" placeholder="山田太郎" required>
+        </div>
+        <div class="form-group">
+          <label>電話番号またはメールアドレス</label>
+          <input type="text" placeholder="090-0000-0000 または example@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>お問い合わせ種別</label>
+          <select>
+            <option>団体予約について</option>
+            <option>営業時間について</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>内容</label>
+          <textarea placeholder="ご自由にお書きください"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <p class="tel">📞 092-864-1318</p>
+    <p>福岡市早良区飯倉7-28-10</p>
+    <p>営業時間: 11:30〜15:00 / 18:00〜22:00 ｜ 定休: 火・水</p>
+    <p style="margin-top:16px;">&copy; 2026 らさろ亭. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
