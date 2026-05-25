@@ -3,502 +3,911 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>らさろ亭 | 福岡・早良区の個性派ラーメン</title>
-  <meta name="description" content="福岡市早良区飯倉の個性派ラーメン店「らさろ亭」。よもぎ麺・スパイシーラーメンなど他にはない独自メニューが大人気。食べログ口コミ32件の地元人気店。">
-  <meta property="og:title" content="らさろ亭 | 福岡・早良区の個性派ラーメン">
-  <meta property="og:description" content="よもぎ麺・スパイシーラーメンで話題。福岡市早良区飯倉の個性派ラーメン店。">
+  <title>らさろ亭 | 福岡・早良区 よもぎ麺と個性派ラーメン</title>
+  <meta name="description" content="福岡市早良区飯倉の個性派ラーメン店「らさろ亭」。国産よもぎ練り込み麺・スパイシーラーメンなど他店にはない一杯。食べログ口コミ32件の地元人気店。092-864-1318">
+  <meta property="og:title" content="らさろ亭 | 福岡・早良区 よもぎ麺と個性派ラーメン">
+  <meta property="og:description" content="よもぎ麺・スパイシーラーメンで話題。大将の真摯な仕込みが生む唯一無二の一杯。福岡市早良区飯倉。">
   <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="rasaro-hero.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "らさろ亭",
+    "description": "よもぎ麺・スパイシーラーメンが名物の個性派ラーメン店",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "福岡市早良区飯倉7-28-10",
+      "streetAddress": "飯倉7-28-10",
+      "addressLocality": "早良区",
+      "addressRegion": "福岡市",
       "addressCountry": "JP"
     },
     "telephone": "092-864-1318",
     "servesCuisine": "ラーメン",
-    "openingHours": ["Mo,Th,Fr,Sa,Su 11:30-15:00", "Mo,Th,Fr,Sa,Su 18:00-22:00"]
+    "priceRange": "¥",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Thursday","Friday","Saturday","Sunday"],"opens":"11:30","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Thursday","Friday","Saturday","Sunday"],"opens":"18:00","closes":"22:00"}
+    ]
   }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
+    /* Design Brief
+       業種    : 老舗・個性派ラーメン
+       見出し  : Shippori Mincho（職人・格調・深み）
+       本文    : Noto Sans JP（読みやすさ）
+       数字/英語: Cormorant Garamond（繊細・古典）
+       世界観  : 漆黒の重厚感 × 琥珀の灯 × よもぎの野趣 × スパイスの刺激
+    */
+    :root {
+      --color-bg:          #0d0d0d;
+      --color-surface:     #181208;
+      --color-surface-2:   #221a0e;
+      --color-primary:     #c8860a;
+      --color-accent:      #e8a020;
+      --color-accent-glow: rgba(232,160,32,0.22);
+      --color-text:        #f5f0e8;
+      --color-text-muted:  #8a7a6a;
+      --color-yomogi:      #6a9050;
+      --color-spice:       #c84828;
+      --color-border:      rgba(200,134,10,0.18);
+      --font-heading: 'Shippori Mincho', serif;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Cormorant Garamond', serif;
+      --radius: 4px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card:
+        0 2px 6px rgba(0,0,0,0.5),
+        0 10px 24px rgba(0,0,0,0.4),
+        0 32px 64px rgba(0,0,0,0.3);
+    }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+    html { scroll-behavior: smooth; }
     body {
-      font-family: "Noto Sans JP", sans-serif;
-      color: #1a1a1a;
-      background: #fff;
-      line-height: 1.7;
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
     }
 
-    /* ヘッダー */
+    /* ── HEADER ── */
     header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 18px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      background: rgba(13,13,13,0.82);
+      border-bottom: 1px solid var(--color-border);
+      padding: 14px 0;
     }
     .header-inner {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 0 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .logo { font-size: 24px; font-weight: 900; letter-spacing: 3px; color: #e8a020; }
-    .logo span { font-size: 12px; display: block; color: #aaa; font-weight: 400; letter-spacing: 1px; }
-    nav a {
-      color: #ddd;
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      color: var(--color-accent);
       text-decoration: none;
-      margin-left: 24px;
-      font-size: 13px;
-      transition: color 0.3s;
+      display: flex;
+      flex-direction: column;
     }
-    nav a:hover { color: #e8a020; }
+    .logo span {
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      color: var(--color-text-muted);
+      font-weight: 400;
+      margin-top: 2px;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    nav a:hover { color: var(--color-accent); }
+    .nav-cta {
+      color: var(--color-bg) !important;
+      background: var(--color-accent);
+      padding: 8px 20px;
+      border-radius: var(--radius);
+      font-weight: 500;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
+    }
+    .nav-cta:hover {
+      background: var(--color-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--color-accent-glow) !important;
+    }
 
-    /* ヒーロー */
+    /* ── HERO ── */
     .hero {
-      min-height: 520px;
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d1a00 60%, #1a1a1a 100%);
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       position: relative;
       overflow: hidden;
-      background-size: cover;
-      background-position: center;
+      background:
+        linear-gradient(to bottom, rgba(13,12,8,0.15) 0%, rgba(13,12,8,0.65) 55%, rgba(13,12,8,0.97) 100%),
+        url('rasaro-hero.png') center/cover no-repeat;
     }
-    .hero::before {
-      content: "";
+    .hero::after {
+      content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.55);
+      background: radial-gradient(ellipse at center bottom, rgba(200,134,10,0.1) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .hero-content { position: relative; z-index: 2; padding: 40px 24px; }
-    .hero-tag {
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 140px 24px 80px;
+      max-width: 680px;
+    }
+    .hero-label {
       display: inline-block;
-      background: #e8a020;
-      color: #fff;
-      padding: 4px 14px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      margin-bottom: 16px;
+      font-family: var(--font-accent);
+      font-size: 13px;
+      font-style: italic;
+      letter-spacing: 0.3em;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 12px;
     }
     .hero h1 {
-      font-size: clamp(40px, 8vw, 80px);
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: 4px;
-      margin-bottom: 12px;
-      text-shadow: 2px 4px 12px rgba(0,0,0,0.5);
+      font-family: var(--font-heading);
+      font-size: clamp(52px, 8vw, 90px);
+      font-weight: 800;
+      letter-spacing: 0.3em;
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: 16px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.6);
     }
-    .hero p {
-      font-size: 16px;
-      color: #ddd;
-      margin-bottom: 32px;
-      letter-spacing: 1px;
+    .hero-catch {
+      font-family: var(--font-heading);
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--color-text-muted);
+      line-height: 2.2;
+      margin-bottom: 36px;
     }
-    .hero-cta {
-      display: inline-block;
-      background: #e8a020;
-      color: #fff;
-      padding: 14px 40px;
-      font-size: 15px;
-      font-weight: 700;
-      text-decoration: none;
-      letter-spacing: 2px;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .hero-cta:hover { background: #c8881a; transform: translateY(-2px); }
-
-    /* セクション共通 */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-title {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-    .section-title h2 {
-      font-size: 36px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      margin-bottom: 8px;
-    }
-    .section-title p { font-size: 13px; color: #888; letter-spacing: 2px; }
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 48px;
-      height: 3px;
-      background: #e8a020;
-      margin: 16px auto 0;
-    }
-
-    /* 店内・大将・外観セクション */
-    .gallery { background: #111; }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    .hero-catch em { font-style: normal; color: var(--color-accent); }
+    .hero-tags {
+      display: flex;
+      justify-content: center;
       gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
     }
-    .gallery-item img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s, opacity 0.4s;
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      border: 1px solid var(--color-border);
+      padding: 5px 14px;
+      border-radius: 20px;
     }
-    .gallery-item img:hover { transform: scale(1.03); opacity: 0.85; }
-    .gallery-item p {
-      color: #aaa;
-      font-size: 12px;
-      text-align: center;
-      padding: 8px 0;
+    .hero-tag.green { border-color: rgba(106,144,80,0.4); color: var(--color-yomogi); }
+    .hero-tag.red   { border-color: rgba(200,72,40,0.4);  color: var(--color-spice); }
+    .btn-primary {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--color-bg);
+      background: var(--color-accent);
+      padding: 16px 44px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
     }
-    @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item img { height: 200px; }
+    .btn-primary:hover {
+      background: var(--color-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px var(--color-accent-glow);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-scroll span {
+      font-family: var(--font-accent);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: var(--color-text-muted);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--color-primary), transparent);
+      animation: scrollAnim 2s ease infinite;
+    }
+    @keyframes scrollAnim {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
     }
 
-    /* 強み */
-    .features { background: #f8f5f0; }
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 100px 28px;
+    }
+    .section-head {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .section-en {
+      display: block;
+      font-family: var(--font-accent);
+      font-size: 11px;
+      font-style: italic;
+      letter-spacing: 0.45em;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+    }
+    .section-head h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--color-text);
+    }
+    .section-line {
+      width: 40px;
+      height: 2px;
+      background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+      margin: 18px auto 0;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      background: var(--color-surface);
+      clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+      padding: 40px 0;
+    }
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
     .feature-card {
-      background: #fff;
-      padding: 36px 28px;
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 44px 30px;
       text-align: center;
-      border-bottom: 3px solid #e8a020;
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition), border-color var(--transition);
     }
-    .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
-    .feature-icon { font-size: 40px; margin-bottom: 16px; }
-    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-    .feature-card p { font-size: 14px; color: #666; line-height: 1.8; }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200,134,10,0.45);
+    }
+    .feature-icon { font-size: 38px; margin-bottom: 18px; display: block; }
+    .feature-card h3 {
+      font-family: var(--font-heading);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      margin-bottom: 14px;
+    }
+    .feature-card p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.9; }
 
-    /* メニュー */
-    .menu { background: #1a1a1a; }
-    .menu .section-title h2 { color: #fff; }
-    .menu .section-title p { color: #888; }
+    /* ── MENU ── */
+    .menu { background: var(--color-bg); }
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
     .menu-card {
-      background: #2a2a2a;
-      border: 1px solid #333;
-      padding: 28px 24px;
-      transition: border-color 0.3s;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition), border-color var(--transition);
     }
-    .menu-card:hover { border-color: #e8a020; }
-    .menu-card .price {
+    .menu-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(200,134,10,0.4);
+    }
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+    .menu-placeholder {
+      width: 100%;
+      height: 180px;
+      background: var(--color-surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+    }
+    .menu-body { padding: 22px 20px 26px; }
+    .menu-badge {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    .badge-green { background: rgba(106,144,80,0.18); color: var(--color-yomogi); border: 1px solid rgba(106,144,80,0.35); }
+    .badge-red   { background: rgba(200,72,40,0.18);  color: var(--color-spice);  border: 1px solid rgba(200,72,40,0.35); }
+    .badge-gold  { background: rgba(200,134,10,0.14); color: var(--color-accent); border: 1px solid var(--color-border); }
+    .menu-price {
+      font-family: var(--font-accent);
       font-size: 22px;
-      font-weight: 900;
-      color: #e8a020;
+      font-weight: 500;
+      color: var(--color-accent);
       margin-bottom: 6px;
     }
-    .menu-card h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-    .menu-card p { font-size: 13px; color: #aaa; line-height: 1.7; }
+    .menu-price span { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+    .menu-card h3 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+    .menu-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.8; }
 
-    /* 口コミ */
-    .reviews { background: #f8f5f0; }
+    /* ── GALLERY ── */
+    .gallery {
+      background: var(--color-surface);
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+      padding-top: 60px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 200px 200px;
+      gap: 10px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+    }
+    .gallery-item:first-child { grid-row: span 2; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 14px 16px;
+      background: linear-gradient(to top, rgba(13,12,8,0.9), transparent);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+    }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-bg); }
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
     .review-card {
-      background: #fff;
-      padding: 28px 24px;
-      border-left: 4px solid #e8a020;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 34px 26px;
+      box-shadow: var(--shadow-card);
+      position: relative;
     }
-    .review-stars { color: #e8a020; font-size: 18px; margin-bottom: 8px; }
-    .review-text { font-size: 14px; color: #444; line-height: 1.8; margin-bottom: 16px; }
-    .review-author { font-size: 12px; color: #888; }
+    .review-card::before {
+      content: '\201C';
+      position: absolute;
+      top: 12px; left: 18px;
+      font-family: var(--font-accent);
+      font-size: 60px;
+      color: var(--color-primary);
+      opacity: 0.3;
+      line-height: 1;
+    }
+    .stars {
+      font-family: var(--font-accent);
+      font-size: 14px;
+      color: var(--color-accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+    .review-text {
+      font-size: 13.5px;
+      color: var(--color-text-muted);
+      line-height: 1.9;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .review-author {
+      font-family: var(--font-accent);
+      font-size: 12px;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      color: var(--color-primary);
+      border-top: 1px solid var(--color-border);
+      padding-top: 12px;
+    }
 
-    /* 営業情報 */
+    /* ── INFO ── */
+    .info {
+      background: var(--color-surface);
+      clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+      padding: 40px 0;
+    }
     .info-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .info-box {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 34px 26px;
+      box-shadow: var(--shadow-card);
     }
     .info-box h3 {
-      font-size: 18px;
+      font-family: var(--font-heading);
+      font-size: 15px;
       font-weight: 700;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #e8a020;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--color-border);
     }
-    .info-box p { font-size: 14px; color: #555; margin-bottom: 8px; }
-    .info-box strong { color: #1a1a1a; }
-
-    /* フォーム */
-    .contact { background: #1a1a1a; }
-    .contact .section-title h2 { color: #fff; }
-    .contact .section-title p { color: #888; }
-    .contact-form { max-width: 600px; margin: 0 auto; }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: 13px; color: #aaa; margin-bottom: 6px; }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 16px;
-      background: #2a2a2a;
-      border: 1px solid #444;
-      color: #fff;
-      font-size: 14px;
-      font-family: inherit;
-      transition: border-color 0.3s;
+    .info-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 13.5px;
     }
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus { outline: none; border-color: #e8a020; }
-    .form-group textarea { min-height: 100px; resize: vertical; }
-    .form-group select option { background: #2a2a2a; }
-    .submit-btn {
-      width: 100%;
-      background: #e8a020;
-      color: #fff;
-      border: none;
-      padding: 16px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      letter-spacing: 2px;
-      transition: background 0.3s;
-    }
-    .submit-btn:hover { background: #c8881a; }
-
-    /* フッター */
-    footer {
-      background: #111;
-      color: #888;
-      text-align: center;
-      padding: 32px 24px;
+    .info-label {
+      font-family: var(--font-accent);
+      font-style: italic;
+      color: var(--color-primary);
+      min-width: 52px;
       font-size: 13px;
     }
-    footer p { margin-bottom: 6px; }
-    footer .tel { font-size: 20px; color: #e8a020; font-weight: 700; margin: 8px 0; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+    .tel-link {
+      font-family: var(--font-accent);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color var(--transition);
+    }
+    .tel-link:hover { color: var(--color-primary); }
 
-    /* レスポンシブ */
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; gap: 12px; }
-      nav a { margin-left: 12px; font-size: 12px; }
-      .hero h1 { font-size: 40px; }
-      section { padding: 56px 16px; }
-      .section-title h2 { font-size: 28px; }
+    /* ── CONTACT ── */
+    .contact { background: var(--color-bg); }
+    .contact-form {
+      max-width: 620px;
+      margin: 0 auto;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 48px 44px;
+      box-shadow: var(--shadow-card);
+    }
+    .form-group { margin-bottom: 22px; }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px var(--color-accent-glow);
+    }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: var(--color-surface); }
+    .submit-btn {
+      width: 100%;
+      background: var(--color-accent);
+      border: none;
+      border-radius: var(--radius);
+      padding: 16px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--color-bg);
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .submit-btn:hover {
+      background: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--color-accent-glow);
     }
 
-    /* フェードイン */
-    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; }
+    /* ── FOOTER ── */
+    footer {
+      background: #080808;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      padding: 52px 24px;
+    }
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+    }
+    .footer-sub {
+      font-family: var(--font-accent);
+      font-size: 11px;
+      font-style: italic;
+      letter-spacing: 0.35em;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+    }
+    .footer-tel {
+      font-family: var(--font-accent);
+      font-size: 24px;
+      color: var(--color-accent);
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .footer-info {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      letter-spacing: 0.08em;
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+    .footer-copy {
+      font-family: var(--font-accent);
+      font-size: 11px;
+      color: rgba(138,122,106,0.45);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── ANIMATION ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1), transform 0.75s cubic-bezier(0.4,0,0.2,1);
+    }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .features-grid, .menu-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .gallery-item:first-child { grid-row: span 1; }
+      nav { display: none; }
+      .contact-form { padding: 32px 22px; }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 44px; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- ヘッダー -->
   <header>
     <div class="header-inner">
-      <div class="logo">
+      <a href="#" class="logo">
         らさろ亭
-        <span>個性派ラーメン | 早良区飯倉</span>
-      </div>
+        <span>RASAROTEI — FUKUOKA RAMEN</span>
+      </a>
       <nav>
-        <a href="#features">特徴</a>
+        <a href="#features">こだわり</a>
         <a href="#menu">メニュー</a>
+        <a href="#gallery">ギャラリー</a>
         <a href="#reviews">口コミ</a>
-        <a href="#info">営業情報</a>
-        <a href="#contact">お問合せ</a>
+        <a href="#info">アクセス</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
       </nav>
     </div>
   </header>
 
-  <!-- ヒーロー -->
-  <section class="hero" style="background-image: url('rasaro-hero.png');">
-    <div class="hero-content fade-in">
-      <div class="hero-tag">福岡市早良区飯倉 | 食べログ口コミ 32 件</div>
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <span class="hero-label">Fukuoka · Sawara · Iikura</span>
       <h1>らさろ亭</h1>
-      <p>よもぎ麺・スパイシーラーメン<br>ここにしかない一杯があります</p>
-      <a href="#menu" class="hero-cta">メニューを見る</a>
+      <p class="hero-catch">
+        <em>よもぎ</em>の香りが漂う一杯<br>
+        <em>スパイス</em>が鼓動を刻む一杯<br>
+        ここにしかない個性があります
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag green">🌿 よもぎ麺</span>
+        <span class="hero-tag red">🌶 スパイシーラーメン</span>
+        <span class="hero-tag">食べログ口コミ 32件</span>
+      </div>
+      <a href="#menu" class="btn-primary">メニューを見る</a>
+    </div>
+    <div class="hero-scroll">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- 強み -->
   <section class="features" id="features">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>FEATURES</p>
-        <h2>らさろ亭の 3 つの特徴</h2>
+      <div class="section-head fade-in">
+        <span class="section-en">Features</span>
+        <h2>らさろ亭の 3 つのこだわり</h2>
+        <div class="section-line"></div>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in">
-          <div class="feature-icon">🌿</div>
+          <span class="feature-icon">🌿</span>
           <h3>よもぎ麺</h3>
-          <p>国産よもぎを練り込んだ独自の麺。香り豊かで他では食べられない特別な味わいです。</p>
+          <p>国産よもぎを練り込んだ独自の麺。清々しい香りと独特の緑色は視覚からも食欲を刺激します。豚骨スープとの相性は唯一無二です。</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon">🌶️</div>
+          <span class="feature-icon">🌶️</span>
           <h3>スパイシーラーメン</h3>
-          <p>メキシコ仕込みのスパイスをラーメンに融合。クセになる辛さと旨みが絶妙です。</p>
+          <p>メキシコ由来のスパイスをラーメンに昇華。一般的な辛味とは異なる複雑な旨みが後を引き、気づけば替え玉を頼んでいます。</p>
         </div>
         <div class="feature-card fade-in">
-          <div class="feature-icon">👨‍🍳</div>
-          <h3>大将の人柄</h3>
-          <p>真面目で誠実な大将が毎日丁寧に仕込む。地元に長年愛され続ける理由がここにあります。</p>
+          <span class="feature-icon">🍜</span>
+          <h3>大将の仕込み</h3>
+          <p>真面目で誠実と評判の大将が毎朝丁寧に仕込むスープ。「また来たい」と思わせる人柄が、地元に長年愛される理由です。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- メニュー -->
   <section class="menu" id="menu">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>MENU</p>
+      <div class="section-head fade-in">
+        <span class="section-en">Menu</span>
         <h2>おすすめメニュー</h2>
+        <div class="section-line"></div>
       </div>
       <div class="menu-grid">
         <div class="menu-card fade-in">
-          <img src="rasaro-menu-yomogi.png" alt="よもぎ麺ラーメン" style="width:100%;height:180px;object-fit:cover;margin-bottom:16px;">
-          <div class="price">¥750</div>
-          <h3>よもぎ麺ラーメン</h3>
-          <p>国産よもぎ練り込みの特製麺に、豚骨ベースのあっさりスープ。</p>
+          <img src="rasaro-menu-yomogi.png" alt="よもぎ麺ラーメン">
+          <div class="menu-body">
+            <span class="menu-badge badge-green">看板メニュー</span>
+            <div class="menu-price">¥750 <span>（税込）</span></div>
+            <h3>よもぎ麺ラーメン</h3>
+            <p>国産よもぎ練り込みの特製麺に、豚骨ベースのあっさりスープ。鮮やかな緑色が食卓を彩ります。</p>
+          </div>
         </div>
         <div class="menu-card fade-in">
-          <img src="rasaro-menu-spicy.png" alt="スパイシーラーメン" style="width:100%;height:180px;object-fit:cover;margin-bottom:16px;">
-          <div class="price">¥800</div>
-          <h3>スパイシーラーメン</h3>
-          <p>メキシコ由来のスパイスを使った他店にない辛旨ラーメン。</p>
+          <img src="rasaro-menu-spicy.png" alt="スパイシーラーメン">
+          <div class="menu-body">
+            <span class="menu-badge badge-red">激辛人気</span>
+            <div class="menu-price">¥800 <span>（税込）</span></div>
+            <h3>スパイシーラーメン</h3>
+            <p>メキシコ由来のスパイスをラーメンに融合。クセになる辛さと深みのある旨みが絶妙です。</p>
+          </div>
         </div>
         <div class="menu-card fade-in">
-          <div class="price">¥650</div>
-          <h3>よもぎ麺 ざるそば風</h3>
-          <p>よもぎ麺を冷やしてつけ汁でいただく夏の人気メニュー。</p>
+          <div class="menu-placeholder">🍜</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-green">夏限定</span>
+            <div class="menu-price">¥650 <span>（税込）</span></div>
+            <h3>よもぎ麺 ざるそば風</h3>
+            <p>よもぎ麺を冷やしてつけ汁でいただく、夏の人気メニュー。香りが一層引き立ちます。</p>
+          </div>
         </div>
         <div class="menu-card fade-in">
-          <div class="price">¥700</div>
-          <h3>定番 とんこつラーメン</h3>
-          <p>福岡らしいクリア豚骨スープ。細麺との相性が絶品です。</p>
+          <div class="menu-placeholder">🐖</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-gold">定番</span>
+            <div class="menu-price">¥700 <span>（税込）</span></div>
+            <h3>とんこつラーメン</h3>
+            <p>福岡らしいクリアな豚骨スープ。細麺との相性が絶品。初めての方はまずこちらをどうぞ。</p>
+          </div>
         </div>
         <div class="menu-card fade-in">
-          <div class="price">¥200</div>
-          <h3>替え玉</h3>
-          <p>麺の量を増やしてボリューム満点に。</p>
+          <div class="menu-placeholder">🍢</div>
+          <div class="menu-body">
+            <div class="menu-price">¥200 <span>（税込）</span></div>
+            <h3>替え玉</h3>
+            <p>麺の量を増やしてボリューム満点に。細麺・よもぎ麺からお選びいただけます。</p>
+          </div>
         </div>
         <div class="menu-card fade-in">
-          <div class="price">¥300</div>
-          <h3>チャーシュー丼</h3>
-          <p>ラーメンと一緒にどうぞ。ランチに人気のサイドメニュー。</p>
+          <div class="menu-placeholder">🍚</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-gold">ランチ人気</span>
+            <div class="menu-price">¥300 <span>（税込）</span></div>
+            <h3>チャーシュー丼</h3>
+            <p>ラーメンとセットで人気のサイドメニュー。大将特製チャーシューがのったご飯物です。</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ギャラリー -->
-  <section class="gallery">
+  <section class="gallery" id="gallery">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>GALLERY</p>
-        <h2 style="color:#fff;">店内・料理ギャラリー</h2>
+      <div class="section-head fade-in">
+        <span class="section-en">Gallery</span>
+        <h2>店内・料理ギャラリー</h2>
+        <div class="section-line"></div>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item fade-in">
-          <img src="rasaro-interior.png" alt="店内の様子">
-          <p>温かみある木のカウンター</p>
+          <img src="rasaro-interior.png" alt="温かみある木のカウンター席">
+          <p class="gallery-caption">温かみある木のカウンター</p>
         </div>
         <div class="gallery-item fade-in">
           <img src="rasaro-chef.png" alt="大将の調理風景">
-          <p>毎日丁寧に仕込む大将</p>
+          <p class="gallery-caption">毎日丁寧に仕込む大将</p>
         </div>
         <div class="gallery-item fade-in">
-          <img src="rasaro-exterior.png" alt="外観">
-          <p>赤い提灯が目印の外観</p>
+          <img src="rasaro-exterior.png" alt="らさろ亭外観">
+          <p class="gallery-caption">赤い提灯が目印の外観</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 口コミ -->
   <section class="reviews" id="reviews">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>REVIEWS</p>
+      <div class="section-head fade-in">
+        <span class="section-en">Reviews</span>
         <h2>お客様の声</h2>
+        <div class="section-line"></div>
       </div>
       <div class="reviews-grid">
         <div class="review-card fade-in">
-          <div class="review-stars">★★★★★</div>
+          <div class="stars">★★★★★</div>
           <p class="review-text">「よもぎ麺が本当に独特で美味しい。福岡でこんなラーメンがあるとは思わなかった。大将の人柄も最高で、また来たいと思わせるお店です。」</p>
           <div class="review-author">— 食べログユーザー</div>
         </div>
         <div class="review-card fade-in">
-          <div class="review-stars">★★★★☆</div>
+          <div class="stars">★★★★☆</div>
           <p class="review-text">「スパイシーラーメンは本当にクセになる。辛いのに後を引く旨さ。地元の常連さんも多く、アットホームな雰囲気が好きです。」</p>
           <div class="review-author">— エキテンユーザー</div>
         </div>
         <div class="review-card fade-in">
-          <div class="review-stars">★★★★★</div>
-          <p class="review-text">「スープが濃厚で麺も太くて食べごたえある。店内も清潔感があって落ち着ける。コスパが良くてランチに最高です。」</p>
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「スープが濃厚で食べごたえある。店内も清潔感があって落ち着ける。コスパが良くてランチに最高です。」</p>
           <div class="review-author">— 食べログユーザー</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 営業情報 -->
-  <section id="info">
+  <section class="info" id="info">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>INFO</p>
+      <div class="section-head fade-in">
+        <span class="section-en">Information</span>
         <h2>営業情報・アクセス</h2>
+        <div class="section-line"></div>
       </div>
       <div class="info-grid">
         <div class="info-box fade-in">
           <h3>営業時間</h3>
-          <p><strong>ランチ:</strong> 11:30 〜 15:00</p>
-          <p><strong>ディナー:</strong> 18:00 〜 22:00（L.O. 21:30）</p>
-          <p><strong>定休日:</strong> 火曜日・水曜日</p>
+          <div class="info-row">
+            <span class="info-label">Lunch</span>
+            <span class="info-value">11:30 〜 15:00</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Dinner</span>
+            <span class="info-value">18:00 〜 22:00<br><span class="info-note">L.O. 21:30</span></span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">定休日</span>
+            <span class="info-value">火曜日・水曜日</span>
+          </div>
         </div>
         <div class="info-box fade-in">
           <h3>アクセス</h3>
-          <p><strong>住所:</strong> 福岡市早良区飯倉7-28-10</p>
-          <p><strong>電話:</strong> 092-864-1318</p>
-          <p><strong>駐車場:</strong> 店舗前 1 台・裏 1 台</p>
+          <div class="info-row">
+            <span class="info-label">住所</span>
+            <span class="info-value">福岡市早良区<br>飯倉7-28-10</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">駐車場</span>
+            <span class="info-value">店舗前1台・裏1台</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">席数</span>
+            <span class="info-value">カウンター9席<br>小上がり2・4名卓</span>
+          </div>
         </div>
         <div class="info-box fade-in">
-          <h3>お支払い</h3>
-          <p>現金・QRコード決済対応</p>
-          <p>※ クレジットカード不可</p>
-          <br>
-          <p><strong>席数:</strong> カウンター 9 席、小上がり 2・4 名卓</p>
+          <h3>お電話・お支払い</h3>
+          <div class="info-row">
+            <span class="info-label">Tel</span>
+            <span class="info-value">
+              <a href="tel:0928641318" class="tel-link">092-864-1318</a>
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">支払い</span>
+            <span class="info-value">現金・QRコード決済<br><span class="info-note">クレジットカード不可</span></span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- お問い合わせ -->
   <section class="contact" id="contact">
     <div class="section-inner">
-      <div class="section-title fade-in">
-        <p>CONTACT</p>
+      <div class="section-head fade-in">
+        <span class="section-en">Contact</span>
         <h2>お問い合わせ</h2>
+        <div class="section-line"></div>
       </div>
       <form class="contact-form fade-in">
         <div class="form-group">
           <label>お名前</label>
-          <input type="text" placeholder="山田太郎" required>
+          <input type="text" placeholder="山田 太郎" required>
         </div>
         <div class="form-group">
           <label>電話番号またはメールアドレス</label>
@@ -509,6 +918,7 @@
           <select>
             <option>団体予約について</option>
             <option>営業時間について</option>
+            <option>メニューについて</option>
             <option>その他</option>
           </select>
         </div>
@@ -521,20 +931,22 @@
     </div>
   </section>
 
-  <!-- フッター -->
   <footer>
-    <p class="tel">📞 092-864-1318</p>
-    <p>福岡市早良区飯倉7-28-10</p>
-    <p>営業時間: 11:30〜15:00 / 18:00〜22:00 ｜ 定休: 火・水</p>
-    <p style="margin-top:16px;">&copy; 2026 らさろ亭. All rights reserved.</p>
+    <div class="footer-logo">らさろ亭</div>
+    <div class="footer-sub">Rasarotei · Fukuoka Ramen</div>
+    <div class="footer-tel">092-864-1318</div>
+    <div class="footer-info">
+      福岡市早良区飯倉7-28-10<br>
+      営業時間 11:30〜15:00 / 18:00〜22:00　定休 火・水
+    </div>
+    <div class="footer-copy">&copy; 2026 らさろ亭. All rights reserved.</div>
   </footer>
 
   <script>
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
