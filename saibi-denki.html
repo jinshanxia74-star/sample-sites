@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>彩備電気株式会社 | 福岡市の電気設備工事・太陽光発電・LED化</title>
+  <meta name="description" content="福岡市城南区の電気設備工事会社。創業昭和55年・45年の実績。太陽光発電設備・LED化工事・電気設備工事一式。無料見積もり受付中。TEL:092-801-0063">
+  <meta property="og:title" content="彩備電気株式会社 | 福岡市の電気設備工事">
+  <meta property="og:description" content="創業45年。太陽光発電・LED化・電気工事のプロ。福岡市城南区。無料相談受付中。">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "彩備電気株式会社",
+    "description": "福岡市の電気設備工事・太陽光発電・LED化工事",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "神松寺3丁目22番5号",
+      "addressLocality": "福岡市城南区",
+      "addressRegion": "福岡県",
+      "postalCode": "814-0111",
+      "addressCountry": "JP"
+    },
+    "telephone": "092-801-0063",
+    "foundingDate": "1980",
+    "areaServed": "福岡市"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* =============================================
+       彩備電気株式会社 — saibi-denki.html
+       Theme: Dark Navy × Electric Yellow
+       Font: Zen Kaku Gothic New + Noto Sans JP + Montserrat
+    ============================================= */
+    :root {
+      --bg:       #09101E;
+      --s1:       #111827;
+      --s2:       #1C2740;
+      --s3:       #243050;
+      --yellow:   #F5B800;
+      --yellow-d: #D4A000;
+      --yellow-l: #FFD033;
+      --blue:     #38BDF8;
+      --blue-d:   #0EA5E9;
+      --text:     #E8F0FE;
+      --muted:    #6B7A99;
+      --white:    #FFFFFF;
+      --f-h: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+      --f-b: 'Noto Sans JP', sans-serif;
+      --f-en: 'Montserrat', sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --tr: 0.35s var(--ease);
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: var(--f-b);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== SCROLL ANIMATION ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-delay-1.visible { transition-delay: 0.1s; }
+    .fade-delay-2.visible { transition-delay: 0.2s; }
+    .fade-delay-3.visible { transition-delay: 0.3s; }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 100px 0; }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0;
+      transition: background var(--tr), box-shadow var(--tr);
+    }
+    .header.scrolled {
+      background: rgba(9, 16, 30, 0.95);
+      backdrop-filter: blur(16px) saturate(180%);
+      box-shadow: 0 1px 0 rgba(245, 184, 0, 0.15);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: var(--f-h);
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+    .logo-en {
+      font-family: var(--f-en);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      color: var(--yellow);
+      text-transform: uppercase;
+    }
+    .logo-ja { color: var(--white); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-family: var(--f-h);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      transition: color var(--tr);
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      font-family: var(--f-h);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--tr);
+      border: none;
+      display: inline-block;
+    }
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--bg);
+      padding: 0.65rem 1.5rem;
+      font-size: 0.82rem;
+    }
+    .btn-yellow:hover {
+      background: var(--yellow-l);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245,184,0,0.35);
+    }
+    .btn-yellow-lg {
+      background: var(--yellow);
+      color: var(--bg);
+      padding: 1rem 2.5rem;
+      font-size: 1rem;
+    }
+    .btn-yellow-lg:hover {
+      background: var(--yellow-l);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(245,184,0,0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid rgba(232, 240, 254, 0.3);
+      padding: 0.95rem 2.2rem;
+      font-size: 0.95rem;
+    }
+    .btn-outline:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+      transform: translateY(-2px);
+    }
+
+    /* hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: var(--tr);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100dvh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      /* 要Canva差し替え: 太陽光パネル・電気工事現場の写真 */
+      background-image: url('https://picsum.photos/seed/saibi-denki-hero/1920/1080');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        rgba(9,16,30,0.96) 0%,
+        rgba(9,16,30,0.82) 50%,
+        rgba(9,16,30,0.45) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      padding: 8rem 2rem 4rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245,184,0,0.12);
+      border: 1px solid rgba(245,184,0,0.35);
+      color: var(--yellow);
+      font-family: var(--f-en);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 2px;
+      margin-bottom: 2rem;
+      animation: fadeDown 0.6s var(--ease) both;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-headline {
+      font-family: var(--f-h);
+      font-size: clamp(1.8rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.7s var(--ease) 0.15s both;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--yellow);
+    }
+    .hero-sub {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: rgba(232,240,254,0.75);
+      margin-bottom: 2.5rem;
+      max-width: 520px;
+      animation: fadeUp 0.7s var(--ease) 0.3s both;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      animation: fadeUp 0.7s var(--ease) 0.45s both;
+    }
+    .hero-tel {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--f-en);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.04em;
+      transition: color var(--tr);
+    }
+    .hero-tel:hover { color: var(--yellow); }
+    .hero-tel-icon { font-size: 1rem; }
+
+    /* scroll indicator */
+    .scroll-line {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 1;
+    }
+    .scroll-line span {
+      font-family: var(--f-en);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .scroll-bar {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--yellow), transparent);
+      animation: scrollAnim 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollAnim {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ===== STATS ===== */
+    .stats {
+      background: var(--s1);
+      border-top: 1px solid rgba(245,184,0,0.12);
+      border-bottom: 1px solid rgba(245,184,0,0.12);
+      padding: 0;
+    }
+    .stats-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border-right: 1px solid rgba(245,184,0,0.1);
+      transition: background var(--tr);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-item:hover { background: rgba(245,184,0,0.04); }
+    .stat-num {
+      font-family: var(--f-en);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .stat-unit {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== SECTION LABEL ===== */
+    .section-label {
+      font-family: var(--f-en);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--f-h);
+      font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+      font-weight: 900;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .section-body {
+      font-size: 0.95rem;
+      line-height: 1.95;
+      color: rgba(232,240,254,0.7);
+      max-width: 560px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services { background: var(--bg); }
+    .services-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .services-header .section-body { margin: 0 auto; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--s1);
+      border: 1px solid rgba(245,184,0,0.1);
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      transition: border-color var(--tr), transform var(--tr), box-shadow var(--tr);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--yellow), var(--blue));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease);
+    }
+    .service-card:hover {
+      border-color: rgba(245,184,0,0.3);
+      transform: translateY(-6px);
+      box-shadow:
+        0 4px 12px rgba(0,0,0,0.3),
+        0 16px 40px rgba(0,0,0,0.25),
+        0 0 0 1px rgba(245,184,0,0.08);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(245,184,0,0.1);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon svg { width: 28px; height: 28px; }
+    .service-num {
+      font-family: var(--f-en);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--yellow);
+      margin-bottom: 0.75rem;
+    }
+    .service-title {
+      font-family: var(--f-h);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .service-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+    .service-list {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .service-list li {
+      font-size: 0.8rem;
+      color: rgba(232,240,254,0.55);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .service-list li::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--yellow);
+      flex-shrink: 0;
+    }
+
+    /* mid CTA banner */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-d) 100%);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .cta-banner-title {
+      font-family: var(--f-h);
+      font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+      font-weight: 900;
+      color: var(--bg);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.04em;
+    }
+    .cta-banner-sub {
+      font-size: 0.9rem;
+      color: rgba(9,16,30,0.7);
+      margin-bottom: 1.75rem;
+    }
+    .cta-banner-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .btn-dark {
+      background: var(--bg);
+      color: var(--yellow);
+      padding: 1rem 2.5rem;
+      font-size: 0.95rem;
+      font-family: var(--f-h);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      transition: all var(--tr);
+      display: inline-block;
+    }
+    .btn-dark:hover {
+      background: var(--s1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+    .tel-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--f-en);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--bg);
+      letter-spacing: 0.04em;
+      transition: opacity var(--tr);
+    }
+    .tel-link:hover { opacity: 0.75; }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--s1); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img {
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .about-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(245,184,0,0.15);
+      border-radius: 6px;
+      pointer-events: none;
+    }
+    .about-img img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      /* 要Canva差し替え: 会社外観・スタッフ写真 */
+    }
+    .about-year {
+      position: absolute;
+      bottom: -1rem;
+      right: -1rem;
+      background: var(--yellow);
+      color: var(--bg);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .about-year-num {
+      font-family: var(--f-en);
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      display: block;
+    }
+    .about-year-text {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .about-points {
+      margin-top: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .about-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: rgba(245,184,0,0.05);
+      border-left: 3px solid var(--yellow);
+      border-radius: 0 4px 4px 0;
+    }
+    .about-point-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .about-point-text strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .about-point-text span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ===== PROCESS ===== */
+    .process { background: var(--bg); }
+    .process-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .process-header .section-body { margin: 0 auto; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.75rem;
+      left: 12.5%;
+      width: 75%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--yellow), rgba(245,184,0,0.3));
+      z-index: 0;
+    }
+    .process-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .step-num-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: var(--bg);
+      font-family: var(--f-en);
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.04em;
+    }
+    .step-title {
+      font-family: var(--f-h);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .step-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ===== VOICE ===== */
+    .voice { background: var(--s1); }
+    .voice-header { margin-bottom: 3.5rem; }
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .voice-card {
+      background: var(--s2);
+      border-radius: 6px;
+      padding: 2rem 1.75rem;
+      border: 1px solid rgba(245,184,0,0.08);
+      transition: border-color var(--tr), transform var(--tr);
+    }
+    .voice-card:hover {
+      border-color: rgba(245,184,0,0.2);
+      transform: translateY(-4px);
+    }
+    .voice-quote {
+      font-size: 3rem;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      font-family: Georgia, serif;
+      opacity: 0.5;
+    }
+    .voice-text {
+      font-size: 0.875rem;
+      color: rgba(232,240,254,0.8);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    .voice-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .voice-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--s3);
+      border: 2px solid rgba(245,184,0,0.2);
+      overflow: hidden;
+    }
+    .voice-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .voice-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .voice-role {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--bg); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info-title {
+      font-family: var(--f-h);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.35;
+    }
+    .contact-info-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .contact-tel-block {
+      background: rgba(245,184,0,0.06);
+      border: 1px solid rgba(245,184,0,0.2);
+      border-radius: 6px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-tel-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--yellow);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .contact-tel-num {
+      font-family: var(--f-en);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .contact-tel-hours {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+    .contact-info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contact-info-item {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+    .contact-info-item dt {
+      min-width: 4.5rem;
+      font-weight: 700;
+      color: var(--yellow);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+      padding-top: 0.05rem;
+    }
+    .contact-info-item dd { color: rgba(232,240,254,0.75); line-height: 1.7; }
+
+    /* Form */
+    .contact-form {
+      background: var(--s1);
+      border-radius: 8px;
+      padding: 2.5rem;
+      border: 1px solid rgba(245,184,0,0.1);
+    }
+    .form-title {
+      font-family: var(--f-h);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .form-title::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 1.1rem;
+      background: var(--yellow);
+      border-radius: 2px;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgba(232,240,254,0.75);
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.05em;
+    }
+    .form-label .required {
+      color: var(--yellow);
+      font-size: 0.7rem;
+      margin-left: 0.35rem;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      background: var(--s2);
+      border: 1px solid rgba(245,184,0,0.15);
+      border-radius: 4px;
+      padding: 0.8rem 1rem;
+      font-family: var(--f-b);
+      font-size: 0.9rem;
+      color: var(--text);
+      transition: border-color var(--tr), box-shadow var(--tr);
+      outline: none;
+    }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--yellow);
+      box-shadow: 0 0 0 3px rgba(245,184,0,0.1);
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted); font-size: 0.85rem; }
+    .form-textarea { min-height: 110px; resize: vertical; }
+    .form-submit {
+      width: 100%;
+      background: var(--yellow);
+      color: var(--bg);
+      border: none;
+      padding: 1rem;
+      font-family: var(--f-h);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all var(--tr);
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--yellow-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,184,0,0.3);
+    }
+    .form-note {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #060C18;
+      border-top: 1px solid rgba(245,184,0,0.1);
+      padding: 3rem 0 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--f-h);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .footer-address {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      transition: color var(--tr);
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: var(--f-en);
+      letter-spacing: 0.1em;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat-item:nth-child(2) { border-right: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-year { bottom: 0; right: 0; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .process-steps::before { display: none; }
+      .voice-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 72px 0; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        position: absolute;
+        top: 72px; left: 0; right: 0;
+        background: rgba(9,16,30,0.98);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid rgba(245,184,0,0.1);
+      }
+      .nav-toggle { display: flex; }
+      .hero-content { padding: 7rem 1.5rem 4rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .cta-banner-actions { flex-direction: column; }
+      .footer-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-en">Saibi Denki Co., Ltd.</span>
+        <span class="logo-ja">彩備電気株式会社</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#process">施工の流れ</a></li>
+          <li><a href="#contact" class="btn btn-yellow">無料で相談する</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          創業昭和55年 / 福岡市城南区
+        </div>
+        <h1 class="hero-headline">
+          電気代が高い、<br>
+          でも<em>誰に頼めばいい</em>か<br>
+          わからない。
+        </h1>
+        <p class="hero-sub">
+          彩備電気株式会社は、太陽光発電・LED化・電気設備工事を45年間手がけてきた福岡のプロ集団。相談から施工・アフターケアまで一貫して対応します。まずはお気軽にご相談ください。
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-yellow-lg">無料で相談する</a>
+          <a href="tel:092-801-0063" class="hero-tel">
+            <span class="hero-tel-icon">📞</span>
+            092-801-0063
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-line">
+      <span>Scroll</span>
+      <div class="scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat-item fade-in">
+        <div class="stat-num">45<span class="stat-unit">年</span></div>
+        <div class="stat-label">創業からの実績</div>
+      </div>
+      <div class="stat-item fade-in fade-delay-1">
+        <div class="stat-num">1,000<span class="stat-unit">+</span></div>
+        <div class="stat-label">施工実績（件）</div>
+      </div>
+      <div class="stat-item fade-in fade-delay-2">
+        <div class="stat-num">0<span class="stat-unit">円</span></div>
+        <div class="stat-label">見積もり・相談費用</div>
+      </div>
+      <div class="stat-item fade-in fade-delay-3">
+        <div class="stat-num">24<span class="stat-unit">h</span></div>
+        <div class="stat-label">問い合わせ受付</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="services-header fade-in">
+        <span class="section-label">Services</span>
+        <h2 class="section-title">省エネ・電気工事の<br>ことならお任せください</h2>
+        <p class="section-body">太陽光発電から日常の電気工事まで、設計・施工・アフターケアを一貫して提供。法人・施設・個人住宅問わず対応します。</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5B800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </div>
+          <div class="service-num">SERVICE 01</div>
+          <h3 class="service-title">太陽光発電設備工事</h3>
+          <p class="service-desc">太陽光発電システムの設計から施工・保守まで一貫対応。電力コストを大幅に削減し、環境にも企業イメージにも貢献します。</p>
+          <ul class="service-list">
+            <li>住宅・法人・施設への導入</li>
+            <li>蓄電池システムの組み合わせ</li>
+            <li>導入後の保守・メンテナンス</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in fade-delay-1">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5B800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/>
+            </svg>
+          </div>
+          <div class="service-num">SERVICE 02</div>
+          <h3 class="service-title">LED化工事・省エネ改修</h3>
+          <p class="service-desc">既存照明のLED化により電力消費を最大80%削減。工場・オフィス・店舗・学校など規模を問わず対応。コスト削減効果をご提案します。</p>
+          <ul class="service-list">
+            <li>工場・倉庫・オフィスのLED化</li>
+            <li>省エネ診断・改修提案</li>
+            <li>補助金申請サポート</li>
+          </ul>
+        </div>
+        <div class="service-card fade-in fade-delay-2">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5B800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="service-num">SERVICE 03</div>
+          <h3 class="service-title">電気設備工事全般</h3>
+          <p class="service-desc">新築・改修・増設など、あらゆる電気設備工事に対応。電力引き込みから分電盤・コンセント・照明設備まで、確かな技術で施工します。</p>
+          <ul class="service-list">
+            <li>新築・改修・増設工事</li>
+            <li>分電盤・幹線工事</li>
+            <li>空調・動力設備工事</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MID CTA ===== -->
+  <div class="cta-banner fade-in">
+    <div class="container">
+      <h2 class="cta-banner-title">まずは無料でご相談ください。見積もりも無料です。</h2>
+      <p class="cta-banner-sub">現地調査から詳細なお見積もりまで、費用は一切かかりません。お気軽にどうぞ。</p>
+      <div class="cta-banner-actions">
+        <a href="#contact" class="btn-dark">無料相談・見積もりを依頼する</a>
+        <a href="tel:092-801-0063" class="tel-link">
+          <span>📞</span> 092-801-0063
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img fade-in">
+          <!-- 要Canva差し替え: 会社外観・スタッフ集合写真 -->
+          <img src="https://picsum.photos/seed/saibi-about/800/600" alt="彩備電気株式会社 スタッフ・施工風景">
+          <div class="about-year">
+            <span class="about-year-num">45</span>
+            <span class="about-year-text">年の実績</span>
+          </div>
+        </div>
+        <div class="about-text fade-in fade-delay-1">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title">昭和55年創業。<br>福岡の電気を<br>45年間守ってきた。</h2>
+          <p class="section-body">
+            彩備電気株式会社は、1980年（昭和55年）に福岡市城南区で創業。以来45年間、「確かな技術力と誠実なアフターケア」を信条に、福岡市内を中心とした電気設備工事を担ってきました。太陽光発電・LED化・電気工事一式を、相談から施工・アフターケアまで一貫して提供します。
+          </p>
+          <div class="about-points">
+            <div class="about-point fade-in fade-delay-1">
+              <span class="about-point-icon">⚡</span>
+              <div class="about-point-text">
+                <strong>確かな技術力</strong>
+                <span>資格保有スタッフが設計から施工まで担当。品質に妥協しません。</span>
+              </div>
+            </div>
+            <div class="about-point fade-in fade-delay-2">
+              <span class="about-point-icon">🤝</span>
+              <div class="about-point-text">
+                <strong>誠実なアフターケア</strong>
+                <span>施工後も責任を持って対応。長期的なパートナーとしてご支援します。</span>
+              </div>
+            </div>
+            <div class="about-point fade-in fade-delay-3">
+              <span class="about-point-icon">📍</span>
+              <div class="about-point-text">
+                <strong>福岡市密着45年</strong>
+                <span>地元をよく知るからこそ、迅速で的確な対応が可能です。</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="process-header fade-in">
+        <span class="section-label">Our Process</span>
+        <h2 class="section-title">施工の流れ</h2>
+        <p class="section-body">はじめての方でも安心して任せていただけるよう、相談から完工まで丁寧にサポートします。</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step fade-in">
+          <div class="step-num-wrap">
+            <div class="step-num">01</div>
+          </div>
+          <div class="step-title">お問い合わせ・無料相談</div>
+          <p class="step-desc">電話・メールでお気軽に。内容をヒアリングし、最適なプランをご提案します。費用は一切かかりません。</p>
+        </div>
+        <div class="process-step fade-in fade-delay-1">
+          <div class="step-num-wrap">
+            <div class="step-num">02</div>
+          </div>
+          <div class="step-title">現地調査・お見積もり</div>
+          <p class="step-desc">現地に伺い詳細を確認。お客様のご要望に合わせた詳細な見積書を無料で作成します。</p>
+        </div>
+        <div class="process-step fade-in fade-delay-2">
+          <div class="step-num-wrap">
+            <div class="step-num">03</div>
+          </div>
+          <div class="step-title">施工・工事</div>
+          <p class="step-desc">熟練したスタッフが安全・丁寧に施工。工程・進捗をこまめにご報告します。</p>
+        </div>
+        <div class="process-step fade-in fade-delay-3">
+          <div class="step-num-wrap">
+            <div class="step-num">04</div>
+          </div>
+          <div class="step-title">完工・アフターケア</div>
+          <p class="step-desc">完工後も安心のアフターケア。何かあればすぐにご連絡ください。長期的にサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOICE ===== -->
+  <section class="section voice" id="voice">
+    <div class="container">
+      <div class="voice-header fade-in">
+        <span class="section-label">Customer Voice</span>
+        <h2 class="section-title">お客様の声</h2>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card fade-in">
+          <div class="voice-quote">"</div>
+          <p class="voice-text">LED化工事をお願いしました。電気代が月に約3割削減できて、投資回収も想定より早そうです。丁寧な説明と迅速な対応に大変満足しています。</p>
+          <div class="voice-author">
+            <div class="voice-avatar">
+              <!-- 要Canva差し替え -->
+              <img src="https://picsum.photos/seed/voice1/40/40" alt="">
+            </div>
+            <div>
+              <div class="voice-name">A社 施設管理担当者様</div>
+              <div class="voice-role">福岡市内・工場 / LED化工事</div>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card fade-in fade-delay-1">
+          <div class="voice-quote">"</div>
+          <p class="voice-text">太陽光発電の導入を検討していたところ、丁寧にシミュレーションを出してくれました。補助金手続きのサポートも助かりました。信頼できる業者さんです。</p>
+          <div class="voice-author">
+            <div class="voice-avatar">
+              <img src="https://picsum.photos/seed/voice2/40/40" alt="">
+            </div>
+            <div>
+              <div class="voice-name">B様</div>
+              <div class="voice-role">福岡市 / 太陽光発電設備工事</div>
+            </div>
+          </div>
+        </div>
+        <div class="voice-card fade-in fade-delay-2">
+          <div class="voice-quote">"</div>
+          <p class="voice-text">急な電気トラブルでも素早く対応してもらえました。45年の実績は伊達じゃないと感じました。アフターケアも含めて、これからもお願いしたいと思います。</p>
+          <div class="voice-author">
+            <div class="voice-avatar">
+              <img src="https://picsum.photos/seed/voice3/40/40" alt="">
+            </div>
+            <div>
+              <div class="voice-name">C社 代表取締役様</div>
+              <div class="voice-role">福岡市城南区 / 電気設備工事</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-label fade-in">Contact</span>
+          <h2 class="contact-info-title fade-in">まずは無料で<br>ご相談ください。</h2>
+          <p class="contact-info-sub fade-in">電気代の削減・LED化・太陽光発電・電気工事のことなら、どんな小さなことでもお気軽にご相談ください。見積もりも現地調査も無料です。</p>
+          <a href="tel:092-801-0063" class="contact-tel-block fade-in" style="display:block; text-decoration:none;">
+            <div class="contact-tel-label">お電話でのご相談</div>
+            <div class="contact-tel-num">📞 092-801-0063</div>
+            <div class="contact-tel-hours">受付時間：平日 8:00〜18:00</div>
+          </a>
+          <dl class="contact-info-items fade-in">
+            <div class="contact-info-item">
+              <dt>会社名</dt>
+              <dd>彩備電気株式会社</dd>
+            </div>
+            <div class="contact-info-item">
+              <dt>所在地</dt>
+              <dd>〒814-0111<br>福岡県福岡市城南区神松寺3丁目22番5号</dd>
+            </div>
+            <div class="contact-info-item">
+              <dt>創業</dt>
+              <dd>昭和55年（1980年）</dd>
+            </div>
+            <div class="contact-info-item">
+              <dt>対応エリア</dt>
+              <dd>福岡市内・福岡県全域（要相談）</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="contact-form fade-in fade-delay-1">
+          <div class="form-title">メールでのお問い合わせ</div>
+          <form>
+            <div class="form-group">
+              <label class="form-label">お名前<span class="required">必須</span></label>
+              <input type="text" class="form-input" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">電話番号<span class="required">必須</span></label>
+              <input type="tel" class="form-input" placeholder="092-000-0000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">ご相談内容</label>
+              <textarea class="form-textarea" placeholder="例：工場のLED化を検討しています。まずは見積もりをお願いしたいです。"></textarea>
+            </div>
+            <button type="submit" class="form-submit">この内容で送る</button>
+            <p class="form-note">通常1営業日以内にご返信します</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">彩備電気株式会社</div>
+        <address class="footer-address" style="font-style:normal;">
+          〒814-0111 福岡県福岡市城南区神松寺3丁目22番5号<br>
+          TEL: 092-801-0063
+        </address>
+      </div>
+      <nav class="footer-links">
+        <a href="#services">サービス</a>
+        <a href="#about">会社概要</a>
+        <a href="#process">施工の流れ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+    <p class="footer-copy">© 2026 彩備電気株式会社. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // ===== Scroll fade-in =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ===== Sticky header =====
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ===== Mobile nav =====
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+
+    // ===== Smooth scroll =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = header.offsetHeight + 16;
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
