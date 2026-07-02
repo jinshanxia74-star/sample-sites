@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DINING祥 food&drink | 福岡・洋酒とカクテルの大人ビストロ</title>
+  <meta name="description" content="福岡の路地裏、大人のための西洋ビストロ「DINING祥 food&drink」。ウイスキー・ブランデーなど世界の洋酒とカクテルを、リーズナブルな軽食とともに。落ち着いて過ごせる、通いたくなる一軒。">
+  <meta property="og:title" content="DINING祥 food&drink | 福岡・洋酒とカクテルの大人ビストロ">
+  <meta property="og:description" content="洋酒・カクテル中心。リーズナブルで居心地のいい、大人の西洋ビストロ。福岡。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="dining-sho-bistro-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "DINING祥 food&drink",
+    "description": "洋酒・カクテル中心の大人の西洋ビストロ。リーズナブルな軽食も充実。",
+    "servesCuisine": ["Bar", "洋酒", "カクテル", "軽食", "洋食"],
+    "priceRange": "¥¥",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "福岡市",
+      "addressRegion": "福岡県",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 33.5484125, "longitude": 130.3804277 },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=DINING%E7%A5%A5food%26drink%2033.5484125%2C130.3804277",
+    "sameAs": ["https://instagram.com/dining_sho/"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ══════════════════════════════════════════════════════════
+       DINING祥 food&drink — 温かいウッディ地 × エディトリアル
+       Design Brief
+         業種    : 大人の西洋ビストロ／ダイニングバー（洋酒・カクテル・軽食）
+         見出し欧: Cormorant Garamond（西洋・エレガントなセリフ）
+         見出し和: Shippori Mincho（格調・和洋折衷の明朝）
+         本文    : Noto Sans JP（可読性）
+         参照    : Airtable Coral #aa2d00 / Forest #0a2e0e ＋ Starbucks warm cream / gold
+         世界観  : 焦げた赤・深緑が所々に効く、ウッディで大人びた雑誌風エディトリアル
+       ══════════════════════════════════════════════════════════ */
+    :root{
+      --bg:            #f2ede1;   /* ウッディ生成り地 */
+      --bg-2:          #ece3d2;   /* やや沈めた地 */
+      --surface:       #fbf7ef;   /* 明るいカード */
+      --wood:          #e6d8bf;   /* 木目タン面 */
+      --primary:       #aa2d00;   /* 焦げ赤（Airtable Coral） */
+      --primary-deep:  #7d2100;   /* 押下・深い焦げ赤 */
+      --forest:        #0a2e0e;   /* 深緑（Airtable Forest） */
+      --forest-2:      #1e3932;   /* Starbucks House Green */
+      --gold:          #cba258;   /* ゴールド（ヘアライン・小差し色） */
+      --gold-soft:     #dfc49d;
+      --text:          #2a2018;   /* エスプレッソ */
+      --text-muted:    #6f5b45;   /* 木の陰 */
+      --text-on-dark:  #f4ede0;
+      --border:        rgba(42,32,24,0.14);
+      --hairline:      rgba(203,162,88,0.45);
+      --font-disp:     'Cormorant Garamond', serif;
+      --font-head:     'Shippori Mincho', serif;
+      --font-body:     'Noto Sans JP', sans-serif;
+      --radius:        6px;
+      --transition:    0.5s cubic-bezier(0.22,1,0.36,1);
+      --shadow-soft:
+        0 1px 2px rgba(42,32,24,0.06),
+        0 8px 24px rgba(42,32,24,0.08),
+        0 24px 60px rgba(42,32,24,0.07);
+      --maxw: 1180px;
+    }
+    *,*::before,*::after{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    html, body{ overflow-x:hidden; }
+    body{
+      font-family:var(--font-body);
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.9;
+      letter-spacing:0.02em;
+      font-weight:300;
+      /* ウッディな紙のような微かな地の陰影 */
+      background-image:
+        radial-gradient(120% 90% at 15% -10%, rgba(203,162,88,0.10), transparent 60%),
+        radial-gradient(120% 90% at 100% 0%, rgba(170,45,0,0.05), transparent 55%);
+      background-attachment:fixed;
+    }
+    ::selection{ background:var(--primary); color:var(--bg); }
+    img{ display:block; max-width:100%; }
+    a{ color:inherit; text-decoration:none; }
+
+    .skip-link{
+      position:absolute; left:-999px; top:0;
+      background:var(--primary); color:var(--bg);
+      padding:10px 18px; z-index:600; border-radius:var(--radius);
+    }
+    .skip-link:focus{ left:12px; top:12px; }
+
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+
+    /* エディトリアルのラベル（アイブロウ） */
+    .eyebrow{
+      font-family:var(--font-disp);
+      font-size:14px; font-style:italic; letter-spacing:0.14em;
+      color:var(--primary);
+      display:inline-flex; align-items:center; gap:12px;
+    }
+    .eyebrow::before{
+      content:""; width:34px; height:1px; background:var(--gold);
+    }
+
+    /* ── HEADER ── */
+    header{
+      position:fixed; inset:0 0 auto 0; z-index:300;
+      padding:20px 0;
+      backdrop-filter:blur(14px) saturate(150%);
+      -webkit-backdrop-filter:blur(14px) saturate(150%);
+      background:rgba(242,237,225,0.72);
+      border-bottom:1px solid transparent;
+      transition:var(--transition);
+    }
+    header.scrolled{
+      padding:12px 0;
+      background:rgba(242,237,225,0.9);
+      border-bottom:1px solid var(--hairline);
+      box-shadow:0 6px 24px rgba(42,32,24,0.06);
+    }
+    .header-inner{ display:flex; align-items:center; justify-content:space-between; }
+    .brand{ display:flex; flex-direction:column; line-height:1.05; }
+    .brand b{
+      font-family:var(--font-head); font-weight:700;
+      font-size:23px; letter-spacing:0.16em; color:var(--text);
+    }
+    .brand span{
+      font-family:var(--font-disp); font-style:italic;
+      font-size:13px; letter-spacing:0.34em; color:var(--primary);
+      margin-top:3px;
+    }
+    nav.main{ display:flex; align-items:center; gap:34px; }
+    nav.main a{
+      font-size:13px; letter-spacing:0.12em; color:var(--text-muted);
+      font-weight:400; position:relative; padding:4px 0; transition:var(--transition);
+    }
+    nav.main a::after{
+      content:""; position:absolute; left:0; bottom:-2px; width:0; height:1px;
+      background:var(--primary); transition:var(--transition);
+    }
+    nav.main a:hover{ color:var(--text); }
+    nav.main a:hover::after{ width:100%; }
+    .btn{
+      display:inline-flex; align-items:center; gap:9px;
+      font-family:var(--font-body); font-weight:500; font-size:14px;
+      letter-spacing:0.06em; cursor:pointer; border:none;
+      padding:14px 26px; border-radius:var(--radius);
+      transition:var(--transition); white-space:nowrap;
+    }
+    .btn:active{ transform:scale(0.97); }
+    .btn-primary{ background:var(--primary); color:var(--bg); box-shadow:0 8px 22px rgba(170,45,0,0.22); }
+    .btn-primary:hover{ background:var(--primary-deep); box-shadow:0 12px 30px rgba(170,45,0,0.28); }
+    .btn-ghost{ background:transparent; color:var(--text); border:1px solid var(--border); }
+    .btn-ghost:hover{ border-color:var(--primary); color:var(--primary); }
+    .btn-gold{ background:transparent; color:var(--text-on-dark); border:1px solid rgba(244,237,224,0.4); }
+    .btn-gold:hover{ background:rgba(244,237,224,0.1); border-color:var(--gold); }
+    .nav-toggle{ display:none; background:none; border:none; cursor:pointer; padding:6px; }
+    .nav-toggle span{ display:block; width:26px; height:2px; background:var(--text); margin:5px 0; transition:var(--transition); }
+
+    /* ── HERO ── */
+    .hero{ position:relative; padding:170px 0 90px; }
+    .hero-grid{
+      display:grid; grid-template-columns:1.05fr 0.95fr;
+      gap:56px; align-items:center;
+    }
+    .hero-copy .eyebrow{ margin-bottom:26px; }
+    .hero h1{
+      font-family:var(--font-head); font-weight:700;
+      font-size:clamp(38px, 5.6vw, 68px); line-height:1.28;
+      letter-spacing:0.04em; color:var(--text);
+    }
+    .hero h1 em{
+      font-family:var(--font-disp); font-style:italic; font-weight:500;
+      color:var(--primary); letter-spacing:0.01em;
+    }
+    .hero-lead{
+      margin:30px 0 38px; max-width:30em;
+      color:var(--text-muted); font-size:16px; line-height:2.1;
+    }
+    .hero-cta{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+    .hero-meta{
+      margin-top:44px; display:flex; gap:34px; flex-wrap:wrap;
+      padding-top:26px; border-top:1px solid var(--border);
+    }
+    .hero-meta div span{ display:block; font-family:var(--font-disp); font-style:italic; font-size:13px; color:var(--primary); letter-spacing:0.08em; }
+    .hero-meta div b{ font-family:var(--font-head); font-weight:600; font-size:15px; letter-spacing:0.08em; color:var(--text); }
+
+    .hero-visual{ position:relative; }
+    .hero-frame{
+      position:relative; aspect-ratio:4/5; border-radius:10px; overflow:hidden;
+      background:linear-gradient(150deg, var(--forest-2), var(--forest) 60%, #06210a);
+      box-shadow:var(--shadow-soft);
+    }
+    .hero-frame img{ width:100%; height:100%; object-fit:cover; }
+    .hero-frame::after{
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg, transparent 45%, rgba(6,12,6,0.5));
+    }
+    .hero-badge{
+      position:absolute; left:-26px; bottom:44px; z-index:3;
+      background:var(--primary); color:var(--bg);
+      padding:20px 24px; border-radius:8px; box-shadow:0 16px 40px rgba(170,45,0,0.3);
+      max-width:230px;
+    }
+    .hero-badge b{ font-family:var(--font-disp); font-style:italic; font-size:30px; display:block; line-height:1; }
+    .hero-badge span{ font-size:12.5px; letter-spacing:0.08em; opacity:0.92; }
+
+    /* ── SECTION SHELL ── */
+    section{ position:relative; }
+    .sec-pad{ padding:96px 0; }
+    .sec-head{ max-width:640px; margin-bottom:56px; }
+    .sec-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+    .sec-head h2{
+      font-family:var(--font-head); font-weight:700;
+      font-size:clamp(28px,3.6vw,42px); line-height:1.4; letter-spacing:0.03em;
+      margin:20px 0 18px;
+    }
+    .sec-head p{ color:var(--text-muted); font-size:15.5px; }
+
+    /* ── CONCEPT ── */
+    .concept{ background:var(--bg-2); }
+    .concept-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:center; }
+    .concept-figure{
+      aspect-ratio:3/4; border-radius:10px; overflow:hidden; box-shadow:var(--shadow-soft);
+      background:linear-gradient(160deg, var(--wood), #cdb992);
+    }
+    .concept-figure img{ width:100%; height:100%; object-fit:cover; }
+    .concept-body h2{
+      font-family:var(--font-head); font-weight:700; letter-spacing:0.04em;
+      font-size:clamp(26px,3.4vw,40px); line-height:1.5; margin:22px 0 26px;
+    }
+    .concept-body h2 em{ font-family:var(--font-disp); font-style:italic; color:var(--primary); }
+    .concept-body p{ color:var(--text-muted); margin-bottom:18px; line-height:2.15; }
+    .quote-mark{ font-family:var(--font-disp); color:var(--gold); font-size:64px; line-height:0.4; }
+
+    /* ── SIGNATURE CARDS ── */
+    .sig{ display:grid; grid-template-columns:repeat(12,1fr); gap:24px; align-items:start; }
+    .sig-card{
+      border-radius:12px; padding:44px 40px; overflow:hidden; position:relative;
+      box-shadow:var(--shadow-soft); transition:var(--transition);
+    }
+    .sig-card:hover{ transform:translateY(-6px); }
+    .sig-card .kicker{ font-family:var(--font-disp); font-style:italic; font-size:15px; letter-spacing:0.1em; opacity:0.85; }
+    .sig-card h3{ font-family:var(--font-head); font-weight:700; font-size:27px; letter-spacing:0.05em; margin:14px 0 18px; line-height:1.5; }
+    .sig-card p{ font-size:14.5px; line-height:2; }
+    .sig-card .tag{
+      display:inline-block; margin-top:22px; font-size:12px; letter-spacing:0.14em;
+      padding:6px 14px; border-radius:100px; border:1px solid currentColor;
+    }
+    /* 焦げ赤（大・洋酒）*/
+    .sig-red{ grid-column:span 5; background:var(--primary); color:var(--text-on-dark); min-height:360px; }
+    .sig-red .kicker{ color:var(--gold-soft); }
+    /* 深緑（中・カクテル）*/
+    .sig-green{ grid-column:span 4; background:linear-gradient(160deg,var(--forest-2),var(--forest)); color:var(--text-on-dark); min-height:300px; }
+    .sig-green .kicker{ color:var(--gold-soft); }
+    /* クリーム callout（小・軽食コスパ）*/
+    .sig-cream{ grid-column:span 3; background:var(--surface); color:var(--text); border:1px solid var(--border); min-height:260px; }
+    .sig-cream .kicker{ color:var(--primary); }
+    .sig-cream .tag{ color:var(--primary); }
+
+    /* ── MENU ── */
+    .menu{ background:var(--forest); color:var(--text-on-dark); }
+    .menu .eyebrow{ color:var(--gold-soft); }
+    .menu .eyebrow::before{ background:var(--gold); }
+    .menu .sec-head h2{ color:var(--text-on-dark); }
+    .menu-cols{ display:grid; grid-template-columns:1fr 1fr; gap:56px 72px; }
+    .menu-group h3{
+      font-family:var(--font-disp); font-style:italic; font-size:26px; color:var(--gold-soft);
+      letter-spacing:0.06em; padding-bottom:14px; margin-bottom:8px;
+      border-bottom:1px solid rgba(203,162,88,0.35);
+      display:flex; justify-content:space-between; align-items:baseline;
+    }
+    .menu-group h3 small{ font-family:var(--font-body); font-style:normal; font-size:12px; letter-spacing:0.14em; color:var(--text-on-dark); opacity:0.6; }
+    .menu-item{ display:flex; justify-content:space-between; gap:20px; align-items:baseline; padding:15px 0; border-bottom:1px dashed rgba(244,237,224,0.14); }
+    .menu-item:last-child{ border-bottom:none; }
+    .menu-item .mi-name{ font-family:var(--font-head); font-weight:500; font-size:16px; letter-spacing:0.04em; }
+    .menu-item .mi-desc{ display:block; font-size:12.5px; color:rgba(244,237,224,0.6); font-weight:300; letter-spacing:0.02em; margin-top:2px; }
+    .menu-item .mi-price{ font-family:var(--font-disp); font-size:20px; color:var(--gold-soft); white-space:nowrap; }
+    .menu-note{ margin-top:44px; font-size:12.5px; color:rgba(244,237,224,0.55); letter-spacing:0.05em; }
+
+    /* ── GALLERY ── */
+    .gallery-grid{ display:grid; grid-template-columns:2fr 1fr 1fr; grid-auto-rows:190px; gap:16px; }
+    .gcell{ border-radius:8px; overflow:hidden; position:relative; background:var(--wood); box-shadow:var(--shadow-soft); }
+    .gcell img{ width:100%; height:100%; object-fit:cover; transition:var(--transition); }
+    .gcell:hover img{ transform:scale(1.06); }
+    .gcell.tall{ grid-row:span 2; }
+    .gcell.wide{ grid-column:span 2; }
+    .gcell .cap{
+      position:absolute; left:16px; bottom:14px; z-index:2;
+      font-family:var(--font-disp); font-style:italic; font-size:15px; color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,0.5); letter-spacing:0.06em;
+    }
+    .gcell::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(6,12,6,0.42)); }
+
+    /* ── TESTIMONIALS ── */
+    .voices{ background:var(--bg-2); }
+    .voice-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+    .voice{
+      background:var(--surface); border:1px solid var(--border); border-radius:10px;
+      padding:34px 32px; box-shadow:var(--shadow-soft); position:relative;
+    }
+    .voice::before{ content:"\201C"; font-family:var(--font-disp); color:var(--gold); font-size:70px; line-height:0.7; display:block; margin-bottom:8px; }
+    .voice p{ font-size:14.5px; color:var(--text); line-height:2; margin-bottom:20px; }
+    .voice .stars{ color:var(--primary); letter-spacing:3px; font-size:13px; margin-bottom:10px; }
+    .voice cite{ font-style:normal; font-family:var(--font-head); font-weight:600; font-size:14px; letter-spacing:0.05em; }
+    .voice cite span{ display:block; font-family:var(--font-body); font-weight:300; font-size:11.5px; color:var(--text-muted); letter-spacing:0.06em; margin-top:2px; }
+    .voice-source{ text-align:center; margin-top:38px; font-size:12.5px; color:var(--text-muted); letter-spacing:0.05em; }
+
+    /* ── ACCESS ── */
+    .access-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-soft); }
+    .access-info{ background:var(--surface); padding:52px 48px; }
+    .access-info h2{ font-family:var(--font-head); font-weight:700; font-size:30px; letter-spacing:0.04em; margin:16px 0 30px; }
+    .info-row{ display:flex; gap:20px; padding:16px 0; border-bottom:1px solid var(--border); }
+    .info-row:last-of-type{ border-bottom:none; }
+    .info-row .k{ font-family:var(--font-disp); font-style:italic; color:var(--primary); font-size:15px; min-width:96px; letter-spacing:0.06em; }
+    .info-row .v{ font-size:14.5px; color:var(--text); }
+    .access-map{ min-height:360px; background:linear-gradient(160deg,var(--forest-2),var(--forest)); position:relative; }
+    .access-map iframe{ width:100%; height:100%; border:0; position:absolute; inset:0; }
+    .map-fallback{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; color:var(--text-on-dark); text-align:center; padding:30px; }
+    .map-fallback .pin{ font-size:40px; }
+
+    /* ── FINAL CTA ── */
+    .final{ background:var(--primary); color:var(--text-on-dark); text-align:center; }
+    .final .eyebrow{ color:var(--gold-soft); justify-content:center; }
+    .final .eyebrow::before{ background:var(--gold-soft); }
+    .final h2{ font-family:var(--font-head); font-weight:700; font-size:clamp(30px,4.4vw,52px); line-height:1.4; letter-spacing:0.04em; margin:22px 0 20px; }
+    .final h2 em{ font-family:var(--font-disp); font-style:italic; font-weight:500; }
+    .final p{ max-width:34em; margin:0 auto 40px; opacity:0.9; font-size:15.5px; }
+    .final-cta{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; }
+    .tel-cta{
+      font-family:var(--font-disp); font-size:30px; letter-spacing:0.04em; color:var(--text-on-dark);
+      display:inline-flex; align-items:center; gap:12px; margin-top:34px;
+    }
+    .tel-cta small{ display:block; font-family:var(--font-body); font-size:11.5px; letter-spacing:0.1em; opacity:0.85; }
+
+    /* ── FOOTER ── */
+    footer{ background:#1a140e; color:rgba(244,237,224,0.7); padding:64px 0 34px; }
+    .foot-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:44px; border-bottom:1px solid rgba(244,237,224,0.1); }
+    .foot-brand b{ font-family:var(--font-head); font-weight:700; font-size:22px; letter-spacing:0.16em; color:var(--text-on-dark); }
+    .foot-brand span{ font-family:var(--font-disp); font-style:italic; color:var(--gold-soft); letter-spacing:0.24em; font-size:13px; display:block; margin-top:4px; }
+    .foot-brand p{ margin-top:18px; font-size:13px; line-height:1.9; max-width:26em; }
+    .foot-col h4{ font-family:var(--font-disp); font-style:italic; color:var(--gold-soft); font-size:16px; letter-spacing:0.06em; margin-bottom:16px; }
+    .foot-col a, .foot-col p{ display:block; font-size:13px; color:rgba(244,237,224,0.7); padding:4px 0; transition:var(--transition); }
+    .foot-col a:hover{ color:var(--gold-soft); }
+    .foot-bottom{ padding-top:26px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:11.5px; color:rgba(244,237,224,0.45); letter-spacing:0.05em; }
+
+    /* ── FADE IN ── */
+    .fade{ opacity:0; transform:translateY(28px); transition:opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+    .fade.visible{ opacity:1; transform:none; }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width:1024px){
+      .hero-grid{ grid-template-columns:1fr 0.9fr; gap:36px; }
+      .concept-grid{ grid-template-columns:1fr; gap:40px; }
+      .concept-figure{ max-width:420px; }
+      .sig-red,.sig-green,.sig-cream{ grid-column:span 12; min-height:0; }
+      .gallery-grid{ grid-template-columns:1fr 1fr; }
+    }
+    @media (max-width:768px){
+      .wrap{ padding:0 22px; }
+      .sec-pad{ padding:70px 0; }
+      nav.main{ display:none; }
+      nav.main.open{
+        display:flex; position:absolute; top:100%; left:0; right:0;
+        flex-direction:column; gap:0; padding:14px 22px 22px;
+        background:rgba(242,237,225,0.97); border-bottom:1px solid var(--hairline);
+        backdrop-filter:blur(14px);
+      }
+      nav.main.open a{ padding:14px 0; border-bottom:1px solid var(--border); width:100%; }
+      nav.main.open .btn{ margin-top:12px; justify-content:center; }
+      .nav-toggle{ display:block; }
+      .hero{ padding:130px 0 60px; }
+      .hero-grid{ grid-template-columns:1fr; gap:44px; }
+      .hero-visual{ max-width:420px; }
+      .hero-badge{ left:auto; right:16px; }
+      .menu-cols{ grid-template-columns:1fr; gap:44px; }
+      .access-grid{ grid-template-columns:1fr; }
+      .access-map{ min-height:280px; order:-1; }
+    }
+    @media (max-width:480px){
+      .wrap{ padding:0 18px; }
+      .hero h1{ font-size:34px; }
+      .hero-meta{ gap:22px; }
+      .gallery-grid{ grid-template-columns:1fr; grid-auto-rows:200px; }
+      .gcell.wide{ grid-column:span 1; }
+      .gcell.tall{ grid-row:span 1; }
+      .sig-card{ padding:34px 28px; }
+      .access-info{ padding:38px 26px; }
+      .tel-cta{ font-size:24px; }
+    }
+    @media (prefers-reduced-motion:reduce){
+      .fade{ transition:none; opacity:1; transform:none; }
+      html{ scroll-behavior:auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <!-- ═══ HEADER ═══ -->
+  <header id="siteHeader">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="DINING祥 food&drink トップへ">
+        <b>DINING祥</b>
+        <span>food &amp; drink</span>
+      </a>
+      <nav class="main" id="nav" aria-label="メインナビゲーション">
+        <a href="#concept">お店について</a>
+        <a href="#menu">メニュー</a>
+        <a href="#gallery">店内</a>
+        <a href="#voices">お客様の声</a>
+        <a href="#access">アクセス</a>
+        <a class="btn btn-primary" href="#reserve">席を予約する</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═══ HERO (Attention) ═══ -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy fade">
+          <span class="eyebrow">Fukuoka · food &amp; drink</span>
+          <h1>大人の夜に、<br>静かに寄り添う<br><em>洋酒とカクテル</em>を。</h1>
+          <p class="hero-lead">
+            福岡の路地裏に佇む、大人のための西洋ビストロ。ウイスキー・ブランデーを軸に、世界の洋酒とカクテルを、
+            肩肘張らないリーズナブルな軽食とともに。懐かしくて、居心地がいい。ふらりと通いたくなる一軒です。
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#reserve">席を予約する</a>
+            <a class="btn btn-ghost" href="#menu">メニューを見る</a>
+          </div>
+          <div class="hero-meta">
+            <div><span>Spirits</span><b>洋酒・カクテル中心</b></div>
+            <div><span>Food</span><b>リーズナブルな軽食</b></div>
+            <div><span>Mood</span><b>落ち着ける大人の空間</b></div>
+          </div>
+        </div>
+        <div class="hero-visual fade">
+          <div class="hero-frame">
+            <!-- 要Canva差し替え: dining-sho-bistro-hero.png（洋酒棚のある温かいウッディな店内） -->
+            <img src="dining-sho-bistro-hero.png" alt="DINING祥 food&drink の店内。ずらりと並ぶ洋酒のボトルと温かな灯り" loading="eager"
+                 onerror="this.style.display='none'">
+          </div>
+          <div class="hero-badge">
+            <b>穴場</b>
+            <span>「また穴場発見」と言われる、知る人ぞ知る一軒。</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONCEPT (Interest) ═══ -->
+    <section class="concept sec-pad" id="concept">
+      <div class="wrap concept-grid">
+        <div class="concept-figure fade">
+          <!-- 要Canva差し替え: dining-sho-bistro-interior.png（カウンターとボトル棚） -->
+          <img src="dining-sho-bistro-interior.png" alt="DINING祥のカウンター席とボトルの並ぶ棚" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <div class="concept-body fade">
+          <span class="eyebrow">Our place</span>
+          <h2>気取らないのに、<em>ちゃんと大人。</em><br>そんな夜の居場所を。</h2>
+          <p class="quote-mark">”</p>
+          <p>
+            扉を開けると、ウッディで落ち着いた空気。棚には見渡すほどの洋酒が並び、
+            今夜の気分に合わせて一杯を選べます。カウンター越しに交わす会話も、この店の名物のひとつ。
+          </p>
+          <p>
+            「リーズナブルで美味しい」「とても居心地がいい」——お客様からいただく言葉のとおり、
+            肩の力を抜いて過ごせる空間です。ひとりでも、大切な人とでも。今夜の一杯を、ここで。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SIGNATURE CARDS ═══ -->
+    <section class="sec-pad" id="offer">
+      <div class="wrap">
+        <div class="sec-head fade">
+          <span class="eyebrow">What we serve</span>
+          <h2>洋酒と、カクテルと、寄り添う小皿。</h2>
+          <p>飲みものを主役に、料理はそっと寄り添う。祥（しょう）で過ごす夜を彩る、三つの愉しみ。</p>
+        </div>
+        <div class="sig">
+          <article class="sig-card sig-red fade">
+            <span class="kicker">Spirits</span>
+            <h3>世界の洋酒を、<br>今夜の気分で。</h3>
+            <p>ウイスキー、ブランデーを中心に、棚いっぱいに揃えた洋酒。ビールもご用意。
+               「洋酒が沢山楽しめそう」——そんな一杯との出会いを、じっくりと。</p>
+            <span class="tag">WHISKY · BRANDY · BEER</span>
+          </article>
+          <article class="sig-card sig-green fade">
+            <span class="kicker">Cocktails</span>
+            <h3>あなたのための<br>一杯を、丁寧に。</h3>
+            <p>定番から季節の一杯まで、その日の気分に合わせてお作りします。
+               「カクテルもオススメ」と評される、静かな自信の一杯を。</p>
+            <span class="tag">CLASSIC · SEASONAL</span>
+          </article>
+          <article class="sig-card sig-cream fade">
+            <span class="kicker">Food</span>
+            <h3>コスパの、<br>いい軽食。</h3>
+            <p>リーズナブルで、美味しい。飲みに寄り添う小皿料理。「コスパめっちゃよい」と評判です。</p>
+            <span class="tag">REASONABLE</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MENU ═══ -->
+    <section class="menu sec-pad" id="menu">
+      <div class="wrap">
+        <div class="sec-head fade">
+          <span class="eyebrow">Menu</span>
+          <h2>今夜の一杯と、小さな一皿。</h2>
+          <p style="color:rgba(244,237,224,0.7)">※ 内容・価格は一例です。実際のメニューに合わせて差し替えます【要差し替え】</p>
+        </div>
+        <div class="menu-cols">
+          <div class="menu-group fade">
+            <h3>Whisky &amp; Brandy <small>ウイスキー・ブランデー</small></h3>
+            <div class="menu-item"><div><span class="mi-name">ハウスウイスキー</span><span class="mi-desc">ロック／ハイボール／水割り</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">シングルモルト（各種）</span><span class="mi-desc">棚のラインナップよりお選びを</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">ブランデー</span><span class="mi-desc">食後の一杯に</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">生ビール</span><span class="mi-desc">まずは一杯</span></div><span class="mi-price">¥—</span></div>
+          </div>
+          <div class="menu-group fade">
+            <h3>Cocktails <small>カクテル</small></h3>
+            <div class="menu-item"><div><span class="mi-name">定番カクテル</span><span class="mi-desc">ジントニック／モスコミュール ほか</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">季節のカクテル</span><span class="mi-desc">旬の素材で一杯を</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">おまかせカクテル</span><span class="mi-desc">気分をお伝えください</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">ノンアルコール</span><span class="mi-desc">お酒を飲まない方にも</span></div><span class="mi-price">¥—</span></div>
+          </div>
+          <div class="menu-group fade">
+            <h3>Light Meals <small>軽食・フード</small></h3>
+            <div class="menu-item"><div><span class="mi-name">本日の一皿</span><span class="mi-desc">その日のおすすめ</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">おつまみ盛り合わせ</span><span class="mi-desc">お酒に寄り添う小皿</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">チーズ・ナッツ</span><span class="mi-desc">洋酒のお供に</span></div><span class="mi-price">¥—</span></div>
+          </div>
+          <div class="menu-group fade">
+            <h3>Charge <small>ご利用について</small></h3>
+            <div class="menu-item"><div><span class="mi-name">チャージ／お通し</span><span class="mi-desc">詳細は店頭にて【要差し替え】</span></div><span class="mi-price">¥—</span></div>
+            <div class="menu-item"><div><span class="mi-name">お支払い</span><span class="mi-desc">現金／各種【要確認】</span></div><span class="mi-price">—</span></div>
+          </div>
+        </div>
+        <p class="menu-note">※ 上記はサンプル表示です。正式なメニュー・価格をいただき次第、実データに差し替えます。</p>
+      </div>
+    </section>
+
+    <!-- ═══ GALLERY ═══ -->
+    <section class="sec-pad" id="gallery">
+      <div class="wrap">
+        <div class="sec-head center fade">
+          <span class="eyebrow">Gallery</span>
+          <h2>灯りと、ボトルと、静かな時間。</h2>
+        </div>
+        <div class="gallery-grid fade">
+          <div class="gcell tall">
+            <!-- 要Canva差し替え: dining-sho-bistro-drink.png -->
+            <img src="dining-sho-bistro-drink.png" alt="グラスに注がれたカクテルと洋酒" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(160deg,var(--forest-2),var(--forest))'">
+            <span class="cap">Cocktail time</span>
+          </div>
+          <div class="gcell">
+            <!-- 要Canva差し替え: dining-sho-bistro-interior.png -->
+            <img src="dining-sho-bistro-interior.png" alt="ウッディな店内カウンター" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(160deg,var(--wood),#cdb992)'">
+          </div>
+          <div class="gcell">
+            <!-- 要Canva差し替え: dining-sho-bistro-food.png -->
+            <img src="dining-sho-bistro-food.png" alt="洋酒に寄り添う軽食" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(160deg,var(--primary),var(--primary-deep))'">
+            <span class="cap">Light meal</span>
+          </div>
+          <div class="gcell wide">
+            <!-- 要Canva差し替え: dining-sho-bistro-exterior.png -->
+            <img src="dining-sho-bistro-exterior.png" alt="DINING祥 の外観・入口" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(160deg,var(--forest),#06210a)'">
+            <span class="cap">路地裏の入口</span>
+          </div>
+          <div class="gcell">
+            <!-- 要Canva差し替え: dining-sho-bistro-hero.png -->
+            <img src="dining-sho-bistro-hero.png" alt="ボトル棚の並ぶ壁面" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(160deg,var(--wood),#b89a6a)'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS (Desire) ═══ -->
+    <section class="voices sec-pad" id="voices">
+      <div class="wrap">
+        <div class="sec-head center fade">
+          <span class="eyebrow">Voices</span>
+          <h2>お客様から、いただいた声。</h2>
+          <p>Googleマップに寄せられた、実際の口コミより。</p>
+        </div>
+        <div class="voice-grid">
+          <blockquote class="voice fade">
+            <div class="stars" aria-label="5段階評価">★★★★★</div>
+            <p>リーズナブルで、美味しい軽食を提供されています。飲み物もビールを初め、主に洋酒中心に揃えてあります。一度は行ってみる価値のあるところですよ。</p>
+            <cite>仲魔仁言太2 さん<span>Google ローカルガイド</span></cite>
+          </blockquote>
+          <blockquote class="voice fade">
+            <div class="stars" aria-label="5段階評価">★★★★★</div>
+            <p>とても居心地がよく、食事が美味しい。カクテルもオススメ。コスパめっちゃよいです。</p>
+            <cite>A sana さん<span>Google ローカルガイド</span></cite>
+          </blockquote>
+          <blockquote class="voice fade">
+            <div class="stars" aria-label="5段階評価">★★★★★</div>
+            <p>お料理は美味しいし、落ち着けるお店です。</p>
+            <cite>ゆづゆづ さん<span>Google ローカルガイド</span></cite>
+          </blockquote>
+          <blockquote class="voice fade">
+            <div class="stars" aria-label="5段階評価">★★★★★</div>
+            <p>洋酒が沢山楽しめそう。またもやプロにあった。全てオッケー、また穴場発見。</p>
+            <cite>Google の口コミより<span>DINING祥 food&drink</span></cite>
+          </blockquote>
+        </div>
+        <p class="voice-source">※ 掲載の口コミはGoogleマップに寄せられた実際の投稿を、読みやすさのため一部整えて引用しています。</p>
+      </div>
+    </section>
+
+    <!-- ═══ ACCESS ═══ -->
+    <section class="sec-pad" id="access">
+      <div class="wrap">
+        <div class="access-grid fade">
+          <div class="access-info">
+            <span class="eyebrow">Access</span>
+            <h2>店舗情報・アクセス</h2>
+            <div class="info-row"><span class="k">Store</span><span class="v">DINING祥 food&drink</span></div>
+            <div class="info-row"><span class="k">Area</span><span class="v">福岡県 福岡市【正式な住所を要差し替え】</span></div>
+            <div class="info-row"><span class="k">Open</span><span class="v">夜の営業（営業時間・定休日は【要差し替え】）</span></div>
+            <div class="info-row"><span class="k">Tel</span><span class="v"><a href="tel:000-0000-0000">000-0000-0000【要差し替え】</a></span></div>
+            <div class="info-row"><span class="k">SNS</span><span class="v"><a href="https://instagram.com/dining_sho/" target="_blank" rel="noopener">Instagram @dining_sho</a></span></div>
+            <a class="btn btn-primary" href="#reserve" style="margin-top:28px">席を予約する</a>
+          </div>
+          <div class="access-map">
+            <!-- Googleマップ埋め込み（正式住所受領後にiframeへ差し替え可）。暫定は検索リンク表示 -->
+            <div class="map-fallback">
+              <div class="pin">📍</div>
+              <p style="font-family:var(--font-disp);font-style:italic;font-size:20px;">Fukuoka</p>
+              <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=DINING%E7%A5%A5food%26drink%2033.5484125%2C130.3804277" target="_blank" rel="noopener">Googleマップで見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FINAL CTA (Action) ═══ -->
+    <section class="final sec-pad" id="reserve">
+      <div class="wrap">
+        <span class="eyebrow">Reservation</span>
+        <h2>今夜の一杯を、<br><em>祥</em>で。</h2>
+        <p>ご予約・お問い合わせはお電話、またはInstagramのDMから。ふらりと一名様も、大歓迎です。</p>
+        <div class="final-cta">
+          <a class="btn btn-gold" href="https://instagram.com/dining_sho/" target="_blank" rel="noopener">InstagramでDMする</a>
+          <a class="btn btn-gold" href="#access">アクセスを見る</a>
+        </div>
+        <a class="tel-cta" href="tel:000-0000-0000">
+          📞 000-0000-0000
+          <small>【電話番号を要差し替え】</small>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <b>DINING祥</b>
+          <span>food &amp; drink</span>
+          <p>福岡の路地裏、大人のための西洋ビストロ。洋酒とカクテルを、リーズナブルな軽食とともに。落ち着いて過ごせる一軒です。</p>
+        </div>
+        <div class="foot-col">
+          <h4>Menu</h4>
+          <a href="#concept">お店について</a>
+          <a href="#menu">メニュー</a>
+          <a href="#gallery">店内</a>
+          <a href="#voices">お客様の声</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="tel:000-0000-0000">Tel：000-0000-0000</a>
+          <a href="https://instagram.com/dining_sho/" target="_blank" rel="noopener">Instagram @dining_sho</a>
+          <a href="#access">アクセス</a>
+          <a href="#reserve">ご予約</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 DINING祥 food&drink. All rights reserved.</span>
+        <span>福岡市 · 洋酒 · カクテル · 軽食</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── ヘッダーのスクロール状態 ──
+    const header = document.getElementById('siteHeader');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive:true });
+
+    // ── モバイルナビ ──
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }));
+
+    // ── スクロールフェードイン ──
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+    document.querySelectorAll('.fade').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
