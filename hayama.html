@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>葉山珈琲 福大通り店 | 福岡・城南区 カフェインレスコーヒー専門店</title>
+  <meta name="description" content="福岡市城南区干隈の「葉山珈琲 福大通り店」。専任焙煎士が毎日焼き上げるスペシャリティ豆のカフェインレスコーヒー専門店。コシノジュンコ プロデュースの白を基調とした空間で、モーニング・パスタ・スイーツを。">
+  <meta property="og:title" content="葉山珈琲 福大通り店 | カフェインレスコーヒー専門店">
+  <meta property="og:description" content="専任焙煎士のスペシャリティ豆と、白を基調とした上質な空間。福岡・城南区でゆったりとした珈琲時間を。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="hayama-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "葉山珈琲 福大通り店",
+    "description": "スペシャリティ豆を使ったカフェインレスコーヒー専門店。モーニング・フード・スイーツも。",
+    "servesCuisine": "カフェ",
+    "priceRange": "¥¥",
+    "address": {"@type":"PostalAddress","streetAddress":"干隈2-44-28","addressLocality":"城南区","addressRegion":"福岡市","addressCountry":"JP"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : カフェインレスコーヒー専門店（上質・落ち着き・白基調）
+       見出し  : Noto Serif JP（格調・静けさ・焙煎のこだわり）
+       本文    : Noto Sans JP
+       数字/英語: Playfair Display（エレガント・エディトリアル）
+       世界観  : 温かいクリーム × 焙煎のコーヒーブラウン × ラテのゴールド × カフェインレスの若草（Starbucksのクリームキャンバス＋ピル型ボタンを参考に、白基調で上品に）
+    */
+    :root {
+      --color-bg:          #f7f1e8;
+      --color-surface:     #fffdf9;
+      --color-surface-2:   #efe6d7;
+      --color-primary:     #6f4a2e;
+      --color-primary-dk:  #543722;
+      --color-accent:      #b18a54;
+      --color-sage:        #7f8a63;
+      --color-ink:         #2b241d;
+      --color-text:        #4a4036;
+      --color-text-muted:  #93867660;
+      --color-muted:       #938676;
+      --color-line:        #e4d8c5;
+      --font-heading: 'Noto Serif JP', serif;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Playfair Display', serif;
+      --radius: 4px;
+      --transition: 0.4s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card: 0 2px 10px rgba(111,74,46,0.06), 0 18px 40px rgba(111,74,46,0.09);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.9; letter-spacing: 0.03em; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); background: rgba(255,253,249,0.82); border-bottom: 1px solid var(--color-line); padding: 16px 0; }
+    .header-inner { max-width: 1140px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { text-decoration: none; display: flex; flex-direction: column; }
+    .logo .name { font-family: var(--font-heading); font-weight: 600; font-size: 22px; letter-spacing: 0.28em; color: var(--color-primary); }
+    .logo .sub { font-family: var(--font-accent); font-style: italic; font-size: 11px; letter-spacing: 0.24em; color: var(--color-muted); margin-top: 2px; }
+    nav { display: flex; align-items: center; gap: 30px; }
+    nav a { font-size: 12.5px; letter-spacing: 0.1em; color: var(--color-text); text-decoration: none; transition: color var(--transition); }
+    nav a:hover { color: var(--color-primary); }
+    .nav-cta { background: var(--color-primary); color: #fff !important; padding: 9px 22px; border-radius: 30px; transition: background var(--transition), transform var(--transition) !important; }
+    .nav-cta:hover { background: var(--color-primary-dk) !important; transform: translateY(-2px); }
+
+    /* ── HERO ── */
+    .hero { padding: 138px 0 80px; position: relative; }
+    .hero-inner { max-width: 1140px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1fr 1.02fr; gap: 56px; align-items: center; }
+    .hero-eyebrow { font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.16em; color: var(--color-accent); margin-bottom: 20px; }
+    .hero h1 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.4; letter-spacing: 0.08em; color: var(--color-ink); margin-bottom: 26px; }
+    .hero h1 span { color: var(--color-primary); }
+    .hero-lead { font-size: 15.5px; color: var(--color-muted); line-height: 2.1; margin-bottom: 34px; max-width: 460px; }
+    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; background: var(--color-primary); color: #fff; font-size: 14px; letter-spacing: 0.1em; padding: 15px 38px; border-radius: 30px; text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { background: var(--color-primary-dk); transform: translateY(-3px); box-shadow: 0 12px 26px rgba(111,74,46,0.22); }
+    .btn-text { font-family: var(--font-accent); font-style: italic; font-size: 16px; color: var(--color-ink); text-decoration: none; border-bottom: 1px solid var(--color-accent); padding-bottom: 3px; transition: color var(--transition); }
+    .btn-text:hover { color: var(--color-primary); }
+    .hero-media { position: relative; }
+    .hero-media img { width: 100%; border-radius: 6px 6px 60px 6px; box-shadow: var(--shadow-card); display: block; }
+    .hero-media .tag { position: absolute; top: 22px; right: -14px; background: var(--color-sage); color: #fff; font-size: 11px; letter-spacing: 0.14em; padding: 8px 16px; border-radius: 30px; box-shadow: var(--shadow-card); }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1140px; margin: 0 auto; padding: 104px 28px; }
+    .section-head { text-align: center; margin-bottom: 60px; }
+    .section-en { display: block; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.18em; color: var(--color-accent); margin-bottom: 12px; }
+    .section-head h2 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(24px, 3vw, 36px); letter-spacing: 0.14em; color: var(--color-ink); }
+    .section-head p.lead { margin: 16px auto 0; color: var(--color-muted); font-size: 15px; max-width: 580px; }
+    .divider { width: 44px; height: 1px; background: var(--color-accent); margin: 18px auto 0; }
+
+    /* ── CONCEPT (3 col elegant) ── */
+    .concept { background: var(--color-surface); }
+    .concept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .concept-item { text-align: center; padding: 0 10px; }
+    .concept-num { font-family: var(--font-accent); font-style: italic; font-size: 34px; color: var(--color-accent); margin-bottom: 14px; }
+    .concept-item h3 { font-family: var(--font-heading); font-weight: 600; font-size: 18px; letter-spacing: 0.1em; color: var(--color-primary); margin-bottom: 12px; }
+    .concept-item p { font-size: 13.5px; color: var(--color-muted); line-height: 1.95; }
+    .concept-sep { width: 1px; }
+
+    /* ── ABOUT (space, interior) ── */
+    .about { background: var(--color-bg); }
+    .about-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    .about-media { position: relative; }
+    .about-media img { width: 100%; border-radius: 6px; box-shadow: var(--shadow-card); display: block; }
+    .about-text .section-en { text-align: left; }
+    .about-text h2 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-ink); margin-bottom: 22px; line-height: 1.5; }
+    .about-text p { font-size: 15px; color: var(--color-muted); line-height: 2.1; margin-bottom: 18px; }
+    .about-sign { font-family: var(--font-accent); font-style: italic; font-size: 15px; color: var(--color-accent); }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-surface); }
+    .menu-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 6px; overflow: hidden; box-shadow: var(--shadow-card); margin-bottom: 40px; background: var(--color-bg); }
+    .menu-feature img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block; }
+    .menu-feature-body { padding: 48px 46px; display: flex; flex-direction: column; justify-content: center; }
+    .menu-feature-body .tag { font-family: var(--font-accent); font-style: italic; color: var(--color-accent); font-size: 15px; margin-bottom: 10px; }
+    .menu-feature-body h3 { font-family: var(--font-heading); font-weight: 600; font-size: 26px; letter-spacing: 0.08em; color: var(--color-ink); margin-bottom: 14px; }
+    .menu-feature-body p { font-size: 14px; color: var(--color-muted); line-height: 1.95; margin-bottom: 20px; }
+    .menu-feature-body .price { font-family: var(--font-accent); font-size: 30px; color: var(--color-primary); }
+    .menu-feature-body .price small { font-family: var(--font-body); font-size: 12px; color: var(--color-muted); }
+    .menu-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
+    .menu-row { display: flex; align-items: baseline; gap: 14px; padding: 18px 0; border-bottom: 1px dashed var(--color-line); }
+    .menu-row .dot { flex: 1; border-bottom: 1px dotted var(--color-line); transform: translateY(-4px); }
+    .menu-row h4 { font-family: var(--font-heading); font-weight: 500; font-size: 16px; color: var(--color-ink); }
+    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-muted); letter-spacing: 0.02em; margin-top: 2px; }
+    .menu-row .m-price { font-family: var(--font-accent); font-size: 20px; color: var(--color-primary); white-space: nowrap; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-bg); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .review-card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 6px; padding: 36px 30px; text-align: center; }
+    .review-card .q { font-family: var(--font-accent); font-size: 44px; color: var(--color-accent); line-height: 0.6; opacity: 0.5; }
+    .review-card p { font-size: 14px; color: var(--color-text); line-height: 2; margin: 18px 0; }
+    .review-author { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-primary); }
+    .stars { color: var(--color-accent); font-size: 13px; letter-spacing: 0.14em; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-surface); }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .info-box h3 { font-family: var(--font-heading); font-weight: 600; font-size: 16px; letter-spacing: 0.12em; color: var(--color-primary); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
+    .info-row { display: flex; gap: 14px; margin-bottom: 12px; font-size: 14px; }
+    .info-label { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-accent); min-width: 58px; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11.5px; color: var(--color-muted); }
+    .ig-link { color: var(--color-primary); text-decoration: none; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-bg); }
+    .contact-form { max-width: 620px; margin: 0 auto; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 8px; padding: 48px 44px; box-shadow: var(--shadow-card); }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 12px; letter-spacing: 0.1em; color: var(--color-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 4px; padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(111,74,46,0.1); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .submit-btn { width: 100%; background: var(--color-primary); color: #fff; border: none; border-radius: 30px; padding: 16px; font-family: var(--font-body); font-size: 14px; letter-spacing: 0.12em; cursor: pointer; transition: background var(--transition), transform var(--transition); }
+    .submit-btn:hover { background: var(--color-primary-dk); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--color-ink); color: #d6c9b6; text-align: center; padding: 58px 24px; }
+    .footer-logo { font-family: var(--font-heading); font-weight: 600; font-size: 26px; letter-spacing: 0.3em; color: #fff; margin-bottom: 8px; }
+    .footer-sub { font-family: var(--font-accent); font-style: italic; font-size: 13px; letter-spacing: 0.2em; color: var(--color-accent); margin-bottom: 22px; }
+    .footer-info { font-size: 12.5px; line-height: 2.1; letter-spacing: 0.04em; margin-bottom: 22px; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(214,201,182,0.5); letter-spacing: 0.1em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .about-wrap, .menu-feature, .concept-grid, .reviews-grid, .info-grid, .menu-list { grid-template-columns: 1fr; }
+      .concept-grid { gap: 30px; }
+      nav { display: none; }
+      .menu-feature img { min-height: 240px; }
+      .menu-feature-body { padding: 34px 28px; }
+      .about-wrap { gap: 34px; }
+    }
+    @media (max-width: 600px) { .contact-form { padding: 32px 22px; } .hero { padding-top: 120px; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo"><span class="name">葉山珈琲</span><span class="sub">HAYAMA COFFEE</span></a>
+      <nav>
+        <a href="#concept">こだわり</a>
+        <a href="#about">空間</a>
+        <a href="#menu">メニュー</a>
+        <a href="#reviews">口コミ</a>
+        <a href="#info">店舗案内</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Caffeine-less Specialty Coffee</p>
+        <h1>今日の一杯に、<br><span>やさしい</span>時間を。</h1>
+        <p class="hero-lead">
+          専任焙煎士が毎日、必要な分だけ焼き上げるスペシャリティ豆。
+          からだにやさしいカフェインレスコーヒー専門店として、
+          白を基調とした落ち着いた空間で、ゆったりとした珈琲時間をお届けします。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">メニューを見る</a>
+          <a href="#concept" class="btn-text">珈琲へのこだわり</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="hayama-hero.png" alt="葉山珈琲のスペシャリティコーヒーと厚切りトースト">
+        <span class="tag">カフェインレス専門</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="concept" id="concept">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Our Coffee</span>
+        <h2>珈琲へのこだわり</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="concept-grid">
+        <div class="concept-item fade-in">
+          <div class="concept-num">01</div>
+          <h3>スペシャリティ豆のみ</h3>
+          <p>全生産量の5％以下しか収穫されない最高品質の「スペシャリティ」だけを使用。素材そのものの香りと甘みを大切にしています。</p>
+        </div>
+        <div class="concept-item fade-in">
+          <div class="concept-num">02</div>
+          <h3>毎日、必要な分だけ焙煎</h3>
+          <p>専任の焙煎士が毎日コーヒー豆を必要分だけ焼き上げ、スタッフ全員で品質をチェック。いつでも新鮮な一杯を。</p>
+        </div>
+        <div class="concept-item fade-in">
+          <div class="concept-num">03</div>
+          <h3>やさしいカフェインレス</h3>
+          <p>妊娠中の方や夜のひと息にも安心のカフェインレス。味わいはそのままに、からだにやさしい珈琲専門店です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-wrap">
+        <div class="about-media fade-in"><img src="hayama-interior.png" alt="白を基調とした葉山珈琲の店内空間"></div>
+        <div class="about-text fade-in">
+          <span class="section-en">The Space</span>
+          <h2>白を基調とした、<br>くつろぎの空間。</h2>
+          <p>店内はコシノジュンコ プロデュース。白を基調に、モダンなアートが彩る洗練された空間です。大きな窓から差し込むやわらかな光の中で、時間を気にせずゆったりと。</p>
+          <p>おひとりの読書に、大切な人との語らいに。福岡・城南区で、日常から少しだけ離れられる場所を目指しています。</p>
+          <p class="about-sign">— ごゆっくり、おくつろぎください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Menu</span>
+        <h2>メニュー</h2>
+        <div class="divider"></div>
+        <p class="lead">朝は厚切りトーストのモーニングから、昼はパスタ、夜はハンバーグまで。一日を通してお楽しみいただけます。</p>
+      </div>
+
+      <div class="menu-feature fade-in">
+        <img src="hayama-menu-01.png" alt="葉山珈琲のモーニングセット">
+        <div class="menu-feature-body">
+          <span class="tag">Morning</span>
+          <h3>モーニングセット</h3>
+          <p>ふっくら焼き上げた厚切りトーストに、サラダとたまご。お好きなドリンクを添えて。朝のひとときを、丁寧な一皿とともに。</p>
+          <div class="price">¥440 <small>〜（モーニングB ¥580）</small></div>
+        </div>
+      </div>
+
+      <div class="menu-list">
+        <div class="menu-row fade-in"><div><h4>カフェインレス ブレンド<span class="m-note">焙煎士おすすめの一杯</span></h4></div><span class="dot"></span><span class="m-price">¥520</span></div>
+        <div class="menu-row fade-in"><div><h4>カフェラテ<span class="m-note">やさしいミルクと</span></h4></div><span class="dot"></span><span class="m-price">¥580</span></div>
+        <div class="menu-row fade-in"><div><h4>オレンジアイスティー<span class="m-note">フレッシュオレンジ使用</span></h4></div><span class="dot"></span><span class="m-price">¥600</span></div>
+        <div class="menu-row fade-in"><div><h4>本日のパスタ<span class="m-note">ランチタイム</span></h4></div><span class="dot"></span><span class="m-price">¥980</span></div>
+        <div class="menu-row fade-in"><div><h4>デミグラスハンバーグ<span class="m-note">ディナータイム</span></h4></div><span class="dot"></span><span class="m-price">¥1,280</span></div>
+        <div class="menu-row fade-in"><div><h4>本日のスイーツ<span class="m-note">日替わり</span></h4></div><span class="dot"></span><span class="m-price">¥480</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="q">&ldquo;</div>
+          <p>白を基調とした店内がとても落ち着きます。カフェインレスなのに香りがしっかりしていて、夜でも安心して飲めるのが嬉しい。</p>
+          <div class="stars">★★★★★</div>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="q">&ldquo;</div>
+          <p>モーニングの厚切りトーストがふわふわで最高。ゆったりできる空間で、つい長居してしまいます。</p>
+          <div class="stars">★★★★★</div>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="q">&ldquo;</div>
+          <p>妊娠中でもコーヒーが飲めるお店を探していて出会いました。豆の香りが本格的で、店員さんも親切です。</p>
+          <div class="stars">★★★★☆</div>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Information</span>
+        <h2>店舗案内</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">Open</span><span class="info-value">モーニング 〜<br>ディナー営業<br><span class="info-note">詳細はSNSをご確認ください</span></span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">店舗にてご確認ください</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>干隈2-44-28</span></div>
+          <div class="info-row"><span class="info-label">最寄</span><span class="info-value">福大通り沿い</span></div>
+          <div class="info-row"><span class="info-label">駐車場</span><span class="info-value">あり</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="info-row"><span class="info-label">IG</span><span class="info-value"><a href="https://instagram.com/hayamafukuoka" class="ig-link">@hayamafukuoka</a></span></div>
+          <div class="info-row"><span class="info-label">FB</span><span class="info-value">葉山珈琲 福大通り店</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種キャッシュレス</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Contact</span>
+        <h2>お問い合わせ</h2>
+        <div class="divider"></div>
+        <p class="lead">ご予約・お問い合わせはこちらから。豆の販売やギフトのご相談も承ります。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 花子" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>ご予約について</option><option>コーヒー豆の販売・ギフト</option><option>メニューについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">葉山珈琲</div>
+    <div class="footer-sub">Hayama Coffee · Fukuoka</div>
+    <div class="footer-info">
+      カフェインレスコーヒー専門店　福大通り店<br>
+      福岡市城南区干隈2-44-28　Instagram @hayamafukuoka
+    </div>
+    <div class="footer-copy">&copy; 2026 葉山珈琲 福大通り店. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
