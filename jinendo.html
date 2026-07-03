@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>旬菜酒房 自然堂 | 福岡・城南区 国産・無添加の自然食材と馬刺し・絶品鍋</title>
-  <meta name="description" content="福岡市城南区堤の居酒屋「旬菜酒房 自然堂（じねんどう）」。天然の水と塩、国産の野菜・肉、化学調味料不使用にこだわった手作りの料理。名物の馬刺し・鶏天・自家製明太子、出汁が絶品のお鍋、そして豊富な日本酒。坂本龍馬を愛する店主が営む、古民家風の落ち着いた和の空間です。">
-  <meta property="og:title" content="旬菜酒房 自然堂 | 国産・無添加の自然食材と馬刺し・絶品鍋">
-  <meta property="og:description" content="天然の水・塩、国産食材、化学調味料不使用。名物の馬刺し・鶏天・自家製明太子と豊富な日本酒を、坂本龍馬ゆかりの古民家風の空間で。">
+  <title>自然堂 | 福岡・城南区 無添加・手作りのやさしいごはんとお酒</title>
+  <meta name="description" content="福岡市城南区堤の「自然堂（じねんどう）」。天然の水と塩、国産の野菜や肉、化学調味料不使用。手作りのやさしいごはんと、店主自慢の馬刺し・鶏天・自家製明太子、豊富な日本酒。まるで実家のような、あたたかいお店です。">
+  <meta property="og:title" content="自然堂 | 無添加・手作りのやさしいごはんとお酒">
+  <meta property="og:description" content="天然の水・塩、国産食材、化学調味料不使用。手作りのやさしいごはんと馬刺し・鶏天・自家製明太子。福岡・城南区堤のあたたかいお店。">
   <meta property="og:type" content="restaurant">
   <meta property="og:image" content="jinendo-hero.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "旬菜酒房 自然堂",
-    "description": "国産・無添加の自然食材にこだわる旬菜酒房。名物の馬刺し・鶏天・自家製明太子、絶品出汁の鍋、豊富な日本酒。",
+    "name": "自然堂",
+    "description": "国産・無添加の自然食材にこだわる手作りのお店。馬刺し・鶏天・自家製明太子、豊富な日本酒。",
     "servesCuisine": "居酒屋・和食",
     "priceRange": "¥¥",
     "address": {"@type":"PostalAddress","streetAddress":"堤1-10-25","addressLocality":"城南区","addressRegion":"福岡市","addressCountry":"JP"}
@@ -22,413 +22,378 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Serif+JP:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
   <style>
-    /* Design Brief
-       業種    : 無農薬自然食の旬菜酒房（居酒屋・和・落ち着き）
-       見出し  : Hina Mincho（繊細・自然・やわらか・和）
-       本文    : Noto Serif JP（格調・落ち着き）
-       数字/英語: Cormorant Garamond（繊細・古典・文学的）
-       世界観  : 深い墨緑（自然・竹） × 琥珀の提灯 × 若草 × 土のウッド × 生成りのクリーム（暗色だが焼肉・ラーメンの赤/炎ではなく“自然・静”方向で差別化）
-    */
-    :root {
-      --color-bg:          #13160f;
-      --color-surface:     #1b2015;
-      --color-surface-2:   #242a1b;
-      --color-primary:     #869b58;
-      --color-primary-dk:  #6c8046;
-      --color-accent:      #cca34c;
-      --color-accent-glow: rgba(204,163,76,0.22);
-      --color-earth:       #b0824f;
-      --color-text:        #f0ede0;
-      --color-cream:       #e3dcc7;
-      --color-text-muted:  #9a9781;
-      --color-border:      rgba(204,163,76,0.16);
-      --color-border-green:rgba(134,155,88,0.3);
-      --font-heading: 'Hina Mincho', serif;
-      --font-body:    'Noto Serif JP', serif;
-      --font-accent:  'Cormorant Garamond', serif;
-      --radius: 3px;
-      --transition: 0.4s cubic-bezier(0.4,0,0.2,1);
-      --shadow-card: 0 2px 6px rgba(0,0,0,0.5), 0 12px 30px rgba(0,0,0,0.4), 0 34px 60px rgba(0,0,0,0.28);
+    /* Design Brief - 参考: Airbnb（丸み・親しみ・あたたかい「うちに帰る」感・ホスト紹介）× Pinterest（コラージュ/マソンリーの料理ギャラリー）
+       見出し: Klee One（手書き調・ほっこり・家庭的）  本文: Noto Sans JP  手書きアクセント: Caveat
+       色: 明るい生成り白 × 若葉グリーン(無添加・国産の主役アクセント) × 柿色(料理の温かみ) × 灯りイエロー(ひと差し)
+       形の規則: ボタン=フルピル / カード・画像=半径20px / タグ=ピル */
+    :root{
+      --bg:#fbfaf4; --paper:#ffffff; --sand:#f1ecdd;
+      --green:#5b8f46; --green-dk:#3f6b34; --green-soft:#e8efdd;
+      --terra:#c96a37; --terra-dk:#a8501f; --terra-soft:#f7e7d9;
+      --yellow:#eeb43f; --yellow-soft:#f8edd2;
+      --ink:#3a3026; --text:#4d4235; --muted:#8a7c68; --line:#e6ddc9;
+      --r-lg:24px; --r-md:18px;
+      --ease:cubic-bezier(.4,0,.2,1);
+      --shadow:0 3px 14px rgba(90,70,30,.07),0 22px 50px rgba(90,70,30,.10);
     }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    html, body { overflow-x: hidden; }
-    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.9; letter-spacing: 0.04em; font-weight: 300; }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{overflow-x:hidden;}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.9;letter-spacing:.02em;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 26px;}
+    img{display:block;max-width:100%;}
+    .klee{font-family:'Klee One',cursive;}
+    .hand{font-family:'Caveat',cursive;}
 
-    /* ── HEADER ── */
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); background: rgba(19,22,15,0.82); border-bottom: 1px solid var(--color-border); padding: 15px 0; }
-    .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
-    .logo .name { font-family: var(--font-heading); font-size: 23px; letter-spacing: 0.24em; color: var(--color-accent); }
-    .logo .sub { font-family: var(--font-accent); font-style: italic; font-size: 11px; letter-spacing: 0.28em; color: var(--color-text-muted); margin-top: 3px; }
-    nav { display: flex; align-items: center; gap: 28px; }
-    nav a { font-size: 12.5px; letter-spacing: 0.12em; color: var(--color-text-muted); text-decoration: none; transition: color var(--transition); }
-    nav a:hover { color: var(--color-accent); }
-    .nav-cta { color: var(--color-bg) !important; background: var(--color-primary); padding: 9px 22px; border-radius: var(--radius); transition: background var(--transition), transform var(--transition) !important; }
-    .nav-cta:hover { background: var(--color-accent) !important; transform: translateY(-2px); }
+    .pill{display:inline-flex;align-items:center;gap:.5em;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.03em;padding:14px 32px;text-decoration:none;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease);cursor:pointer;border:none;}
+    .pill-green{background:var(--green);color:#fff;}
+    .pill-green:hover{background:var(--green-dk);transform:translateY(-3px);box-shadow:0 12px 24px rgba(91,143,70,.30);}
+    .pill-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+    .pill-ghost:hover{background:var(--ink);color:var(--bg);transform:translateY(-3px);}
 
-    /* ── HERO ── */
-    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
-      background: linear-gradient(to right, rgba(19,22,15,0.94) 0%, rgba(19,22,15,0.72) 46%, rgba(19,22,15,0.4) 100%), url('jinendo-hero.png') center/cover no-repeat; }
-    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 22% 50%, rgba(204,163,76,0.14) 0%, transparent 62%); pointer-events: none; }
-    .hero-content { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; width: 100%; padding: 150px 28px 90px; }
-    .hero-inner { max-width: 600px; }
-    .hero-label { display: inline-block; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.2em; color: var(--color-accent); margin-bottom: 22px; padding-bottom: 10px; border-bottom: 1px solid var(--color-border); }
-    .hero h1 { font-family: var(--font-heading); font-size: clamp(40px, 6.5vw, 74px); letter-spacing: 0.14em; line-height: 1.4; color: var(--color-text); margin-bottom: 24px; text-shadow: 0 4px 24px rgba(0,0,0,0.6); }
-    .hero h1 em { font-style: normal; color: var(--color-primary); }
-    .hero-catch { font-family: var(--font-body); font-size: clamp(14px, 1.8vw, 17px); font-weight: 300; letter-spacing: 0.1em; color: var(--color-cream); line-height: 2.3; margin-bottom: 36px; }
-    .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
-    .btn-primary { display: inline-block; font-size: 13.5px; letter-spacing: 0.14em; color: var(--color-bg); background: var(--color-accent); padding: 16px 40px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
-    .btn-primary:hover { background: var(--color-primary); transform: translateY(-3px); box-shadow: 0 12px 30px var(--color-accent-glow); }
-    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-style: italic; font-size: 16px; letter-spacing: 0.08em; color: var(--color-primary); text-decoration: none; }
-    .btn-ghost:hover { color: var(--color-text); }
-    .hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .hero-scroll span { font-family: var(--font-accent); font-style: italic; font-size: 12px; letter-spacing: 0.28em; color: var(--color-text-muted); }
-    .scroll-line { width: 1px; height: 46px; background: linear-gradient(to bottom, var(--color-accent), transparent); animation: scrollAnim 2.2s ease infinite; }
-    @keyframes scrollAnim { 0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom} }
+    /* header */
+    header{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(251,250,244,.85);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);border-bottom:1px solid var(--line);}
+    .hd{display:flex;align-items:center;justify-content:space-between;height:66px;}
+    .logo{display:flex;align-items:baseline;gap:9px;text-decoration:none;}
+    .logo .jp{font-family:'Klee One',cursive;font-weight:600;font-size:24px;color:var(--ink);letter-spacing:.08em;}
+    .logo .en{font-family:'Caveat',cursive;font-size:16px;color:var(--green);}
+    nav{display:flex;align-items:center;gap:26px;}
+    nav a{font-size:13px;color:var(--text);text-decoration:none;transition:color .3s var(--ease);}
+    nav a:hover{color:var(--green);}
+    nav .pill{padding:10px 20px;font-size:13px;}
 
-    /* ── SECTION COMMONS ── */
-    section { position: relative; }
-    .section-inner { max-width: 1120px; margin: 0 auto; padding: 104px 28px; }
-    .section-head { text-align: center; margin-bottom: 58px; }
-    .section-head.left { text-align: left; }
-    .section-en { display: block; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.2em; color: var(--color-primary); margin-bottom: 14px; }
-    .section-head h2 { font-family: var(--font-heading); font-size: clamp(25px, 3.2vw, 38px); letter-spacing: 0.16em; color: var(--color-text); }
-    .section-head p.lead { margin: 16px auto 0; color: var(--color-text-muted); font-size: 15px; max-width: 580px; font-weight: 300; }
-    .section-head.left p.lead { margin-left: 0; }
-    .leaf { width: 40px; height: 1px; background: var(--color-accent); margin: 18px auto 0; position: relative; }
-    .section-head.left .leaf { margin-left: 0; }
-    .leaf::after { content: '❦'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); color: var(--color-accent); font-size: 14px; background: var(--color-bg); padding: 0 8px; }
+    /* ── HERO ── warm, homey, text + photo collage */
+    .hero{padding:118px 0 72px;position:relative;overflow:hidden;}
+    .hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;}
+    .hero .leaf{position:absolute;width:280px;height:280px;border-radius:46% 54% 58% 42%/50% 44% 56% 50%;background:var(--green-soft);top:40px;right:-90px;z-index:0;}
+    .htxt{position:relative;z-index:2;}
+    .htxt .hand-top{font-family:'Caveat',cursive;font-size:24px;color:var(--terra);margin-bottom:6px;}
+    .htxt h1{font-family:'Klee One',cursive;font-weight:600;font-size:clamp(38px,5.4vw,66px);line-height:1.42;color:var(--ink);letter-spacing:.02em;margin-bottom:22px;}
+    .htxt h1 .g{color:var(--green);}
+    .htxt p.lead{font-size:16px;color:var(--text);line-height:2.05;max-width:29em;margin-bottom:30px;}
+    .hact{display:flex;gap:14px;flex-wrap:wrap;}
+    .hcollage{position:relative;z-index:2;min-height:440px;}
+    .hcollage img{position:absolute;border-radius:var(--r-lg);box-shadow:var(--shadow);object-fit:cover;}
+    .hcollage .p1{width:70%;height:330px;top:0;right:0;}
+    .hcollage .p2{width:52%;height:210px;bottom:0;left:0;border:6px solid var(--paper);}
+    .hcollage .note{position:absolute;bottom:26px;right:-6px;background:var(--yellow);color:var(--ink);font-family:'Klee One',cursive;font-weight:600;font-size:14px;padding:12px 18px;border-radius:16px;box-shadow:var(--shadow);transform:rotate(4deg);z-index:3;}
 
-    /* ── PHILOSOPHY ── */
-    .philosophy { background: var(--color-surface); }
-    .phil-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .phil-text .section-en { text-align: left; }
-    .phil-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; line-height: 1.6; }
-    .phil-text p { color: var(--color-text-muted); font-size: 15px; line-height: 2.2; margin-bottom: 18px; font-weight: 300; }
-    .phil-text .accent-word { color: var(--color-primary); }
-    .phil-cards { display: grid; gap: 16px; }
-    .phil-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-left: 3px solid var(--color-primary); border-radius: var(--radius); padding: 26px 28px; }
-    .phil-card h3 { font-family: var(--font-heading); font-size: 18px; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 8px; }
-    .phil-card p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.9; font-weight: 300; }
+    /* ── CONCEPT BAND ── statement, not cards */
+    .concept{background:var(--green-soft);padding:82px 0;position:relative;}
+    .concept .wrap{text-align:center;}
+    .concept .hand-top{font-family:'Caveat',cursive;font-size:26px;color:var(--terra);margin-bottom:8px;}
+    .concept h2{font-family:'Klee One',cursive;font-weight:600;font-size:clamp(24px,3.4vw,38px);color:var(--ink);letter-spacing:.03em;line-height:1.6;margin-bottom:18px;}
+    .concept p{color:var(--text);font-size:15.5px;line-height:2.1;max-width:36em;margin:0 auto 32px;}
+    .chips{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border-radius:999px;padding:12px 22px;box-shadow:var(--shadow);font-weight:500;font-size:14px;color:var(--ink);}
+    .chip i{font-style:normal;font-size:18px;}
 
-    /* ── SIGNATURE ── */
-    .signature { background: var(--color-bg); }
-    .sig-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
-    .sig-media { min-height: 440px; }
-    .sig-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .sig-text { padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; background: var(--color-surface); }
-    .sig-text .badge { align-self: flex-start; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.1em; color: var(--color-primary); border: 1px solid var(--color-border-green); padding: 4px 16px; border-radius: 20px; margin-bottom: 18px; }
-    .sig-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 18px; line-height: 1.5; }
-    .sig-text p { color: var(--color-text-muted); font-size: 14.5px; line-height: 2.1; margin-bottom: 22px; font-weight: 300; }
-    .sig-price { font-family: var(--font-accent); font-size: 34px; color: var(--color-accent); letter-spacing: 0.04em; }
-    .sig-price small { font-family: var(--font-body); font-size: 12px; color: var(--color-text-muted); }
+    /* ── GALLERY (Pinterest masonry) ── */
+    .gallery{padding:100px 0;}
+    .gsec-head{margin-bottom:36px;}
+    .gsec-head .hand-top{font-family:'Caveat',cursive;font-size:24px;color:var(--terra);}
+    .gsec-head h2{font-family:'Klee One',cursive;font-weight:600;font-size:clamp(26px,3.4vw,40px);color:var(--ink);letter-spacing:.03em;}
+    .masonry{column-count:3;column-gap:18px;}
+    .m-item{break-inside:avoid;margin-bottom:18px;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);}
+    .m-item img{width:100%;display:block;}
+    .m-item.photo{position:relative;}
+    .m-item .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 20px 16px;background:linear-gradient(to top,rgba(40,30,20,.78),transparent);color:#fff;}
+    .m-item .cap .t{font-family:'Klee One',cursive;font-weight:600;font-size:18px;}
+    .m-item .cap .pr{font-size:13px;opacity:.92;margin-top:2px;}
+    .m-item.tile{padding:34px 28px;color:#fff;}
+    .m-item.tile .t{font-family:'Klee One',cursive;font-weight:600;font-size:22px;margin-bottom:8px;}
+    .m-item.tile .d{font-size:13.5px;line-height:1.9;opacity:.94;}
+    .m-item.tile .pr{font-family:'Caveat',cursive;font-size:26px;margin-top:12px;display:block;}
+    .tile-green{background:var(--green);}
+    .tile-terra{background:var(--terra);}
+    .tile-yellow{background:var(--yellow);color:var(--ink)!important;}
 
-    /* ── MENU ── */
-    .menu { background: var(--color-surface); }
-    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 56px; }
-    .menu-cat { padding: 8px 0 18px; }
-    .menu-cat h3 { font-family: var(--font-heading); font-size: 19px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 8px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
-    .menu-cat h3 span { font-family: var(--font-accent); font-style: italic; font-size: 13px; color: var(--color-primary); margin-left: 10px; letter-spacing: 0.1em; }
-    .menu-row { display: flex; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px dashed var(--color-border); }
-    .menu-row h4 { font-size: 15px; color: var(--color-cream); font-weight: 400; }
-    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-text-muted); margin-top: 2px; font-weight: 300; }
-    .menu-row .dot { flex: 1; border-bottom: 1px dotted rgba(154,151,129,0.3); transform: translateY(-4px); }
-    .menu-row .m-price { font-family: var(--font-accent); font-size: 22px; color: var(--color-accent); white-space: nowrap; }
-    .menu-row .m-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+    /* ── MENU (handwritten paper card) ── */
+    .menu{padding:20px 0 100px;}
+    .paper-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:56px 54px;max-width:960px;margin:0 auto;position:relative;}
+    .paper-card::before{content:"お品書き";position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--terra);color:#fff;font-family:'Klee One',cursive;font-weight:600;font-size:15px;padding:6px 26px;border-radius:999px;letter-spacing:.1em;}
+    .paper-card .note{text-align:center;color:var(--muted);font-size:13px;margin:8px 0 34px;}
+    .m-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px 54px;}
+    .m-cat{padding-top:8px;}
+    .m-cat h4{font-family:'Klee One',cursive;font-weight:600;font-size:17px;color:var(--green-dk);margin-bottom:6px;padding-bottom:10px;border-bottom:2px dotted var(--line);}
+    .row{display:flex;align-items:baseline;gap:12px;padding:12px 0;}
+    .row .nm{font-size:15px;color:var(--ink);}
+    .row .nm small{display:block;font-size:12px;color:var(--muted);margin-top:1px;}
+    .row .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px);}
+    .row .pr{font-family:'Caveat',cursive;font-size:24px;font-weight:600;color:var(--terra);white-space:nowrap;}
+    .menu-foot{text-align:center;margin-top:34px;font-size:12.5px;color:var(--muted);}
 
-    /* ── ATMOSPHERE ── */
-    .atmos { background: var(--color-bg); }
-    .atmos-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
-    .atmos-media img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card); display: block; border: 1px solid var(--color-border); }
-    .atmos-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 20px; line-height: 1.6; }
-    .atmos-text p { color: var(--color-text-muted); font-size: 15px; line-height: 2.2; margin-bottom: 18px; font-weight: 300; }
-    .atmos-quote { font-family: var(--font-heading); color: var(--color-primary); font-size: 17px; letter-spacing: 0.08em; }
+    /* ── HOST (龍馬 story, Airbnb meet-the-host) ── */
+    .host{padding:100px 0;background:var(--sand);}
+    .host .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;}
+    .host-img{position:relative;}
+    .host-img img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow);aspect-ratio:4/5;object-fit:cover;}
+    .host-img .badge{position:absolute;bottom:-16px;left:-14px;background:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:var(--shadow);}
+    .host-img .badge .hand{font-family:'Caveat',cursive;font-size:20px;color:var(--green);}
+    .host-img .badge .s{font-size:11px;color:var(--muted);}
+    .host-text .hand-top{font-family:'Caveat',cursive;font-size:24px;color:var(--terra);margin-bottom:4px;}
+    .host-text h2{font-family:'Klee One',cursive;font-weight:600;font-size:clamp(24px,3.2vw,36px);color:var(--ink);line-height:1.5;margin-bottom:20px;}
+    .host-text p{color:var(--text);font-size:15px;line-height:2.1;margin-bottom:16px;}
+    .host-text p .u{color:var(--green-dk);font-weight:500;}
 
-    /* ── REVIEWS ── */
-    .reviews { background: var(--color-surface); }
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .review-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; position: relative; }
-    .review-card::before { content: '\201C'; position: absolute; top: 10px; left: 18px; font-family: var(--font-accent); font-size: 56px; color: var(--color-primary); opacity: 0.28; line-height: 1; }
-    .stars { color: var(--color-accent); font-size: 14px; letter-spacing: 0.14em; margin-bottom: 14px; }
-    .review-text { font-size: 13.5px; color: var(--color-cream); line-height: 2; margin-bottom: 18px; position: relative; z-index: 1; font-weight: 300; }
-    .review-author { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-primary); border-top: 1px solid var(--color-border); padding-top: 12px; }
+    /* ── REVIEWS (warm staggered notes) ── */
+    .rev{padding:100px 0;}
+    .rev .gsec-head{text-align:center;margin-bottom:40px;}
+    .rev-masonry{column-count:2;column-gap:20px;max-width:900px;margin:0 auto;}
+    .note-card{break-inside:avoid;margin-bottom:20px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:30px 30px;box-shadow:var(--shadow);}
+    .note-card:nth-child(2){background:var(--green-soft);}
+    .note-card:nth-child(3){background:var(--yellow-soft);}
+    .note-card .stars{color:var(--yellow);letter-spacing:.1em;margin-bottom:12px;font-size:15px;}
+    .note-card p{color:var(--text);font-size:14.5px;line-height:1.95;}
+    .note-card .by{margin-top:16px;font-family:'Caveat',cursive;font-size:19px;color:var(--green-dk);}
 
-    /* ── INFO ── */
-    .info { background: var(--color-bg); }
-    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .info-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; box-shadow: var(--shadow-card); }
-    .info-box h3 { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
-    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
-    .info-label { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-primary); min-width: 58px; }
-    .info-value { color: var(--color-text); line-height: 1.7; font-weight: 300; }
-    .info-note { font-size: 11px; color: var(--color-text-muted); }
+    /* ── BOOK ── bright info + form */
+    .book{padding:100px 0;}
+    .book .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:start;}
+    .book-info .hand-top{font-family:'Caveat',cursive;font-size:24px;color:var(--terra);margin-bottom:4px;}
+    .book-info h2{font-family:'Klee One',cursive;font-weight:600;font-size:clamp(28px,3.6vw,44px);color:var(--ink);margin-bottom:16px;}
+    .book-info .sub{color:var(--text);font-size:15px;line-height:2.05;margin-bottom:28px;max-width:25em;}
+    .il{display:flex;gap:16px;padding:14px 0;border-top:1px solid var(--line);font-size:14px;}
+    .il:last-child{border-bottom:1px solid var(--line);}
+    .il .k{font-family:'Caveat',cursive;font-size:19px;color:var(--green-dk);min-width:74px;}
+    .il .v{color:var(--ink);line-height:1.7;}
+    .il .v small{color:var(--muted);}
+    form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px 38px;box-shadow:var(--shadow);}
+    .fg{margin-bottom:18px;}
+    .fg label{display:block;font-size:12px;color:var(--muted);margin-bottom:7px;}
+    .fg input,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-family:'Noto Sans JP';font-size:14px;color:var(--ink);outline:none;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
+    .fg input:focus,.fg textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(91,143,70,.14);}
+    .fg textarea{height:104px;resize:vertical;}
+    form .pill{width:100%;justify-content:center;margin-top:4px;}
 
-    /* ── CONTACT ── */
-    .contact { background: var(--color-surface); }
-    .contact-form { max-width: 620px; margin: 0 auto; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 50px 46px; box-shadow: var(--shadow-card); }
-    .form-group { margin-bottom: 22px; }
-    .form-group label { display: block; font-size: 11px; letter-spacing: 0.14em; color: var(--color-text-muted); margin-bottom: 8px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; font-weight: 300; transition: border-color var(--transition), box-shadow var(--transition); }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-accent-glow); }
-    .form-group textarea { height: 120px; resize: vertical; }
-    .form-group select option { background: var(--color-surface); }
-    .submit-btn { width: 100%; background: var(--color-accent); border: none; border-radius: var(--radius); padding: 16px; font-family: var(--font-body); font-size: 14px; letter-spacing: 0.16em; color: var(--color-bg); cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
-    .submit-btn:hover { background: var(--color-primary); transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-accent-glow); }
+    /* footer */
+    footer{background:var(--ink);color:#c9bda9;text-align:center;padding:52px 24px;}
+    .footer-jp{font-family:'Klee One',cursive;font-weight:600;font-size:28px;color:#fff;letter-spacing:.1em;}
+    .footer-en{font-family:'Caveat',cursive;font-size:20px;color:var(--yellow);margin:2px 0 16px;}
+    .footer-info{font-size:12.5px;line-height:2;margin-bottom:16px;}
+    .footer-cp{font-size:11px;letter-spacing:.06em;color:rgba(201,189,169,.5);}
 
-    /* ── FOOTER ── */
-    footer { background: #0c0e08; border-top: 1px solid var(--color-border); text-align: center; padding: 56px 24px; }
-    .footer-logo { font-family: var(--font-heading); font-size: 28px; letter-spacing: 0.26em; color: var(--color-accent); margin-bottom: 6px; }
-    .footer-sub { font-family: var(--font-accent); font-style: italic; font-size: 13px; letter-spacing: 0.22em; color: var(--color-text-muted); margin-bottom: 22px; }
-    .footer-info { font-size: 12.5px; color: var(--color-text-muted); letter-spacing: 0.06em; line-height: 2.1; margin-bottom: 22px; font-weight: 300; }
-    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(154,151,129,0.5); letter-spacing: 0.1em; }
+    /* motion */
+    .rise{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+    .rise.in{opacity:1;transform:none;}
+    @media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none;}}
 
-    /* ── ANIM ── */
-    .fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .fade-in:nth-child(2) { transition-delay: 0.1s; }
-    .fade-in:nth-child(3) { transition-delay: 0.2s; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .phil-wrap, .sig-wrap, .atmos-wrap, .menu-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
-      .sig-media { min-height: 300px; }
-      .sig-text { padding: 40px 30px; }
-      nav { display: none; }
-      .phil-wrap, .atmos-wrap { gap: 34px; }
-      .contact-form { padding: 34px 24px; }
+    /* responsive */
+    @media (max-width:920px){
+      .hero .wrap,.host .wrap,.book .wrap{grid-template-columns:1fr;}
+      .masonry{column-count:2;}
+      .hcollage{min-height:340px;margin-top:8px;}
+      nav{display:none;}
+      .paper-card{padding:44px 30px;}
     }
-    @media (max-width: 600px) { .hero h1 { font-size: 38px; } }
+    @media (max-width:560px){
+      .htxt h1{font-size:36px;}
+      .masonry,.rev-masonry{column-count:1;}
+      .m-cols{grid-template-columns:1fr;gap:0 0;}
+      .paper-card{padding:40px 24px;}
+      form{padding:30px 22px;}
+      .hcollage .p1{width:78%;}
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="header-inner">
-      <a href="#top" class="logo"><span class="name">自然堂</span><span class="sub">JINEN-DO · SHUNSAI SHUBOU</span></a>
+    <div class="wrap hd">
+      <a href="#top" class="logo"><span class="jp">自然堂</span><span class="en">jinendo</span></a>
       <nav>
-        <a href="#philosophy">こだわり</a>
-        <a href="#signature">名物</a>
+        <a href="#concept">こだわり</a>
+        <a href="#gallery">お料理</a>
         <a href="#menu">お品書き</a>
-        <a href="#atmos">店内</a>
-        <a href="#info">アクセス</a>
-        <a href="#contact" class="nav-cta">ご予約</a>
+        <a href="#host">店主より</a>
+        <a href="#book" class="pill pill-green">ご予約</a>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="top">
-    <div class="hero-content">
-      <div class="hero-inner">
-        <span class="hero-label">Fukuoka · Jonan · Tsutsumi</span>
-        <h1>自然に、<br><em>素直</em>な一皿を。</h1>
-        <p class="hero-catch">
-          天然の水と塩、国産の食材、化学調味料は不使用。<br>
-          名物の馬刺しに、出汁が絶品のお鍋、自家製明太子。<br>
-          城南区・堤の静かな灯りの下で、体にやさしいひとときを。
-        </p>
-        <div class="hero-actions">
-          <a href="#menu" class="btn-primary">お品書きを見る</a>
-          <a href="#philosophy" class="btn-ghost">こだわりを知る →</a>
+    <span class="leaf"></span>
+    <div class="wrap">
+      <div class="htxt">
+        <p class="hand-top">natural kitchen &amp; sake</p>
+        <h1>今日のごはん、<br><span class="g">うちで</span>食べていって。</h1>
+        <p class="lead">天然の水と塩、国産の食材、化学調味料は不使用。まるで実家のような、手作りのやさしいごはんとお酒。福岡・城南区堤の、あたたかいお店です。</p>
+        <div class="hact">
+          <a href="#book" class="pill pill-green">席を予約する</a>
+          <a href="#menu" class="pill pill-ghost">お品書きを見る</a>
         </div>
       </div>
-    </div>
-    <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
-  </section>
-
-  <section class="philosophy" id="philosophy">
-    <div class="section-inner">
-      <div class="phil-wrap">
-        <div class="phil-text fade-in">
-          <span class="section-en">Our Philosophy</span>
-          <h2>体にやさしい、<br>自然のままの味を。</h2>
-          <p>自然堂の料理は、<span class="accent-word">天然の水と塩、国産の野菜や肉</span>から。化学調味料は使わず、素材そのものの味を大切に、一品一品を手作りで丁寧に仕立てます。</p>
-          <p>「頑固なこだわりの大将…という心配は全くなく、美味しい手作りのご飯が頂けた」——お客様のそんな声が、私たちの誇りです。</p>
-        </div>
-        <div class="phil-cards fade-in">
-          <div class="phil-card">
-            <h3>国産・無添加の食材</h3>
-            <p>天然の水と塩、国産の野菜や肉を選び、化学調味料は不使用。後味までやさしい一皿に。</p>
-          </div>
-          <div class="phil-card">
-            <h3>旬を大切に</h3>
-            <p>その時季にいちばんおいしい旬の野菜や、店主が捌く新鮮な魚を日替わりでご用意します。</p>
-          </div>
-          <div class="phil-card">
-            <h3>龍馬を愛する店主</h3>
-            <p>店主は幕末の志士・坂本龍馬のファン。店名の「自然堂・竜馬」にもその想いを込めています。</p>
-          </div>
-        </div>
+      <div class="hcollage rise">
+        <img class="p1" src="jinendo-hero.png" alt="自然堂の手作りのごはん">
+        <img class="p2" src="jinendo-interior.png" alt="自然堂のあたたかい店内">
+        <span class="note">ほっとする味</span>
       </div>
     </div>
   </section>
 
-  <section class="signature" id="signature">
-    <div class="section-inner">
-      <div class="section-head fade-in">
-        <span class="section-en">Signature</span>
-        <h2>名物</h2>
-        <div class="leaf"></div>
+  <!-- CONCEPT -->
+  <section class="concept" id="concept">
+    <div class="wrap">
+      <p class="hand-top">our kitchen</p>
+      <h2>いいものだけで、<br>ていねいに手作り。</h2>
+      <p>自然堂の料理は、天然の水と塩、国産の野菜や肉から。化学調味料は使わず、一品一品を手作りで。「頑固なこだわりの大将…という心配は全くなく、美味しい手作りのご飯が頂けた」。そんなお客様の声が、私たちの誇りです。</p>
+      <div class="chips">
+        <span class="chip"><i>🌿</i>無添加・化学調味料不使用</span>
+        <span class="chip"><i>🥬</i>国産の野菜とお肉</span>
+        <span class="chip"><i>🍚</i>ぜんぶ手作り</span>
       </div>
-      <div class="sig-wrap fade-in">
-        <div class="sig-media"><img src="jinendo-menu-01.png" alt="自然堂の名物・馬刺し"></div>
-        <div class="sig-text">
-          <span class="badge">名物 · Signature</span>
-          <h2>店主の一番の押し、<br>新鮮な馬刺し。</h2>
-          <p>「個人的には馬刺しと鶏天が押しです」——常連さんもそう語る、自然堂の看板。きめ細やかで臭みのない馬刺しは、素材の良さがそのまま伝わる一皿です。出汁が絶品と評判のお鍋、自家製明太子とともに、じっくりと日本酒を。</p>
-          <div class="sig-price">馬刺し ¥1,280 <small>〜（税込・目安）</small></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="wrap">
+      <div class="gsec-head rise">
+        <p class="hand-top">today's dishes</p>
+        <h2>店主自慢の、お料理たち。</h2>
+      </div>
+      <div class="masonry">
+        <div class="m-item photo rise">
+          <img src="jinendo-menu-01.png" alt="自然堂の名物・馬刺し">
+          <div class="cap"><span class="t">名物 馬刺し</span><span class="pr">店主イチ押し ¥1,280〜</span></div>
+        </div>
+        <div class="m-item tile tile-green rise">
+          <span class="t">鶏天</span>
+          <span class="d">サクッとやわらか。「馬刺しと鶏天が押し」と常連さんも太鼓判。</span>
+          <span class="pr">¥780</span>
+        </div>
+        <div class="m-item tile tile-terra rise">
+          <span class="t">自家製明太子</span>
+          <span class="d">薄味でさっぱり。お酒がすすむ、店主手作りの一品。</span>
+          <span class="pr">¥680</span>
+        </div>
+        <div class="m-item photo rise">
+          <img src="jinendo-interior.png" alt="自然堂の店内で楽しむお鍋">
+          <div class="cap"><span class="t">本日のお鍋</span><span class="pr">出汁が絶品 ・ 時価</span></div>
+        </div>
+        <div class="m-item tile tile-yellow rise">
+          <span class="t">豊富な日本酒</span>
+          <span class="d">坂本龍馬ゆかりの珍しいお酒も。手作りの肴と、ゆっくり一杯。</span>
+          <span class="pr">¥580〜</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- MENU -->
   <section class="menu" id="menu">
-    <div class="section-inner">
-      <div class="section-head fade-in">
-        <span class="section-en">Menu</span>
-        <h2>お品書き</h2>
-        <div class="leaf"></div>
-        <p class="lead">旬の一品から、名物の〆まで。仕入れにより内容は変わります。価格は目安です。</p>
-      </div>
-      <div class="menu-grid">
-        <div class="menu-cat fade-in">
-          <h3>名物・自慢の一品 <span>Specialty</span></h3>
-          <div class="menu-row"><div><h4>馬刺し<span class="m-note">店主イチ押し・新鮮</span></h4></div><span class="dot"></span><span class="m-price">¥1,280<small>〜</small></span></div>
-          <div class="menu-row"><div><h4>鶏天<span class="m-note">サクッとやわらか・人気</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
-          <div class="menu-row"><div><h4>自家製明太子<span class="m-note">お酒がすすむ一品</span></h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+    <div class="wrap">
+      <div class="paper-card rise">
+        <p class="note">仕入れにより内容は変わります。価格は目安です。</p>
+        <div class="m-cols">
+          <div class="m-cat">
+            <h4>名物・自慢の一品</h4>
+            <div class="row"><span class="nm">馬刺し<small>店主イチ押し・新鮮</small></span><span class="dots"></span><span class="pr">¥1,280〜</span></div>
+            <div class="row"><span class="nm">鶏天<small>サクッとやわらか</small></span><span class="dots"></span><span class="pr">¥780</span></div>
+            <div class="row"><span class="nm">自家製明太子<small>お酒がすすむ</small></span><span class="dots"></span><span class="pr">¥680</span></div>
+          </div>
+          <div class="m-cat">
+            <h4>お鍋・旬菜</h4>
+            <div class="row"><span class="nm">本日のお鍋<small>出汁が絶品・要予約</small></span><span class="dots"></span><span class="pr">時価</span></div>
+            <div class="row"><span class="nm">本日の旬野菜盛り<small>国産野菜を彩りよく</small></span><span class="dots"></span><span class="pr">¥680</span></div>
+            <div class="row"><span class="nm">本日のお造り<small>店主が捌く新鮮な魚</small></span><span class="dots"></span><span class="pr">時価</span></div>
+          </div>
+          <div class="m-cat">
+            <h4>〆・ごはん</h4>
+            <div class="row"><span class="nm">お寿司<small>新鮮なネタで</small></span><span class="dots"></span><span class="pr">時価</span></div>
+            <div class="row"><span class="nm">おにぎり（2個）</span><span class="dots"></span><span class="pr">¥380</span></div>
+            <div class="row"><span class="nm">お味噌汁</span><span class="dots"></span><span class="pr">¥250</span></div>
+          </div>
+          <div class="m-cat">
+            <h4>お飲み物</h4>
+            <div class="row"><span class="nm">日本酒（種類豊富）<small>龍馬ゆかりの珍しい酒も</small></span><span class="dots"></span><span class="pr">¥580〜</span></div>
+            <div class="row"><span class="nm">生ビール</span><span class="dots"></span><span class="pr">¥520</span></div>
+            <div class="row"><span class="nm">焼酎・サワー各種</span><span class="dots"></span><span class="pr">¥450〜</span></div>
+          </div>
         </div>
-        <div class="menu-cat fade-in">
-          <h3>お鍋・旬菜 <span>Nabe &amp; Seasonal</span></h3>
-          <div class="menu-row"><div><h4>本日のお鍋<span class="m-note">出汁が絶品・要予約</span></h4></div><span class="dot"></span><span class="m-price">時価</span></div>
-          <div class="menu-row"><div><h4>本日の旬野菜盛り<span class="m-note">国産野菜を彩りよく</span></h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
-          <div class="menu-row"><div><h4>本日のお造り<span class="m-note">店主が捌く新鮮な魚</span></h4></div><span class="dot"></span><span class="m-price">時価</span></div>
-        </div>
-        <div class="menu-cat fade-in">
-          <h3>〆・ごはん <span>Rice &amp; Noodle</span></h3>
-          <div class="menu-row"><div><h4>お寿司<span class="m-note">新鮮なネタで</span></h4></div><span class="dot"></span><span class="m-price">時価</span></div>
-          <div class="menu-row"><div><h4>おにぎり（2個）</h4></div><span class="dot"></span><span class="m-price">¥380</span></div>
-          <div class="menu-row"><div><h4>お味噌汁</h4></div><span class="dot"></span><span class="m-price">¥250</span></div>
-        </div>
-        <div class="menu-cat fade-in">
-          <h3>お飲み物 <span>Drink</span></h3>
-          <div class="menu-row"><div><h4>日本酒（種類豊富）<span class="m-note">龍馬ゆかりの珍しい酒も</span></h4></div><span class="dot"></span><span class="m-price">¥580<small>〜</small></span></div>
-          <div class="menu-row"><div><h4>生ビール</h4></div><span class="dot"></span><span class="m-price">¥520</span></div>
-          <div class="menu-row"><div><h4>焼酎・サワー各種</h4></div><span class="dot"></span><span class="m-price">¥450<small>〜</small></span></div>
-        </div>
-      </div>
-      <p style="text-align:center;margin-top:28px;font-size:12.5px;color:var(--color-text-muted);">※ ご予算の目安は2,000〜6,000円。メニュー・価格はイメージです。仕入れにより内容は変わります。</p>
-    </div>
-  </section>
-
-  <section class="atmos" id="atmos">
-    <div class="section-inner">
-      <div class="atmos-wrap">
-        <div class="atmos-media fade-in"><img src="jinendo-interior.png" alt="落ち着いた和の自然堂の店内"></div>
-        <div class="atmos-text fade-in">
-          <span class="section-en">The Space</span>
-          <h2>古民家の灯りの下、<br>和みの止まり木。</h2>
-          <p>昔ながらの古民家のような、木のぬくもりと和紙の提灯のやわらかな灯り。まるで旅館の一室のような、落ち着いた大人の空間です。仕事帰りにひとりで、気の合う仲間と静かに。</p>
-          <p>カウンターに腰かけて、旬の一品とお酒を。ゆっくりと流れる時間の中で、体も心もほどけていく。そんな夜を過ごしていただけます。</p>
-          <p class="atmos-quote">— 今日もおつかれさま。ゆっくりどうぞ。</p>
-        </div>
+        <p class="menu-foot">ご予算の目安は 2,000〜6,000円。カウンター・テーブル・お座敷あり。おひとり飲みも歓迎です。</p>
       </div>
     </div>
   </section>
 
-  <section class="reviews" id="reviews">
-    <div class="section-inner">
-      <div class="section-head fade-in">
-        <span class="section-en">Voices</span>
+  <!-- HOST -->
+  <section class="host" id="host">
+    <div class="wrap">
+      <div class="host-img rise">
+        <img src="jinendo-interior.png" alt="自然堂の店主とあたたかい店内">
+        <div class="badge"><div class="hand">自然堂・竜馬</div><div class="s">店名の由来</div></div>
+      </div>
+      <div class="host-text rise">
+        <p class="hand-top">meet the owner</p>
+        <h2>龍馬を愛する店主が、<br>心を込めて。</h2>
+        <p>店主は、幕末の志士・坂本龍馬の大ファン。店名の「自然堂・竜馬」にも、その想いが込められています。日本酒には龍馬にちなんだ珍しいお酒も並びます。</p>
+        <p>旬の魚は<span class="u">店主自らが捌いて味付け</span>。国産・無添加にこだわった手作りの料理は、後味までやさしく、体にすっと馴染みます。肩の力を抜いて、ゆっくり召し上がってください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="rev">
+    <div class="wrap">
+      <div class="gsec-head rise">
+        <p class="hand-top">guest voices</p>
         <h2>お客様の声</h2>
-        <div class="leaf"></div>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card fade-in">
+      <div class="rev-masonry">
+        <div class="note-card rise">
           <div class="stars">★★★★★</div>
-          <p class="review-text">「どのお料理も全部美味しいです。お鍋のお出汁が特に絶品。個人的には馬刺しと鶏天が押しです。」</p>
-          <div class="review-author">— Googleクチコミ（ローカルガイド）</div>
+          <p>どのお料理も全部美味しいです。お鍋のお出汁が特に絶品。個人的には馬刺しと鶏天が押しです。</p>
+          <div class="by">Googleクチコミ（ローカルガイド）</div>
         </div>
-        <div class="review-card fade-in">
+        <div class="note-card rise">
           <div class="stars">★★★★★</div>
-          <p class="review-text">「新鮮な魚料理が気に入ってます。旬の魚を店主が捌き味付けをしてくれる。自家製明太子も薄味でさっぱりして美味しい。店主の素直な人柄が気に入り通っています。」</p>
-          <div class="review-author">— Googleクチコミ</div>
+          <p>新鮮な魚料理が気に入ってます。旬の魚を店主が捌き味付けをしてくれる。自家製明太子も薄味でさっぱりして美味しい。店主の素直な人柄が気に入り通っています。</p>
+          <div class="by">Googleクチコミ</div>
         </div>
-        <div class="review-card fade-in">
+        <div class="note-card rise">
           <div class="stars">★★★★★</div>
-          <p class="review-text">「日本酒の数が多くてgood！オーナーが坂本龍馬ファンで、それにちなんだ珍しい日本酒も。加調無添加なので後味も悪くなく、優しい味で安心して頂けます。」</p>
-          <div class="review-author">— Googleクチコミ</div>
+          <p>日本酒の数が多くてgood！オーナーが坂本龍馬ファンで、それにちなんだ珍しい日本酒も。加調無添加なので後味も悪くなく、優しい味で安心して頂けます。</p>
+          <div class="by">Googleクチコミ</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="info" id="info">
-    <div class="section-inner">
-      <div class="section-head fade-in">
-        <span class="section-en">Information</span>
-        <h2>営業情報・アクセス</h2>
-        <div class="leaf"></div>
+  <!-- BOOK -->
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="book-info rise">
+        <p class="hand-top">reservation</p>
+        <h2>席を予約する</h2>
+        <p class="sub">ご予約・お問い合わせはこちらから。ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
+        <div class="il"><span class="k">場所</span><span class="v">福岡市城南区堤1-10-25<br><small>福大前周辺</small></span></div>
+        <div class="il"><span class="k">営業</span><span class="v">夜の営業<br><small>詳しい営業時間は店舗・SNSでご確認ください</small></span></div>
+        <div class="il"><span class="k">お席</span><span class="v">カウンター・テーブル・お座敷<br><small>おひとり飲みも歓迎</small></span></div>
+        <div class="il"><span class="k">ご予算</span><span class="v">2,000〜6,000円（目安）</span></div>
       </div>
-      <div class="info-grid">
-        <div class="info-box fade-in">
-          <h3>営業時間</h3>
-          <div class="info-row"><span class="info-label">Dinner</span><span class="info-value">夜の居酒屋営業<br><span class="info-note">詳細はSNSをご確認ください</span></span></div>
-          <div class="info-row"><span class="info-label">定休</span><span class="info-value">店舗にてご確認ください</span></div>
-        </div>
-        <div class="info-box fade-in">
-          <h3>アクセス</h3>
-          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>堤1-10-25</span></div>
-          <div class="info-row"><span class="info-label">最寄</span><span class="info-value">福大前周辺</span></div>
-          <div class="info-row"><span class="info-label">席</span><span class="info-value">カウンター・<br>テーブル席</span></div>
-        </div>
-        <div class="info-box fade-in">
-          <h3>ご予約・SNS</h3>
-          <div class="info-row"><span class="info-label">IG</span><span class="info-value">@jinen.do</span></div>
-          <div class="info-row"><span class="info-label">予約</span><span class="info-value">お問い合わせフォーム<br>またはお電話</span></div>
-          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種<br>キャッシュレス</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="section-inner">
-      <div class="section-head fade-in">
-        <span class="section-en">Reservation</span>
-        <h2>ご予約・お問い合わせ</h2>
-        <div class="leaf"></div>
-        <p class="lead">ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
-      </div>
-      <form class="contact-form fade-in" onsubmit="return false;">
-        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
-        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
-        <div class="form-group"><label>ご希望人数・日時</label><input type="text" placeholder="例：3名 / 7月12日 19:30"></div>
-        <div class="form-group"><label>お問い合わせ種別</label>
-          <select><option>ご予約</option><option>宴会・貸切</option><option>お品書きについて</option><option>その他</option></select>
-        </div>
-        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
-        <button type="submit" class="submit-btn">送信する</button>
+      <form onsubmit="return false;" class="rise">
+        <div class="fg"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="fg"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 / example@email.com" required></div>
+        <div class="fg"><label>ご希望人数・日時</label><input type="text" placeholder="例：3名 / 7月12日 19:30"></div>
+        <div class="fg"><label>ご相談内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="pill pill-green">この内容で送る</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <div class="footer-logo">旬菜酒房 自然堂</div>
-    <div class="footer-sub">Jinen-do · Fukuoka</div>
-    <div class="footer-info">
-      国産・無添加の自然食材と、名物の馬刺し・絶品鍋・豊富な日本酒<br>
-      福岡市城南区堤1-10-25　Instagram @jinen.do
-    </div>
-    <div class="footer-copy">&copy; 2026 旬菜酒房 自然堂. All rights reserved.</div>
+    <div class="footer-jp">自然堂</div>
+    <div class="footer-en">jinendo</div>
+    <div class="footer-info">国産・無添加の手作りごはんと、馬刺し・絶品鍋・豊富な日本酒<br>福岡市城南区堤1-10-25</div>
+    <div class="footer-cp">&copy; 2026 自然堂. All rights reserved.</div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rise').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
