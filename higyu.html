@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>やきにく飛牛 七隈本店 | 福岡・城南区 高級肉をリーズナブルに味わう焼肉</title>
-  <meta name="description" content="福岡市城南区七隈の焼肉店「やきにく飛牛（ひぎゅう）」。上質なお肉を、驚くほどリーズナブルに。丁寧な接客と落ち着いた雰囲気で、記念日にも普段使いにも。白を基調とした店内でゆっくり本格焼肉を。">
-  <meta property="og:title" content="やきにく飛牛 七隈本店 | 高級肉をリーズナブルに">
+  <title>やきにく飛牛 七隈本店 | 上質な肉を、手が届く価格で。福岡・城南区の焼肉</title>
+  <meta name="description" content="福岡市城南区七隈の焼肉「やきにく飛牛（ひぎゅう）」。上質なお肉を、驚くほどお手頃に。丁寧な接客と落ち着いた雰囲気で、記念日にも普段使いにも。この質で、この値段。">
+  <meta property="og:title" content="やきにく飛牛 七隈本店 | 上質な肉を、手が届く価格で">
   <meta property="og:description" content="上質なお肉を、驚くほどお手頃に。丁寧な接客と落ち着いた雰囲気の焼肉店。福岡・城南区七隈。">
   <meta property="og:type" content="restaurant">
   <meta property="og:image" content="higyu-hero.png">
@@ -22,441 +22,381 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Design Brief
-       業種    : 焼肉（高級肉をリーズナブルに・高級感とお手頃の両立）
-       見出し  : Zen Antique（筆文字風・和・手仕事感 → インスタの筆文字ロゴに合わせる）
-       本文    : Noto Sans JP
-       数字/英語: Anton（極太・価格とコスパのインパクト）
-       世界観  : 白基調 × 肉の赤 × メニューの黄 × 若葉のグリーン差し（強みメモ「白基調・赤ちょい・黄色・緑は葉っぱ程度」に忠実）
-    */
-    :root {
-      --color-bg:          #faf6ef;
-      --color-surface:     #ffffff;
-      --color-surface-2:   #f3ecdf;
-      --color-red:         #c0271e;
-      --color-red-dk:      #9c1d16;
-      --color-yellow:      #f2b100;
-      --color-green:       #4f7a3f;
-      --color-ink:         #241d19;
-      --color-text:        #3c332c;
-      --color-muted:       #8a7d70;
-      --color-line:        #e7ddcc;
-      --color-red-soft:    rgba(192,39,30,0.10);
-      --color-yellow-soft: rgba(242,177,0,0.16);
-      --font-heading: 'Zen Antique', serif;
-      --font-body:    'Noto Sans JP', sans-serif;
-      --font-accent:  'Anton', sans-serif;
-      --radius: 4px;
-      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
-      --shadow-card: 0 2px 8px rgba(60,40,20,0.06), 0 16px 40px rgba(60,40,20,0.10);
+    /* Design Brief - 参考: Nike（特大筆致・全面写真・非対称エディトリアル）× Mastercard（クリーム地に赤×黄の重なり円・ピル・温かさ）
+       見出し: Yuji Syuku（筆文字 → インスタの筆ロゴに合わせる）  本文: Noto Sans JP  数字/英字: Oswald（コンデンス）
+       色: 生成りクリーム基調 × 肉の赤(主役アクセント) × 山吹イエロー(ブランドマーク・価格) × 若葉グリーン(ひと差し)
+       形の規則: ボタン=フルピル / 画像フレーム・面=半径20px / タグ=ピル / モチーフ=円 */
+    :root{
+      --cream:#faf5ea; --paper:#ffffff; --sand:#f2e9d6;
+      --ink:#241b14; --text:#40342a; --muted:#8b7c6b;
+      --red:#d12e24; --red-dk:#a81f18; --red-soft:rgba(209,46,36,.10);
+      --yellow:#f4b400; --yellow-soft:rgba(244,180,0,.18);
+      --green:#3e7c4f;
+      --line:#e7dcc6;
+      --r-lg:22px; --r-md:16px;
+      --ease:cubic-bezier(.4,0,.2,1);
+      --shadow:0 3px 12px rgba(80,50,20,.07),0 20px 50px rgba(80,50,20,.11);
     }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    html, body { overflow-x: hidden; }
-    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.85; letter-spacing: 0.03em; }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    html,body{overflow-x:hidden;}
+    body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);line-height:1.85;letter-spacing:.02em;-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 26px;}
+    img{display:block;max-width:100%;}
 
-    /* ── HEADER ── */
-    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); background: rgba(255,255,255,0.86); border-bottom: 1px solid var(--color-line); padding: 13px 0; }
-    .header-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.15; }
-    .logo .name { font-family: var(--font-heading); font-size: 24px; letter-spacing: 0.12em; color: var(--color-ink); }
-    .logo .name b { color: var(--color-red); font-weight: 400; }
-    .logo .sub { font-family: var(--font-accent); font-size: 11px; letter-spacing: 0.34em; color: var(--color-muted); margin-top: 3px; }
-    nav { display: flex; align-items: center; gap: 26px; }
-    nav a { font-size: 12px; letter-spacing: 0.12em; color: var(--color-text); text-decoration: none; transition: color var(--transition); }
-    nav a:hover { color: var(--color-red); }
-    .nav-cta { color: #fff !important; background: var(--color-red); padding: 9px 22px; border-radius: var(--radius); font-weight: 700; letter-spacing: 0.06em; transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important; }
-    .nav-cta:hover { background: var(--color-red-dk) !important; transform: translateY(-2px); box-shadow: 0 6px 18px var(--color-red-soft) !important; }
+    /* fonts */
+    .brush{font-family:'Yuji Syuku',serif;font-weight:400;line-height:1.32;}
+    .num{font-family:'Oswald',sans-serif;letter-spacing:.01em;}
 
-    /* ── HERO (light, split) ── */
-    .hero { padding: 132px 0 76px; position: relative; background:
-        radial-gradient(ellipse at 85% 20%, var(--color-yellow-soft) 0%, transparent 55%),
-        var(--color-bg); }
-    .hero-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1fr 1.04fr; gap: 54px; align-items: center; }
-    .hero-label { display: inline-block; font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.28em; color: var(--color-red); border-left: 3px solid var(--color-red); padding: 2px 0 2px 14px; margin-bottom: 22px; }
-    .hero h1 { font-family: var(--font-heading); font-size: clamp(40px, 6vw, 74px); letter-spacing: 0.04em; line-height: 1.2; color: var(--color-ink); margin-bottom: 22px; }
-    .hero h1 em { font-style: normal; color: var(--color-red); }
-    .hero h1 .mark { position: relative; display: inline-block; }
-    .hero h1 .mark::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: 8%; height: 34%; background: var(--color-yellow-soft); z-index: -1; }
-    .hero-catch { font-size: clamp(15px, 1.7vw, 18px); font-weight: 500; letter-spacing: 0.06em; color: var(--color-text); line-height: 2.05; margin-bottom: 32px; }
-    .hero-catch strong { color: var(--color-red); font-weight: 700; }
-    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-    .btn-primary { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; color: #fff; background: var(--color-red); padding: 16px 40px; border-radius: 30px; text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
-    .btn-primary:hover { background: var(--color-red-dk); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(192,39,30,0.28); }
-    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-size: 16px; letter-spacing: 0.08em; color: var(--color-ink); text-decoration: none; border-bottom: 2px solid var(--color-yellow); padding-bottom: 3px; }
-    .btn-ghost:hover { color: var(--color-red); }
-    .hero-media { position: relative; }
-    .hero-media img { width: 100%; border-radius: 8px 8px 60px 8px; box-shadow: var(--shadow-card); display: block; }
-    .hero-media .float-badge { position: absolute; bottom: -18px; left: -14px; background: var(--color-red); color: #fff; padding: 14px 22px; border-radius: 8px; box-shadow: var(--shadow-card); text-align: center; }
-    .hero-media .float-badge .num { font-family: var(--font-accent); font-size: 28px; letter-spacing: 0.02em; line-height: 1; }
-    .hero-media .float-badge .lbl { font-size: 10.5px; letter-spacing: 0.14em; opacity: 0.92; margin-top: 4px; }
+    /* buttons */
+    .pill{display:inline-flex;align-items:center;gap:.5em;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.04em;padding:15px 34px;text-decoration:none;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease);cursor:pointer;border:none;}
+    .pill-red{background:var(--red);color:#fff;}
+    .pill-red:hover{background:var(--red-dk);transform:translateY(-3px);box-shadow:0 12px 26px rgba(209,46,36,.32);}
+    .pill-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);}
+    .pill-ghost:hover{background:var(--ink);color:var(--cream);transform:translateY(-3px);}
 
-    /* ── COSPA banner ── */
-    .cospa { background: var(--color-ink); }
-    .cospa-inner { max-width: 1160px; margin: 0 auto; padding: 26px 28px; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; text-align: center; }
-    .cospa-inner .big { font-family: var(--font-heading); font-size: clamp(20px,3vw,30px); color: var(--color-yellow); letter-spacing: 0.06em; }
-    .cospa-inner .txt { color: #f4ece0; font-weight: 500; font-size: 14.5px; letter-spacing: 0.04em; }
+    /* header */
+    header{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(250,245,234,.82);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);border-bottom:1px solid var(--line);}
+    .hd{display:flex;align-items:center;justify-content:space-between;height:66px;}
+    .logo{display:flex;flex-direction:column;line-height:1.05;text-decoration:none;}
+    .logo .jp{font-family:'Yuji Syuku',serif;font-size:23px;color:var(--ink);letter-spacing:.06em;}
+    .logo .jp b{color:var(--red);font-weight:400;}
+    .logo .en{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.34em;color:var(--muted);margin-top:2px;}
+    nav{display:flex;align-items:center;gap:28px;}
+    nav a{font-size:13px;color:var(--text);text-decoration:none;transition:color .3s var(--ease);}
+    nav a:hover{color:var(--red);}
+    nav .pill{padding:10px 22px;font-size:13px;}
 
-    /* ── SECTION COMMONS ── */
-    section { position: relative; }
-    .section-inner { max-width: 1160px; margin: 0 auto; padding: 100px 28px; }
-    .section-head { margin-bottom: 56px; }
-    .section-head.center { text-align: center; }
-    .section-en { display: block; font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.32em; color: var(--color-red); margin-bottom: 12px; }
-    .section-head h2 { font-family: var(--font-heading); font-size: clamp(26px, 3.6vw, 42px); letter-spacing: 0.08em; color: var(--color-ink); }
-    .section-head p.lead { margin-top: 16px; color: var(--color-muted); font-size: 15px; max-width: 600px; }
-    .section-head.center p.lead { margin-left: auto; margin-right: auto; }
-    .section-line { width: 48px; height: 3px; background: linear-gradient(to right, var(--color-red), var(--color-yellow)); margin: 18px 0 0; border-radius: 2px; }
-    .section-head.center .section-line { margin-left: auto; margin-right: auto; }
+    /* ── HERO ── asymmetric editorial split, cream base, red+yellow circles behind */
+    .hero{position:relative;padding:120px 0 70px;overflow:hidden;}
+    .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center;}
+    .hero .circle{position:absolute;border-radius:50%;z-index:1;pointer-events:none;filter:blur(1px);}
+    .hero .c-yellow{width:340px;height:340px;background:var(--yellow-soft);top:60px;left:-70px;}
+    .hero .c-red{width:260px;height:260px;background:var(--red-soft);top:220px;left:150px;}
+    .htxt .kicker{display:inline-block;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.22em;color:var(--red);border-left:3px solid var(--red);padding:2px 0 2px 12px;margin-bottom:20px;}
+    .htxt h1{font-family:'Yuji Syuku',serif;font-size:clamp(44px,6.4vw,82px);line-height:1.22;color:var(--ink);letter-spacing:.03em;margin-bottom:22px;}
+    .htxt h1 .em{color:var(--red);position:relative;white-space:nowrap;}
+    .htxt h1 .em::after{content:"";position:absolute;left:-1%;right:-1%;bottom:6%;height:26%;background:var(--yellow-soft);z-index:-1;border-radius:4px;}
+    .htxt p.lead{font-size:16px;color:var(--text);line-height:2;max-width:30em;margin-bottom:30px;}
+    .hact{display:flex;gap:14px;flex-wrap:wrap;}
+    .hmedia{position:relative;}
+    .hmedia .frame{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:var(--sand);}
+    .hmedia .frame img{width:100%;height:100%;object-fit:cover;}
+    .coin{position:absolute;left:-26px;bottom:34px;width:132px;height:132px;border-radius:50%;background:var(--yellow);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:var(--shadow);transform:rotate(-7deg);}
+    .coin .s{font-size:11px;letter-spacing:.06em;line-height:1.5;font-weight:700;}
+    .coin .b{font-family:'Yuji Syuku',serif;font-size:19px;color:var(--red);line-height:1.2;margin-top:2px;}
+    .tag-nk{position:absolute;top:20px;right:-10px;background:var(--red);color:#fff;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.14em;padding:7px 15px;border-radius:999px;box-shadow:var(--shadow);}
 
-    /* ── FEATURES (icon cards, 3) ── */
-    .features { background: var(--color-surface); }
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .feature-card { background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 8px; padding: 40px 30px; box-shadow: var(--shadow-card); transition: transform var(--transition), border-color var(--transition); position: relative; overflow: hidden; }
-    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(to right, var(--color-red), var(--color-yellow)); }
-    .feature-card:hover { transform: translateY(-6px); border-color: var(--color-yellow); }
-    .feature-icon { font-size: 38px; margin-bottom: 18px; display: block; }
-    .feature-card h3 { font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.06em; color: var(--color-red); margin-bottom: 12px; }
-    .feature-card p { font-size: 13.5px; color: var(--color-muted); line-height: 1.95; }
+    /* ── VALUE BAND ── Mastercard overlapping circles as literal brand device */
+    .value{background:var(--ink);color:var(--cream);padding:74px 0;}
+    .value .wrap{text-align:center;}
+    .venn{position:relative;width:400px;max-width:88vw;height:210px;margin:0 auto 26px;}
+    .venn .v{position:absolute;top:0;width:230px;height:210px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;mix-blend-mode:screen;}
+    .venn .v1{left:0;background:var(--red);}
+    .venn .v2{right:0;background:var(--yellow);}
+    .venn .v span{font-family:'Yuji Syuku',serif;font-size:24px;color:#fff;mix-blend-mode:normal;}
+    .venn .v2 span{color:var(--ink);}
+    .venn .center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;}
+    .venn .center b{font-family:'Yuji Syuku',serif;font-size:30px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.4);}
+    .value h2{font-family:'Yuji Syuku',serif;font-size:clamp(24px,3.4vw,36px);letter-spacing:.05em;margin-bottom:14px;}
+    .value p{color:#d8ccb8;font-size:15px;max-width:34em;margin:0 auto;line-height:2;}
 
-    /* ── SIGNATURE (meat platter) ── */
-    .signature { background: var(--color-bg); }
-    .sig-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow-card); background: var(--color-surface); }
-    .sig-media { min-height: 420px; background: var(--color-surface-2); }
-    .sig-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .sig-text { padding: 56px 50px; display: flex; flex-direction: column; justify-content: center; }
-    .sig-text .badge { display: inline-block; font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.14em; color: #fff; background: var(--color-red); padding: 5px 15px; border-radius: 20px; margin-bottom: 16px; align-self: flex-start; }
-    .sig-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.06em; color: var(--color-ink); margin-bottom: 16px; line-height: 1.4; }
-    .sig-text p { color: var(--color-muted); font-size: 14.5px; line-height: 2; margin-bottom: 22px; }
-    .sig-price { font-family: var(--font-accent); font-size: 36px; color: var(--color-red); letter-spacing: 0.03em; }
-    .sig-price small { font-family: var(--font-body); font-size: 12px; color: var(--color-muted); }
+    /* ── SIGNATURE ── full-bleed image + oversized number (Nike) */
+    .sig{padding:0;background:var(--paper);}
+    .sig-grid{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;}
+    .sig-img{min-height:520px;background:var(--sand);}
+    .sig-img img{width:100%;height:100%;object-fit:cover;}
+    .sig-body{padding:76px 62px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+    .sig-body .lbl{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.28em;color:var(--red);margin-bottom:16px;}
+    .sig-body h2{font-family:'Yuji Syuku',serif;font-size:clamp(30px,3.6vw,46px);color:var(--ink);line-height:1.3;letter-spacing:.04em;margin-bottom:20px;}
+    .sig-body p{color:var(--muted);font-size:15px;line-height:2.05;margin-bottom:30px;max-width:32em;}
+    .price-xl{display:flex;align-items:baseline;gap:12px;}
+    .price-xl .n{font-family:'Oswald',sans-serif;font-weight:700;font-size:70px;color:var(--red);line-height:.9;}
+    .price-xl .u{font-size:14px;color:var(--muted);}
 
-    /* ── MENU ── */
-    .menu { background: var(--color-surface); }
-    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
-    .menu-cat { padding: 8px 0 20px; }
-    .menu-cat h3 { font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.08em; color: var(--color-ink); margin-bottom: 8px; padding-bottom: 14px; border-bottom: 2px solid var(--color-yellow); }
-    .menu-row { display: flex; align-items: baseline; gap: 12px; padding: 15px 0; border-bottom: 1px dashed var(--color-line); }
-    .menu-row h4 { font-size: 15px; color: var(--color-ink); font-weight: 500; }
-    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-muted); margin-top: 2px; }
-    .menu-row .dot { flex: 1; border-bottom: 1px dotted var(--color-line); transform: translateY(-4px); }
-    .menu-row .m-price { font-family: var(--font-accent); font-size: 22px; color: var(--color-red); letter-spacing: 0.02em; white-space: nowrap; }
-    .menu-row .m-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-muted); }
-    .menu-note { text-align: center; margin-top: 30px; font-size: 12.5px; color: var(--color-muted); }
+    /* ── WHY ── bento: 1 big + 2 small (no 3 equal cards, no eyebrow) */
+    .why{padding:104px 0;}
+    .why h2{font-family:'Yuji Syuku',serif;font-size:clamp(26px,3.4vw,40px);color:var(--ink);letter-spacing:.05em;margin-bottom:40px;max-width:16em;}
+    .why h2 span{color:var(--red);}
+    .bento{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:18px;}
+    .cell{border-radius:var(--r-md);padding:40px 38px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+    .cell .ico{font-size:34px;margin-bottom:16px;display:block;}
+    .cell h3{font-family:'Yuji Syuku',serif;font-size:22px;letter-spacing:.04em;margin-bottom:12px;line-height:1.4;}
+    .cell p{font-size:14px;line-height:1.95;}
+    .cell.big{grid-row:1/3;background:var(--red);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px;}
+    .cell.big h3{color:#fff;font-size:30px;}
+    .cell.big p{color:rgba(255,255,255,.9);max-width:20em;}
+    .cell.big .coin2{position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:var(--yellow-soft);}
+    .cell.y{background:var(--yellow-soft);color:var(--ink);}
+    .cell.y h3,.cell.p h3{color:var(--ink);}
+    .cell.p{background:var(--paper);color:var(--muted);border:1px solid var(--line);}
 
-    /* ── ATMOSPHERE (interior) ── */
-    .atmos { background: var(--color-bg); }
-    .atmos-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
-    .atmos-media img { width: 100%; border-radius: 8px; box-shadow: var(--shadow-card); display: block; }
-    .atmos-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.06em; color: var(--color-ink); margin-bottom: 20px; line-height: 1.4; }
-    .atmos-text > p { color: var(--color-muted); font-size: 15px; }
-    .atmos-list { list-style: none; margin-top: 20px; }
-    .atmos-list li { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid var(--color-line); font-size: 14px; color: var(--color-muted); }
-    .atmos-list li:last-child { border-bottom: 1px solid var(--color-line); }
-    .atmos-list .ico { color: var(--color-green); font-size: 18px; }
-    .atmos-list b { color: var(--color-ink); font-weight: 700; }
+    /* ── MENU ── featured tile + editorial price list (grouped, not row-by-row lines) */
+    .menu{padding:104px 0;background:var(--paper);}
+    .menu-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:38px;flex-wrap:wrap;}
+    .menu-head h2{font-family:'Yuji Syuku',serif;font-size:clamp(28px,3.6vw,44px);color:var(--ink);letter-spacing:.05em;}
+    .menu-head .note{font-size:13px;color:var(--muted);}
+    .menu-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:start;}
+    .feat{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);background:var(--sand);position:relative;}
+    .feat img{width:100%;height:340px;object-fit:cover;}
+    .feat .cap{padding:22px 24px;background:var(--ink);color:var(--cream);display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .feat .cap .t{font-family:'Yuji Syuku',serif;font-size:19px;}
+    .feat .cap .pr{font-family:'Oswald',sans-serif;font-weight:600;font-size:26px;color:var(--yellow);}
+    .mgroup + .mgroup{margin-top:26px;}
+    .mgroup h4{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.16em;color:var(--red);padding-bottom:10px;margin-bottom:6px;border-bottom:2px solid var(--yellow);}
+    .mrow{display:flex;align-items:baseline;gap:14px;padding:12px 0;}
+    .mrow .nm{font-weight:500;color:var(--ink);font-size:15px;}
+    .mrow .nm small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:1px;}
+    .mrow .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px);}
+    .mrow .pr{font-family:'Oswald',sans-serif;font-weight:600;font-size:21px;color:var(--red);white-space:nowrap;}
+    .mrow .pr small{font-family:'Noto Sans JP';font-size:11px;color:var(--muted);}
+    .menu-note{margin-top:26px;font-size:12px;color:var(--muted);text-align:center;}
 
-    /* ── REVIEWS ── */
-    .reviews { background: var(--color-surface); }
-    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .review-card { background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 8px; padding: 34px 26px; box-shadow: var(--shadow-card); position: relative; }
-    .review-card::before { content: '\201C'; position: absolute; top: 10px; left: 18px; font-family: var(--font-accent); font-size: 58px; color: var(--color-yellow); opacity: 0.45; line-height: 1; }
-    .stars { color: var(--color-yellow); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 14px; }
-    .review-text { font-size: 13.5px; color: var(--color-text); line-height: 1.95; margin-bottom: 18px; position: relative; z-index: 1; }
-    .review-author { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.08em; color: var(--color-red); border-top: 1px solid var(--color-line); padding-top: 12px; }
+    /* ── REVIEWS ── offset: one featured + two supporting */
+    .rev{padding:104px 0;}
+    .rev h2{font-family:'Yuji Syuku',serif;font-size:clamp(26px,3.4vw,40px);color:var(--ink);letter-spacing:.05em;margin-bottom:38px;}
+    .rev-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:stretch;}
+    .rev-col{display:grid;gap:18px;}
+    .quote{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:38px 36px;position:relative;box-shadow:var(--shadow);}
+    .quote::before{content:"\201C";position:absolute;top:12px;left:22px;font-family:'Oswald',sans-serif;font-size:80px;color:var(--yellow);opacity:.5;line-height:1;}
+    .quote.hero-q{background:var(--sand);}
+    .quote .stars{color:var(--yellow);letter-spacing:.1em;margin-bottom:14px;font-size:15px;position:relative;z-index:1;}
+    .quote p{color:var(--text);line-height:1.95;position:relative;z-index:1;font-size:14.5px;}
+    .quote.hero-q p{font-size:17px;line-height:2;color:var(--ink);}
+    .quote .by{margin-top:18px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.06em;color:var(--red);}
 
-    /* ── INFO ── */
-    .info { background: var(--color-bg); }
-    .info-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 22px; }
-    .info-box { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 8px; padding: 34px 28px; box-shadow: var(--shadow-card); }
-    .info-box.highlight { border-color: var(--color-red); }
-    .info-box h3 { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.08em; color: var(--color-red); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
-    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
-    .info-label { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.04em; color: var(--color-muted); min-width: 64px; }
-    .info-value { color: var(--color-ink); line-height: 1.7; }
-    .info-note { font-size: 11px; color: var(--color-muted); }
+    /* ── RESERVE ── info + minimal form (final CTA) */
+    .book{padding:104px 0;background:var(--ink);color:var(--cream);}
+    .book-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start;}
+    .book h2{font-family:'Yuji Syuku',serif;font-size:clamp(30px,4vw,50px);letter-spacing:.05em;margin-bottom:18px;}
+    .book h2 span{color:var(--yellow);}
+    .book .sub{color:#d8ccb8;font-size:15px;line-height:2;margin-bottom:30px;max-width:26em;}
+    .info-line{display:flex;gap:16px;padding:15px 0;border-top:1px solid rgba(255,255,255,.12);font-size:14px;}
+    .info-line:last-child{border-bottom:1px solid rgba(255,255,255,.12);}
+    .info-line .k{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--yellow);min-width:70px;}
+    .info-line .v{color:#efe6d6;line-height:1.7;}
+    .info-line .v small{color:#b7a58c;}
+    form{background:var(--cream);border-radius:var(--r-md);padding:40px 38px;box-shadow:var(--shadow);}
+    .fg{margin-bottom:18px;}
+    .fg label{display:block;font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:7px;}
+    .fg input,.fg textarea{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:13px 15px;font-family:'Noto Sans JP';font-size:14px;color:var(--ink);outline:none;transition:border-color .3s var(--ease),box-shadow .3s var(--ease);}
+    .fg input:focus,.fg textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-soft);}
+    .fg textarea{height:104px;resize:vertical;}
+    form .pill{width:100%;justify-content:center;margin-top:4px;}
 
-    /* ── CONTACT ── */
-    .contact { background: var(--color-surface); }
-    .contact-form { max-width: 640px; margin: 0 auto; background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 10px; padding: 50px 46px; box-shadow: var(--shadow-card); }
-    .form-group { margin-bottom: 22px; }
-    .form-group label { display: block; font-size: 11.5px; letter-spacing: 0.12em; color: var(--color-muted); margin-bottom: 8px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-ink); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-red); box-shadow: 0 0 0 3px var(--color-red-soft); }
-    .form-group textarea { height: 120px; resize: vertical; }
-    .submit-btn { width: 100%; background: var(--color-red); border: none; border-radius: 30px; padding: 17px; font-family: var(--font-body); font-size: 14px; font-weight: 700; letter-spacing: 0.16em; color: #fff; cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
-    .submit-btn:hover { background: var(--color-red-dk); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,39,30,0.28); }
+    /* footer */
+    footer{background:#1a130d;color:#b7a58c;text-align:center;padding:52px 24px;}
+    .footer-jp{font-family:'Yuji Syuku',serif;font-size:28px;color:#fff;letter-spacing:.08em;}
+    .footer-jp b{color:var(--yellow);font-weight:400;}
+    .footer-en{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.3em;color:var(--yellow);margin:6px 0 18px;}
+    .footer-info{font-size:12px;line-height:2;margin-bottom:16px;}
+    .footer-cp{font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.1em;color:rgba(183,165,140,.5);}
 
-    /* ── FOOTER ── */
-    footer { background: var(--color-ink); color: #cabcae; text-align: center; padding: 56px 24px; }
-    .footer-logo { font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.12em; color: #fff; margin-bottom: 6px; }
-    .footer-logo b { color: var(--color-yellow); font-weight: 400; }
-    .footer-sub { font-family: var(--font-accent); font-size: 12px; letter-spacing: 0.34em; color: var(--color-yellow); margin-bottom: 22px; }
-    .footer-info { font-size: 12px; color: #cabcae; letter-spacing: 0.06em; line-height: 2; margin-bottom: 22px; }
-    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(202,188,174,0.5); letter-spacing: 0.1em; }
+    /* motion */
+    .rise{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+    .rise.in{opacity:1;transform:none;}
+    @media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none;}}
 
-    /* ── ANIM ── */
-    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1), transform 0.75s cubic-bezier(0.4,0,0.2,1); }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .fade-in:nth-child(2) { transition-delay: 0.08s; }
-    .fade-in:nth-child(3) { transition-delay: 0.16s; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero-inner, .features-grid, .reviews-grid, .menu-grid, .info-grid, .sig-wrap, .atmos-wrap { grid-template-columns: 1fr; }
-      .hero { padding-top: 116px; }
-      .hero-media { order: -1; }
-      .sig-media { min-height: 280px; }
-      .sig-text { padding: 40px 30px; }
-      nav { display: none; }
-      .contact-form { padding: 34px 24px; }
+    /* responsive */
+    @media (max-width:920px){
+      .hero .wrap,.sig-grid,.bento,.menu-grid,.rev-grid,.book-grid{grid-template-columns:1fr;}
+      .hero{padding-top:100px;}
+      .hmedia{order:-1;}
+      .hmedia .frame{aspect-ratio:16/11;}
+      .bento .cell.big{grid-row:auto;min-height:auto;}
+      .sig-img{min-height:320px;}
+      .sig-body{padding:48px 30px;}
+      nav{display:none;}
     }
-    @media (max-width: 600px) { .hero h1 { font-size: 38px; } }
+    @media (max-width:520px){
+      .htxt h1{font-size:40px;}
+      .coin{width:112px;height:112px;left:-14px;}
+      .sig-body{padding:40px 24px;}
+      .price-xl .n{font-size:56px;}
+      form{padding:30px 22px;}
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="header-inner">
-      <a href="#top" class="logo"><span class="name">やきにく<b>飛牛</b></span><span class="sub">HIGYU — NANAKUMA</span></a>
+    <div class="wrap hd">
+      <a href="#top" class="logo"><span class="jp">やきにく<b>飛牛</b></span><span class="en">HIGYU NANAKUMA</span></a>
       <nav>
-        <a href="#features">飛牛の魅力</a>
-        <a href="#signature">おすすめ</a>
+        <a href="#value">飛牛とは</a>
+        <a href="#sig">名物</a>
         <a href="#menu">メニュー</a>
-        <a href="#atmos">店内</a>
-        <a href="#info">アクセス</a>
-        <a href="#contact" class="nav-cta">ご予約</a>
+        <a href="#rev">口コミ</a>
+        <a href="#book" class="pill pill-red">ご予約</a>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero" id="top">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="hero-label">FUKUOKA · JONAN · NANAKUMA</span>
-        <h1>いい肉を、<br><em>驚くほど</em><span class="mark">お手頃に。</span></h1>
-        <p class="hero-catch">
-          上質なお肉を、<strong>リーズナブルな価格</strong>で。<br>
-          肩ひじ張らず、心ゆくまで炭火焼肉を。<br>
-          七隈で愛される、飛牛のお肉をぜひ。
-        </p>
-        <div class="hero-actions">
-          <a href="#menu" class="btn-primary">メニューを見る</a>
-          <a href="#contact" class="btn-ghost">▶ ご予約はこちら</a>
+    <span class="circle c-yellow"></span>
+    <span class="circle c-red"></span>
+    <div class="wrap">
+      <div class="htxt">
+        <span class="kicker">FUKUOKA · NANAKUMA</span>
+        <h1>いい肉を、<br><span class="em">手が届く。</span></h1>
+        <p class="lead">上質なお肉を、驚くほどお手頃に。肩ひじ張らず、心ゆくまで炭火焼肉を。七隈で愛される、飛牛のお肉をぜひ。</p>
+        <div class="hact">
+          <a href="#book" class="pill pill-red">席を予約する</a>
+          <a href="#menu" class="pill pill-ghost">メニューを見る</a>
         </div>
       </div>
-      <div class="hero-media">
-        <img src="higyu-hero.png" alt="やきにく飛牛の炭火で焼く上質なお肉">
-        <div class="float-badge">
-          <div class="num">4.5<span style="font-size:16px;">★</span></div>
-          <div class="lbl">お客様の高評価</div>
-        </div>
+      <div class="hmedia rise">
+        <div class="frame"><img src="higyu-hero.png" alt="やきにく飛牛の炭火で焼く上質なお肉"></div>
+        <span class="tag-nk">七隈本店</span>
+        <div class="coin"><span class="s">上質な肉を<br>この価格で</span><span class="b">飛牛</span></div>
       </div>
     </div>
   </section>
 
-  <div class="cospa">
-    <div class="cospa-inner">
-      <span class="big">「この質で、この値段？」</span>
-      <span class="txt">上質なお肉を、気軽に楽しめる価格で。それが飛牛のこだわりです。</span>
-    </div>
-  </div>
-
-  <section class="features" id="features">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Why Higyu</span>
-        <h2>飛牛が選ばれる理由</h2>
-        <div class="section-line"></div>
+  <!-- VALUE BAND -->
+  <section class="value" id="value">
+    <div class="wrap">
+      <div class="venn rise">
+        <div class="v v1"><span>上質</span></div>
+        <div class="v v2"><span>お手頃</span></div>
+        <div class="center"><b>飛牛</b></div>
       </div>
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <span class="feature-icon">🥩</span>
-          <h3>上質な肉を、お手頃に</h3>
-          <p>いいお肉を、驚くほどリーズナブルに。「チェーン店より一段上の味を、この価格で」と評判の、飛牛ならではのコスパをぜひ体感してください。</p>
+      <h2>「この質で、この値段？」</h2>
+      <p>上質なお肉を、気軽に楽しめる価格で。その両立こそが、飛牛がお客様から選ばれ続ける理由です。</p>
+    </div>
+  </section>
+
+  <!-- SIGNATURE -->
+  <section class="sig" id="sig">
+    <div class="sig-grid">
+      <div class="sig-img"><img src="higyu-menu-01.png" alt="飛牛の上質な赤身肉の盛り合わせ"></div>
+      <div class="sig-body rise">
+        <span class="lbl">SIGNATURE</span>
+        <h2>とっておきの、<br>上質な赤身肉。</h2>
+        <p>飛牛が選び抜いた、うまみのしっかり詰まった上質なお肉。炭火でさっと炙れば、肉本来の甘みと香ばしさが口いっぱいに広がります。まずは盛り合わせで、飛牛のお肉を存分に。</p>
+        <div class="price-xl"><span class="n">2,480</span><span class="u">円〜（税込・目安）盛り合わせ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY (bento) -->
+  <section class="why">
+    <div class="wrap">
+      <h2>飛牛が、<span>また来たくなる</span>理由。</h2>
+      <div class="bento">
+        <div class="cell big rise">
+          <span class="coin2"></span>
+          <span class="ico">🥩</span>
+          <h3>この質で、<br>この値段。</h3>
+          <p>いいお肉を、驚くほどリーズナブルに。「チェーン店より一段上の味を、この価格で」と評判の、飛牛ならではのコスパ。</p>
         </div>
-        <div class="feature-card fade-in">
-          <span class="feature-icon">🍽️</span>
+        <div class="cell y rise">
+          <span class="ico">🍽️</span>
           <h3>丁寧なおもてなし</h3>
-          <p>「雰囲気がよく、また通いたい」——お客様からそう言っていただける、丁寧な接客が自慢です。記念日にもお祝いにも、心地よいひとときを。</p>
+          <p>「雰囲気がよく、また通いたい」。お客様からそう言っていただける、丁寧な接客が自慢です。記念日にもお祝いにも。</p>
         </div>
-        <div class="feature-card fade-in">
-          <span class="feature-icon">🔥</span>
-          <h3>気軽に本格炭火焼肉</h3>
-          <p>肩ひじ張らずに、本格的な炭火焼肉を。落ち着いた店内で、ご家族でもデートでも、思い思いのペースでゆっくりお楽しみいただけます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="signature" id="signature">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Signature</span>
-        <h2>飛牛のおすすめ</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="sig-wrap fade-in">
-        <div class="sig-media"><img src="higyu-menu-01.png" alt="飛牛の上質なお肉の盛り合わせ"></div>
-        <div class="sig-text">
-          <span class="badge">おすすめ · SIGNATURE</span>
-          <h2>とっておきの、<br>上質な赤身肉。</h2>
-          <p>飛牛が選び抜いた、うまみのしっかり詰まった上質なお肉。炭火でさっと炙れば、肉本来の甘みと香ばしさが口いっぱいに広がります。まずは盛り合わせで、飛牛のお肉を存分に味わってください。</p>
-          <div class="sig-price">盛り合わせ ¥2,480 <small>〜（税込・目安）</small></div>
+        <div class="cell p rise">
+          <span class="ico" style="color:var(--green)">🌿</span>
+          <h3>落ち着いた雰囲気</h3>
+          <p>肩ひじ張らずに本格炭火焼肉を。ご家族でもデートでも、思い思いのペースでゆっくり過ごせます。</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- MENU -->
   <section class="menu" id="menu">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Menu</span>
+    <div class="wrap">
+      <div class="menu-head">
         <h2>おすすめメニュー</h2>
-        <div class="section-line"></div>
-        <p class="lead">上質なお肉を、お手頃に。定番から希少部位まで幅広く。価格は目安です。</p>
+        <span class="note">上質なお肉を、お手頃に。価格は目安です。</span>
       </div>
       <div class="menu-grid">
-        <div class="menu-cat fade-in">
-          <h3>牛タン・希少部位</h3>
-          <div class="menu-row"><div><h4>厚切り牛タン塩<span class="m-note">ザクッと食感の人気の一皿</span></h4></div><span class="dot"></span><span class="m-price">¥1,180</span></div>
-          <div class="menu-row"><div><h4>本日の希少部位<span class="m-note">仕入れによる</span></h4></div><span class="dot"></span><span class="m-price">¥980<small>〜</small></span></div>
+        <div class="feat rise">
+          <img src="higyu-menu-01.png" alt="飛牛盛り合わせ">
+          <div class="cap"><span class="t">飛牛盛り合わせ</span><span class="pr">¥2,480</span></div>
         </div>
-        <div class="menu-cat fade-in">
-          <h3>ステーキ・赤身</h3>
-          <div class="menu-row"><div><h4>上質赤身ステーキ<span class="m-note">飛牛おすすめ・柔らか</span></h4></div><span class="dot"></span><span class="m-price">¥1,580</span></div>
-          <div class="menu-row"><div><h4>国産カルビ<span class="m-note">定番の一皿</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
-          <div class="menu-row"><div><h4>ハラミ<span class="m-note">やわらか赤身</span></h4></div><span class="dot"></span><span class="m-price">¥880</span></div>
-        </div>
-        <div class="menu-cat fade-in">
-          <h3>盛り合わせ・ホルモン</h3>
-          <div class="menu-row"><div><h4>飛牛盛り合わせ<span class="m-note">人気部位を少しずつ</span></h4></div><span class="dot"></span><span class="m-price">¥2,480</span></div>
-          <div class="menu-row"><div><h4>本日のホルモン<span class="m-note">新鮮直送</span></h4></div><span class="dot"></span><span class="m-price">¥580<small>〜</small></span></div>
-        </div>
-        <div class="menu-cat fade-in">
-          <h3>サイド・〆</h3>
-          <div class="menu-row"><div><h4>キムチ盛り合わせ</h4></div><span class="dot"></span><span class="m-price">¥480</span></div>
-          <div class="menu-row"><div><h4>ビビンバ<span class="m-note">〆の定番</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
-          <div class="menu-row"><div><h4>冷麺</h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+        <div class="mlist rise">
+          <div class="mgroup">
+            <h4>肉・希少部位</h4>
+            <div class="mrow"><span class="nm">厚切り牛タン塩<small>ザクッと食感の人気の一皿</small></span><span class="dots"></span><span class="pr">¥1,180</span></div>
+            <div class="mrow"><span class="nm">上質赤身ステーキ<small>飛牛おすすめ・やわらか</small></span><span class="dots"></span><span class="pr">¥1,580</span></div>
+            <div class="mrow"><span class="nm">国産カルビ<small>定番の一皿</small></span><span class="dots"></span><span class="pr">¥780</span></div>
+            <div class="mrow"><span class="nm">ハラミ<small>やわらか赤身</small></span><span class="dots"></span><span class="pr">¥880</span></div>
+            <div class="mrow"><span class="nm">本日のホルモン<small>新鮮直送</small></span><span class="dots"></span><span class="pr">¥580<small>〜</small></span></div>
+          </div>
+          <div class="mgroup">
+            <h4>サイド・〆</h4>
+            <div class="mrow"><span class="nm">キムチ盛り合わせ</span><span class="dots"></span><span class="pr">¥480</span></div>
+            <div class="mrow"><span class="nm">ビビンバ<small>〆の定番</small></span><span class="dots"></span><span class="pr">¥780</span></div>
+            <div class="mrow"><span class="nm">冷麺</span><span class="dots"></span><span class="pr">¥780</span></div>
+          </div>
         </div>
       </div>
       <p class="menu-note">※ メニュー・価格はイメージです。実際の内容は店舗にてご確認ください。</p>
     </div>
   </section>
 
-  <section class="atmos" id="atmos">
-    <div class="section-inner">
-      <div class="atmos-wrap">
-        <div class="atmos-media fade-in"><img src="higyu-interior.png" alt="落ち着いた雰囲気のやきにく飛牛の店内"></div>
-        <div class="atmos-text fade-in">
-          <span class="section-en">The Space</span>
-          <h2>落ち着いた雰囲気で、<br>ゆっくり炭火を。</h2>
-          <p>飛牛は、気軽に本格焼肉を楽しめる空間づくりにこだわっています。シーンを選ばず、思い思いのペースでお楽しみください。</p>
-          <ul class="atmos-list">
-            <li><span class="ico">🌿</span><div>落ち着いた雰囲気で、<b>記念日やお祝い</b>にもぴったり</div></li>
-            <li><span class="ico">🌿</span><div><b>丁寧な接客</b>で、はじめての方もゆっくり過ごせる</div></li>
-            <li><span class="ico">🌿</span><div>ご家族・デート・仕事帰りまで、<b>幅広いシーン</b>に</div></li>
-          </ul>
+  <!-- REVIEWS -->
+  <section class="rev" id="rev">
+    <div class="wrap">
+      <h2>お客様の声</h2>
+      <div class="rev-grid">
+        <div class="quote hero-q rise">
+          <div class="stars">★★★★★</div>
+          <p>雰囲気良く、リーズナブルに美味しいお肉が食べられました！何度か利用していますが、お食事も店員さんの対応も良くて、とても気に入っています。</p>
+          <div class="by">Googleクチコミ（ローカルガイド）</div>
+        </div>
+        <div class="rev-col">
+          <div class="quote rise">
+            <div class="stars">★★★★★</div>
+            <p>とても丁寧な接客で、雰囲気がよかったです。通いたいと思えるお店。オススメです。</p>
+            <div class="by">Googleクチコミ</div>
+          </div>
+          <div class="quote rise">
+            <div class="stars">★★★★★</div>
+            <p>お肉の味も良く、お祝いや記念日の食事にちょうどいいお店でした。</p>
+            <div class="by">Googleクチコミ</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="reviews" id="reviews">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Voices</span>
-        <h2>お客様の声</h2>
-        <div class="section-line"></div>
+  <!-- RESERVE -->
+  <section class="book" id="book">
+    <div class="wrap book-grid">
+      <div class="rise">
+        <h2>席を<span>予約する</span></h2>
+        <p class="sub">ご予約・お問い合わせはこちらから。ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
+        <div class="info-line"><span class="k">場所</span><span class="v">福岡市城南区七隈<br><small>地下鉄七隈駅周辺</small></span></div>
+        <div class="info-line"><span class="k">営業</span><span class="v">ディナー営業<br><small>詳しい営業時間は店舗・SNSでご確認ください</small></span></div>
+        <div class="info-line"><span class="k">予算</span><span class="v">¥3,000〜5,000 / 人（目安）</span></div>
+        <div class="info-line"><span class="k">支払い</span><span class="v">現金・各種キャッシュレス</span></div>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">「雰囲気良く、リーズナブルに美味しいお肉が食べられました！何度か利用していますが、お食事も店員さんの対応も良くて、とても気に入っています。」</p>
-          <div class="review-author">— Googleクチコミ（ローカルガイド）</div>
-        </div>
-        <div class="review-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">「とても丁寧な接客で、雰囲気がよかったです。通いたいと思えるお店。オススメです。」</p>
-          <div class="review-author">— Googleクチコミ</div>
-        </div>
-        <div class="review-card fade-in">
-          <div class="stars">★★★★★</div>
-          <p class="review-text">「丁寧な接客で雰囲気が良かったです。お肉の味も良く、お祝いや記念日の食事にちょうどいいお店でした。」</p>
-          <div class="review-author">— Googleクチコミ</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="info" id="info">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Information</span>
-        <h2>営業情報・アクセス</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="info-grid">
-        <div class="info-box fade-in">
-          <h3>営業時間</h3>
-          <div class="info-row"><span class="info-label">営業</span><span class="info-value">ディナー営業<br><span class="info-note">詳しい営業時間は<br>店舗・SNSでご確認ください</span></span></div>
-          <div class="info-row"><span class="info-label">予算</span><span class="info-value">¥3,000〜5,000 / 人<br><span class="info-note">（目安）</span></span></div>
-          <div class="info-row"><span class="info-label">定休</span><span class="info-value">不定休</span></div>
-        </div>
-        <div class="info-box fade-in">
-          <h3>アクセス</h3>
-          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>七隈</span></div>
-          <div class="info-row"><span class="info-label">最寄</span><span class="info-value">地下鉄七隈駅周辺</span></div>
-          <div class="info-row"><span class="info-label">利用</span><span class="info-value">イートイン<br>ご家族・デート歓迎</span></div>
-        </div>
-        <div class="info-box highlight fade-in">
-          <h3>ご予約・SNS</h3>
-          <div class="info-row"><span class="info-label">IG</span><span class="info-value">Instagramで<br>最新情報を発信中</span></div>
-          <div class="info-row"><span class="info-label">予約</span><span class="info-value">お問い合わせフォーム<br>またはお電話</span></div>
-          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種<br>キャッシュレス</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="section-inner">
-      <div class="section-head center fade-in">
-        <span class="section-en">Reservation</span>
-        <h2>ご予約・お問い合わせ</h2>
-        <div class="section-line"></div>
-        <p class="lead">ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
-      </div>
-      <form class="contact-form fade-in" onsubmit="return false;">
-        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
-        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
-        <div class="form-group"><label>ご希望人数・日時</label><input type="text" placeholder="例：4名 / 7月10日 19:00"></div>
-        <div class="form-group"><label>お問い合わせ種別</label>
-          <select><option>ご予約</option><option>宴会・貸切</option><option>メニューについて</option><option>その他</option></select>
-        </div>
-        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
-        <button type="submit" class="submit-btn">送信する</button>
+      <form onsubmit="return false;" class="rise">
+        <div class="fg"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="fg"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 / example@email.com" required></div>
+        <div class="fg"><label>ご希望人数・日時</label><input type="text" placeholder="例：4名 / 7月10日 19:00"></div>
+        <div class="fg"><label>ご相談内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="pill pill-red">この内容で送る</button>
       </form>
     </div>
   </section>
 
   <footer>
-    <div class="footer-logo">やきにく<b>飛牛</b></div>
-    <div class="footer-sub">HIGYU · NANAKUMA HONTEN</div>
-    <div class="footer-info">
-      福岡市城南区七隈　上質なお肉をリーズナブルに<br>
-      落ち着いた雰囲気の焼肉店　ご家族・デート・記念日に
-    </div>
-    <div class="footer-copy">&copy; 2026 やきにく飛牛 七隈本店. All rights reserved.</div>
+    <div class="footer-jp">やきにく<b>飛牛</b></div>
+    <div class="footer-en">HIGYU · NANAKUMA HONTEN</div>
+    <div class="footer-info">福岡市城南区七隈　上質なお肉をリーズナブルに<br>落ち着いた雰囲気の焼肉店　ご家族・デート・記念日に</div>
+    <div class="footer-cp">&copy; 2026 やきにく飛牛 七隈本店. All rights reserved.</div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rise').forEach(el=>io.observe(el));
   </script>
 </body>
 </html>
