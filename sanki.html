@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博多三氣 | あっさりとんこつラーメン・替え玉10円 福岡</title>
+  <meta name="description" content="福岡のあっさりとんこつラーメン「博多三氣（さんき）」。九州豚の乳白色スープ、ラー麦100％自家製麺、替え玉はいつでも10円。やる氣・げん氣・負けん氣、三つの氣を込めた一杯を城南区で。">
+  <meta property="og:title" content="博多三氣 | あっさりとんこつ・替え玉10円">
+  <meta property="og:description" content="乳白色のあっさり豚骨×ラー麦自家製麺。替え玉いつでも10円。三つの氣を込めた博多の一杯。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="sanki-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "博多三氣",
+    "description": "あっさりとんこつラーメン専門店。ラー麦100％自家製麺、替え玉10円。",
+    "servesCuisine": "ラーメン",
+    "priceRange": "¥",
+    "address": {"@type":"PostalAddress","addressLocality":"城南区","addressRegion":"福岡市","addressCountry":"JP"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : あっさりとんこつラーメン（元気・清潔・替え玉10円）
+       見出し  : Zen Kaku Gothic New（現代的・スタイリッシュ・力強い）
+       本文    : Noto Sans JP
+       数字/英語: Oswald（コンデンスド・スポーティ・「氣」の勢い）
+       世界観  : 乳白色の白 × 三氣の赤 × ラー麦の黄金 × 明るい木（ライトテーマで閃龍の暗色と対比）
+    */
+    :root {
+      --color-bg:          #faf6ef;
+      --color-surface:     #ffffff;
+      --color-surface-2:   #f3ede2;
+      --color-primary:     #d3202a;
+      --color-primary-dk:  #a81620;
+      --color-accent:      #e2952a;
+      --color-ink:         #1d1a17;
+      --color-text:        #322d28;
+      --color-text-muted:  #7d7369;
+      --color-cream:       #fffdf9;
+      --color-line:        #e7ddcd;
+      --color-red-tint:    #fbeceb;
+      --font-heading: 'Zen Kaku Gothic New', sans-serif;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Oswald', sans-serif;
+      --radius: 6px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card: 0 2px 8px rgba(120,90,40,0.08), 0 14px 34px rgba(120,90,40,0.10);
+      --shadow-soft: 0 10px 30px rgba(120,90,40,0.12);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body {
+      font-family: var(--font-body); background: var(--color-bg);
+      color: var(--color-text); line-height: 1.85; letter-spacing: 0.02em;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      backdrop-filter: blur(14px) saturate(150%);
+      -webkit-backdrop-filter: blur(14px) saturate(150%);
+      background: rgba(255,255,255,0.86);
+      border-bottom: 1px solid var(--color-line); padding: 13px 0;
+    }
+    .header-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo .mark {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--color-primary); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-heading); font-weight: 900; font-size: 20px;
+    }
+    .logo .name { font-family: var(--font-heading); font-weight: 900; font-size: 21px; letter-spacing: 0.08em; color: var(--color-ink); line-height: 1.1; }
+    .logo .name small { display: block; font-family: var(--font-accent); font-size: 10px; letter-spacing: 0.3em; color: var(--color-text-muted); font-weight: 500; }
+    nav { display: flex; align-items: center; gap: 26px; }
+    nav a { font-size: 13px; letter-spacing: 0.06em; color: var(--color-text); text-decoration: none; transition: color var(--transition); }
+    nav a:hover { color: var(--color-primary); }
+    .nav-cta { background: var(--color-primary); color: #fff !important; padding: 9px 22px; border-radius: 40px; font-weight: 700; transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important; }
+    .nav-cta:hover { background: var(--color-primary-dk) !important; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211,32,42,0.28) !important; }
+
+    /* ── HERO (split) ── */
+    .hero { padding: 128px 0 70px; background: linear-gradient(160deg, var(--color-cream) 0%, var(--color-bg) 60%, var(--color-red-tint) 130%); position: relative; overflow: hidden; }
+    .hero-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--color-red-tint); color: var(--color-primary); font-family: var(--font-accent); font-size: 15px; letter-spacing: 0.14em; padding: 7px 16px; border-radius: 30px; margin-bottom: 22px; }
+    .hero-badge b { font-family: var(--font-accent); font-size: 19px; }
+    .hero h1 { font-family: var(--font-heading); font-weight: 900; font-size: clamp(38px, 5.6vw, 68px); line-height: 1.14; letter-spacing: 0.02em; color: var(--color-ink); margin-bottom: 22px; }
+    .hero h1 .red { color: var(--color-primary); }
+    .hero h1 .u { position: relative; }
+    .hero h1 .u::after { content: ''; position: absolute; left: 0; right: 0; bottom: 6px; height: 12px; background: rgba(226,149,42,0.35); z-index: -1; }
+    .hero-lead { font-size: 16px; color: var(--color-text-muted); line-height: 2; margin-bottom: 32px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { display: inline-block; background: var(--color-primary); color: #fff; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; padding: 16px 38px; border-radius: 40px; text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { background: var(--color-primary-dk); transform: translateY(-3px); box-shadow: 0 12px 28px rgba(211,32,42,0.3); }
+    .btn-text { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-size: 17px; letter-spacing: 0.08em; color: var(--color-ink); text-decoration: none; }
+    .btn-text:hover { color: var(--color-primary); }
+    .hero-media { position: relative; }
+    .hero-media img { width: 100%; border-radius: 20px; box-shadow: var(--shadow-soft); display: block; }
+    .hero-media .float {
+      position: absolute; bottom: -22px; left: -22px;
+      background: var(--color-ink); color: #fff; border-radius: 16px;
+      padding: 16px 22px; box-shadow: var(--shadow-soft); text-align: center;
+    }
+    .hero-media .float .n { font-family: var(--font-accent); font-size: 30px; color: var(--color-accent); line-height: 1; }
+    .hero-media .float .l { font-size: 11px; letter-spacing: 0.1em; color: #d9cfc2; margin-top: 4px; }
+
+    /* ── 三氣 STRIP ── */
+    .ki-strip { background: var(--color-primary); padding: 0; }
+    .ki-inner { max-width: 1160px; margin: 0 auto; padding: 46px 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .ki-item { text-align: center; color: #fff; }
+    .ki-item .kanji { font-family: var(--font-heading); font-weight: 900; font-size: 44px; letter-spacing: 0.04em; }
+    .ki-item .kanji span { color: #ffd98a; }
+    .ki-item .en { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.24em; opacity: 0.85; margin: 6px 0 8px; }
+    .ki-item p { font-size: 13px; color: #fbe3e2; line-height: 1.7; max-width: 240px; margin: 0 auto; }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1160px; margin: 0 auto; padding: 100px 28px; }
+    .section-head { margin-bottom: 56px; }
+    .section-head.center { text-align: center; }
+    .section-en { display: block; font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.34em; color: var(--color-primary); margin-bottom: 12px; }
+    .section-head h2 { font-family: var(--font-heading); font-weight: 900; font-size: clamp(26px, 3.4vw, 40px); letter-spacing: 0.03em; color: var(--color-ink); }
+    .section-head p.lead { margin-top: 16px; color: var(--color-text-muted); font-size: 15px; max-width: 600px; }
+    .section-head.center p.lead { margin-left: auto; margin-right: auto; }
+    .section-line { width: 48px; height: 4px; border-radius: 4px; background: var(--color-accent); margin: 16px 0 0; }
+    .section-head.center .section-line { margin-left: auto; margin-right: auto; }
+
+    /* ── ABOUT (broth) split ── */
+    .about { background: var(--color-surface); }
+    .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .about-media img { width: 100%; border-radius: 18px; box-shadow: var(--shadow-card); display: block; }
+    .about-text .section-en { font-size: 13px; }
+    .about-text h2 { font-family: var(--font-heading); font-weight: 900; font-size: clamp(24px,3vw,34px); color: var(--color-ink); margin-bottom: 20px; line-height: 1.35; }
+    .about-list { list-style: none; margin-top: 24px; }
+    .about-list li { display: flex; gap: 16px; padding: 16px 0; border-top: 1px solid var(--color-line); }
+    .about-list li:last-child { border-bottom: 1px solid var(--color-line); }
+    .about-list .ico { flex: 0 0 44px; height: 44px; border-radius: 12px; background: var(--color-red-tint); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+    .about-list h4 { font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: var(--color-ink); margin-bottom: 3px; }
+    .about-list p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.8; }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-bg); }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .menu-card { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-card); transition: transform var(--transition), box-shadow var(--transition); }
+    .menu-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-soft); }
+    .menu-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .menu-ph { width: 100%; height: 200px; background: linear-gradient(135deg, var(--color-surface-2), #ece3d4); display: flex; align-items: center; justify-content: center; font-size: 46px; }
+    .menu-body { padding: 22px 22px 26px; }
+    .menu-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 8px; }
+    .menu-card h3 { font-family: var(--font-heading); font-weight: 700; font-size: 17px; color: var(--color-ink); }
+    .menu-price { font-family: var(--font-accent); font-size: 24px; color: var(--color-primary); white-space: nowrap; }
+    .menu-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+    .menu-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.8; }
+    .menu-tag { display: inline-block; font-family: var(--font-accent); font-size: 12px; letter-spacing: 0.1em; color: var(--color-accent); border: 1px solid rgba(226,149,42,0.5); padding: 2px 10px; border-radius: 20px; margin-bottom: 10px; }
+    .menu-tag.hot { color: var(--color-primary); border-color: rgba(211,32,42,0.4); }
+
+    /* ── KAEDAMA banner ── */
+    .kaedama { background: var(--color-ink); }
+    .kaedama-inner { max-width: 1160px; margin: 0 auto; padding: 70px 28px; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+    .kaedama-left h2 { font-family: var(--font-heading); font-weight: 900; color: #fff; font-size: clamp(26px,3.4vw,40px); letter-spacing: 0.03em; }
+    .kaedama-left h2 .big { font-family: var(--font-accent); color: var(--color-accent); font-size: 1.3em; }
+    .kaedama-left p { color: #cfc6ba; font-size: 14px; margin-top: 10px; max-width: 520px; }
+    .kaedama .btn-primary { background: var(--color-accent); color: var(--color-ink); }
+    .kaedama .btn-primary:hover { background: #f0a63a; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-surface); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card { background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 16px; padding: 32px 26px; }
+    .review-card .stars { color: var(--color-accent); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 14px; }
+    .review-card p { font-size: 14px; color: var(--color-text); line-height: 1.9; margin-bottom: 18px; }
+    .review-author { font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.08em; color: var(--color-primary); border-top: 1px solid var(--color-line); padding-top: 12px; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-bg); }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .info-box { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: 16px; padding: 32px 28px; box-shadow: var(--shadow-card); }
+    .info-box h3 { font-family: var(--font-heading); font-weight: 700; font-size: 16px; color: var(--color-primary); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
+    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
+    .info-label { font-family: var(--font-accent); font-size: 14px; color: var(--color-accent); min-width: 62px; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+    .ig-link { color: var(--color-primary); text-decoration: none; font-weight: 700; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-surface); }
+    .contact-form { max-width: 640px; margin: 0 auto; background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 18px; padding: 48px 44px; box-shadow: var(--shadow-card); }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 12px; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: #fff; border: 1px solid var(--color-line); border-radius: 8px; padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(211,32,42,0.12); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .submit-btn { width: 100%; background: var(--color-primary); color: #fff; border: none; border-radius: 40px; padding: 16px; font-family: var(--font-body); font-size: 15px; font-weight: 700; letter-spacing: 0.08em; cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .submit-btn:hover { background: var(--color-primary-dk); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(211,32,42,0.3); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--color-ink); color: #cfc6ba; text-align: center; padding: 56px 24px; }
+    .footer-logo { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .footer-logo .mark { width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 900; font-size: 21px; }
+    .footer-logo .name { font-family: var(--font-heading); font-weight: 900; font-size: 24px; letter-spacing: 0.08em; color: #fff; }
+    .footer-info { font-size: 12.5px; line-height: 2; letter-spacing: 0.04em; margin-bottom: 20px; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(207,198,186,0.5); letter-spacing: 0.1em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .about-wrap { grid-template-columns: 1fr; gap: 36px; }
+      .ki-inner, .menu-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .hero-media .float { left: 14px; }
+    }
+    @media (max-width: 600px) {
+      .contact-form { padding: 32px 22px; }
+      .kaedama-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo">
+        <span class="mark">氣</span>
+        <span class="name">博多三氣<small>HAKATA SANKI</small></span>
+      </a>
+      <nav>
+        <a href="#about">スープと麺</a>
+        <a href="#menu">メニュー</a>
+        <a href="#kaedama">替え玉10円</a>
+        <a href="#reviews">口コミ</a>
+        <a href="#info">店舗案内</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">替え玉いつでも <b>10円</b></span>
+        <h1>あっさり豚骨に、<br><span class="red u">三つの氣</span>を。</h1>
+        <p class="hero-lead">
+          九州豚の頭骨からじっくり炊いた乳白色のスープ。福岡県産ラー麦100％の自家製麺。
+          やる氣・げん氣・負けん氣——三氣を込めた一杯を、毎日の一杯に。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">メニューを見る</a>
+          <a href="#about" class="btn-text">こだわりを知る →</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="sanki-hero.png" alt="博多三氣のあっさりとんこつラーメン">
+        <div class="float"><div class="n">100%</div><div class="l">福岡県産ラー麦 自家製麺</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ki-strip">
+    <div class="ki-inner">
+      <div class="ki-item"><div class="kanji">やる<span>氣</span></div><div class="en">MOTIVATION</div><p>一杯ごとに全力で。手を抜かない仕込みが、変わらぬ味をつくります。</p></div>
+      <div class="ki-item"><div class="kanji">げん<span>氣</span></div><div class="en">ENERGY</div><p>食べれば元気に。あっさりなのに満たされる、毎日通える一杯を。</p></div>
+      <div class="ki-item"><div class="kanji">負けん<span>氣</span></div><div class="en">SPIRIT</div><p>博多の味に妥協しない。ラー麦とスープに込めた、負けん氣の一杯。</p></div>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="section-inner">
+      <div class="about-wrap">
+        <div class="about-media fade-in"><img src="sanki-menu-01.png" alt="乳白色のあっさりとんこつラーメン"></div>
+        <div class="about-text fade-in">
+          <span class="section-en">Soup &amp; Noodle</span>
+          <h2>乳白色のスープと、<br>ラー麦の自家製麺。</h2>
+          <p style="color:var(--color-text-muted);font-size:15px;">こってりだけが豚骨じゃない。三氣が守るのは、最後まで飲み干せる“あっさり”の乳白色。麺は福岡が誇るラー麦を100％。コシが強く、のびにくい細ストレート麺です。</p>
+          <ul class="about-list">
+            <li><span class="ico">🍜</span><div><h4>九州豚の乳白色スープ</h4><p>主に九州豚の頭骨を使い、あっさりなのに深い旨み。毎日でも食べたくなる一杯です。</p></div></li>
+            <li><span class="ico">🌾</span><div><h4>ラー麦100％の自家製麺</h4><p>福岡県産小麦「ラー麦」を100％使用。グループ自社工場で打つ、コシのある細麺。</p></div></li>
+            <li><span class="ico">🪙</span><div><h4>替え玉はいつでも10円</h4><p>土日祝も関係なく、替え玉1玉10円。心ゆくまで、博多の細麺を味わえます。</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Menu</span>
+        <h2>おすすめメニュー</h2>
+        <div class="section-line"></div>
+        <p class="lead">まずは看板の白ラーメンから。替え玉10円で、好きなだけどうぞ。</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card fade-in">
+          <img src="sanki-menu-01.png" alt="白ラーメン">
+          <div class="menu-body">
+            <span class="menu-tag hot">看板</span>
+            <div class="menu-head"><h3>白ラーメン</h3><span class="menu-price">¥600<small>〜</small></span></div>
+            <p>三氣の基本。あっさり乳白色スープとラー麦麺の相性をまずはこの一杯で。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-ph">🌶️</div>
+          <div class="menu-body">
+            <span class="menu-tag hot">人気</span>
+            <div class="menu-head"><h3>赤ラーメン</h3><span class="menu-price">¥700<small>〜</small></span></div>
+            <p>特製辛味だれを効かせたパンチのある一杯。あっさりスープに旨辛が映えます。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-ph">🧄</div>
+          <div class="menu-body">
+            <span class="menu-tag">こってり派に</span>
+            <div class="menu-head"><h3>黒ラーメン</h3><span class="menu-price">¥700<small>〜</small></span></div>
+            <p>香ばしいマー油の香り。あっさりベースにコクを重ねた深みの一杯。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-ph">🥟</div>
+          <div class="menu-body">
+            <span class="menu-tag">サイド</span>
+            <div class="menu-head"><h3>餃子（6個）</h3><span class="menu-price">¥300<small>〜</small></span></div>
+            <p>パリッと焼き上げる定番。ラーメンのお供にぜひ一緒に。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-ph">🍚</div>
+          <div class="menu-body">
+            <span class="menu-tag">ランチ</span>
+            <div class="menu-head"><h3>明太ご飯</h3><span class="menu-price">¥200<small>〜</small></span></div>
+            <p>福岡といえば明太子。ラーメンとセットで満足度アップ。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-ph">🪙</div>
+          <div class="menu-body">
+            <span class="menu-tag hot">名物</span>
+            <div class="menu-head"><h3>替え玉</h3><span class="menu-price">¥10</span></div>
+            <p>いつでも10円。スープが残っているうちに、もう一玉。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kaedama" id="kaedama">
+    <div class="kaedama-inner">
+      <div class="kaedama-left">
+        <h2>替え玉、いつでも <span class="big">10</span>円。</h2>
+        <p>土日祝も関係なく、ほぼ毎日。福岡県産ラー麦の細麺を、心ゆくまで。「もう一玉」が気軽に頼める、それが三氣のスタンダードです。</p>
+      </div>
+      <a href="#info" class="btn-primary">店舗を見る</a>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>「あっさりなのに旨みがしっかり。替え玉10円が本当にありがたい。ラー麦の麺がコシがあって好みです。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★☆</div>
+          <p>「白ラーメンが優しい味で毎日食べたくなる。子どもと一緒でも入りやすい清潔感のあるお店です。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>「赤ラーメンの旨辛がクセになる。替え玉が10円だからついつい頼んでしまいます。コスパ最高。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Information</span>
+        <h2>店舗案内</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">Open</span><span class="info-value">11:00 〜 深夜<br><span class="info-note">店舗により異なります</span></span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">年中無休<br><span class="info-note">店舗により異なります</span></span></div>
+          <div class="info-row"><span class="info-label">替玉</span><span class="info-value">いつでも10円</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>エリア</h3>
+          <div class="info-row"><span class="info-label">本拠</span><span class="info-value">福岡市内<br>（城南区・南区ほか）</span></div>
+          <div class="info-row"><span class="info-label">駐車場</span><span class="info-value">店舗により<br>あり</span></div>
+          <div class="info-row"><span class="info-label">席</span><span class="info-value">カウンター・<br>テーブル席</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>SNS・お問い合わせ</h3>
+          <div class="info-row"><span class="info-label">IG</span><span class="info-value"><a href="https://instagram.com/hakatasanki_jp" class="ig-link">@hakatasanki_jp</a></span></div>
+          <div class="info-row"><span class="info-label">情報</span><span class="info-value">最新の営業時間・<br>店舗はSNSにて</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・QR決済</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Contact</span>
+        <h2>お問い合わせ</h2>
+        <div class="section-line"></div>
+        <p class="lead">出店・イベント・団体でのご利用など、お気軽にどうぞ。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>団体・貸切について</option><option>出店・イベント</option><option>メニューについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><span class="mark">氣</span><span class="name">博多三氣</span></div>
+    <div class="footer-info">
+      あっさりとんこつラーメン専門店　替え玉いつでも10円<br>
+      福岡市内（城南区・南区ほか）　Instagram @hakatasanki_jp
+    </div>
+    <div class="footer-copy">&copy; 2026 博多三氣. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
