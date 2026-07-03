@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>麺処 博多 閃龍 | 福岡・城南区田島 背脂とんこつラーメン</title>
+  <meta name="description" content="福岡市城南区田島の豚骨ラーメン「麺処 博多 閃龍（せんりゅう）」。背脂の効いた濃厚とんこつを一杯600円から。牛すじ丼・ステーキも人気。駐車場7台・家族連れ歓迎。">
+  <meta property="og:title" content="麺処 博多 閃龍 | 背脂とんこつラーメン 福岡・城南区">
+  <meta property="og:description" content="龍の一閃、背脂のきらめき。濃厚豚骨を城南区田島で。牛すじ丼・ステーキも。駐車場完備・お子様連れ歓迎。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="senryu-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "麺処 博多 閃龍",
+    "description": "背脂の効いた濃厚とんこつラーメンが名物。牛すじ丼・ステーキも人気の福岡・城南区のラーメン店。",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "田島5-4-21",
+      "addressLocality": "城南区",
+      "addressRegion": "福岡市",
+      "postalCode": "814-0113",
+      "addressCountry": "JP"
+    },
+    "telephone": "090-9620-8711",
+    "servesCuisine": "ラーメン",
+    "priceRange": "¥",
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"11:30","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"11:30","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"18:00","closes":"21:00"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : 背脂とんこつラーメン（本格・活気・家族連れ）
+       見出し  : Reggae One（力強い・炎・龍の閃き）
+       本文    : Noto Sans JP（読みやすさ）
+       数字/英語: Bebas Neue（インパクト・コンデンスド）
+       世界観  : 漆黒 × 炎の赤 × 龍鱗の金 × 背脂の白（Ferrariのキアロスクーロ＋Lamborghiniの金差し）
+    */
+    :root {
+      --color-bg:          #14090a;
+      --color-surface:     #23110f;
+      --color-surface-2:   #2f1613;
+      --color-primary:     #c82f28;
+      --color-accent:      #e6b422;
+      --color-accent-glow: rgba(230,180,34,0.24);
+      --color-red-glow:    rgba(200,47,40,0.30);
+      --color-text:        #f6ece7;
+      --color-text-muted:  #a3847c;
+      --color-cream:       #f0e4d4;
+      --color-border:      rgba(230,180,34,0.16);
+      --color-border-red:  rgba(200,47,40,0.28);
+      --font-heading: 'Reggae One', cursive;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Bebas Neue', sans-serif;
+      --radius: 3px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card:
+        0 2px 6px rgba(0,0,0,0.55),
+        0 12px 28px rgba(0,0,0,0.42),
+        0 34px 60px rgba(0,0,0,0.32);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.85;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      background: rgba(20,9,10,0.82);
+      border-bottom: 1px solid var(--color-border);
+      padding: 13px 0;
+    }
+    .header-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 28px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 22px; letter-spacing: 0.14em;
+      color: var(--color-accent); text-decoration: none;
+      display: flex; flex-direction: column; line-height: 1.2;
+    }
+    .logo span {
+      font-family: var(--font-accent);
+      font-size: 11px; letter-spacing: 0.36em;
+      color: var(--color-text-muted); margin-top: 3px;
+    }
+    nav { display: flex; align-items: center; gap: 26px; }
+    nav a {
+      font-size: 12px; letter-spacing: 0.14em;
+      color: var(--color-text-muted); text-decoration: none;
+      transition: color var(--transition);
+    }
+    nav a:hover { color: var(--color-accent); }
+    .nav-cta {
+      color: var(--color-bg) !important;
+      background: var(--color-primary);
+      padding: 9px 22px; border-radius: var(--radius);
+      font-weight: 700; letter-spacing: 0.08em;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
+    }
+    .nav-cta:hover {
+      background: var(--color-accent) !important; color: var(--color-bg) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--color-red-glow) !important;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: flex-start;
+      position: relative; overflow: hidden;
+      background:
+        linear-gradient(105deg, rgba(20,9,10,0.94) 0%, rgba(20,9,10,0.72) 42%, rgba(20,9,10,0.35) 100%),
+        url('senryu-hero.png') center/cover no-repeat;
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 20% 60%, rgba(200,47,40,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1160px; margin: 0 auto; width: 100%;
+      padding: 150px 28px 90px;
+    }
+    .hero-inner { max-width: 640px; }
+    .hero-label {
+      display: inline-block; font-family: var(--font-accent);
+      font-size: 15px; letter-spacing: 0.34em; color: var(--color-primary);
+      margin-bottom: 22px; padding-left: 4px;
+      border-left: 3px solid var(--color-primary); padding: 2px 0 2px 14px;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(56px, 9vw, 108px);
+      letter-spacing: 0.06em; line-height: 1.0;
+      color: var(--color-text); margin-bottom: 20px;
+      text-shadow: 0 6px 30px rgba(0,0,0,0.7);
+    }
+    .hero h1 em { font-style: normal; color: var(--color-accent); }
+    .hero-catch {
+      font-size: clamp(15px, 2vw, 19px); font-weight: 500;
+      letter-spacing: 0.1em; color: var(--color-cream);
+      line-height: 2.1; margin-bottom: 34px;
+    }
+    .hero-catch strong { color: var(--color-accent); font-weight: 700; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      display: inline-block; font-size: 14px; font-weight: 700;
+      letter-spacing: 0.14em; color: var(--color-bg);
+      background: var(--color-primary); padding: 17px 42px;
+      border-radius: var(--radius); text-decoration: none;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary:hover {
+      background: var(--color-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 34px var(--color-red-glow);
+    }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-accent); font-size: 17px; letter-spacing: 0.14em;
+      color: var(--color-accent); text-decoration: none;
+    }
+    .btn-ghost:hover { color: var(--color-text); }
+    .hero-scroll {
+      position: absolute; bottom: 30px; left: 50%;
+      transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .hero-scroll span { font-family: var(--font-accent); font-size: 12px; letter-spacing: 0.3em; color: var(--color-text-muted); }
+    .scroll-line {
+      width: 1px; height: 46px;
+      background: linear-gradient(to bottom, var(--color-primary), transparent);
+      animation: scrollAnim 2s ease infinite;
+    }
+    @keyframes scrollAnim {
+      0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}
+      51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}
+    }
+
+    /* ── MARQUEE STRIP ── */
+    .strip {
+      background: var(--color-primary); overflow: hidden;
+      padding: 14px 0; white-space: nowrap;
+    }
+    .strip-track { display: inline-block; animation: marquee 22s linear infinite; }
+    .strip-track span {
+      font-family: var(--font-accent); font-size: 20px; letter-spacing: 0.2em;
+      color: var(--color-bg); margin: 0 28px;
+    }
+    .strip-track span::after { content: '龍'; margin-left: 28px; color: var(--color-accent); font-family: var(--font-heading); font-size: 15px; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1160px; margin: 0 auto; padding: 104px 28px; }
+    .section-head { margin-bottom: 60px; }
+    .section-head.center { text-align: center; }
+    .section-en {
+      display: block; font-family: var(--font-accent);
+      font-size: 15px; letter-spacing: 0.4em; color: var(--color-primary); margin-bottom: 14px;
+    }
+    .section-head h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 4vw, 44px); letter-spacing: 0.08em; color: var(--color-text);
+    }
+    .section-head p.lead { margin-top: 18px; color: var(--color-text-muted); font-size: 15px; max-width: 620px; }
+    .section-head.center p.lead { margin-left: auto; margin-right: auto; }
+    .section-line { width: 46px; height: 3px; background: linear-gradient(to right, var(--color-primary), var(--color-accent)); margin: 18px 0 0; }
+    .section-head.center .section-line { margin-left: auto; margin-right: auto; }
+
+    /* ── FEATURES (split rows) ── */
+    .features { background: var(--color-surface); }
+    .feature-row {
+      display: grid; grid-template-columns: 84px 1fr; gap: 26px;
+      align-items: start; padding: 34px 0; border-top: 1px solid var(--color-border);
+    }
+    .feature-row:last-child { border-bottom: 1px solid var(--color-border); }
+    .feature-num {
+      font-family: var(--font-accent); font-size: 52px; line-height: 1;
+      color: var(--color-primary); opacity: 0.85;
+    }
+    .feature-body h3 {
+      font-family: var(--font-heading); font-size: 21px; letter-spacing: 0.08em;
+      color: var(--color-accent); margin-bottom: 10px;
+    }
+    .feature-body p { font-size: 14.5px; color: var(--color-text-muted); line-height: 1.95; max-width: 640px; }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-bg); }
+    .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .menu-card {
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+    .menu-card:hover { transform: translateY(-6px); border-color: var(--color-border-red); }
+    .menu-card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+    .menu-placeholder {
+      width: 100%; height: 190px; background: var(--color-surface-2);
+      display: flex; align-items: center; justify-content: center; font-size: 40px;
+    }
+    .menu-body { padding: 22px 22px 26px; }
+    .menu-badge {
+      display: inline-block; font-family: var(--font-accent); font-size: 13px;
+      letter-spacing: 0.12em; padding: 3px 12px; border-radius: 2px; margin-bottom: 12px;
+    }
+    .badge-red { background: rgba(200,47,40,0.16); color: #e8695f; border: 1px solid var(--color-border-red); }
+    .badge-gold { background: rgba(230,180,34,0.14); color: var(--color-accent); border: 1px solid var(--color-border); }
+    .menu-price { font-family: var(--font-accent); font-size: 30px; color: var(--color-accent); margin-bottom: 4px; letter-spacing: 0.04em; }
+    .menu-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+    .menu-card h3 { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.06em; color: var(--color-text); margin-bottom: 8px; }
+    .menu-card p { font-size: 13px; color: var(--color-text-muted); line-height: 1.85; }
+
+    /* ── SIGNATURE (feature banner) ── */
+    .signature { background: var(--color-surface); }
+    .sig-wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; align-items: stretch; }
+    .sig-media { min-height: 420px; background: var(--color-surface-2); position: relative; overflow: hidden; }
+    .sig-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sig-text { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
+    .sig-text .section-en { font-size: 14px; }
+    .sig-text h2 { font-family: var(--font-heading); font-size: clamp(26px,3vw,38px); letter-spacing: 0.06em; color: var(--color-text); margin-bottom: 20px; line-height: 1.35; }
+    .sig-text p { color: var(--color-text-muted); font-size: 14.5px; line-height: 2; margin-bottom: 18px; }
+    .sig-quote { font-family: var(--font-heading); color: var(--color-accent); font-size: 18px; letter-spacing: 0.05em; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-bg); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .review-card {
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius); padding: 34px 26px; box-shadow: var(--shadow-card); position: relative;
+    }
+    .review-card::before {
+      content: '\201C'; position: absolute; top: 8px; left: 18px;
+      font-family: var(--font-accent); font-size: 72px; color: var(--color-primary); opacity: 0.22; line-height: 1;
+    }
+    .stars { color: var(--color-accent); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 14px; }
+    .review-text { font-size: 13.5px; color: var(--color-cream); line-height: 1.95; margin-bottom: 18px; position: relative; z-index: 1; }
+    .review-author { font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.1em; color: var(--color-primary); border-top: 1px solid var(--color-border); padding-top: 12px; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-surface); }
+    .info-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 22px; }
+    .info-box { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; box-shadow: var(--shadow-card); }
+    .info-box.highlight { border-color: var(--color-border-red); }
+    .info-box h3 { font-family: var(--font-heading); font-size: 16px; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
+    .info-label { font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.06em; color: var(--color-primary); min-width: 60px; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+    .tel-link { font-family: var(--font-accent); font-size: 28px; color: var(--color-accent); text-decoration: none; letter-spacing: 0.05em; transition: color var(--transition); }
+    .tel-link:hover { color: var(--color-primary); }
+    .rating-badge { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 6px; }
+    .rating-badge .num { font-family: var(--font-accent); font-size: 34px; color: var(--color-accent); }
+    .rating-badge .cnt { font-size: 12px; color: var(--color-text-muted); }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-bg); }
+    .contact-form {
+      max-width: 640px; margin: 0 auto; background: var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: var(--radius);
+      padding: 50px 46px; box-shadow: var(--shadow-card);
+    }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 11px; letter-spacing: 0.14em; color: var(--color-text-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: var(--color-bg); border: 1px solid var(--color-border);
+      border-radius: var(--radius); padding: 13px 15px; font-family: var(--font-body);
+      font-size: 14px; color: var(--color-text); outline: none;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-red-glow);
+    }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: var(--color-surface); }
+    .submit-btn {
+      width: 100%; background: var(--color-primary); border: none; border-radius: var(--radius);
+      padding: 17px; font-family: var(--font-body); font-size: 14px; font-weight: 700;
+      letter-spacing: 0.16em; color: var(--color-cream); cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .submit-btn:hover { background: var(--color-accent); color: var(--color-bg); transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-red-glow); }
+
+    /* ── FOOTER ── */
+    footer { background: #0d0607; border-top: 1px solid var(--color-border); text-align: center; padding: 56px 24px; }
+    .footer-logo { font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 6px; }
+    .footer-sub { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.34em; color: var(--color-text-muted); margin-bottom: 24px; }
+    .footer-tel { font-family: var(--font-accent); font-size: 30px; color: var(--color-accent); letter-spacing: 0.05em; margin-bottom: 10px; }
+    .footer-info { font-size: 12px; color: var(--color-text-muted); letter-spacing: 0.06em; line-height: 2; margin-bottom: 24px; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(163,132,124,0.5); letter-spacing: 0.12em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1), transform 0.75s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .menu-grid, .reviews-grid { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .sig-wrap { grid-template-columns: 1fr; }
+      .sig-media { min-height: 300px; }
+      .sig-text { padding: 44px 30px; }
+      nav { display: none; }
+      .contact-form { padding: 34px 24px; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 52px; }
+      .feature-row { grid-template-columns: 60px 1fr; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo">閃龍<span>SENRYU — HAKATA RAMEN</span></a>
+      <nav>
+        <a href="#features">こだわり</a>
+        <a href="#menu">メニュー</a>
+        <a href="#signature">看板の一杯</a>
+        <a href="#reviews">口コミ</a>
+        <a href="#info">アクセス</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-label">HAKATA · JONAN · TAJIMA</span>
+        <h1>背脂の<em>閃</em>き、<br>龍の一杯。</h1>
+        <p class="hero-catch">
+          濃厚豚骨に、とろける<strong>背脂</strong>。<br>
+          一杯<strong>600円</strong>から、腹の底まで満たす福岡の味。<br>
+          城南区田島、家族で通える一杯がここに。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">メニューを見る</a>
+          <a href="tel:09096208711" class="btn-ghost">☎ 090-9620-8711</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-track">
+      <span>背脂とんこつ</span><span>牛すじ丼</span><span>ステーキ</span><span>替え玉</span><span>駐車場7台</span><span>家族連れ歓迎</span>
+      <span>背脂とんこつ</span><span>牛すじ丼</span><span>ステーキ</span><span>替え玉</span><span>駐車場7台</span><span>家族連れ歓迎</span>
+    </div>
+  </div>
+
+  <section class="features" id="features">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Our Craft</span>
+        <h2>閃龍の こだわり</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="feature-row fade-in">
+        <div class="feature-num">01</div>
+        <div class="feature-body">
+          <h3>背脂の効いた濃厚豚骨</h3>
+          <p>長時間炊き出した豚骨スープに、とろりと甘い背脂を重ねた一杯。こってりなのに後味は驚くほどキレがあり、最後の一滴まで飲み干したくなる。福岡らしいクリアな豚骨に、閃龍だけの厚みを宿しました。</p>
+        </div>
+      </div>
+      <div class="feature-row fade-in">
+        <div class="feature-num">02</div>
+        <div class="feature-body">
+          <h3>ラーメンだけじゃない、丼とステーキ</h3>
+          <p>名物は牛すじをじっくり煮込んだ牛すじ丼、そして鉄板で焼き上げるステーキ。ラーメンのお供にも、がっつり食べたい日にも。麺と丼のセットで満足度は段違いです。</p>
+        </div>
+      </div>
+      <div class="feature-row fade-in">
+        <div class="feature-num">03</div>
+        <div class="feature-body">
+          <h3>駐車場7台・家族で通える一杯</h3>
+          <p>イオンスタイル笹丘の裏手、車で立ち寄りやすい立地に7台分の駐車場。お子様連れも大歓迎で、地元のご家族がふらりと通える気軽さも自慢です。一杯600円からという価格も、毎日の味方に。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Menu</span>
+        <h2>おすすめメニュー</h2>
+        <div class="section-line"></div>
+        <p class="lead">まずは看板の背脂とんこつから。替え玉でシメて、牛すじ丼で満腹に。</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card fade-in">
+          <img src="senryu-menu-01.png" alt="背脂とんこつラーメン">
+          <div class="menu-body">
+            <span class="menu-badge badge-red">看板メニュー</span>
+            <div class="menu-price">¥600 <small>（税込）</small></div>
+            <h3>背脂とんこつラーメン</h3>
+            <p>濃厚豚骨スープに背脂を重ねた閃龍の一杯。細麺との一体感をぜひ。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <img src="senryu-menu-02.png" alt="牛すじ丼">
+          <div class="menu-body">
+            <span class="menu-badge badge-gold">人気サイド</span>
+            <div class="menu-price">¥450 <small>（税込）</small></div>
+            <h3>牛すじ丼</h3>
+            <p>とろとろに煮込んだ牛すじをご飯にたっぷり。ラーメンとのセットが鉄板。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-placeholder">🥩</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-gold">がっつり</span>
+            <div class="menu-price">¥980 <small>（税込）</small></div>
+            <h3>鉄板ステーキ</h3>
+            <p>ジューシーに焼き上げるステーキ。ボリューム重視の一皿です。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-placeholder">🍜</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-red">こってり</span>
+            <div class="menu-price">¥750 <small>（税込）</small></div>
+            <h3>特製背脂マシラーメン</h3>
+            <p>背脂を増量したこってり派の一杯。スタミナをつけたい日に。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-placeholder">🍥</div>
+          <div class="menu-body">
+            <div class="menu-price">¥150 <small>（税込）</small></div>
+            <h3>替え玉</h3>
+            <p>スープが残っているうちにもう一玉。細麺のキレを楽しんで。</p>
+          </div>
+        </div>
+        <div class="menu-card fade-in">
+          <div class="menu-placeholder">🍚</div>
+          <div class="menu-body">
+            <span class="menu-badge badge-gold">ランチ人気</span>
+            <div class="menu-price">¥250 <small>（税込）</small></div>
+            <h3>半チャーハン</h3>
+            <p>ラーメンと一緒に頼みたいパラっと香ばしい一杯。ランチの定番。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="signature">
+    <div class="sig-wrap">
+      <div class="sig-media fade-in">
+        <img src="senryu-interior.png" alt="閃龍の活気ある店内">
+      </div>
+      <div class="sig-text fade-in">
+        <span class="section-en">Signature</span>
+        <h2>一杯に、龍の閃きを。</h2>
+        <p>豚骨を炊く湯気、鉄板で香ばしく立ちのぼる背脂の香り。閃龍の厨房は、開店から閉店までずっと活気に満ちています。「もう一杯」と言わせる濃さと、家族で通える気軽さ。その両立こそが、私たちの目指す一杯です。</p>
+        <p class="sig-quote">背脂ととんこつが交わる、その一閃を。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「背脂の甘みととんこつの濃さが最高。この値段でこの満足感はすごい。牛すじ丼とのセットで大満足でした。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★☆</div>
+          <p class="review-text">「駐車場があるので家族で行きやすい。子ども連れでも気兼ねなく入れて、また来たくなるお店です。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「こってりなのにしつこくなくて最後まで飲めるスープ。替え玉が進みます。ステーキもボリュームあって良かった。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Information</span>
+        <h2>営業情報・アクセス</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">平日</span><span class="info-value">11:30 〜 15:00</span></div>
+          <div class="info-row"><span class="info-label">土日</span><span class="info-value">11:30 〜 15:00<br>18:00 〜 21:00</span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">不定休<br><span class="info-note">最新はInstagramをご確認ください</span></span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>田島5-4-21</span></div>
+          <div class="info-row"><span class="info-label">目印</span><span class="info-value">イオンスタイル<br>笹丘の裏手</span></div>
+          <div class="info-row"><span class="info-label">駐車場</span><span class="info-value">7台完備</span></div>
+        </div>
+        <div class="info-box highlight fade-in">
+          <h3>ご予約・お電話</h3>
+          <div class="info-row"><span class="info-label">Tel</span><span class="info-value"><a href="tel:09096208711" class="tel-link">090-9620-8711</a></span></div>
+          <div class="info-row"><span class="info-label">SNS</span><span class="info-value">Instagram<br>@hakata.senryu</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・QR決済</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Contact</span>
+        <h2>お問い合わせ</h2>
+        <div class="section-line"></div>
+        <p class="lead">団体でのご来店・貸切のご相談はお気軽にどうぞ。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>団体・宴会のご予約</option><option>営業時間について</option><option>メニューについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">麺処 博多 閃龍</div>
+    <div class="footer-sub">SENRYU · HAKATA RAMEN</div>
+    <div class="footer-tel">090-9620-8711</div>
+    <div class="footer-info">
+      福岡市城南区田島5-4-21（イオンスタイル笹丘 裏手）<br>
+      平日 11:30〜15:00 / 土日 11:30〜15:00・18:00〜21:00　駐車場7台
+    </div>
+    <div class="footer-copy">&copy; 2026 麺処 博多 閃龍. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
