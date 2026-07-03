@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旬菜酒房 自然堂 | 福岡・城南区 無農薬の自然食材と名物テールラーメン</title>
+  <meta name="description" content="福岡市城南区堤の居酒屋「旬菜酒房 自然堂（じねんどう）」。無農薬の自然食材にこだわった旬の料理と、名物テールラーメン・山芋鉄板。落ち着いた和の空間で、体にやさしい一杯とお酒を。">
+  <meta property="og:title" content="旬菜酒房 自然堂 | 無農薬の自然食材と名物テールラーメン">
+  <meta property="og:description" content="無農薬の自然食材にこだわる、福岡・城南区の旬菜酒房。名物テールラーメン・山芋鉄板と、旬の一品を落ち着いた和の空間で。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="jinendo-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "旬菜酒房 自然堂",
+    "description": "無農薬の自然食材にこだわる旬菜酒房。名物テールラーメン・山芋鉄板。",
+    "servesCuisine": "居酒屋・和食",
+    "priceRange": "¥¥",
+    "address": {"@type":"PostalAddress","streetAddress":"堤1-10-25","addressLocality":"城南区","addressRegion":"福岡市","addressCountry":"JP"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Serif+JP:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : 無農薬自然食の旬菜酒房（居酒屋・和・落ち着き）
+       見出し  : Hina Mincho（繊細・自然・やわらか・和）
+       本文    : Noto Serif JP（格調・落ち着き）
+       数字/英語: Cormorant Garamond（繊細・古典・文学的）
+       世界観  : 深い墨緑（自然・竹） × 琥珀の提灯 × 若草 × 土のウッド × 生成りのクリーム（暗色だが焼肉・ラーメンの赤/炎ではなく“自然・静”方向で差別化）
+    */
+    :root {
+      --color-bg:          #13160f;
+      --color-surface:     #1b2015;
+      --color-surface-2:   #242a1b;
+      --color-primary:     #869b58;
+      --color-primary-dk:  #6c8046;
+      --color-accent:      #cca34c;
+      --color-accent-glow: rgba(204,163,76,0.22);
+      --color-earth:       #b0824f;
+      --color-text:        #f0ede0;
+      --color-cream:       #e3dcc7;
+      --color-text-muted:  #9a9781;
+      --color-border:      rgba(204,163,76,0.16);
+      --color-border-green:rgba(134,155,88,0.3);
+      --font-heading: 'Hina Mincho', serif;
+      --font-body:    'Noto Serif JP', serif;
+      --font-accent:  'Cormorant Garamond', serif;
+      --radius: 3px;
+      --transition: 0.4s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card: 0 2px 6px rgba(0,0,0,0.5), 0 12px 30px rgba(0,0,0,0.4), 0 34px 60px rgba(0,0,0,0.28);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.9; letter-spacing: 0.04em; font-weight: 300; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); background: rgba(19,22,15,0.82); border-bottom: 1px solid var(--color-border); padding: 15px 0; }
+    .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+    .logo .name { font-family: var(--font-heading); font-size: 23px; letter-spacing: 0.24em; color: var(--color-accent); }
+    .logo .sub { font-family: var(--font-accent); font-style: italic; font-size: 11px; letter-spacing: 0.28em; color: var(--color-text-muted); margin-top: 3px; }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { font-size: 12.5px; letter-spacing: 0.12em; color: var(--color-text-muted); text-decoration: none; transition: color var(--transition); }
+    nav a:hover { color: var(--color-accent); }
+    .nav-cta { color: var(--color-bg) !important; background: var(--color-primary); padding: 9px 22px; border-radius: var(--radius); transition: background var(--transition), transform var(--transition) !important; }
+    .nav-cta:hover { background: var(--color-accent) !important; transform: translateY(-2px); }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
+      background: linear-gradient(to right, rgba(19,22,15,0.94) 0%, rgba(19,22,15,0.72) 46%, rgba(19,22,15,0.4) 100%), url('jinendo-hero.png') center/cover no-repeat; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 22% 50%, rgba(204,163,76,0.14) 0%, transparent 62%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; width: 100%; padding: 150px 28px 90px; }
+    .hero-inner { max-width: 600px; }
+    .hero-label { display: inline-block; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.2em; color: var(--color-accent); margin-bottom: 22px; padding-bottom: 10px; border-bottom: 1px solid var(--color-border); }
+    .hero h1 { font-family: var(--font-heading); font-size: clamp(40px, 6.5vw, 74px); letter-spacing: 0.14em; line-height: 1.4; color: var(--color-text); margin-bottom: 24px; text-shadow: 0 4px 24px rgba(0,0,0,0.6); }
+    .hero h1 em { font-style: normal; color: var(--color-primary); }
+    .hero-catch { font-family: var(--font-body); font-size: clamp(14px, 1.8vw, 17px); font-weight: 300; letter-spacing: 0.1em; color: var(--color-cream); line-height: 2.3; margin-bottom: 36px; }
+    .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { display: inline-block; font-size: 13.5px; letter-spacing: 0.14em; color: var(--color-bg); background: var(--color-accent); padding: 16px 40px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { background: var(--color-primary); transform: translateY(-3px); box-shadow: 0 12px 30px var(--color-accent-glow); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-style: italic; font-size: 16px; letter-spacing: 0.08em; color: var(--color-primary); text-decoration: none; }
+    .btn-ghost:hover { color: var(--color-text); }
+    .hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .hero-scroll span { font-family: var(--font-accent); font-style: italic; font-size: 12px; letter-spacing: 0.28em; color: var(--color-text-muted); }
+    .scroll-line { width: 1px; height: 46px; background: linear-gradient(to bottom, var(--color-accent), transparent); animation: scrollAnim 2.2s ease infinite; }
+    @keyframes scrollAnim { 0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom} }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1120px; margin: 0 auto; padding: 104px 28px; }
+    .section-head { text-align: center; margin-bottom: 58px; }
+    .section-head.left { text-align: left; }
+    .section-en { display: block; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.2em; color: var(--color-primary); margin-bottom: 14px; }
+    .section-head h2 { font-family: var(--font-heading); font-size: clamp(25px, 3.2vw, 38px); letter-spacing: 0.16em; color: var(--color-text); }
+    .section-head p.lead { margin: 16px auto 0; color: var(--color-text-muted); font-size: 15px; max-width: 580px; font-weight: 300; }
+    .section-head.left p.lead { margin-left: 0; }
+    .leaf { width: 40px; height: 1px; background: var(--color-accent); margin: 18px auto 0; position: relative; }
+    .section-head.left .leaf { margin-left: 0; }
+    .leaf::after { content: '❦'; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); color: var(--color-accent); font-size: 14px; background: var(--color-bg); padding: 0 8px; }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy { background: var(--color-surface); }
+    .phil-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .phil-text .section-en { text-align: left; }
+    .phil-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 24px; line-height: 1.6; }
+    .phil-text p { color: var(--color-text-muted); font-size: 15px; line-height: 2.2; margin-bottom: 18px; font-weight: 300; }
+    .phil-text .accent-word { color: var(--color-primary); }
+    .phil-cards { display: grid; gap: 16px; }
+    .phil-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-left: 3px solid var(--color-primary); border-radius: var(--radius); padding: 26px 28px; }
+    .phil-card h3 { font-family: var(--font-heading); font-size: 18px; letter-spacing: 0.1em; color: var(--color-accent); margin-bottom: 8px; }
+    .phil-card p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.9; font-weight: 300; }
+
+    /* ── SIGNATURE ── */
+    .signature { background: var(--color-bg); }
+    .sig-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
+    .sig-media { min-height: 440px; }
+    .sig-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sig-text { padding: 60px 52px; display: flex; flex-direction: column; justify-content: center; background: var(--color-surface); }
+    .sig-text .badge { align-self: flex-start; font-family: var(--font-accent); font-style: italic; font-size: 15px; letter-spacing: 0.1em; color: var(--color-primary); border: 1px solid var(--color-border-green); padding: 4px 16px; border-radius: 20px; margin-bottom: 18px; }
+    .sig-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 18px; line-height: 1.5; }
+    .sig-text p { color: var(--color-text-muted); font-size: 14.5px; line-height: 2.1; margin-bottom: 22px; font-weight: 300; }
+    .sig-price { font-family: var(--font-accent); font-size: 34px; color: var(--color-accent); letter-spacing: 0.04em; }
+    .sig-price small { font-family: var(--font-body); font-size: 12px; color: var(--color-text-muted); }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-surface); }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 56px; }
+    .menu-cat { padding: 8px 0 18px; }
+    .menu-cat h3 { font-family: var(--font-heading); font-size: 19px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 8px; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+    .menu-cat h3 span { font-family: var(--font-accent); font-style: italic; font-size: 13px; color: var(--color-primary); margin-left: 10px; letter-spacing: 0.1em; }
+    .menu-row { display: flex; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px dashed var(--color-border); }
+    .menu-row h4 { font-size: 15px; color: var(--color-cream); font-weight: 400; }
+    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-text-muted); margin-top: 2px; font-weight: 300; }
+    .menu-row .dot { flex: 1; border-bottom: 1px dotted rgba(154,151,129,0.3); transform: translateY(-4px); }
+    .menu-row .m-price { font-family: var(--font-accent); font-size: 22px; color: var(--color-accent); white-space: nowrap; }
+    .menu-row .m-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+
+    /* ── ATMOSPHERE ── */
+    .atmos { background: var(--color-bg); }
+    .atmos-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
+    .atmos-media img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card); display: block; border: 1px solid var(--color-border); }
+    .atmos-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.1em; color: var(--color-text); margin-bottom: 20px; line-height: 1.6; }
+    .atmos-text p { color: var(--color-text-muted); font-size: 15px; line-height: 2.2; margin-bottom: 18px; font-weight: 300; }
+    .atmos-quote { font-family: var(--font-heading); color: var(--color-primary); font-size: 17px; letter-spacing: 0.08em; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-surface); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .review-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; position: relative; }
+    .review-card::before { content: '\201C'; position: absolute; top: 10px; left: 18px; font-family: var(--font-accent); font-size: 56px; color: var(--color-primary); opacity: 0.28; line-height: 1; }
+    .stars { color: var(--color-accent); font-size: 14px; letter-spacing: 0.14em; margin-bottom: 14px; }
+    .review-text { font-size: 13.5px; color: var(--color-cream); line-height: 2; margin-bottom: 18px; position: relative; z-index: 1; font-weight: 300; }
+    .review-author { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-primary); border-top: 1px solid var(--color-border); padding-top: 12px; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-bg); }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .info-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; box-shadow: var(--shadow-card); }
+    .info-box h3 { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
+    .info-label { font-family: var(--font-accent); font-style: italic; font-size: 14px; color: var(--color-primary); min-width: 58px; }
+    .info-value { color: var(--color-text); line-height: 1.7; font-weight: 300; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-surface); }
+    .contact-form { max-width: 620px; margin: 0 auto; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 50px 46px; box-shadow: var(--shadow-card); }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 11px; letter-spacing: 0.14em; color: var(--color-text-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; font-weight: 300; transition: border-color var(--transition), box-shadow var(--transition); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-accent-glow); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: var(--color-surface); }
+    .submit-btn { width: 100%; background: var(--color-accent); border: none; border-radius: var(--radius); padding: 16px; font-family: var(--font-body); font-size: 14px; letter-spacing: 0.16em; color: var(--color-bg); cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .submit-btn:hover { background: var(--color-primary); transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-accent-glow); }
+
+    /* ── FOOTER ── */
+    footer { background: #0c0e08; border-top: 1px solid var(--color-border); text-align: center; padding: 56px 24px; }
+    .footer-logo { font-family: var(--font-heading); font-size: 28px; letter-spacing: 0.26em; color: var(--color-accent); margin-bottom: 6px; }
+    .footer-sub { font-family: var(--font-accent); font-style: italic; font-size: 13px; letter-spacing: 0.22em; color: var(--color-text-muted); margin-bottom: 22px; }
+    .footer-info { font-size: 12.5px; color: var(--color-text-muted); letter-spacing: 0.06em; line-height: 2.1; margin-bottom: 22px; font-weight: 300; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(154,151,129,0.5); letter-spacing: 0.1em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in:nth-child(3) { transition-delay: 0.2s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .phil-wrap, .sig-wrap, .atmos-wrap, .menu-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
+      .sig-media { min-height: 300px; }
+      .sig-text { padding: 40px 30px; }
+      nav { display: none; }
+      .phil-wrap, .atmos-wrap { gap: 34px; }
+      .contact-form { padding: 34px 24px; }
+    }
+    @media (max-width: 600px) { .hero h1 { font-size: 38px; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo"><span class="name">自然堂</span><span class="sub">JINEN-DO · SHUNSAI SHUBOU</span></a>
+      <nav>
+        <a href="#philosophy">こだわり</a>
+        <a href="#signature">名物</a>
+        <a href="#menu">お品書き</a>
+        <a href="#atmos">店内</a>
+        <a href="#info">アクセス</a>
+        <a href="#contact" class="nav-cta">ご予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-label">Fukuoka · Jonan · Tsutsumi</span>
+        <h1>自然に、<br><em>素直</em>な一杯を。</h1>
+        <p class="hero-catch">
+          無農薬の自然食材にこだわった、旬の料理。<br>
+          名物のテールラーメンに、じゅうと香る山芋鉄板。<br>
+          城南区・堤の静かな灯りの下で、体にやさしいひとときを。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">お品書きを見る</a>
+          <a href="#philosophy" class="btn-ghost">こだわりを知る →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+
+  <section class="philosophy" id="philosophy">
+    <div class="section-inner">
+      <div class="phil-wrap">
+        <div class="phil-text fade-in">
+          <span class="section-en">Our Philosophy</span>
+          <h2>体にやさしい、<br>自然のままの味を。</h2>
+          <p>自然堂の料理は、<span class="accent-word">無農薬の自然食材</span>から。旬の野菜や素材そのものの味を大切に、余計な手を加えすぎず、丁寧に仕立てます。</p>
+          <p>お酒とともに、体をいたわる一皿を。日々がんばるあなたに、そっと寄り添う旬菜酒房でありたいと思っています。</p>
+        </div>
+        <div class="phil-cards fade-in">
+          <div class="phil-card">
+            <h3>無農薬の自然食材</h3>
+            <p>できるかぎり無農薬・自然の食材を選び、素材本来のうまみを引き出します。</p>
+          </div>
+          <div class="phil-card">
+            <h3>旬を大切に</h3>
+            <p>その時季にいちばんおいしい旬の野菜や魚を、日替わりでご用意します。</p>
+          </div>
+          <div class="phil-card">
+            <h3>〆まで、やさしく</h3>
+            <p>名物テールラーメンや煮麺で、お酒のあとの体もほっと満たされます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="signature">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Signature</span>
+        <h2>名物</h2>
+        <div class="leaf"></div>
+      </div>
+      <div class="sig-wrap fade-in">
+        <div class="sig-media"><img src="jinendo-menu-01.png" alt="自然堂の名物テールラーメン"></div>
+        <div class="sig-text">
+          <span class="badge">名物 · Signature</span>
+          <h2>とろける牛テールの、<br>テールラーメン。</h2>
+          <p>じっくり煮込んだ牛テールの旨みが溶け込んだ、琥珀色のスープ。コラーゲンたっぷりで、お酒のあとの〆にもぴったりです。やさしい味わいが、体の芯までしみわたります。煮麺でもお楽しみいただけます。</p>
+          <div class="sig-price">¥980 <small>（税込・目安）</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Menu</span>
+        <h2>お品書き</h2>
+        <div class="leaf"></div>
+        <p class="lead">旬の一品から、名物の〆まで。仕入れにより内容は変わります。価格は目安です。</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-cat fade-in">
+          <h3>名物・鉄板 <span>Specialty</span></h3>
+          <div class="menu-row"><div><h4>テールラーメン<span class="m-note">名物・とろける牛テール</span></h4></div><span class="dot"></span><span class="m-price">¥980</span></div>
+          <div class="menu-row"><div><h4>煮麺（にゅうめん）<span class="m-note">やさしい〆の一杯</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+          <div class="menu-row"><div><h4>山芋鉄板<span class="m-note">ふわとろの人気メニュー</span></h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>旬菜・一品 <span>Seasonal</span></h3>
+          <div class="menu-row"><div><h4>本日の旬野菜盛り<span class="m-note">無農薬野菜を彩りよく</span></h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+          <div class="menu-row"><div><h4>揚げ豆腐ミックス<span class="m-note">定番の一皿</span></h4></div><span class="dot"></span><span class="m-price">¥580</span></div>
+          <div class="menu-row"><div><h4>本日のお造り<span class="m-note">仕入れによる</span></h4></div><span class="dot"></span><span class="m-price">時価</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>ごはん・麺 <span>Rice &amp; Noodle</span></h3>
+          <div class="menu-row"><div><h4>チャーハン<span class="m-note">パラっと香ばしく</span></h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+          <div class="menu-row"><div><h4>塩焼きそば</h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+          <div class="menu-row"><div><h4>おにぎり（2個）</h4></div><span class="dot"></span><span class="m-price">¥380</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>お飲み物 <span>Drink</span></h3>
+          <div class="menu-row"><div><h4>生ビール</h4></div><span class="dot"></span><span class="m-price">¥520</span></div>
+          <div class="menu-row"><div><h4>日本酒（本日のおすすめ）</h4></div><span class="dot"></span><span class="m-price">¥580<small>〜</small></span></div>
+          <div class="menu-row"><div><h4>焼酎・サワー各種</h4></div><span class="dot"></span><span class="m-price">¥450<small>〜</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atmos" id="atmos">
+    <div class="section-inner">
+      <div class="atmos-wrap">
+        <div class="atmos-media fade-in"><img src="jinendo-interior.png" alt="落ち着いた和の自然堂の店内"></div>
+        <div class="atmos-text fade-in">
+          <span class="section-en">The Space</span>
+          <h2>灯りをおとした、<br>和みの止まり木。</h2>
+          <p>木のぬくもりと、和紙の提灯のやわらかな灯り。竹や草花をあしらった、落ち着いた大人の空間です。仕事帰りにひとりで、気の合う仲間と静かに。</p>
+          <p>カウンターに腰かけて、旬の一品とお酒を。ゆっくりと流れる時間の中で、体も心もほどけていく。そんな夜を過ごしていただけます。</p>
+          <p class="atmos-quote">— 今日もおつかれさま。ゆっくりどうぞ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="leaf"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「テールラーメンが絶品。お酒のあとの〆にぴったりで、体にしみわたる優しい味。無農薬の野菜も新鮮で美味しい。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★☆</div>
+          <p class="review-text">「山芋鉄板がふわとろで最高。落ち着いた雰囲気で、一人でもゆっくり飲めるのが嬉しいお店です。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「体にやさしい料理が揃っていて、健康を気にする自分にはありがたい。旬のお野菜が本当に美味しかったです。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Information</span>
+        <h2>営業情報・アクセス</h2>
+        <div class="leaf"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">Dinner</span><span class="info-value">夜の居酒屋営業<br><span class="info-note">詳細はSNSをご確認ください</span></span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">店舗にてご確認ください</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>堤1-10-25</span></div>
+          <div class="info-row"><span class="info-label">最寄</span><span class="info-value">福大前周辺</span></div>
+          <div class="info-row"><span class="info-label">席</span><span class="info-value">カウンター・<br>テーブル席</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>ご予約・SNS</h3>
+          <div class="info-row"><span class="info-label">IG</span><span class="info-value">@jinen.do</span></div>
+          <div class="info-row"><span class="info-label">予約</span><span class="info-value">お問い合わせフォーム<br>またはお電話</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種<br>キャッシュレス</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Reservation</span>
+        <h2>ご予約・お問い合わせ</h2>
+        <div class="leaf"></div>
+        <p class="lead">ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>ご希望人数・日時</label><input type="text" placeholder="例：3名 / 7月12日 19:30"></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>ご予約</option><option>宴会・貸切</option><option>お品書きについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">旬菜酒房 自然堂</div>
+    <div class="footer-sub">Jinen-do · Fukuoka</div>
+    <div class="footer-info">
+      無農薬の自然食材と名物テールラーメン<br>
+      福岡市城南区堤1-10-25　Instagram @jinen.do
+    </div>
+    <div class="footer-copy">&copy; 2026 旬菜酒房 自然堂. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
