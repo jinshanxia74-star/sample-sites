@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>やきにく飛牛 七隈本店 | 福岡・城南区 リーズナブル焼肉・無煙ロースター</title>
+  <meta name="description" content="福岡市城南区七隈の焼肉店「やきにく飛牛（ひぎゅう）」。名物ネギ巻きの縛りタン、神コスパの厚切り国産ヒレステーキ。全席無煙ロースターでニオイを気にせず、パーテーション席で一人焼肉・デート・仕事帰りも安心。">
+  <meta property="og:title" content="やきにく飛牛 七隈本店 | リーズナブル焼肉">
+  <meta property="og:description" content="名物・縛りタンと神コスパのヒレステーキ。全席無煙ロースター＆個室感のあるパーテーション席。福岡・城南区七隈。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="higyu-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "やきにく飛牛 七隈本店",
+    "description": "リーズナブルな焼肉店。名物・縛りタン、神コスパのヒレステーキ、全席無煙ロースター。",
+    "servesCuisine": "焼肉",
+    "priceRange": "¥¥",
+    "address": {"@type":"PostalAddress","addressLocality":"城南区七隈","addressRegion":"福岡市","addressCountry":"JP"},
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"17:00","closes":"01:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"16:00","closes":"01:00"}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&family=Noto+Sans+JP:wght@300;400;500;700&family=Anton&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : リーズナブル焼肉（炭火・活気・神コスパ・無煙）
+       見出し  : Zen Antique（筆文字風・炭火・和・手仕事感）
+       本文    : Noto Sans JP
+       数字/英語: Anton（極太コンデンスド・インパクト・価格訴求）
+       世界観  : 炭黒 × 炎のオレンジ × 肉の赤 × 燻しの金（Ferrariの暗色は閃龍で使用済み → 炭火の暖色スモーキー路線で差別化）
+    */
+    :root {
+      --color-bg:          #15100c;
+      --color-surface:     #211811;
+      --color-surface-2:   #2c211a;
+      --color-primary:     #bd3324;
+      --color-ember:       #e6692a;
+      --color-accent:      #d9a441;
+      --color-ember-glow:  rgba(230,105,42,0.28);
+      --color-text:        #f5ece2;
+      --color-cream:       #eaddcb;
+      --color-text-muted:  #a48b76;
+      --color-border:      rgba(217,164,65,0.16);
+      --color-border-ember:rgba(230,105,42,0.32);
+      --font-heading: 'Zen Antique', serif;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Anton', sans-serif;
+      --radius: 3px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card: 0 2px 6px rgba(0,0,0,0.5), 0 12px 30px rgba(0,0,0,0.45), 0 34px 60px rgba(0,0,0,0.3);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.85; letter-spacing: 0.03em; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%); background: rgba(21,16,12,0.82); border-bottom: 1px solid var(--color-border); padding: 13px 0; }
+    .header-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.15; }
+    .logo .name { font-family: var(--font-heading); font-size: 24px; letter-spacing: 0.14em; color: var(--color-accent); }
+    .logo .sub { font-family: var(--font-accent); font-size: 11px; letter-spacing: 0.34em; color: var(--color-text-muted); margin-top: 3px; }
+    nav { display: flex; align-items: center; gap: 26px; }
+    nav a { font-size: 12px; letter-spacing: 0.12em; color: var(--color-text-muted); text-decoration: none; transition: color var(--transition); }
+    nav a:hover { color: var(--color-accent); }
+    .nav-cta { color: var(--color-bg) !important; background: var(--color-ember); padding: 9px 22px; border-radius: var(--radius); font-weight: 700; letter-spacing: 0.06em; transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important; }
+    .nav-cta:hover { background: var(--color-accent) !important; transform: translateY(-2px); box-shadow: 0 6px 20px var(--color-ember-glow) !important; }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
+      background: linear-gradient(100deg, rgba(21,16,12,0.95) 0%, rgba(21,16,12,0.7) 45%, rgba(21,16,12,0.3) 100%), url('higyu-hero.png') center/cover no-repeat; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 18% 70%, rgba(230,105,42,0.2) 0%, transparent 60%); pointer-events: none; }
+    .hero-content { position: relative; z-index: 2; max-width: 1160px; margin: 0 auto; width: 100%; padding: 150px 28px 90px; }
+    .hero-inner { max-width: 620px; }
+    .hero-label { display: inline-block; font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.3em; color: var(--color-ember); border-left: 3px solid var(--color-ember); padding: 2px 0 2px 14px; margin-bottom: 22px; }
+    .hero h1 { font-family: var(--font-heading); font-size: clamp(46px, 8vw, 92px); letter-spacing: 0.05em; line-height: 1.15; color: var(--color-text); margin-bottom: 20px; text-shadow: 0 6px 30px rgba(0,0,0,0.7); }
+    .hero h1 em { font-style: normal; color: var(--color-accent); }
+    .hero-catch { font-size: clamp(15px, 2vw, 19px); font-weight: 500; letter-spacing: 0.08em; color: var(--color-cream); line-height: 2.1; margin-bottom: 34px; }
+    .hero-catch strong { color: var(--color-ember); font-weight: 700; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; color: var(--color-bg); background: var(--color-ember); padding: 17px 42px; border-radius: var(--radius); text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { background: var(--color-accent); transform: translateY(-3px); box-shadow: 0 12px 34px var(--color-ember-glow); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-accent); font-size: 16px; letter-spacing: 0.1em; color: var(--color-accent); text-decoration: none; }
+    .btn-ghost:hover { color: var(--color-text); }
+    .hero-scroll { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .hero-scroll span { font-family: var(--font-accent); font-size: 12px; letter-spacing: 0.3em; color: var(--color-text-muted); }
+    .scroll-line { width: 1px; height: 46px; background: linear-gradient(to bottom, var(--color-ember), transparent); animation: scrollAnim 2s ease infinite; }
+    @keyframes scrollAnim { 0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom} }
+
+    /* ── COSPA banner ── */
+    .cospa { background: var(--color-ember); }
+    .cospa-inner { max-width: 1160px; margin: 0 auto; padding: 30px 28px; display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; text-align: center; }
+    .cospa-inner .big { font-family: var(--font-accent); font-size: clamp(26px,4vw,42px); color: var(--color-bg); letter-spacing: 0.03em; }
+    .cospa-inner .txt { color: #2a160c; font-weight: 700; font-size: 15px; letter-spacing: 0.04em; }
+    .cospa-inner .note { color: #4a2a17; font-size: 12px; }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1160px; margin: 0 auto; padding: 104px 28px; }
+    .section-head { margin-bottom: 58px; }
+    .section-head.center { text-align: center; }
+    .section-en { display: block; font-family: var(--font-accent); font-size: 14px; letter-spacing: 0.34em; color: var(--color-ember); margin-bottom: 14px; }
+    .section-head h2 { font-family: var(--font-heading); font-size: clamp(26px, 3.6vw, 42px); letter-spacing: 0.08em; color: var(--color-text); }
+    .section-head p.lead { margin-top: 16px; color: var(--color-text-muted); font-size: 15px; max-width: 600px; }
+    .section-head.center p.lead { margin-left: auto; margin-right: auto; }
+    .section-line { width: 46px; height: 3px; background: linear-gradient(to right, var(--color-primary), var(--color-accent)); margin: 18px 0 0; }
+    .section-head.center .section-line { margin-left: auto; margin-right: auto; }
+
+    /* ── FEATURES (icon cards, 3) ── */
+    .features { background: var(--color-surface); }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .feature-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px 30px; box-shadow: var(--shadow-card); transition: transform var(--transition), border-color var(--transition); }
+    .feature-card:hover { transform: translateY(-6px); border-color: var(--color-border-ember); }
+    .feature-icon { font-size: 38px; margin-bottom: 18px; display: block; }
+    .feature-card h3 { font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 12px; }
+    .feature-card p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.95; }
+
+    /* ── SIGNATURE (meat platter) ── */
+    .signature { background: var(--color-bg); }
+    .sig-wrap { display: grid; grid-template-columns: 1fr 1.05fr; gap: 0; align-items: stretch; border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-card); }
+    .sig-media { min-height: 420px; background: var(--color-surface-2); }
+    .sig-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .sig-text { padding: 56px 50px; display: flex; flex-direction: column; justify-content: center; background: var(--color-surface); }
+    .sig-text .badge { display: inline-block; font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.14em; color: var(--color-ember); border: 1px solid var(--color-border-ember); padding: 4px 14px; border-radius: 20px; margin-bottom: 16px; align-self: flex-start; }
+    .sig-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.06em; color: var(--color-text); margin-bottom: 16px; line-height: 1.4; }
+    .sig-text p { color: var(--color-text-muted); font-size: 14.5px; line-height: 2; margin-bottom: 22px; }
+    .sig-price { font-family: var(--font-accent); font-size: 38px; color: var(--color-accent); letter-spacing: 0.03em; }
+    .sig-price small { font-family: var(--font-body); font-size: 12px; color: var(--color-text-muted); }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-surface); }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 56px; }
+    .menu-cat { padding: 8px 0 20px; }
+    .menu-cat h3 { font-family: var(--font-heading); font-size: 20px; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 8px; padding-bottom: 14px; border-bottom: 2px solid var(--color-border-ember); }
+    .menu-row { display: flex; align-items: baseline; gap: 12px; padding: 15px 0; border-bottom: 1px dashed var(--color-border); }
+    .menu-row h4 { font-size: 15px; color: var(--color-text); }
+    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-text-muted); margin-top: 2px; }
+    .menu-row .dot { flex: 1; border-bottom: 1px dotted rgba(164,139,118,0.35); transform: translateY(-4px); }
+    .menu-row .m-price { font-family: var(--font-accent); font-size: 22px; color: var(--color-ember); letter-spacing: 0.02em; white-space: nowrap; }
+    .menu-row .m-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); }
+
+    /* ── ATMOSPHERE (interior) ── */
+    .atmos { background: var(--color-bg); }
+    .atmos-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+    .atmos-media img { width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-card); display: block; border: 1px solid var(--color-border); }
+    .atmos-text h2 { font-family: var(--font-heading); font-size: clamp(24px,3vw,34px); letter-spacing: 0.06em; color: var(--color-text); margin-bottom: 20px; line-height: 1.4; }
+    .atmos-list { list-style: none; margin-top: 20px; }
+    .atmos-list li { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid var(--color-border); font-size: 14px; color: var(--color-text-muted); }
+    .atmos-list li:last-child { border-bottom: 1px solid var(--color-border); }
+    .atmos-list .ico { color: var(--color-ember); font-size: 18px; }
+    .atmos-list b { color: var(--color-cream); font-weight: 700; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-surface); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .review-card { background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 26px; box-shadow: var(--shadow-card); position: relative; }
+    .review-card::before { content: '\201C'; position: absolute; top: 8px; left: 18px; font-family: var(--font-accent); font-size: 60px; color: var(--color-ember); opacity: 0.2; line-height: 1; }
+    .stars { color: var(--color-accent); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 14px; }
+    .review-text { font-size: 13.5px; color: var(--color-cream); line-height: 1.95; margin-bottom: 18px; position: relative; z-index: 1; }
+    .review-author { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.08em; color: var(--color-ember); border-top: 1px solid var(--color-border); padding-top: 12px; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-bg); }
+    .info-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 22px; }
+    .info-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 34px 28px; box-shadow: var(--shadow-card); }
+    .info-box.highlight { border-color: var(--color-border-ember); }
+    .info-box h3 { font-family: var(--font-heading); font-size: 17px; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
+    .info-label { font-family: var(--font-accent); font-size: 13px; letter-spacing: 0.04em; color: var(--color-ember); min-width: 64px; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-surface); }
+    .contact-form { max-width: 640px; margin: 0 auto; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 50px 46px; box-shadow: var(--shadow-card); }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 11px; letter-spacing: 0.14em; color: var(--color-text-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-ember); box-shadow: 0 0 0 3px var(--color-ember-glow); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .form-group select option { background: var(--color-surface); }
+    .submit-btn { width: 100%; background: var(--color-ember); border: none; border-radius: var(--radius); padding: 17px; font-family: var(--font-body); font-size: 14px; font-weight: 700; letter-spacing: 0.16em; color: var(--color-bg); cursor: pointer; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .submit-btn:hover { background: var(--color-accent); transform: translateY(-2px); box-shadow: 0 8px 24px var(--color-ember-glow); }
+
+    /* ── FOOTER ── */
+    footer { background: #0d0805; border-top: 1px solid var(--color-border); text-align: center; padding: 56px 24px; }
+    .footer-logo { font-family: var(--font-heading); font-size: 30px; letter-spacing: 0.12em; color: var(--color-accent); margin-bottom: 6px; }
+    .footer-sub { font-family: var(--font-accent); font-size: 12px; letter-spacing: 0.34em; color: var(--color-text-muted); margin-bottom: 22px; }
+    .footer-info { font-size: 12px; color: var(--color-text-muted); letter-spacing: 0.06em; line-height: 2; margin-bottom: 22px; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(164,139,118,0.5); letter-spacing: 0.1em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(28px); transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1), transform 0.75s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .features-grid, .reviews-grid, .menu-grid, .info-grid, .sig-wrap, .atmos-wrap { grid-template-columns: 1fr; }
+      .sig-media { min-height: 280px; }
+      .sig-text { padding: 40px 30px; }
+      nav { display: none; }
+      .contact-form { padding: 34px 24px; }
+    }
+    @media (max-width: 600px) { .hero h1 { font-size: 42px; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo"><span class="name">やきにく飛牛</span><span class="sub">HIGYU — NANAKUMA</span></a>
+      <nav>
+        <a href="#features">飛牛の魅力</a>
+        <a href="#signature">名物</a>
+        <a href="#menu">メニュー</a>
+        <a href="#atmos">店内</a>
+        <a href="#info">アクセス</a>
+        <a href="#contact" class="nav-cta">ご予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="hero-label">FUKUOKA · JONAN · NANAKUMA</span>
+        <h1>いい肉を、<br><em>気軽に</em>炭火で。</h1>
+        <p class="hero-catch">
+          名物・<strong>縛りタン</strong>に、神コスパの厚切り<strong>ヒレステーキ</strong>。
+          全席<strong>無煙ロースター</strong>だから、ニオイを気にせず心ゆくまで。
+          七隈の夜は、飛牛の炭火で。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">メニューを見る</a>
+          <a href="#contact" class="btn-ghost">▶ ご予約はこちら</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
+  </section>
+
+  <div class="cospa">
+    <div class="cospa-inner">
+      <span class="big">初回半額</span>
+      <span class="txt">国産ヒレステーキ、フード初オーダーで半額サービス</span>
+      <span class="note">※詳細は店舗にてご確認ください</span>
+    </div>
+  </div>
+
+  <section class="features" id="features">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Why Higyu</span>
+        <h2>飛牛が選ばれる理由</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <span class="feature-icon">🥩</span>
+          <h3>神コスパの国産肉</h3>
+          <p>厚切りの国産ヒレをはじめ、いい肉をリーズナブルに。「この値段でこの質」と驚かれる、飛牛のコスパをぜひ。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon">💨</span>
+          <h3>全席 無煙ロースター</h3>
+          <p>全席に無煙ロースターを完備。煙とニオイをしっかり吸い込み換気するから、服やヘアに匂いがつきにくく安心です。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-icon">🪟</span>
+          <h3>個室感のある席</h3>
+          <p>パーテーション付きのカウンター席で、一人焼肉も、デートも、仕事帰りの一杯も。周りを気にせずゆっくり楽しめます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="signature">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Signature</span>
+        <h2>飛牛の名物</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="sig-wrap fade-in">
+        <div class="sig-media"><img src="higyu-menu-01.png" alt="飛牛の霜降り和牛盛り合わせ"></div>
+        <div class="sig-text">
+          <span class="badge">名物 · SIGNATURE</span>
+          <h2>ネギ巻きの<br>「縛りタン」。</h2>
+          <p>シャキッとしたネギを厚切りタンで巻き上げた、飛牛だけの名物。炭火でさっと炙れば、タンの旨みとネギの香りが口いっぱいに広がります。まずはこの一皿から、飛牛の夜を始めてください。</p>
+          <div class="sig-price">¥1,280 <small>（税込・目安）</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Menu</span>
+        <h2>おすすめメニュー</h2>
+        <div class="section-line"></div>
+        <p class="lead">神コスパの一皿から、ゆっくり味わう厚切りまで。価格は目安です。</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-cat fade-in">
+          <h3>牛タン・希少部位</h3>
+          <div class="menu-row"><div><h4>縛りタン<span class="m-note">名物・ネギ巻き厚切りタン</span></h4></div><span class="dot"></span><span class="m-price">¥1,280</span></div>
+          <div class="menu-row"><div><h4>厚切り牛タン塩<span class="m-note">ザクッと食感</span></h4></div><span class="dot"></span><span class="m-price">¥1,180</span></div>
+          <div class="menu-row"><div><h4>本日の希少部位<span class="m-note">仕入れによる</span></h4></div><span class="dot"></span><span class="m-price">¥980<small>〜</small></span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>ステーキ・赤身</h3>
+          <div class="menu-row"><div><h4>神コスパ ヒレステーキ<span class="m-note">厚切り国産ヒレ・初回半額</span></h4></div><span class="dot"></span><span class="m-price">¥1,580</span></div>
+          <div class="menu-row"><div><h4>国産カルビ<span class="m-note">定番の一皿</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+          <div class="menu-row"><div><h4>ハラミ<span class="m-note">やわらか赤身</span></h4></div><span class="dot"></span><span class="m-price">¥880</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>ホルモン・盛り合わせ</h3>
+          <div class="menu-row"><div><h4>飛牛盛り合わせ<span class="m-note">人気部位を少しずつ</span></h4></div><span class="dot"></span><span class="m-price">¥2,480</span></div>
+          <div class="menu-row"><div><h4>本日のホルモン<span class="m-note">新鮮直送</span></h4></div><span class="dot"></span><span class="m-price">¥580<small>〜</small></span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>サイド・〆</h3>
+          <div class="menu-row"><div><h4>キムチ盛り合わせ</h4></div><span class="dot"></span><span class="m-price">¥480</span></div>
+          <div class="menu-row"><div><h4>ビビンバ<span class="m-note">〆の定番</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+          <div class="menu-row"><div><h4>冷麺</h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atmos" id="atmos">
+    <div class="section-inner">
+      <div class="atmos-wrap">
+        <div class="atmos-media fade-in"><img src="higyu-interior.png" alt="無煙ロースターを備えた飛牛の店内"></div>
+        <div class="atmos-text fade-in">
+          <span class="section-en">The Space</span>
+          <h2>煙を気にせず、<br>ゆっくり炭火を。</h2>
+          <p style="color:var(--color-text-muted);font-size:15px;">飛牛は、気軽に本格焼肉を楽しめる空間づくりにこだわっています。無煙ロースターと個室感のある席で、シーンを選ばず。</p>
+          <ul class="atmos-list">
+            <li><span class="ico">💨</span><div>全席<b>無煙ロースター</b>で、服やヘアにニオイがつきにくい</div></li>
+            <li><span class="ico">🪟</span><div><b>パーテーション付き</b>カウンターで、一人焼肉やデートも安心</div></li>
+            <li><span class="ico">🕔</span><div>平日17:00〜深夜1:00。<b>仕事帰り</b>にふらっと立ち寄れる</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「縛りタンが最高。ネギとタンの相性が抜群で、これ目当てに通ってます。コスパも良くて言うことなし。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★☆</div>
+          <p class="review-text">「無煙ロースターだから服に匂いがつかないのが本当に助かる。デートで使っても安心でした。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">「ヒレステーキがこの値段で食べられるのは驚き。一人でカウンターでも気軽に入れる雰囲気がいい。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Information</span>
+        <h2>営業情報・アクセス</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">平日</span><span class="info-value">17:00 〜 翌1:00<br><span class="info-note">L.O. 24:30</span></span></div>
+          <div class="info-row"><span class="info-label">土日祝</span><span class="info-value">16:00 〜 翌1:00<br><span class="info-note">L.O. 24:30</span></span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">不定休</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <div class="info-row"><span class="info-label">住所</span><span class="info-value">福岡市城南区<br>七隈</span></div>
+          <div class="info-row"><span class="info-label">最寄</span><span class="info-value">七隈駅周辺</span></div>
+          <div class="info-row"><span class="info-label">席</span><span class="info-value">カウンター<br>（パーテーション付）</span></div>
+        </div>
+        <div class="info-box highlight fade-in">
+          <h3>ご予約・SNS</h3>
+          <div class="info-row"><span class="info-label">IG</span><span class="info-value">@higyu864</span></div>
+          <div class="info-row"><span class="info-label">予約</span><span class="info-value">お問い合わせフォーム<br>またはお電話</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種<br>キャッシュレス</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head center fade-in">
+        <span class="section-en">Reservation</span>
+        <h2>ご予約・お問い合わせ</h2>
+        <div class="section-line"></div>
+        <p class="lead">ご宴会・貸切のご相談も承ります。お気軽にどうぞ。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>ご希望人数・日時</label><input type="text" placeholder="例：4名 / 7月10日 19:00"></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>ご予約</option><option>宴会・貸切</option><option>メニューについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">やきにく飛牛</div>
+    <div class="footer-sub">HIGYU · NANAKUMA HONTEN</div>
+    <div class="footer-info">
+      福岡市城南区七隈　全席無煙ロースター<br>
+      平日 17:00〜翌1:00 / 土日祝 16:00〜翌1:00（L.O. 24:30）　Instagram @higyu864
+    </div>
+    <div class="footer-copy">&copy; 2026 やきにく飛牛 七隈本店. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
