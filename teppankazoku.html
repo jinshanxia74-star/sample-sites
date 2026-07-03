@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鉄板家族 | 福岡 鉄板焼き・お好み焼き｜みんなで囲むアットホームな鉄板</title>
+  <meta name="description" content="福岡の鉄板焼き・お好み焼きのお店「鉄板家族」。熱々の鉄板を囲んで、お好み焼き・焼きそば・鉄板焼きをわいわいと。家族や仲間で気軽に楽しめる、あたたかい鉄板ダイニングです。">
+  <meta property="og:title" content="鉄板家族 | 福岡 鉄板焼き・お好み焼き">
+  <meta property="og:description" content="熱々の鉄板を囲んで、みんなでわいわい。お好み焼き・焼きそば・鉄板焼きが揃うアットホームな鉄板ダイニング。">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:image" content="teppankazoku-hero.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "鉄板家族",
+    "description": "鉄板焼き・お好み焼きのアットホームな鉄板ダイニング。",
+    "servesCuisine": "鉄板焼き・お好み焼き",
+    "priceRange": "¥¥",
+    "address": {"@type":"PostalAddress","addressLocality":"福岡市","addressRegion":"福岡県","addressCountry":"JP"}
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Design Brief
+       業種    : 鉄板焼き・お好み焼き（アットホーム・家族・わいわい）
+       見出し  : Klee One（手書き調・温かみ・ほっこり）
+       本文    : Noto Sans JP
+       数字/英語: Montserrat（現代的・信頼・すっきり）
+       世界観  : クラフト紙のクリーム × 鉄板の炎オレンジ × ソースの茶 × 卵黄の金 × 紅生姜の赤（クラフト調ライトテーマで焼肉・ラーメンの暗色系と差別化）
+    */
+    :root {
+      --color-bg:          #f3ead9;
+      --color-surface:     #fffaf0;
+      --color-surface-2:   #ece0c9;
+      --color-primary:     #c85a1e;
+      --color-primary-dk:  #a3450f;
+      --color-accent:      #e0a02c;
+      --color-red:         #c0392b;
+      --color-green:       #6f8a4a;
+      --color-ink:         #362718;
+      --color-text:        #4d3b28;
+      --color-text-muted:  #8b7757;
+      --color-line:        #ddcdad;
+      --font-heading: 'Klee One', serif;
+      --font-body:    'Noto Sans JP', sans-serif;
+      --font-accent:  'Montserrat', sans-serif;
+      --radius: 10px;
+      --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-card: 0 2px 10px rgba(120,80,30,0.08), 0 16px 36px rgba(120,80,30,0.12);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { overflow-x: hidden; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.85; letter-spacing: 0.02em; }
+
+    /* ── HEADER ── */
+    header { position: fixed; top: 0; left: 0; right: 0; z-index: 200; backdrop-filter: blur(14px) saturate(150%); -webkit-backdrop-filter: blur(14px) saturate(150%); background: rgba(255,250,240,0.86); border-bottom: 1px solid var(--color-line); padding: 13px 0; }
+    .header-inner { max-width: 1140px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+    .logo .mark { width: 40px; height: 40px; border-radius: 12px; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 600; font-size: 20px; }
+    .logo .name { font-family: var(--font-heading); font-weight: 600; font-size: 21px; letter-spacing: 0.1em; color: var(--color-ink); }
+    nav { display: flex; align-items: center; gap: 26px; }
+    nav a { font-size: 13px; letter-spacing: 0.05em; color: var(--color-text); text-decoration: none; transition: color var(--transition); }
+    nav a:hover { color: var(--color-primary); }
+    .nav-cta { background: var(--color-primary); color: #fff !important; padding: 9px 22px; border-radius: 40px; font-weight: 700; transition: background var(--transition), transform var(--transition) !important; }
+    .nav-cta:hover { background: var(--color-primary-dk) !important; transform: translateY(-2px); }
+
+    /* ── HERO ── */
+    .hero { padding: 128px 0 72px; position: relative; }
+    .hero-inner { max-width: 1140px; margin: 0 auto; padding: 0 28px; display: grid; grid-template-columns: 1fr 1.02fr; gap: 50px; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--color-surface); border: 1px solid var(--color-line); color: var(--color-primary); font-family: var(--font-accent); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; padding: 7px 16px; border-radius: 40px; margin-bottom: 22px; }
+    .hero h1 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(36px, 5.4vw, 62px); line-height: 1.35; letter-spacing: 0.03em; color: var(--color-ink); margin-bottom: 22px; }
+    .hero h1 .o { color: var(--color-primary); }
+    .hero-lead { font-size: 15.5px; color: var(--color-text-muted); line-height: 2.05; margin-bottom: 32px; max-width: 470px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn-primary { display: inline-block; background: var(--color-primary); color: #fff; font-family: var(--font-accent); font-weight: 600; font-size: 15px; letter-spacing: 0.03em; padding: 15px 36px; border-radius: 40px; text-decoration: none; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
+    .btn-primary:hover { background: var(--color-primary-dk); transform: translateY(-3px); box-shadow: 0 12px 26px rgba(200,90,30,0.28); }
+    .btn-text { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 16px; color: var(--color-ink); text-decoration: none; }
+    .btn-text:hover { color: var(--color-primary); }
+    .hero-media { position: relative; }
+    .hero-media img { width: 100%; border-radius: 18px; box-shadow: var(--shadow-card); display: block; transform: rotate(-1.2deg); }
+    .hero-media .sticker { position: absolute; bottom: -18px; right: -12px; background: var(--color-accent); color: var(--color-ink); font-family: var(--font-heading); font-weight: 600; font-size: 15px; padding: 14px 20px; border-radius: 50%; width: 96px; height: 96px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.3; box-shadow: var(--shadow-card); transform: rotate(8deg); }
+
+    /* ── STRIP ── */
+    .strip { background: var(--color-primary); overflow: hidden; padding: 13px 0; white-space: nowrap; }
+    .strip-track { display: inline-block; animation: marquee 24s linear infinite; }
+    .strip-track span { font-family: var(--font-heading); font-weight: 600; font-size: 17px; letter-spacing: 0.06em; color: #fff; margin: 0 22px; }
+    .strip-track span::after { content: '●'; margin-left: 22px; color: var(--color-accent); font-size: 9px; vertical-align: middle; }
+    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ── SECTION COMMONS ── */
+    section { position: relative; }
+    .section-inner { max-width: 1140px; margin: 0 auto; padding: 96px 28px; }
+    .section-head { text-align: center; margin-bottom: 54px; }
+    .section-en { display: block; font-family: var(--font-accent); font-weight: 600; font-size: 13px; letter-spacing: 0.28em; color: var(--color-primary); margin-bottom: 12px; }
+    .section-head h2 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(25px, 3.2vw, 38px); letter-spacing: 0.04em; color: var(--color-ink); }
+    .section-head p.lead { margin: 14px auto 0; color: var(--color-text-muted); font-size: 15px; max-width: 580px; }
+    .wavy { width: 60px; height: 8px; margin: 14px auto 0; background: radial-gradient(circle, var(--color-accent) 40%, transparent 42%) 0 0/16px 8px repeat-x; }
+
+    /* ── FEATURES ── */
+    .features { background: var(--color-surface); }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .feature-card { background: var(--color-bg); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 40px 30px; text-align: center; transition: transform var(--transition), box-shadow var(--transition); }
+    .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
+    .feature-emoji { font-size: 40px; margin-bottom: 16px; display: block; }
+    .feature-card h3 { font-family: var(--font-heading); font-weight: 600; font-size: 19px; color: var(--color-primary); margin-bottom: 12px; }
+    .feature-card p { font-size: 13.5px; color: var(--color-text-muted); line-height: 1.95; }
+
+    /* ── SIGNATURE ── */
+    .signature { background: var(--color-bg); }
+    .sig-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+    .sig-media img { width: 100%; border-radius: 18px; box-shadow: var(--shadow-card); display: block; }
+    .sig-text .section-en { text-align: left; }
+    .sig-text h2 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(24px,3vw,34px); color: var(--color-ink); margin-bottom: 18px; line-height: 1.45; }
+    .sig-text p { font-size: 15px; color: var(--color-text-muted); line-height: 2.05; margin-bottom: 18px; }
+    .sig-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+    .sig-tag { font-family: var(--font-accent); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; padding: 6px 14px; border-radius: 40px; }
+    .tag-o { background: rgba(200,90,30,0.12); color: var(--color-primary); }
+    .tag-g { background: rgba(111,138,74,0.16); color: var(--color-green); }
+    .tag-r { background: rgba(192,57,43,0.12); color: var(--color-red); }
+
+    /* ── MENU ── */
+    .menu { background: var(--color-surface); }
+    .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 56px; }
+    .menu-cat { padding: 6px 0 18px; }
+    .menu-cat h3 { font-family: var(--font-heading); font-weight: 600; font-size: 19px; color: var(--color-primary); margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px dotted var(--color-line); }
+    .menu-row { display: flex; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px dashed var(--color-line); }
+    .menu-row h4 { font-size: 15px; color: var(--color-ink); }
+    .menu-row .m-note { display: block; font-size: 12px; color: var(--color-text-muted); margin-top: 2px; }
+    .menu-row .dot { flex: 1; border-bottom: 1px dotted var(--color-line); transform: translateY(-4px); }
+    .menu-row .m-price { font-family: var(--font-accent); font-weight: 700; font-size: 18px; color: var(--color-primary); white-space: nowrap; }
+    .menu-row .m-price small { font-family: var(--font-body); font-size: 11px; color: var(--color-text-muted); font-weight: 400; }
+
+    /* ── ATMOSPHERE ── */
+    .atmos { background: var(--color-bg); }
+    .atmos-wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 50px; align-items: center; }
+    .atmos-media img { width: 100%; border-radius: 18px; box-shadow: var(--shadow-card); display: block; }
+    .atmos-text h2 { font-family: var(--font-heading); font-weight: 600; font-size: clamp(24px,3vw,34px); color: var(--color-ink); margin-bottom: 20px; line-height: 1.45; }
+    .atmos-text p { font-size: 15px; color: var(--color-text-muted); line-height: 2.05; margin-bottom: 16px; }
+    .atmos-note { display: inline-block; font-family: var(--font-heading); font-size: 15px; color: var(--color-primary); border-bottom: 2px solid var(--color-accent); padding-bottom: 3px; }
+
+    /* ── REVIEWS ── */
+    .reviews { background: var(--color-surface); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card { background: var(--color-bg); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 32px 28px; }
+    .review-card .stars { color: var(--color-accent); font-size: 15px; letter-spacing: 0.12em; margin-bottom: 14px; }
+    .review-card p { font-size: 14px; color: var(--color-text); line-height: 1.95; margin-bottom: 18px; }
+    .review-author { font-family: var(--font-accent); font-weight: 600; font-size: 13px; color: var(--color-primary); border-top: 1px solid var(--color-line); padding-top: 12px; }
+
+    /* ── INFO ── */
+    .info { background: var(--color-bg); }
+    .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .info-box { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 32px 28px; box-shadow: var(--shadow-card); }
+    .info-box h3 { font-family: var(--font-heading); font-weight: 600; font-size: 17px; color: var(--color-primary); margin-bottom: 18px; padding-bottom: 12px; border-bottom: 1px solid var(--color-line); }
+    .info-row { display: flex; gap: 12px; margin-bottom: 11px; font-size: 13.5px; }
+    .info-label { font-family: var(--font-accent); font-weight: 600; font-size: 12px; letter-spacing: 0.04em; color: var(--color-accent); min-width: 62px; padding-top: 2px; }
+    .info-value { color: var(--color-text); line-height: 1.7; }
+    .info-note { font-size: 11px; color: var(--color-text-muted); }
+    .ig-link { color: var(--color-primary); text-decoration: none; font-weight: 700; }
+
+    /* ── CONTACT ── */
+    .contact { background: var(--color-surface); }
+    .contact-form { max-width: 620px; margin: 0 auto; background: var(--color-bg); border: 1px solid var(--color-line); border-radius: 16px; padding: 46px 42px; box-shadow: var(--shadow-card); }
+    .form-group { margin-bottom: 22px; }
+    .form-group label { display: block; font-size: 12px; letter-spacing: 0.06em; color: var(--color-text-muted); margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; background: #fff; border: 1px solid var(--color-line); border-radius: 10px; padding: 13px 15px; font-family: var(--font-body); font-size: 14px; color: var(--color-text); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(200,90,30,0.12); }
+    .form-group textarea { height: 120px; resize: vertical; }
+    .submit-btn { width: 100%; background: var(--color-primary); color: #fff; border: none; border-radius: 40px; padding: 16px; font-family: var(--font-accent); font-weight: 700; font-size: 15px; letter-spacing: 0.04em; cursor: pointer; transition: background var(--transition), transform var(--transition); }
+    .submit-btn:hover { background: var(--color-primary-dk); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--color-ink); color: #d8c4a6; text-align: center; padding: 54px 24px; }
+    .footer-logo { display: inline-flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+    .footer-logo .mark { width: 42px; height: 42px; border-radius: 12px; background: var(--color-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 600; font-size: 20px; }
+    .footer-logo .name { font-family: var(--font-heading); font-weight: 600; font-size: 24px; letter-spacing: 0.08em; color: #fff; }
+    .footer-info { font-size: 12.5px; line-height: 2; letter-spacing: 0.04em; margin-bottom: 20px; }
+    .footer-copy { font-family: var(--font-accent); font-size: 12px; color: rgba(216,196,166,0.5); letter-spacing: 0.08em; }
+
+    /* ── ANIM ── */
+    .fade-in { opacity: 0; transform: translateY(26px); transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1); }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in:nth-child(2) { transition-delay: 0.08s; }
+    .fade-in:nth-child(3) { transition-delay: 0.16s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner, .sig-wrap, .atmos-wrap, .features-grid, .menu-grid, .reviews-grid, .info-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+      .hero-media img { transform: none; }
+      .sig-wrap, .atmos-wrap { gap: 34px; }
+    }
+    @media (max-width: 600px) { .contact-form { padding: 32px 22px; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#top" class="logo"><span class="mark">鉄</span><span class="name">鉄板家族</span></a>
+      <nav>
+        <a href="#features">こだわり</a>
+        <a href="#signature">名物</a>
+        <a href="#menu">メニュー</a>
+        <a href="#atmos">店内</a>
+        <a href="#info">アクセス</a>
+        <a href="#contact" class="nav-cta">ご予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge">🔥 熱々の鉄板を、みんなで囲む</span>
+        <h1>鉄板を囲めば、<br>そこは<span class="o">家族</span>。</h1>
+        <p class="hero-lead">
+          じゅうじゅう焼ける音、香ばしいソースの香り。お好み焼きに焼きそば、鉄板焼き。
+          鉄板家族は、家族や仲間で気軽にわいわい楽しめる、あたたかい鉄板ダイニングです。
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">メニューを見る</a>
+          <a href="#signature" class="btn-text">名物を見る →</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="teppankazoku-hero.png" alt="鉄板で焼き上げるお好み焼きと焼きそば">
+        <span class="sticker">できたて熱々</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-track">
+      <span>お好み焼き</span><span>焼きそば</span><span>鉄板ステーキ</span><span>もんじゃ</span><span>ホルモン鉄板</span><span>宴会OK</span>
+      <span>お好み焼き</span><span>焼きそば</span><span>鉄板ステーキ</span><span>もんじゃ</span><span>ホルモン鉄板</span><span>宴会OK</span>
+    </div>
+  </div>
+
+  <section class="features" id="features">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Our Style</span>
+        <h2>鉄板家族の たのしみ方</h2>
+        <div class="wavy"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <span class="feature-emoji">🍳</span>
+          <h3>目の前の鉄板で</h3>
+          <p>熱々の鉄板を囲んで、焼きたてをそのまま。じゅうじゅうと焼ける音と香りも、鉄板家族のごちそうです。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-emoji">👨‍👩‍👧‍👦</span>
+          <h3>家族・仲間でわいわい</h3>
+          <p>お子様連れも、気の合う仲間との集まりも大歓迎。みんなでシェアして、あたたかい時間を過ごせます。</p>
+        </div>
+        <div class="feature-card fade-in">
+          <span class="feature-emoji">💰</span>
+          <h3>気軽に楽しめる価格</h3>
+          <p>お好み焼きから鉄板焼きまで、毎日でも通えるお手頃価格。ちょっと一杯にも、しっかりごはんにも。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signature" id="signature">
+    <div class="section-inner">
+      <div class="sig-wrap">
+        <div class="sig-media fade-in"><img src="teppankazoku-menu-01.png" alt="鉄板家族の看板お好み焼き"></div>
+        <div class="sig-text fade-in">
+          <span class="section-en">Signature</span>
+          <h2>ふわっと香ばしい、<br>看板のお好み焼き。</h2>
+          <p>生地はふんわり、外は香ばしく。特製ソースとマヨネーズ、たっぷりのかつお節と青のり。一枚一枚、鉄板でていねいに焼き上げる看板の一皿です。まずはここから、鉄板家族の味を。</p>
+          <div class="sig-tags">
+            <span class="sig-tag tag-o">特製ソース</span>
+            <span class="sig-tag tag-g">青のり・かつお節</span>
+            <span class="sig-tag tag-r">紅生姜</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Menu</span>
+        <h2>おしながき</h2>
+        <div class="wavy"></div>
+        <p class="lead">お好み焼き・焼きそばから鉄板焼きまで。価格は目安です。</p>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-cat fade-in">
+          <h3>お好み焼き</h3>
+          <div class="menu-row"><div><h4>豚玉<span class="m-note">定番の一枚</span></h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+          <div class="menu-row"><div><h4>ミックス玉<span class="m-note">豚・いか・えび</span></h4></div><span class="dot"></span><span class="m-price">¥980</span></div>
+          <div class="menu-row"><div><h4>もちチーズ玉<span class="m-note">人気トッピング</span></h4></div><span class="dot"></span><span class="m-price">¥980</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>焼きそば・もんじゃ</h3>
+          <div class="menu-row"><div><h4>ソース焼きそば</h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+          <div class="menu-row"><div><h4>海鮮塩焼きそば</h4></div><span class="dot"></span><span class="m-price">¥880</span></div>
+          <div class="menu-row"><div><h4>明太もちもんじゃ<span class="m-note">福岡らしい一品</span></h4></div><span class="dot"></span><span class="m-price">¥980</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>鉄板焼き</h3>
+          <div class="menu-row"><div><h4>鉄板ステーキ<span class="m-note">ジューシーに</span></h4></div><span class="dot"></span><span class="m-price">¥1,280</span></div>
+          <div class="menu-row"><div><h4>ホルモン鉄板焼き</h4></div><span class="dot"></span><span class="m-price">¥780</span></div>
+          <div class="menu-row"><div><h4>とん平焼き</h4></div><span class="dot"></span><span class="m-price">¥680</span></div>
+        </div>
+        <div class="menu-cat fade-in">
+          <h3>サイド・ドリンク</h3>
+          <div class="menu-row"><div><h4>枝豆・きゅうり漬け</h4></div><span class="dot"></span><span class="m-price">¥380<small>〜</small></span></div>
+          <div class="menu-row"><div><h4>生ビール</h4></div><span class="dot"></span><span class="m-price">¥520</span></div>
+          <div class="menu-row"><div><h4>ソフトドリンク各種</h4></div><span class="dot"></span><span class="m-price">¥300<small>〜</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="atmos" id="atmos">
+    <div class="section-inner">
+      <div class="atmos-wrap">
+        <div class="atmos-media fade-in"><img src="teppankazoku-interior.png" alt="あたたかい雰囲気の鉄板家族の店内"></div>
+        <div class="atmos-text fade-in">
+          <span class="section-en">The Space</span>
+          <h2>ただいま、と<br>言いたくなる店内。</h2>
+          <p>あたたかな木のぬくもりと、やわらかな灯り。鉄板を囲むカウンターやテーブルで、肩の力を抜いてくつろげる空間です。</p>
+          <p>ひとりでも、ご家族でも、職場の仲間との集まりでも。「また来たい」と思える、そんなお店を目指しています。</p>
+          <span class="atmos-note">ご宴会・貸切のご相談も承ります。</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Voices</span>
+        <h2>お客様の声</h2>
+        <div class="wavy"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>「お好み焼きがふわふわで美味しい！子どもと一緒に鉄板を囲めて、家族みんなで楽しめました。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>「アットホームな雰囲気で居心地がいい。焼きそばも鉄板焼きも美味しくて、ついつい長居してしまいます。」</p>
+          <div class="review-author">— 食べログユーザー</div>
+        </div>
+        <div class="review-card fade-in">
+          <div class="stars">★★★★☆</div>
+          <p>「職場の飲み会で利用。みんなでワイワイ鉄板を囲めて盛り上がりました。コスパも良く大満足です。」</p>
+          <div class="review-author">— Googleクチコミ</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info" id="info">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Information</span>
+        <h2>店舗案内</h2>
+        <div class="wavy"></div>
+      </div>
+      <div class="info-grid">
+        <div class="info-box fade-in">
+          <h3>営業時間</h3>
+          <div class="info-row"><span class="info-label">Open</span><span class="info-value">ランチ・ディナー営業<br><span class="info-note">詳細はSNSをご確認ください</span></span></div>
+          <div class="info-row"><span class="info-label">定休</span><span class="info-value">店舗にてご確認ください</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>アクセス</h3>
+          <div class="info-row"><span class="info-label">エリア</span><span class="info-value">福岡市内</span></div>
+          <div class="info-row"><span class="info-label">席</span><span class="info-value">カウンター・<br>テーブル席</span></div>
+          <div class="info-row"><span class="info-label">利用</span><span class="info-value">ご家族・宴会・<br>おひとりさま</span></div>
+        </div>
+        <div class="info-box fade-in">
+          <h3>SNS・ご予約</h3>
+          <div class="info-row"><span class="info-label">IG</span><span class="info-value"><a href="https://instagram.com/ipf_ironplatefamily" class="ig-link">@ipf_ironplatefamily</a></span></div>
+          <div class="info-row"><span class="info-label">予約</span><span class="info-value">お問い合わせフォーム<br>またはSNSのDMにて</span></div>
+          <div class="info-row"><span class="info-label">支払い</span><span class="info-value">現金・各種<br>キャッシュレス</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <div class="section-head fade-in">
+        <span class="section-en">Reservation</span>
+        <h2>ご予約・お問い合わせ</h2>
+        <div class="wavy"></div>
+        <p class="lead">ご宴会・貸切のご相談もお気軽にどうぞ。</p>
+      </div>
+      <form class="contact-form fade-in" onsubmit="return false;">
+        <div class="form-group"><label>お名前</label><input type="text" placeholder="山田 太郎" required></div>
+        <div class="form-group"><label>電話番号またはメールアドレス</label><input type="text" placeholder="090-0000-0000 または example@email.com" required></div>
+        <div class="form-group"><label>ご希望人数・日時</label><input type="text" placeholder="例：4名 / 7月10日 18:30"></div>
+        <div class="form-group"><label>お問い合わせ種別</label>
+          <select><option>ご予約</option><option>宴会・貸切</option><option>メニューについて</option><option>その他</option></select>
+        </div>
+        <div class="form-group"><label>内容</label><textarea placeholder="ご自由にお書きください"></textarea></div>
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo"><span class="mark">鉄</span><span class="name">鉄板家族</span></div>
+    <div class="footer-info">
+      鉄板焼き・お好み焼き　みんなで囲むアットホームな鉄板ダイニング<br>
+      福岡市内　Instagram @ipf_ironplatefamily
+    </div>
+    <div class="footer-copy">&copy; 2026 鉄板家族. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
