@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ちゃんぽん 玉ねぎ｜福岡・野方の創作ちゃんぽん｜いろんなものを、混ぜ合わせる。</title>
+<meta name="description" content="福岡市早良区・野方の「ちゃんぽん 玉ねぎ」。自家製生麺に、シャキシャキの玉ねぎ。王道から坦々・モツまで、混ぜ合わせて生まれた創作ちゃんぽん。甘みのあるスープは、思わず飲み干す一杯。食後のコーヒーサービスも。">
+<meta property="og:title" content="ちゃんぽん 玉ねぎ｜いろんなものを、混ぜ合わせる。">
+<meta property="og:description" content="自家製生麺とシャキシャキ玉ねぎ。混ぜ合わせて生まれた、野方の創作ちゃんぽん。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="chanpon-tamanegi-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"ちゃんぽん 玉ねぎ",
+  "servesCuisine":["ちゃんぽん","創作ちゃんぽん","麺料理"],
+  "image":"chanpon-tamanegi-hero.png",
+  "telephone":"092-812-8011",
+  "priceRange":"¥800〜¥1500",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市早良区 野方","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Serif+JP:wght@200;300;400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+  --bg:#FBFAF7;        /* 白屋敷 */
+  --surface:#F1EFE9;
+  --primary:#22252B;   /* 墨 */
+  --accent:#C89A3F;    /* 玉ねぎの飴色・琥珀 */
+  --text:#26282D;
+  --muted:#8E8B83;
+  --line:#E4E0D6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Serif JP',serif;color:var(--text);background:var(--bg);line-height:2.1;font-weight:300;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Shippori Mincho B1',serif;font-weight:500;line-height:1.5;}
+.g{font-family:'EB Garamond',serif;}
+
+.sheet{max-width:760px;margin:0 auto;padding:0 clamp(22px,6vw,44px);}
+
+/* 題字 */
+.masthead{text-align:center;padding:clamp(48px,8vw,84px) 0 clamp(30px,5vw,44px);}
+.masthead .en{font-family:'EB Garamond',serif;font-style:italic;font-size:0.9rem;letter-spacing:0.3em;color:var(--accent);text-transform:lowercase;}
+.masthead h1{font-family:'Shippori Mincho B1',serif;font-weight:600;font-size:clamp(2.4rem,8vw,3.8rem);letter-spacing:0.24em;color:var(--primary);margin:14px 0 0;}
+.masthead .rule{width:44px;height:1px;background:var(--accent);margin:26px auto 0;}
+
+/* ヒーロー写真 */
+.hero-photo{margin:0 0 clamp(36px,6vw,56px);}
+.hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.hero-photo .cap{text-align:center;font-family:'EB Garamond',serif;font-style:italic;color:var(--muted);font-size:0.9rem;margin-top:14px;letter-spacing:0.06em;}
+
+/* 由来（前書き） */
+.preface{text-align:center;padding:0 0 clamp(50px,8vw,80px);}
+.preface .lead{font-family:'Shippori Mincho B1',serif;font-weight:500;font-size:clamp(1.5rem,4.4vw,2.2rem);color:var(--primary);letter-spacing:0.08em;line-height:1.8;}
+.preface .lead .a{color:var(--accent);}
+.preface p{max-width:44ch;margin:26px auto 0;color:var(--text);font-size:1rem;}
+
+/* お品書き（本体） */
+.column-title{text-align:center;margin:0 0 clamp(30px,5vw,46px);}
+.column-title .n{font-family:'EB Garamond',serif;font-style:italic;letter-spacing:0.24em;color:var(--accent);font-size:0.84rem;}
+.column-title h2{font-size:clamp(1.6rem,4.4vw,2.2rem);letter-spacing:0.14em;color:var(--primary);margin-top:8px;}
+
+.menu-list{border-top:1px solid var(--line);}
+.dish{padding:clamp(24px,4vw,34px) 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:baseline;}
+.dish .name{font-family:'Shippori Mincho B1',serif;font-weight:500;font-size:clamp(1.3rem,3.6vw,1.7rem);color:var(--primary);letter-spacing:0.08em;grid-column:1;}
+.dish .price{font-family:'EB Garamond',serif;font-size:1.1rem;color:var(--accent);grid-column:2;grid-row:1;white-space:nowrap;}
+.dish .desc{grid-column:1 / -1;color:var(--muted);font-size:0.96rem;line-height:1.95;max-width:56ch;}
+.dish.feature .name::before{content:"名物 ";font-family:'EB Garamond',serif;font-style:italic;font-size:0.7em;color:var(--accent);letter-spacing:0.1em;}
+
+.season-note{background:var(--surface);border-radius:2px;padding:clamp(24px,4vw,34px);margin-top:clamp(36px,6vw,54px);text-align:center;}
+.season-note .k{font-family:'EB Garamond',serif;font-style:italic;letter-spacing:0.18em;color:var(--accent);font-size:0.82rem;}
+.season-note p{margin-top:10px;color:var(--text);font-size:0.98rem;}
+
+/* こだわり（三箇条・縦） */
+.craft{padding:clamp(56px,9vw,100px) 0;}
+.craft .c-item{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:26px 0;border-bottom:1px dotted var(--line);align-items:baseline;}
+.craft .c-item:first-child{border-top:1px dotted var(--line);}
+.craft .c-item .no{font-family:'EB Garamond',serif;font-size:1.4rem;color:var(--accent);}
+.craft .c-item h3{font-size:1.24rem;letter-spacing:0.08em;color:var(--primary);margin-bottom:6px;}
+.craft .c-item p{color:var(--muted);font-size:0.96rem;}
+
+/* 所作（夫婦） */
+.hands{background:var(--primary);color:var(--bg);padding:clamp(56px,9vw,100px) 0;text-align:center;}
+.hands .k{font-family:'EB Garamond',serif;font-style:italic;letter-spacing:0.2em;color:var(--accent);font-size:0.84rem;}
+.hands h2{color:var(--bg);font-size:clamp(1.6rem,4.4vw,2.3rem);letter-spacing:0.1em;margin:12px 0 30px;}
+.hands blockquote{font-family:'Noto Serif JP',serif;font-weight:300;font-size:1.05rem;line-height:2.1;color:#EDEBE4;max-width:52ch;margin:0 auto 24px;}
+.hands blockquote .em{color:var(--accent);}
+.hands .who{font-family:'EB Garamond',serif;font-style:italic;color:#B9B4A6;font-size:0.9rem;}
+
+/* ご案内 */
+.info{padding:clamp(56px,9vw,100px) 0;text-align:center;}
+.info h2{font-size:clamp(1.5rem,4vw,2rem);letter-spacing:0.12em;color:var(--primary);margin-bottom:34px;}
+.info dl{display:inline-grid;grid-template-columns:auto 1fr;gap:16px 30px;text-align:left;margin-bottom:36px;}
+.info dt{font-family:'Shippori Mincho B1',serif;color:var(--accent);white-space:nowrap;letter-spacing:0.06em;}
+.info dd{color:var(--text);}
+.info .tel{display:inline-block;font-family:'EB Garamond',serif;font-size:clamp(1.5rem,5vw,2rem);letter-spacing:0.06em;color:var(--primary);border-bottom:2px solid var(--accent);padding-bottom:6px;}
+.info .telnote{color:var(--muted);font-size:0.88rem;margin-top:14px;}
+
+footer{text-align:center;padding:40px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:0.82rem;letter-spacing:0.06em;}
+footer .m{font-family:'Shippori Mincho B1',serif;color:var(--primary);font-size:1.1rem;letter-spacing:0.2em;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:480px){
+  .dish{grid-template-columns:1fr;}
+  .dish .price{grid-column:1;grid-row:auto;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- 題字 -->
+  <header class="masthead">
+    <div class="en fade vis">sōsaku chanpon</div>
+    <h1 class="fade vis">ちゃんぽん 玉ねぎ</h1>
+    <div class="rule fade vis"></div>
+  </header>
+
+  <!-- ヒーロー -->
+  <div class="hero-photo fade vis">
+    <img src="chanpon-tamanegi-hero.png" alt="湯気の立つちゃんぽんを真上から。シャキシャキの玉ねぎがのる">
+    <p class="cap g">自家製生麺に、シャキシャキの玉ねぎを一面に。</p>
+  </div>
+
+  <!-- 由来 -->
+  <section class="preface fade">
+    <p class="lead">いろんなものを、<br><span class="a">混ぜ合わせる。</span><br>それが、ちゃんぽん。</p>
+    <p>王道のちゃんぽんはもちろん、自家製生麺にいろんな材料を「混ぜ合わせて」、全く新しいちゃんぽんを。玉ねぎのシャキシャキは、どの一杯にも共通する、この店の合図です。</p>
+  </section>
+
+  <!-- お品書き -->
+  <section>
+    <div class="column-title fade">
+      <div class="n">o - shina - gaki</div>
+      <h2>お品書き</h2>
+    </div>
+    <div class="menu-list">
+      <div class="dish feature fade">
+        <div class="name">ちゃんぽん</div>
+        <div class="price g">¥</div>
+        <p class="desc">出汁がきいて甘みのある、とても美味しいスープ。他所ではスープを飲み干さない人も、思わず全部飲み干してしまう一杯。少し太い麺が、よく合います。</p>
+      </div>
+      <div class="dish fade">
+        <div class="name">モツちゃんぽん</div>
+        <div class="price g">¥</div>
+        <p class="desc">モツはプリップリで甘みを感じる。程よいコッテリ感のスープに、野菜の甘みが相まって、すげ〜うまい。大盛りもできます。</p>
+      </div>
+      <div class="dish fade">
+        <div class="name">坦々ちゃんぽん</div>
+        <div class="price g">¥</div>
+        <p class="desc">同じ玉ねぎがのっていても、味は全くの別物。それぞれに魅力があって、迷ってしまう。</p>
+      </div>
+      <div class="dish fade">
+        <div class="name">平日限定・玉ねぎランチセット</div>
+        <div class="price g">＋¥500</div>
+        <p class="desc">油淋鶏・コロッケ・春巻・バンバンジー。お洒落な盛り付けで、4種類の味が楽しめる。ちゃんぽんに合わせて、平日だけの特別。</p>
+      </div>
+    </div>
+    <div class="season-note fade">
+      <div class="k">seasonal</div>
+      <p>4月からは、冷たいちゃんぽん・冷たい辛味噌ちゃんぽんなど、季節のメニューも。次に行くのが、楽しみになる店です。</p>
+    </div>
+  </section>
+
+  <!-- こだわり -->
+  <section class="craft">
+    <div class="c-item fade">
+      <div class="no g">i.</div>
+      <div><h3>自家製の生麺</h3><p>よくある麺ではなく、少し太い自家製の生麺。ツルッとした喉越しと、噛みごたえ。</p></div>
+    </div>
+    <div class="c-item fade">
+      <div class="no g">ii.</div>
+      <div><h3>シャキシャキの玉ねぎ</h3><p>上にのる玉ねぎスライスが、良いアクセント。店名にもなった、この店の顔。</p></div>
+    </div>
+    <div class="c-item fade">
+      <div class="no g">iii.</div>
+      <div><h3>食後のコーヒー</h3><p>自席で精算、食後にはコーヒーのサービスも。至れり尽くせりの、やさしい所作。</p></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- 所作（夫婦） -->
+<section class="hands">
+  <div class="sheet">
+    <div class="k fade">the couple</div>
+    <h2 class="fade">ご夫婦の、美しい所作。</h2>
+    <blockquote class="fade">立ち居振る舞い、受け応えがとても美しい奥さん。そして、ご主人の相変わらずの無骨さ。<span class="em">また、この所作を見にお邪魔したい</span>と思わせてくれる、そんなお店です。</blockquote>
+    <div class="who fade">— 5年ぶりに再訪したご夫婦のお客様</div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <div class="sheet">
+    <h2 class="fade">ご案内</h2>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡市早良区・野方交差点近く</dd>
+      <dt>営業</dt><dd>ランチ営業（14時頃まで）</dd>
+      <dt>駐車場</dt><dd>店横に1台分</dd>
+      <dt>サービス</dt><dd>食後のコーヒー・自席精算</dd>
+    </dl>
+    <div class="fade">
+      <a class="tel g" href="tel:092-812-8011">092-812-8011</a>
+      <p class="telnote">人気店です。お早めのご来店がおすすめです。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">ちゃんぽん 玉ねぎ</div>
+  <p>福岡市早良区・野方｜創作ちゃんぽん・自家製生麺｜ご夫婦のお店</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
