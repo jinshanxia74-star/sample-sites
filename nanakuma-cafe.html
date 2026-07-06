@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanakuma Cafe｜福大通り・湖畔公園そばのカフェ｜メニュー豊富</title>
+<meta name="description" content="福岡・福大通り、西南杜の湖畔公園そばの Nanakuma Cafe。定食からデミカツ、揚げ出し豆腐、ベーグルまでメニューが豊富。公園を望む大きな窓とテラス席、QRモバイルオーダーで気軽に。今日は何にする？">
+<meta property="og:title" content="Nanakuma Cafe｜今日は、何にする？">
+<meta property="og:description" content="福大通り・湖畔公園そばのカフェ。メニューが豊富で、選ぶのが楽しい。公園ビューの窓とテラス席。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="nanakuma-cafe-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"CafeOrCoffeeShop",
+  "name":"Nanakuma Cafe",
+  "servesCuisine":["定食","カフェ飯","ベーグル"],
+  "image":"nanakuma-cafe-hero.png",
+  "priceRange":"¥800〜¥1500",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区 福大通り","addressRegion":"福岡県","addressCountry":"JP"},
+  "amenityFeature":[{"@type":"LocationFeatureSpecification","name":"テラス席"},{"@type":"LocationFeatureSpecification","name":"モバイルオーダー"}]
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Quicksand:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#ffffff;
+  --panel:#f6f7fb;
+  --ink:#282b33;
+  --muted:#71757f;
+  --coral:#ff6a5a;      /* プライマリ（CTA） */
+  --coral-d:#e8503f;
+  --mint:#25c2a0;
+  --lemon:#ffc531;
+  --lav:#8f7be8;
+  --sky:#3a9dff;
+  --line:#e7e9f0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Kaisei Decol',serif;font-weight:700;line-height:1.3;}
+.en{font-family:'Quicksand',sans-serif;}
+
+/* ヘッダー */
+header.nav{
+  position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(16px,4vw,44px);
+}
+.brand{font-family:'Kaisei Decol',serif;font-weight:700;font-size:1.2rem;}
+.brand .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--coral);margin-left:2px;}
+.nav-links{display:flex;gap:24px;align-items:center;}
+.nav-links a{font-size:0.9rem;color:var(--muted);}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{background:var(--coral);color:#fff;font-family:'Quicksand',sans-serif;font-weight:700;padding:9px 18px;border-radius:30px;font-size:0.86rem;transition:transform .2s;}
+.nav-cta:hover{transform:translateY(-2px);}
+@media(max-width:680px){.nav-links a:not(.nav-cta){display:none;}}
+
+/* ヒーロー */
+.hero{padding:clamp(40px,6vw,84px) clamp(16px,5vw,44px) clamp(30px,5vw,60px);}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;}
+.hero .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.chip{font-family:'Quicksand',sans-serif;font-weight:600;font-size:0.78rem;padding:5px 13px;border-radius:20px;color:#fff;}
+.chip.c1{background:var(--coral);}.chip.c2{background:var(--mint);}.chip.c3{background:var(--lemon);color:#5a4300;}.chip.c4{background:var(--lav);}.chip.c5{background:var(--sky);}
+.hero h1{font-size:clamp(2.5rem,7vw,4.4rem);letter-spacing:-0.01em;}
+.hero h1 .u{background:linear-gradient(transparent 62%,rgba(255,197,49,0.55) 62%);}
+.hero p.lead{font-size:1.12rem;margin:20px 0 12px;max-width:32ch;}
+.hero p.sub{color:var(--muted);max-width:34ch;margin-bottom:28px;}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{font-family:'Quicksand',sans-serif;font-weight:700;padding:14px 26px;border-radius:30px;font-size:1rem;transition:transform .2s,box-shadow .2s;display:inline-block;}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(255,106,90,0.35);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(255,106,90,0.42);}
+.btn-ghost{background:var(--panel);color:var(--ink);}
+.btn-ghost:hover{transform:translateY(-3px);}
+.hero-visual{position:relative;}
+.hero-visual .main{border-radius:26px;box-shadow:0 30px 60px rgba(40,43,51,0.18);aspect-ratio:5/4;object-fit:cover;width:100%;}
+.hero-visual .float{
+  position:absolute;background:#fff;border-radius:16px;box-shadow:0 14px 30px rgba(40,43,51,0.16);
+  padding:12px 16px;font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.86rem;display:flex;align-items:center;gap:8px;
+}
+.hero-visual .float .sw{width:12px;height:12px;border-radius:50%;}
+.hero-visual .f1{top:-14px;left:-14px;transform:rotate(-4deg);}
+.hero-visual .f1 .sw{background:var(--mint);}
+.hero-visual .f2{bottom:-16px;right:-10px;transform:rotate(3deg);}
+.hero-visual .f2 .sw{background:var(--lav);}
+
+/* フィルムストリップ（主役・横スクロール） */
+.strip-sec{padding:clamp(40px,6vw,80px) 0;background:var(--panel);}
+.strip-head{max-width:1200px;margin:0 auto 26px;padding:0 clamp(16px,5vw,44px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;}
+.strip-head h2{font-size:clamp(1.8rem,5vw,2.8rem);}
+.strip-head p{color:var(--muted);font-size:0.95rem;}
+.strip-hint{font-family:'Quicksand',sans-serif;font-weight:600;color:var(--coral);font-size:0.85rem;white-space:nowrap;}
+.rail{
+  display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:6px clamp(16px,5vw,44px) 20px;-webkit-overflow-scrolling:touch;
+}
+.rail::-webkit-scrollbar{height:8px;}
+.rail::-webkit-scrollbar-thumb{background:#cfd3de;border-radius:8px;}
+.f-card{
+  scroll-snap-align:start;flex:0 0 clamp(220px,72vw,300px);
+  background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 28px rgba(40,43,51,0.1);
+  display:flex;flex-direction:column;
+}
+.f-card .ph{height:180px;position:relative;}
+.f-card .ph img{width:100%;height:100%;object-fit:cover;}
+.f-card .ph.color{display:flex;align-items:center;justify-content:center;}
+.f-card .ph.color .big{font-family:'Kaisei Decol',serif;color:#fff;font-size:2rem;opacity:0.92;}
+.f-card .ph.col-mint{background:linear-gradient(135deg,var(--mint),#1aa588);}
+.f-card .ph.col-lemon{background:linear-gradient(135deg,var(--lemon),#f2a800);}
+.f-card .ph.col-lav{background:linear-gradient(135deg,var(--lav),#6f5ad6);}
+.f-card .ph.col-sky{background:linear-gradient(135deg,var(--sky),#1f7fe0);}
+.f-card .tag{position:absolute;top:12px;left:12px;font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.72rem;background:rgba(255,255,255,0.92);padding:4px 11px;border-radius:20px;}
+.f-card .body{padding:18px 18px 22px;}
+.f-card h3{font-size:1.15rem;margin-bottom:4px;}
+.f-card p{font-size:0.86rem;color:var(--muted);margin-bottom:10px;}
+.f-card .price{font-family:'Quicksand',sans-serif;font-weight:700;color:var(--coral);font-size:1.05rem;}
+
+/* 選ぶ楽しさ（カテゴリ多色グリッド） */
+.variety{padding:clamp(48px,7vw,96px) clamp(16px,5vw,44px);}
+.variety-inner{max-width:1100px;margin:0 auto;text-align:center;}
+.variety h2{font-size:clamp(1.9rem,5vw,3rem);margin-bottom:10px;}
+.variety .v-lead{color:var(--muted);max-width:48ch;margin:0 auto 40px;}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;}
+.cat{border-radius:18px;padding:26px 18px;color:#fff;text-align:left;}
+.cat .n{font-family:'Kaisei Decol',serif;font-weight:700;font-size:1.25rem;}
+.cat .c{font-size:0.82rem;opacity:0.94;margin-top:4px;}
+.cat.k1{background:var(--coral);}.cat.k2{background:var(--mint);}.cat.k3{background:var(--lemon);color:#5a4300;}.cat.k4{background:var(--lav);}.cat.k5{background:var(--sky);}.cat.k6{background:#ff9a3d;}
+
+/* お店の良さ（非対称）*/
+.why{padding:clamp(48px,7vw,96px) clamp(16px,5vw,44px);background:var(--panel);}
+.why-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 0.8fr;gap:clamp(24px,4vw,48px);align-items:center;}
+.why-text h2{font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:24px;}
+.why-list{display:flex;flex-direction:column;gap:18px;}
+.why-item{display:flex;gap:16px;align-items:flex-start;}
+.why-item .num{flex:0 0 auto;width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Quicksand',sans-serif;font-weight:700;color:#fff;font-size:1.1rem;}
+.why-item:nth-child(1) .num{background:var(--mint);}
+.why-item:nth-child(2) .num{background:var(--lav);}
+.why-item:nth-child(3) .num{background:var(--sky);}
+.why-item h3{font-size:1.12rem;margin-bottom:2px;}
+.why-item p{font-size:0.94rem;color:var(--muted);}
+.why-photo img{border-radius:22px;box-shadow:0 24px 50px rgba(40,43,51,0.16);aspect-ratio:3/4;object-fit:cover;width:100%;}
+
+/* 口コミ */
+.voices{padding:clamp(48px,7vw,96px) clamp(16px,5vw,44px);}
+.voices h2{text-align:center;font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:8px;}
+.voices .v-sub{text-align:center;color:var(--muted);margin-bottom:40px;}
+.v-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.v-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 24px;}
+.v-card .bar{width:38px;height:5px;border-radius:6px;margin-bottom:16px;}
+.v-card:nth-child(1) .bar{background:var(--coral);}
+.v-card:nth-child(2) .bar{background:var(--mint);}
+.v-card:nth-child(3) .bar{background:var(--lav);}
+.v-card p{font-size:0.98rem;}
+.v-card .who{margin-top:14px;font-family:'Quicksand',sans-serif;font-weight:600;font-size:0.82rem;color:var(--muted);}
+
+/* アクセス・QR */
+.access{padding:clamp(48px,7vw,96px) clamp(16px,5vw,44px);background:var(--ink);color:#fff;}
+.access-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;}
+.access h2{font-size:clamp(1.9rem,5vw,2.8rem);color:#fff;margin-bottom:20px;}
+.access dl{display:grid;grid-template-columns:auto 1fr;gap:12px 18px;}
+.access dt{font-family:'Quicksand',sans-serif;font-weight:700;color:var(--lemon);white-space:nowrap;}
+.access dd{color:#d6d9e2;}
+.qr-box{background:#33363f;border-radius:22px;padding:34px 30px;text-align:center;}
+.qr-box .qr-ic{font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.1rem;color:var(--mint);margin-bottom:8px;}
+.qr-box h3{color:#fff;font-size:1.3rem;margin-bottom:10px;}
+.qr-box p{color:#b9bdca;font-size:0.92rem;}
+
+/* フッターCTA */
+.foot-cta{padding:clamp(56px,8vw,110px) clamp(16px,5vw,44px);text-align:center;background:linear-gradient(135deg,var(--coral),#ff8a5c);color:#fff;}
+.foot-cta h2{font-size:clamp(2rem,6vw,3.6rem);color:#fff;}
+.foot-cta p{margin:16px auto 30px;max-width:40ch;font-size:1.08rem;}
+.foot-cta .btn-w{background:#fff;color:var(--coral-d);font-family:'Quicksand',sans-serif;font-weight:700;padding:16px 36px;border-radius:30px;display:inline-block;box-shadow:0 12px 30px rgba(0,0,0,0.2);transition:transform .2s;}
+.foot-cta .btn-w:hover{transform:translateY(-3px);}
+footer{background:var(--ink);color:#8a8e99;text-align:center;padding:28px 20px;font-size:0.82rem;border-top:1px solid #33363f;}
+footer .brand{color:#fff;}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-visual{max-width:460px;margin:0 auto;}
+  .why-inner{grid-template-columns:1fr;}
+  .why-photo{max-width:360px;margin:0 auto;}
+  .access-inner{grid-template-columns:1fr;}
+}
+@media(max-width:520px){.btn{width:100%;text-align:center;}}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">Nanakuma Cafe<span class="dot"></span></div>
+  <nav class="nav-links">
+    <a href="#menu">メニュー</a>
+    <a href="#why">お店の良さ</a>
+    <a href="#access">アクセス</a>
+    <a href="#access" class="nav-cta">来店の前に</a>
+  </nav>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="fade vis">
+      <div class="chips">
+        <span class="chip c1">定食</span><span class="chip c2">カフェ飯</span><span class="chip c3">ベーグル</span><span class="chip c4">デザート</span><span class="chip c5">ドリンク</span>
+      </div>
+      <h1>今日は、<span class="u">何にする？</span></h1>
+      <p class="lead">定食からベーグルまで、メニューがとにかく豊富。選ぶところから、もう楽しい。</p>
+      <p class="sub">福大通り、湖畔公園のそば。大きな窓から公園を眺めながら、ゆっくりごはんを。</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#menu">メニューを見る</a>
+        <a class="btn btn-ghost" href="#access">お店の場所</a>
+      </div>
+    </div>
+    <div class="hero-visual fade vis">
+      <div class="float f1"><span class="sw"></span>公園ビューの窓</div>
+      <img class="main" src="nanakuma-cafe-hero.png" alt="大きな窓から公園が見えるNanakuma Cafeの明るい店内">
+      <div class="float f2"><span class="sw"></span>テラス席あり</div>
+    </div>
+  </div>
+</section>
+
+<!-- フィルムストリップ・メニュー -->
+<section class="strip-sec" id="menu">
+  <div class="strip-head fade">
+    <div>
+      <h2>メニューを、流し見。</h2>
+      <p>人気の定食から、ちょっとした一品まで。</p>
+    </div>
+    <div class="strip-hint">→ 横にスクロールできます</div>
+  </div>
+  <div class="rail">
+    <div class="f-card">
+      <div class="ph"><span class="tag">一番人気</span><img src="nanakuma-cafe-teishoku.png" alt="ナナクマ定食：デミハンバーグとクリームコロッケ"></div>
+      <div class="body"><h3>ナナクマ定食</h3><p>デミハンバーグとクリームコロッケ。小鉢の揚げ出し豆腐まで。</p><span class="price">¥1,000〜</span></div>
+    </div>
+    <div class="f-card">
+      <div class="ph col-mint color"><span class="tag">ボリューム</span><span class="big">デミカツ</span></div>
+      <div class="body"><h3>デミカツ定食</h3><p>しっかりボリューム。デミグラスソースが決め手の一皿。</p><span class="price">¥1,100〜</span></div>
+    </div>
+    <div class="f-card">
+      <div class="ph col-lemon color"><span class="tag">揚げたて</span><span class="big" style="color:#5a4300;">揚げ物</span></div>
+      <div class="body"><h3>揚げ物いろいろ</h3><p>熱々でサクサク。手のかかった揚げ物が自慢です。</p><span class="price">単品あり</span></div>
+    </div>
+    <div class="f-card">
+      <div class="ph"><span class="tag">上品な味</span><img src="nanakuma-cafe-side.png" alt="揚げ出し豆腐など手のかかった小鉢"></div>
+      <div class="body"><h3>揚げ出し豆腐</h3><p>上品な味付けの小鉢。定食のうれしい脇役です。</p><span class="price">小鉢</span></div>
+    </div>
+    <div class="f-card">
+      <div class="ph col-lav color"><span class="tag">軽く</span><span class="big">ベーグル</span></div>
+      <div class="body"><h3>ベーグル</h3><p>軽く済ませたい日に。テイクアウトにもぴったり。</p><span class="price">¥400〜</span></div>
+    </div>
+    <div class="f-card">
+      <div class="ph col-sky color"><span class="tag">セット</span><span class="big">ドリンク</span></div>
+      <div class="body"><h3>ドリンク付き</h3><p>定食にはドリンクが付きます。食後の一杯までゆっくり。</p><span class="price">セット</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 選ぶ楽しさ -->
+<section class="variety">
+  <div class="variety-inner">
+    <h2 class="fade">種類が多いって、うれしい。</h2>
+    <p class="v-lead fade">「今日は定食」「今日は軽くベーグル」。その日の気分で選べるのが、このお店のいちばんの魅力です。</p>
+    <div class="cat-grid fade">
+      <div class="cat k1"><div class="n">定食</div><div class="c">がっつり食べたい日に</div></div>
+      <div class="cat k2"><div class="n">カフェ飯</div><div class="c">手のかかった一皿</div></div>
+      <div class="cat k3"><div class="n">揚げ物</div><div class="c">熱々サクサク</div></div>
+      <div class="cat k4"><div class="n">ベーグル</div><div class="c">軽めランチに</div></div>
+      <div class="cat k5"><div class="n">ドリンク</div><div class="c">食後にゆっくり</div></div>
+      <div class="cat k6"><div class="n">デザート</div><div class="c">甘いものは別腹</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- お店の良さ -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-text fade">
+      <h2>ここで過ごす時間が、いい。</h2>
+      <div class="why-list">
+        <div class="why-item"><div class="num">01</div><div><h3>公園を望む、大きな窓。</h3><p>2面ガラス張りの開放感。窓の外には湖畔公園。家族でのランチにもぴったりです。</p></div></div>
+        <div class="why-item"><div class="num">02</div><div><h3>テラス席で、外ごはん。</h3><p>気持ちのいい季節は、テラスでどうぞ。公園の緑を感じながら食事ができます。</p></div></div>
+        <div class="why-item"><div class="num">03</div><div><h3>QRでモバイルオーダー。</h3><p>席のQRコードから注文。店員さんを呼ばなくていいから、気兼ねなくゆっくり。</p></div></div>
+      </div>
+    </div>
+    <div class="why-photo fade">
+      <img src="nanakuma-cafe-teishoku.png" alt="手のかかったナナクマ定食のプレート">
+    </div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2 class="fade">来た人の、声。</h2>
+  <p class="v-sub fade">Googleクチコミより実際の声を引用しています。</p>
+  <div class="v-grid">
+    <div class="v-card fade"><div class="bar"></div><p>広々とした店内！広い窓から公園が見えて更に広々と感じられます。料理もとても手がかかっていて、揚げ物は熱々で、とても美味しいです。</p><div class="who">ご家族でランチの方</div></div>
+    <div class="v-card fade"><div class="bar"></div><p>テラスで食事が出来る点と、モバイルオーダーなので店員さんを声をあげて呼ばずオーダーできる店が気楽だった。</p><div class="who">おひとりランチの方</div></div>
+    <div class="v-card fade"><div class="bar"></div><p>ナナクマ定食は小さめだけどデミハンバーグとクリームコロッケ、どちらも美味しい。小鉢の揚げ出し豆腐も上品な味付け。デミカツはちゃんとボリュームある。</p><div class="who">常連さん</div></div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section class="access" id="access">
+  <div class="access-inner">
+    <div class="fade">
+      <h2>来店の前に。</h2>
+      <dl>
+        <dt>場所</dt><dd>福岡市城南区 福大通り沿い（西南杜の湖畔公園 入口広場そば）</dd>
+        <dt>席</dt><dd>2面ガラス張りの店内・テラス席・カウンター席</dd>
+        <dt>注文</dt><dd>QRコードでのモバイルオーダー</dd>
+        <dt>おすすめ</dt><dd>公園が見える窓際の席／お子さま連れも安心</dd>
+        <dt>駐車場</dt><dd>近隣にコインパーキングあり</dd>
+      </dl>
+    </div>
+    <div class="qr-box fade">
+      <div class="qr-ic">MOBILE ORDER</div>
+      <h3>席に着いたら、QRで注文。</h3>
+      <p>メニューを眺めながら、じっくり選べます。ドリンク付きの定食から、軽めのベーグルまで。今日の気分でどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>公園の風と、豊富なメニュー。</h2>
+  <p>福大通りでちょっと迷ったら、Nanakuma Cafe へ。きっと今日の一皿が見つかります。</p>
+  <a class="btn-w" href="#menu">メニューをもう一度見る</a>
+</section>
+
+<footer>
+  <div class="brand">Nanakuma Cafe</div>
+  <p style="margin-top:8px;">福岡市城南区 福大通り｜カフェ・定食・ベーグル｜テラス席／モバイルオーダー</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
