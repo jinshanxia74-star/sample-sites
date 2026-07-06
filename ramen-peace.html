@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラーメンピース｜福岡・七隈の二郎系ラーメン｜関内二郎出身の店主</title>
+<meta name="description" content="福岡市七隈の二郎系ラーメン、ラーメンピース。ラーメン二郎横浜関内で修行した店主が2021年開業。平打ち太麺・微乳化甘めスープ・食べ応えのある豚。二郎初心者にもおすすめ。コールルールも店内に明記。">
+<meta property="og:title" content="ラーメンピース｜うまい。以上。">
+<meta property="og:description" content="福岡・七隈の二郎系ラーメン。関内二郎出身の店主が焼く、微乳化甘めスープとワシワシ太麺。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="ramen-peace-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"ラーメンピース",
+  "servesCuisine":["ラーメン","二郎系"],
+  "image":"ramen-peace-hero.png",
+  "priceRange":"¥900〜¥1300",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区 七隈","addressRegion":"福岡県","addressCountry":"JP"},
+  "foundingDate":"2021"
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Mono:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root{
+  --blk:#000000;
+  --wht:#f4f2ec;      /* 看板の白（少しだけ生成り） */
+  --gray:#8a8880;
+  --line:#2a2a28;
+  --chili:#e01b1b;    /* 唐辛子赤（差し色・5%だけ） */
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--blk);color:var(--wht);line-height:1.8;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+.mono{font-family:'Space Mono',monospace;}
+.dela{font-family:'Dela Gothic One',sans-serif;}
+
+/* 上部：ブルータリスト・バー */
+.bar{
+  position:sticky;top:0;z-index:60;background:var(--blk);
+  border-bottom:2px solid var(--wht);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px clamp(14px,4vw,36px);
+}
+.bar .lg{font-family:'Dela Gothic One',sans-serif;font-size:1.05rem;letter-spacing:0.02em;}
+.bar .k{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gray);}
+.bar .k b{color:var(--chili);}
+
+/* ヒーロー：巨大タイポ */
+.hero{border-bottom:2px solid var(--wht);padding:clamp(40px,7vw,90px) clamp(14px,4vw,44px) 0;}
+.hero .kick{font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:0.1em;color:var(--gray);margin-bottom:20px;}
+.hero .kick b{color:var(--chili);}
+.hero h1{
+  font-family:'Dela Gothic One',sans-serif;line-height:0.92;
+  font-size:clamp(3.4rem,15vw,10rem);letter-spacing:-0.02em;
+}
+.hero h1 .line2{display:block;}
+.hero .statement{
+  font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.6rem,5vw,3rem);
+  margin:26px 0 14px;
+}
+.hero .statement .c{color:var(--chili);}
+.hero .desc{max-width:52ch;color:var(--gray);font-size:1.02rem;padding-bottom:34px;}
+.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--wht);}
+.hero-strip .cell{padding:20px clamp(14px,3vw,28px);border-right:2px solid var(--wht);}
+.hero-strip .cell:last-child{border-right:none;}
+.hero-strip .cell .n{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gray);}
+.hero-strip .cell .v{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1rem,2.4vw,1.5rem);margin-top:6px;}
+
+/* マーキー（1回だけ） */
+.marquee{overflow:hidden;border-bottom:2px solid var(--wht);background:var(--wht);color:var(--blk);}
+.marquee .track{display:inline-flex;white-space:nowrap;will-change:transform;animation:scroll 26s linear infinite;}
+.marquee .track span{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.3rem,4vw,2.2rem);padding:14px 28px;}
+.marquee .track span .c{color:var(--chili);}
+@keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* 一杯の中身（罫線データ）*/
+.bowl{padding:clamp(46px,7vw,90px) clamp(14px,4vw,44px);border-bottom:2px solid var(--wht);}
+.bowl-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;}
+.bowl h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.8rem,5vw,3rem);margin-bottom:24px;}
+.spec{border-top:2px solid var(--line);}
+.spec .row{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:18px 0;border-bottom:2px solid var(--line);align-items:baseline;}
+.spec .row .l{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--chili);white-space:nowrap;}
+.spec .row .r .t{font-family:'Dela Gothic One',sans-serif;font-size:1.2rem;}
+.spec .row .r .d{color:var(--gray);font-size:0.92rem;}
+.bowl-photo img{width:100%;border:2px solid var(--wht);filter:grayscale(15%) contrast(1.05);}
+
+/* コール（説明書き） */
+.call{padding:clamp(46px,7vw,90px) clamp(14px,4vw,44px);border-bottom:2px solid var(--wht);}
+.call-inner{max-width:1200px;margin:0 auto;}
+.call h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.8rem,5vw,3rem);}
+.call .lead{color:var(--gray);max-width:56ch;margin:14px 0 34px;}
+.call-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--wht);border-left:2px solid var(--wht);}
+.call-grid .c{border-right:2px solid var(--wht);border-bottom:2px solid var(--wht);padding:24px 20px;}
+.call-grid .c .num{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--chili);}
+.call-grid .c .w{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.2rem,3vw,1.8rem);margin:8px 0 6px;}
+.call-grid .c p{color:var(--gray);font-size:0.86rem;}
+.call .note{font-family:'Space Mono',monospace;font-size:0.82rem;color:var(--gray);margin-top:22px;}
+.call .note b{color:var(--wht);}
+
+/* 店主の話（新聞的） */
+.story{padding:clamp(46px,7vw,90px) clamp(14px,4vw,44px);border-bottom:2px solid var(--wht);}
+.story-inner{max-width:900px;margin:0 auto;}
+.story .kick{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--chili);letter-spacing:0.1em;margin-bottom:16px;}
+.story h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.7rem,4.5vw,2.6rem);line-height:1.2;margin-bottom:24px;}
+.story p{font-size:1.05rem;margin-bottom:18px;}
+.story p b{color:var(--wht);border-bottom:2px solid var(--chili);}
+
+/* 口コミ（罫線引用） */
+.voices{padding:clamp(46px,7vw,90px) clamp(14px,4vw,44px);border-bottom:2px solid var(--wht);}
+.voices h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.7rem,4.5vw,2.6rem);text-align:center;margin-bottom:10px;}
+.voices .sub{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--gray);text-align:center;margin-bottom:40px;}
+.v-list{max-width:1000px;margin:0 auto;border-top:2px solid var(--line);}
+.v-item{padding:26px 0;border-bottom:2px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:24px;}
+.v-item .q{font-family:'Dela Gothic One',sans-serif;font-size:2rem;color:var(--chili);line-height:1;}
+.v-item p{font-size:1rem;}
+.v-item .who{font-family:'Space Mono',monospace;font-size:0.74rem;color:var(--gray);margin-top:10px;}
+
+/* アクセス */
+.info{padding:clamp(46px,7vw,90px) clamp(14px,4vw,44px);border-bottom:2px solid var(--wht);}
+.info-inner{max-width:1000px;margin:0 auto;}
+.info h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(1.7rem,4.5vw,2.6rem);margin-bottom:28px;}
+.info-grid{display:grid;grid-template-columns:auto 1fr;gap:0;border-top:2px solid var(--line);}
+.info-grid dt{font-family:'Space Mono',monospace;color:var(--chili);font-size:0.82rem;padding:16px 24px 16px 0;border-bottom:2px solid var(--line);}
+.info-grid dd{padding:16px 0;border-bottom:2px solid var(--line);}
+
+/* フッター巨大 */
+.foot-cta{padding:clamp(56px,9vw,120px) clamp(14px,4vw,44px);text-align:center;}
+.foot-cta .big{font-family:'Dela Gothic One',sans-serif;font-size:clamp(3rem,13vw,8rem);line-height:0.9;}
+.foot-cta .big .c{color:var(--chili);}
+.foot-cta p{font-family:'Space Mono',monospace;color:var(--gray);margin:24px 0 0;font-size:0.9rem;}
+footer{border-top:2px solid var(--wht);text-align:center;padding:26px 20px;font-family:'Space Mono',monospace;font-size:0.76rem;color:var(--gray);}
+footer b{color:var(--wht);}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .bowl-inner{grid-template-columns:1fr;}
+  .call-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-strip{grid-template-columns:1fr;}
+  .hero-strip .cell{border-right:none;border-bottom:2px solid var(--wht);}
+  .hero-strip .cell:last-child{border-bottom:none;}
+}
+@media(max-width:520px){
+  .call-grid{grid-template-columns:1fr;}
+  .v-item{grid-template-columns:1fr;gap:10px;}
+  .info-grid{grid-template-columns:1fr;}
+  .info-grid dt{padding-bottom:4px;border-bottom:none;}
+}
+@media(prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  .marquee .track{animation:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="lg">ラーメンピース</div>
+  <div class="k">FUKUOKA / NANAKUMA — <b>JIRO STYLE</b></div>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <p class="kick">EST. 2021 — 関内二郎出身の店主が焼く <b>本格二郎系</b></p>
+  <h1>ラーメン<span class="line2">ピース</span></h1>
+  <p class="statement">うまい。<span class="c">以上。</span></p>
+  <p class="desc">平打ちの太麺、微乳化の甘めスープ、食べ応えのある豚。ごちゃごちゃ説明はいらない。並んで、コールして、ワシワシ食う。それだけの店です。</p>
+  <div class="hero-strip">
+    <div class="cell"><div class="n">MEN / 麺</div><div class="v">平打ち太麺</div></div>
+    <div class="cell"><div class="n">SOUP / スープ</div><div class="v">微乳化・甘め</div></div>
+    <div class="cell"><div class="n">BUTA / 豚</div><div class="v">食べ応えあり</div></div>
+  </div>
+</header>
+
+<!-- マーキー -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>ワシワシ太麺</span><span>微乳化<span class="c">甘め</span></span><span>ニンニク入れますか</span><span>直系クオリティ</span><span>二郎初心者OK</span>
+    <span>ワシワシ太麺</span><span>微乳化<span class="c">甘め</span></span><span>ニンニク入れますか</span><span>直系クオリティ</span><span>二郎初心者OK</span>
+  </div>
+</div>
+
+<!-- 一杯の中身 -->
+<section class="bowl">
+  <div class="bowl-inner">
+    <div class="fade">
+      <h2>一杯の、中身。</h2>
+      <div class="spec">
+        <div class="row"><div class="l">MEN</div><div class="r"><div class="t">平打ち太麺・コシあり</div><div class="d">ムチッとした歯切れと、啜り心地。茹で前でしっかりの量。</div></div></div>
+        <div class="row"><div class="l">SOUP</div><div class="r"><div class="t">微乳化・甘め</div><div class="d">麺とヤサイを中和する、食べやすい一杯。二郎初心者にもおすすめ。</div></div></div>
+        <div class="row"><div class="l">BUTA</div><div class="r"><div class="t">食べ応えのある豚</div><div class="d">小ブタダブルで満腹。生卵ドボンで味変も。</div></div></div>
+        <div class="row"><div class="l">MENU</div><div class="r"><div class="t">汁なし、あります</div><div class="d">その日の気分で。まずは基本のラーメンから。</div></div></div>
+      </div>
+    </div>
+    <div class="bowl-photo fade">
+      <img src="ramen-peace-hero.png" alt="ラーメンピースの二郎系ラーメン。ワシワシ太麺と食べ応えのある豚、ヤサイ">
+    </div>
+  </div>
+</section>
+
+<!-- コール -->
+<section class="call">
+  <div class="call-inner">
+    <h2 class="fade">コール、覚えとけ。</h2>
+    <p class="lead fade">難しくない。店内にルールもちゃんと書いてある。麺が出る前に、これだけ言えばいい。</p>
+    <div class="call-grid fade">
+      <div class="c"><div class="num">01</div><div class="w">ヤサイ</div><p>増しでシャキシャキ。多いと感じたら少なめでも満足。</p></div>
+      <div class="c"><div class="num">02</div><div class="w">ニンニク</div><p>入れる？入れない？その日の予定と相談を。</p></div>
+      <div class="c"><div class="num">03</div><div class="w">アブラ</div><p>コクが欲しいなら。パンチが一段上がる。</p></div>
+      <div class="c"><div class="num">04</div><div class="w">カラメ</div><p>甘めスープだから、カラメもよく合う。</p></div>
+    </div>
+    <p class="note fade">※ 初心者は「<b>ヤサイニンニク</b>」あたりから。予習していけば、うまいラーメンが待ってる。</p>
+  </div>
+</section>
+
+<!-- 店主の話 -->
+<section class="story">
+  <div class="story-inner">
+    <p class="kick fade">THE STORE</p>
+    <h2 class="fade">横浜関内で修行した、直系の味。</h2>
+    <div class="fade">
+      <p>ラーメンピースは、<b>ラーメン二郎 横浜関内店</b>で修行した店主が、2021年に七隈で開いた二郎系ラーメン店です。</p>
+      <p>九州でも二郎インスパイアは増えました。それでも「昔よく行った関内二郎を思い出す」——そう言ってもらえる、紛うことなき直系のクオリティ。それがこの店の誇りです。</p>
+      <p>甘めのスープは、麺とヤサイをまとめて中和してくれる食べやすさ。トッピングも日によって準備しているから、飽きずに通える一杯です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2 class="fade">食べたやつの、言葉。</h2>
+  <p class="sub fade">GOOGLE REVIEWS — 実際の声を引用</p>
+  <div class="v-list">
+    <div class="v-item fade"><div class="q">&ldquo;</div><div><p>紛うことなき直系のクオリティを味わえるのはこのお店。昔よく行っていた関内二郎を思い出します。ちゃんとコールの予習をしていれば、美味しいラーメンを提供してくれる素敵なお店です。</p><div class="who">— 二郎歴の長い方</div></div></div>
+    <div class="v-item fade"><div class="q">&ldquo;</div><div><p>微乳化甘めスープなので、他の二郎インスパイア行くぐらいならここが食べやすい。スープが麺とヤサイを中和されていて食べやすくてうまい。二郎初心者にお勧め！</p><div class="who">— 直系42店舗訪問済みの方</div></div></div>
+    <div class="v-item fade"><div class="q">&ldquo;</div><div><p>ワシワシ太麺のムチッと感と歯切れと啜り心地も良き！途中で生卵ドボンして味変。これは沼るやつや、、ごちそうさまでした！！</p><div class="who">— 二郎系デビューの方</div></div></div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section class="info">
+  <div class="info-inner">
+    <h2 class="fade">店の場所。</h2>
+    <dl class="info-grid fade">
+      <dt>AREA</dt><dd>福岡市城南区 七隈</dd>
+      <dt>STYLE</dt><dd>二郎系ラーメン（直系・横浜関内出身）</dd>
+      <dt>SINCE</dt><dd>2021年開業</dd>
+      <dt>SEAT</dt><dd>カウンター席</dd>
+      <dt>TIPS</dt><dd>訪問前に営業情報の確認を。コールの予習をしていくとスムーズ。</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- フッター -->
+<section class="foot-cta">
+  <div class="big fade">うまい。<span class="c">以上。</span></div>
+  <p>並んで、コールして、ワシワシ食う。それだけ。</p>
+</section>
+
+<footer>
+  <b>ラーメンピース</b> — 福岡市城南区 七隈｜二郎系ラーメン｜EST. 2021
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
