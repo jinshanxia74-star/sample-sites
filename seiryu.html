@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>勢龍｜福岡・七隈の昭和の焼肉屋｜老夫婦がつづける五十年</title>
+<meta name="description" content="福岡市城南区・七隈の焼肉 勢龍。おばあちゃんが一人でホールを切り盛りする、創業五十年の昭和の焼肉屋。厚めに切った肉、切り置きしない手仕事、塩だれと甘めのタレ。地元に愛される一軒。ご予約がおすすめです。">
+<meta property="og:title" content="勢龍｜五十年、変わらぬ手しごと。">
+<meta property="og:description" content="福岡・七隈の昭和の焼肉屋。老夫婦がつづける、厚めの肉と塩だれ。煙とともに時間が積み重なる一軒。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="seiryu-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"勢龍",
+  "servesCuisine":["焼肉"],
+  "image":"seiryu-hero.png",
+  "priceRange":"¥2500〜¥4000",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区 七隈","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&family=Yuji+Mai&family=Noto+Serif+JP:wght@300;400;500;600&display=swap');
+
+:root{
+  --washi:#f2eee2;      /* 生成り */
+  --white:#faf8f1;
+  --green:#1e3a2d;      /* 深緑（アイコン再現） */
+  --green2:#2f553f;
+  --gold:#a4823a;       /* 金茶（わずかに） */
+  --ink:#242019;        /* 墨 */
+  --muted:#6d6656;
+  --line:#d8d1bf;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Serif JP',serif;color:var(--ink);background:var(--washi);line-height:2.05;font-weight:400;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Zen Old Mincho',serif;font-weight:700;line-height:1.5;}
+.brush{font-family:'Yuji Mai',serif;font-weight:400;}
+
+/* 上部 */
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(18px,5vw,52px);border-bottom:1px solid var(--line);}
+.top .mark{font-family:'Zen Old Mincho',serif;font-weight:900;font-size:1.4rem;letter-spacing:0.14em;color:var(--green);}
+.top .sub{font-size:0.76rem;letter-spacing:0.18em;color:var(--muted);}
+
+/* ヒーロー：縦書き */
+.hero{
+  min-height:88vh;display:flex;align-items:center;justify-content:center;gap:clamp(30px,6vw,90px);
+  padding:clamp(40px,7vw,90px) clamp(20px,6vw,72px);position:relative;
+}
+.hero-writing{display:flex;flex-direction:row-reverse;align-items:flex-start;gap:clamp(18px,3vw,44px);}
+.hero h1{
+  writing-mode:vertical-rl;text-orientation:upright;
+  font-family:'Zen Old Mincho',serif;font-weight:900;
+  font-size:clamp(3.4rem,11vw,6.6rem);letter-spacing:0.16em;color:var(--green);
+  line-height:1.05;
+}
+.hero .tagline{
+  writing-mode:vertical-rl;font-family:'Yuji Mai',serif;
+  font-size:clamp(1.15rem,3vw,1.7rem);color:var(--gold);letter-spacing:0.28em;line-height:1.9;
+  align-self:center;
+}
+.hero .lede{
+  writing-mode:vertical-rl;font-size:clamp(0.95rem,2vw,1.05rem);color:var(--muted);
+  letter-spacing:0.16em;line-height:2.3;max-height:60vh;align-self:center;
+}
+.hero-photo{flex:0 0 auto;width:clamp(200px,30vw,360px);}
+.hero-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:sepia(6%);box-shadow:0 20px 40px rgba(30,58,45,0.18);}
+
+/* 物語（随筆） */
+.story{padding:clamp(60px,10vw,130px) clamp(20px,6vw,52px);}
+.story-inner{max-width:640px;margin:0 auto;}
+.section-label{font-family:'Yuji Mai',serif;font-size:1.4rem;color:var(--gold);letter-spacing:0.2em;margin-bottom:6px;}
+.story h2{font-size:clamp(1.7rem,4.5vw,2.5rem);letter-spacing:0.08em;margin-bottom:34px;color:var(--green);}
+.story p{font-size:1.05rem;margin-bottom:26px;letter-spacing:0.03em;}
+.story p .em{color:var(--green2);font-weight:600;}
+
+/* 手しごと（静かな一覧） */
+.craft{padding:clamp(56px,9vw,120px) clamp(20px,6vw,52px);background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.craft-inner{max-width:820px;margin:0 auto;}
+.craft .section-label{text-align:center;}
+.craft h2{text-align:center;font-size:clamp(1.7rem,4.5vw,2.4rem);letter-spacing:0.08em;color:var(--green);margin-bottom:52px;}
+.craft-item{display:grid;grid-template-columns:auto 1fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.craft-item:last-child{border-bottom:none;}
+.craft-item .no{font-family:'Zen Old Mincho',serif;font-weight:700;font-size:1.6rem;color:var(--gold);writing-mode:vertical-rl;letter-spacing:0.1em;}
+.craft-item h3{font-size:1.3rem;letter-spacing:0.06em;margin-bottom:8px;color:var(--green2);}
+.craft-item p{color:var(--muted);font-size:1rem;letter-spacing:0.02em;}
+
+/* おしながき */
+.menu{padding:clamp(56px,9vw,120px) clamp(20px,6vw,52px);}
+.menu-inner{max-width:720px;margin:0 auto;}
+.menu .section-label{text-align:center;}
+.menu h2{text-align:center;font-size:clamp(1.7rem,4.5vw,2.4rem);letter-spacing:0.08em;color:var(--green);margin-bottom:12px;}
+.menu .m-note{text-align:center;color:var(--muted);font-size:0.95rem;margin-bottom:44px;}
+.m-row{display:flex;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px dotted var(--line);}
+.m-row .n{font-family:'Zen Old Mincho',serif;font-weight:500;font-size:1.18rem;letter-spacing:0.06em;white-space:nowrap;}
+.m-row .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);}
+.m-row .d{color:var(--muted);font-size:0.92rem;text-align:right;max-width:20ch;}
+.tare{margin-top:40px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
+.tare span{font-family:'Zen Old Mincho',serif;border:1px solid var(--green);color:var(--green);border-radius:2px;padding:8px 22px;letter-spacing:0.14em;font-size:0.95rem;}
+
+/* 常連の声 */
+.voices{padding:clamp(56px,9vw,120px) clamp(20px,6vw,52px);background:var(--green);color:var(--washi);}
+.voices-inner{max-width:820px;margin:0 auto;}
+.voices .section-label{text-align:center;color:#c9a659;}
+.voices h2{text-align:center;color:var(--white);font-size:clamp(1.7rem,4.5vw,2.4rem);letter-spacing:0.08em;margin-bottom:52px;}
+.v-item{padding:32px 0;border-bottom:1px solid rgba(242,238,226,0.16);}
+.v-item:last-child{border-bottom:none;}
+.v-item p{font-size:1.08rem;letter-spacing:0.03em;line-height:2.1;}
+.v-item .who{margin-top:14px;font-family:'Yuji Mai',serif;font-size:1.05rem;color:#c9a659;letter-spacing:0.12em;}
+
+/* ご案内 */
+.info{padding:clamp(56px,9vw,120px) clamp(20px,6vw,52px);}
+.info-inner{max-width:760px;margin:0 auto;text-align:center;}
+.info .section-label{}
+.info h2{font-size:clamp(1.7rem,4.5vw,2.4rem);letter-spacing:0.08em;color:var(--green);margin-bottom:40px;}
+.info dl{display:inline-grid;grid-template-columns:auto 1fr;gap:20px 30px;text-align:left;}
+.info dt{font-family:'Zen Old Mincho',serif;font-weight:500;color:var(--gold);letter-spacing:0.1em;white-space:nowrap;}
+.info dd{color:var(--ink);letter-spacing:0.02em;}
+.info .yoyaku{margin-top:44px;font-family:'Yuji Mai',serif;font-size:1.3rem;color:var(--green2);letter-spacing:0.14em;}
+
+/* フッター */
+.foot{padding:clamp(64px,10vw,130px) clamp(20px,6vw,52px);text-align:center;background:var(--white);border-top:1px solid var(--line);}
+.foot .big{font-family:'Zen Old Mincho',serif;font-weight:900;font-size:clamp(2.4rem,7vw,4rem);letter-spacing:0.2em;color:var(--green);}
+.foot .brush-line{font-family:'Yuji Mai',serif;font-size:1.3rem;color:var(--gold);letter-spacing:0.16em;margin-top:24px;}
+footer{background:var(--green);color:rgba(242,238,226,0.7);text-align:center;padding:30px 20px;font-size:0.82rem;letter-spacing:0.08em;}
+footer .m{font-family:'Zen Old Mincho',serif;color:var(--washi);font-size:1.05rem;letter-spacing:0.2em;}
+
+.fade{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:760px){
+  .hero{min-height:auto;flex-direction:column;gap:40px;padding-top:56px;padding-bottom:56px;}
+  .hero-writing{flex-direction:column;align-items:center;gap:20px;}
+  .hero h1{writing-mode:horizontal-tb;letter-spacing:0.1em;}
+  .hero .tagline,.hero .lede{writing-mode:horizontal-tb;text-align:center;letter-spacing:0.1em;max-height:none;}
+  .hero .lede{max-width:34ch;line-height:2;}
+  .hero-photo{width:min(80vw,320px);}
+  .craft-item{grid-template-columns:1fr;gap:8px;}
+  .craft-item .no{writing-mode:horizontal-tb;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="mark">勢龍</div>
+  <div class="sub">昭和の焼肉屋・創業五十年</div>
+</div>
+
+<!-- ヒーロー（縦書き） -->
+<header class="hero">
+  <div class="hero-writing">
+    <h1>勢龍</h1>
+    <div class="tagline brush">五十年、変わらぬ手しごと。</div>
+    <p class="lede">おばあちゃんが一人で切り盛りする、七隈の小さな焼肉屋。厚めに切った肉と、煙とともに積み重なった時間があります。</p>
+  </div>
+  <div class="hero-photo fade vis">
+    <img src="seiryu-hero.png" alt="炭火でじっくり焼く、勢龍の厚切りの肉">
+  </div>
+</header>
+
+<!-- 物語 -->
+<section class="story">
+  <div class="story-inner">
+    <p class="section-label fade">物語</p>
+    <h2 class="fade">おじいちゃんとおばあちゃんの、五十年。</h2>
+    <div class="fade">
+      <p>暖簾をくぐると、腰を曲げながら立ち働くおばあちゃんが迎えてくれます。ホールは、ずっと<span class="em">おひとりで</span >。この店で焼肉を出しつづけて、もう五十年になるそうです。</p>
+      <p>煙モクモクの、年季の入った店内。それなのに、テーブルも壁も、驚くほどサラサラでした。開店前に、一枚いちまい懸命に拭きあげておられるのでしょう。<span class="em">それは、まぎれもないプロの仕事です。</span></p>
+      <p>肉はいっさい切り置きしません。だから、頼んでからしばらく待ちます。その「待つ時間」までもが、この店の味わいなのだと思います。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 手しごと -->
+<section class="craft">
+  <div class="craft-inner">
+    <p class="section-label fade">手しごと</p>
+    <h2 class="fade">急がず、ていねいに。</h2>
+    <div class="craft-item fade">
+      <div class="no">壱</div>
+      <div><h3>厚めに切った肉</h3><p>並ロースでも、適度に霜降って柔らか。薄切りにはない、噛みしめる旨みがあります。</p></div>
+    </div>
+    <div class="craft-item fade">
+      <div class="no">弐</div>
+      <div><h3>切り置きは、しない</h3><p>注文を受けてから切り出します。だから少し待つ。そのぶん、いつも新しい一皿です。</p></div>
+    </div>
+    <div class="craft-item fade">
+      <div class="no">参</div>
+      <div><h3>二種のたれ</h3><p>甘めのタレと、さっぱりの塩だれ。「断然、塩だれ派」という常連さんも多い自慢の味です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- おしながき -->
+<section class="menu">
+  <div class="menu-inner">
+    <p class="section-label fade" style="text-align:center;">おしながき</p>
+    <h2 class="fade">お品書き</h2>
+    <p class="m-note fade">早い、美味い、安い、量もちょうどよく。</p>
+    <div class="fade">
+      <div class="m-row"><span class="n">並ロース</span><span class="dots"></span><span class="d">適度な霜降り、柔らかく</span></div>
+      <div class="m-row"><span class="n">カルビ</span><span class="dots"></span><span class="d">サシが入って甘い</span></div>
+      <div class="m-row"><span class="n">塩タン</span><span class="dots"></span><span class="d">塩だれでさっぱりと</span></div>
+      <div class="m-row"><span class="n">ホルモン</span><span class="dots"></span><span class="d">昔ながらの味わい</span></div>
+      <div class="m-row"><span class="n">生センマイ</span><span class="dots"></span><span class="d">みんなが頼む名物</span></div>
+    </div>
+    <div class="tare fade">
+      <span>塩だれ</span><span>甘めのタレ</span>
+    </div>
+  </div>
+</section>
+
+<!-- 常連の声 -->
+<section class="voices">
+  <div class="voices-inner">
+    <p class="section-label fade">常連の声</p>
+    <h2 class="fade">地元に、愛されて。</h2>
+    <div class="v-item fade">
+      <p>お肉は厚めに切ってあり、並ロースでも適度に霜降って柔らか。しかもタレが好み。塩タンも、カルビも、焼酎の濃さも、全て好み。お店を五十年されてるそうです。</p>
+      <div class="who">— 初訪問の方</div>
+    </div>
+    <div class="v-item fade">
+      <p>煙モクモク＋年季の入った店内なのに、驚いたことにテーブルも壁もサラサラでした。腰を曲げながら立ち働くおばあちゃんのお仕事。プロフェッショナル。勉強になります。</p>
+      <div class="who">— 常連の方</div>
+    </div>
+    <div class="v-item fade">
+      <p>早い、美味い、安い、量も丁度良い！全てのお肉が薄切りで、サシが入って甘くて最高に美味しかった。私は断然、塩だれ派です。</p>
+      <div class="who">— ご夫婦で来店の方</div>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <div class="info-inner">
+    <p class="section-label fade">ご案内</p>
+    <h2 class="fade">お越しの前に。</h2>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡市城南区 七隈</dd>
+      <dt>お品</dt><dd>厚切りの焼肉・塩だれ／甘めのタレ・生センマイ</dd>
+      <dt>雰囲気</dt><dd>THE 昭和。満席時は煙が室内にこもります</dd>
+      <dt>ご予約</dt><dd>満席になりやすいため、ご予約がおすすめです</dd>
+    </dl>
+    <p class="yoyaku fade">まずは、お電話でご予約を。</p>
+  </div>
+</section>
+
+<!-- フッター -->
+<section class="foot">
+  <div class="big fade">勢龍</div>
+  <div class="brush-line fade">煙とともに、五十年。</div>
+</section>
+
+<footer>
+  <div class="m">勢龍</div>
+  <p style="margin-top:10px;">福岡市城南区 七隈｜昭和の焼肉屋｜創業五十年・老夫婦の店</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
