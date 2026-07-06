@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaNa KEBAB｜福岡・七隈のケバブ屋台｜イベント出店・テイクアウト</title>
+<meta name="description" content="福岡市七隈のケバブ専門店 MaNa KEBAB。博多の森・舞鶴公園・護国神社の蚤の市など、街のイベントに出店中。肉たっぷりチリマヨのケバブサンドは断然ラージがおすすめ。PayPay・クレジット決済OK。">
+<meta property="og:title" content="MaNa KEBAB｜イベントで見かけた、あの味。">
+<meta property="og:description" content="福岡・七隈のケバブ屋台。街のイベントに出店中。肉たっぷりチリマヨのケバブサンドは断然ラージ。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="mana-kebab-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "MaNa KEBAB",
+  "servesCuisine": ["ケバブ", "トルコ料理"],
+  "image": "mana-kebab-hero.png",
+  "priceRange": "¥600〜¥800",
+  "areaServed": "福岡市 七隈・城南区",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市城南区",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  },
+  "paymentAccepted": "現金, クレジットカード, PayPay",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "3.8",
+    "reviewCount": "24"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root{
+  --char: #14100c;      /* 炭黒キャンバス */
+  --char2: #201812;     /* すこし明るい炭 */
+  --red: #e02718;       /* ケバブ赤 */
+  --red-deep: #b41c10;
+  --yellow: #ffc21f;    /* マスタード黄 */
+  --pita: #f2e6cf;      /* ピタ生成り */
+  --pita-dim: #cbbfa6;
+  --ink: #0c0906;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--char);
+  color:var(--pita);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+
+/* ---- スリム上部バー ---- */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px clamp(16px,4vw,40px);
+  background:rgba(20,16,12,0.9);
+  backdrop-filter:blur(8px);
+  border-bottom:2px solid var(--yellow);
+}
+.topbar .mark{
+  font-family:'Archivo Black',sans-serif;
+  font-size:1.05rem;letter-spacing:0.04em;color:var(--yellow);
+}
+.topbar .mark span{color:var(--red);}
+.topbar a.dm{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;
+  font-size:0.8rem;background:var(--red);color:#fff;
+  padding:9px 16px;border-radius:2px;
+  transform:rotate(-2deg);transition:transform .2s;
+}
+.topbar a.dm:hover{transform:rotate(0) scale(1.05);}
+
+/* ---- ヒーロー：ポスター ---- */
+.poster{
+  position:relative;
+  padding:clamp(40px,7vw,90px) clamp(16px,5vw,64px) clamp(60px,9vw,110px);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(224,39,24,0.28), transparent 46%),
+    radial-gradient(circle at 12% 88%, rgba(255,194,31,0.16), transparent 44%),
+    var(--char);
+  overflow:hidden;
+}
+.poster::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+}
+.poster-grid{
+  position:relative;z-index:2;max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(24px,4vw,48px);align-items:center;
+}
+.kicker{
+  display:inline-block;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;
+  font-size:0.82rem;letter-spacing:0.14em;
+  background:var(--yellow);color:var(--ink);padding:6px 14px;
+  transform:rotate(-1.5deg);margin-bottom:22px;
+}
+.poster h1{
+  font-family:'Archivo Black',sans-serif;
+  font-size:clamp(3.2rem,11vw,6.8rem);line-height:0.86;letter-spacing:-0.01em;
+  color:var(--pita);text-transform:uppercase;
+}
+.poster h1 .r{color:var(--red);}
+.poster h1 .y{
+  color:var(--yellow);
+  -webkit-text-stroke:2px var(--ink);
+}
+.poster .jp-lead{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;
+  font-size:clamp(1.35rem,4.4vw,2.1rem);line-height:1.4;margin:26px 0 14px;
+}
+.poster .jp-lead em{color:var(--yellow);font-style:normal;}
+.poster .sub{
+  color:var(--pita-dim);max-width:34ch;font-size:1.02rem;margin-bottom:30px;
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;
+  padding:15px 26px;border-radius:2px;font-size:0.98rem;
+  transition:transform .2s ease, box-shadow .2s ease;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.btn-red{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--ink);}
+.btn-red:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);}
+.btn-out{background:transparent;color:var(--pita);border:2px solid var(--pita-dim);}
+.btn-out:hover{border-color:var(--yellow);color:var(--yellow);transform:translateY(-2px);}
+
+/* ヒーロー写真＋ステッカー */
+.hero-photo{position:relative;}
+.hero-photo .frame{
+  border:5px solid var(--pita);transform:rotate(2.4deg);
+  box-shadow:12px 12px 0 rgba(0,0,0,0.45);
+  aspect-ratio:4/5;object-fit:cover;width:100%;
+}
+.sticker{
+  position:absolute;font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  padding:12px 16px;border-radius:50%;text-align:center;line-height:1;z-index:3;
+  box-shadow:3px 4px 0 rgba(0,0,0,0.4);
+}
+.sticker.large{
+  top:-26px;left:-24px;background:var(--yellow);color:var(--ink);
+  width:104px;height:104px;display:flex;flex-direction:column;justify-content:center;
+  transform:rotate(-12deg);font-size:0.72rem;
+}
+.sticker.large b{font-size:1.55rem;display:block;}
+.sticker.pay{
+  bottom:-18px;right:-14px;background:var(--red);color:#fff;border-radius:4px;
+  transform:rotate(6deg);font-size:0.66rem;padding:10px 14px;letter-spacing:0.05em;
+}
+
+/* ---- チケット風 出店スケジュール（主役）---- */
+.schedule{
+  background:var(--yellow);color:var(--ink);
+  padding:clamp(44px,7vw,80px) clamp(16px,5vw,64px);position:relative;
+}
+.schedule .head{max-width:1180px;margin:0 auto 34px;}
+.schedule h2{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(2rem,6vw,3.4rem);line-height:0.95;
+}
+.schedule h2 small{
+  display:block;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;
+  font-size:clamp(1rem,3vw,1.3rem);color:var(--red-deep);margin-top:8px;
+}
+.tickets{
+  max-width:1180px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;
+}
+.ticket{
+  background:var(--char);color:var(--pita);position:relative;
+  padding:26px 24px;border-radius:4px;
+  box-shadow:6px 6px 0 rgba(0,0,0,0.25);
+}
+.ticket:nth-child(2){transform:rotate(-1.4deg);}
+.ticket:nth-child(3){transform:rotate(1.2deg);}
+/* チケットの切り取り穴 */
+.ticket::before,.ticket::after{
+  content:"";position:absolute;width:22px;height:22px;border-radius:50%;
+  background:var(--yellow);top:50%;transform:translateY(-50%);
+}
+.ticket::before{left:-11px;}
+.ticket::after{right:-11px;}
+.ticket .when{
+  font-family:'Archivo Black',sans-serif;color:var(--yellow);
+  font-size:1.7rem;line-height:1;
+}
+.ticket .where{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;
+  font-size:1.12rem;margin:10px 0 6px;
+}
+.ticket .note{font-size:0.86rem;color:var(--pita-dim);border-top:1px dashed rgba(242,230,207,0.3);padding-top:10px;margin-top:12px;}
+.schedule .foot{
+  max-width:1180px;margin:30px auto 0;font-family:'Zen Kaku Gothic New',sans-serif;
+  font-weight:700;color:var(--red-deep);font-size:0.98rem;
+}
+
+/* ---- ラージ一択 比較ブロック ---- */
+.size{
+  padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);
+  background:var(--char2);position:relative;overflow:hidden;
+}
+.size-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,44px);align-items:stretch;}
+.size h2{
+  grid-column:1/-1;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;
+  font-size:clamp(1.9rem,5.5vw,3rem);line-height:1.2;margin-bottom:10px;
+}
+.size h2 .y{color:var(--yellow);}
+.size .lede{grid-column:1/-1;color:var(--pita-dim);max-width:52ch;margin-bottom:20px;}
+.size-card{
+  border:2px solid rgba(242,230,207,0.18);border-radius:6px;padding:30px 26px;
+  display:flex;flex-direction:column;gap:6px;background:rgba(0,0,0,0.15);
+}
+.size-card.win{
+  border-color:var(--yellow);background:rgba(255,194,31,0.08);
+  box-shadow:0 0 0 4px rgba(255,194,31,0.12);
+}
+.size-card .tag{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:1.4rem;color:var(--pita);
+}
+.size-card.win .tag{color:var(--yellow);}
+.size-card .price{font-family:'Archivo Black',sans-serif;font-size:2.6rem;color:var(--red);line-height:1;margin:4px 0;}
+.size-card .desc{color:var(--pita-dim);font-size:0.94rem;}
+.size-card .badge{
+  align-self:flex-start;background:var(--red);color:#fff;font-weight:700;
+  font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.76rem;
+  padding:4px 12px;border-radius:20px;margin-top:8px;
+}
+
+/* ---- お品書き（テープ貼り）---- */
+.menu{padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);}
+.menu-inner{max-width:900px;margin:0 auto;}
+.menu h2{
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;text-align:center;
+  font-size:clamp(1.9rem,6vw,3.2rem);margin-bottom:8px;
+}
+.menu .m-sub{text-align:center;color:var(--pita-dim);margin-bottom:38px;}
+.board{
+  background:var(--pita);color:var(--ink);border-radius:4px;position:relative;
+  padding:clamp(30px,5vw,52px);box-shadow:0 24px 48px rgba(0,0,0,0.4);
+  transform:rotate(-0.6deg);
+}
+.board::before{
+  content:"";position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(3deg);
+  width:120px;height:30px;background:rgba(255,194,31,0.85);
+  box-shadow:2px 2px 4px rgba(0,0,0,0.2);
+}
+.m-row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:15px 0;border-bottom:2px dotted rgba(20,16,12,0.25);
+}
+.m-row:last-child{border-bottom:none;}
+.m-row .n{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:1.12rem;}
+.m-row .n small{display:block;font-weight:400;font-size:0.8rem;color:#6a5c44;}
+.m-row .p{font-family:'Archivo Black',sans-serif;font-size:1.35rem;color:var(--red-deep);white-space:nowrap;}
+.m-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:30px;}
+.m-tags span{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:0.8rem;
+  background:var(--ink);color:var(--pita);padding:6px 14px;border-radius:20px;
+}
+
+/* ---- 口コミ（破り紙ステッカー）---- */
+.voices{
+  padding:clamp(48px,8vw,96px) clamp(16px,5vw,64px);
+  background:
+    radial-gradient(circle at 85% 12%, rgba(224,39,24,0.2), transparent 40%),
+    var(--char);
+}
+.voices h2{
+  font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;text-align:center;
+  font-size:clamp(1.7rem,5vw,2.6rem);margin-bottom:8px;
+}
+.voices .v-sub{text-align:center;color:var(--pita-dim);margin-bottom:40px;}
+.v-wrap{max-width:1100px;margin:0 auto;column-gap:24px;}
+.v-card{
+  background:var(--pita);color:var(--ink);padding:24px 22px;margin-bottom:24px;
+  break-inside:avoid;border-radius:2px;box-shadow:5px 6px 0 rgba(0,0,0,0.35);
+}
+.v-card:nth-child(odd){transform:rotate(-1.3deg);}
+.v-card:nth-child(even){transform:rotate(1.1deg);}
+.v-card .stars{color:var(--red-deep);font-weight:700;letter-spacing:0.1em;margin-bottom:10px;font-size:0.9rem;}
+.v-card p{font-size:0.98rem;line-height:1.7;}
+.v-card .who{margin-top:14px;font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:0.82rem;color:#7a6b50;}
+
+/* ---- 決済・アクセス（スタンプ）---- */
+.info{
+  padding:clamp(48px,8vw,90px) clamp(16px,5vw,64px);background:var(--char2);
+}
+.info-grid{
+  max-width:1100px;margin:0 auto;display:grid;
+  grid-template-columns:1.1fr 0.9fr;gap:clamp(24px,4vw,48px);align-items:center;
+}
+.info-photo img{
+  border:5px solid var(--pita);transform:rotate(-1.8deg);
+  box-shadow:10px 10px 0 rgba(0,0,0,0.4);aspect-ratio:4/3;object-fit:cover;width:100%;
+}
+.info h2{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:900;font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:20px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 18px;margin-bottom:24px;}
+.info dt{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;color:var(--yellow);white-space:nowrap;}
+.info dd{color:var(--pita);}
+.stamp{
+  display:inline-block;border:3px solid var(--red);color:var(--red);
+  font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  padding:8px 16px;border-radius:6px;transform:rotate(-4deg);font-size:0.9rem;
+  letter-spacing:0.04em;
+}
+
+/* ---- フッターCTA ---- */
+.foot-cta{
+  padding:clamp(56px,9vw,110px) clamp(16px,5vw,64px);text-align:center;
+  background:var(--red);color:#fff;position:relative;overflow:hidden;
+}
+.foot-cta h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(2.2rem,7vw,4rem);line-height:0.95;}
+.foot-cta p{font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;font-size:clamp(1.1rem,3vw,1.4rem);margin:18px 0 30px;}
+.foot-cta .btn-y{
+  background:var(--yellow);color:var(--ink);font-family:'Zen Kaku Gothic New',sans-serif;font-weight:700;
+  padding:17px 34px;border-radius:2px;font-size:1.05rem;display:inline-block;
+  box-shadow:6px 6px 0 var(--ink);transition:transform .2s,box-shadow .2s;
+}
+.foot-cta .btn-y:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink);}
+footer{background:var(--ink);color:var(--pita-dim);text-align:center;padding:30px 20px;font-size:0.82rem;}
+footer .mark{font-family:'Archivo Black',sans-serif;color:var(--yellow);font-size:1rem;letter-spacing:0.04em;}
+
+/* fade in */
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+/* ---- レスポンシブ ---- */
+@media(max-width:820px){
+  .poster-grid{grid-template-columns:1fr;gap:44px;}
+  .hero-photo{max-width:420px;margin:0 auto;}
+  .size-inner{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+  .info-photo{max-width:460px;margin:0 auto;}
+  .v-wrap{column-count:1;}
+}
+@media(min-width:821px) and (max-width:1100px){
+  .v-wrap{column-count:2;}
+}
+@media(min-width:1101px){.v-wrap{column-count:3;}}
+@media(max-width:480px){
+  .sticker.large{width:82px;height:82px;font-size:0.6rem;}
+  .sticker.large b{font-size:1.2rem;}
+  .btn{width:100%;justify-content:center;}
+  .topbar .mark{font-size:0.9rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="mark">MaNa<span>·</span>KEBAB</div>
+  <a class="dm" href="#schedule">出店スケジュール</a>
+</div>
+
+<!-- ヒーロー：ストリートポスター -->
+<header class="poster">
+  <div class="poster-grid">
+    <div class="fade vis">
+      <span class="kicker">福岡・七隈｜イベント出店ケバブ</span>
+      <h1><span class="r">MaNa</span><br><span class="y">KEBAB</span></h1>
+      <p class="jp-lead">イベントで見かけた、<em>あの味。</em></p>
+      <p class="sub">博多の森、舞鶴公園、護国神社の蚤の市。街のどこかで、肉たっぷりのケバブサンドを焼いています。見つけたら、迷わずラージを。</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="#schedule">今月の出店を見る</a>
+        <a class="btn btn-out" href="#menu">メニューと値段</a>
+      </div>
+    </div>
+    <div class="hero-photo fade vis">
+      <div class="sticker large">EVENT<b>OK</b>出店中</div>
+      <img class="frame" src="mana-kebab-hero.png" alt="ピタパンに肉と野菜がたっぷり詰まったMaNa KEBABのケバブサンド">
+      <div class="sticker pay">現金 / カード / PayPay OK</div>
+    </div>
+  </div>
+</header>
+
+<!-- 出店スケジュール（ページの主役）-->
+<section class="schedule" id="schedule">
+  <div class="head fade">
+    <h2>WHERE ARE WE?<small>今月、どの街で焼いてます</small></h2>
+  </div>
+  <div class="tickets">
+    <div class="ticket fade">
+      <div class="when">WEEKDAY</div>
+      <div class="where">七隈四つ角・店舗</div>
+      <p>平日はテイクアウト専門店で営業。焼きたてをその場で。</p>
+      <div class="note">※開店時間は前後することあり。SNSで最新をチェック。</div>
+    </div>
+    <div class="ticket fade">
+      <div class="when">WEEKEND</div>
+      <div class="where">博多の森 / 舞鶴公園</div>
+      <p>週末はキッチンカーで移動販売。桜まつり・スポーツイベントに出没。</p>
+      <div class="note">※出店先は週替わり。「見かけたら即買い」が正解。</div>
+    </div>
+    <div class="ticket fade">
+      <div class="when">EVENT</div>
+      <div class="where">護国神社 蚤の市 ほか</div>
+      <p>蚤の市やお祭りにも出店。トルコのジュースも一緒にどうぞ。</p>
+      <div class="note">※イベント出店の予定はInstagramで告知します。</div>
+    </div>
+  </div>
+  <p class="foot">「この前イベントで食べたケバブ、また食べたい」——その"また"に、ここで会えます。</p>
+</section>
+
+<!-- ラージ一択 -->
+<section class="size">
+  <div class="size-inner">
+    <h2>サイズで迷ったら、<span class="y">ラージ一択。</span></h2>
+    <p class="lede">「レギュラーはちょっと小さいので断然ラージがおすすめ」——常連さんの総意です。チキンかビーフ、辛さは3段階から選べます。肉も野菜も、遠慮なくたっぷり。</p>
+    <div class="size-card">
+      <div class="tag">REGULAR</div>
+      <div class="price">¥600</div>
+      <p class="desc">サクッと食べたい人に。それでも野菜はしっかり入っています。</p>
+    </div>
+    <div class="size-card win">
+      <div class="tag">LARGE</div>
+      <div class="price">¥800</div>
+      <p class="desc">食べ応え重視ならこっち。肉の満足感がまるで違います。</p>
+      <span class="badge">みんなコレ頼んでます</span>
+    </div>
+  </div>
+</section>
+
+<!-- お品書き -->
+<section class="menu" id="menu">
+  <div class="menu-inner">
+    <h2>MENU</h2>
+    <p class="m-sub">チリマヨソースにキャベツ・トマト・玉ねぎ、そしてお肉。トルコのチリパウダーがふわり香ります。</p>
+    <div class="board fade">
+      <div class="m-row"><span class="n">ケバブサンド レギュラー<small>チキン or ビーフ／辛さ3段階</small></span><span class="p">¥600</span></div>
+      <div class="m-row"><span class="n">ケバブサンド ラージ<small>肉も野菜もたっぷり。一番人気</small></span><span class="p">¥800</span></div>
+      <div class="m-row"><span class="n">ケバブ丼<small>ごはんの上にたっぷりケバブ</small></span><span class="p">¥700</span></div>
+      <div class="m-row"><span class="n">トルコのジュース<small>サンドのお供に</small></span><span class="p">¥200</span></div>
+      <div class="m-tags">
+        <span>チリマヨ</span><span>野菜たっぷり</span><span>辛さ選べる</span><span>子どももOK</span><span>テイクアウト専門</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2>食べた人の、正直な声。</h2>
+  <p class="v-sub">Googleクチコミより実際の言葉を引用しています。</p>
+  <div class="v-wrap">
+    <div class="v-card fade">
+      <div class="stars">★★★★★</div>
+      <p>ケバブ肉がたっぷり詰まったピタパンはキャベツとの相性もバツグン。食べ応えありのケバブサンドです。</p>
+      <div class="who">— 博多の森のキッチンカーで</div>
+    </div>
+    <div class="v-card fade">
+      <div class="stars">★★★★☆</div>
+      <p>チリマヨソースにキャベツ、トマト、玉ねぎ、チキンが挟んであり、辛さもそんなにないので小学生以上なら子どもでも美味しくいただけます。トルコ料理独特のチリパウダーの風味が良いです。</p>
+      <div class="who">— ローカルガイドさん</div>
+    </div>
+    <div class="v-card fade">
+      <div class="stars">★★★★★</div>
+      <p>たっぷりボリュームがあるケバブサンドがお安く食べられるお店。肉の種類も辛さも選べる。お店のお兄さんたちもフレンドリーで話しやすかった。トルコのジュースも美味しかった。</p>
+      <div class="who">— リピーターの方</div>
+    </div>
+    <div class="v-card fade">
+      <div class="stars">★★★★★</div>
+      <p>現金の他、クレジット決済やPayPayタッチ決済できます。博多の森に来ていたキッチンカーでケバブサンドを頂きました。</p>
+      <div class="who">— イベント来場の方</div>
+    </div>
+  </div>
+</section>
+
+<!-- 決済・アクセス -->
+<section class="info">
+  <div class="info-grid">
+    <div class="info-photo fade">
+      <img src="mana-kebab-truck.png" alt="街のイベントに出店するMaNa KEBABのキッチンカー">
+    </div>
+    <div class="fade">
+      <h2>お店のこと</h2>
+      <dl>
+        <dt>エリア</dt><dd>福岡市城南区 七隈四つ角（テイクアウト専門）</dd>
+        <dt>週末</dt><dd>博多の森・舞鶴公園・護国神社の蚤の市などに移動販売で出店</dd>
+        <dt>お支払い</dt><dd>現金・クレジットカード・PayPayタッチ決済</dd>
+        <dt>メニュー</dt><dd>チキン／ビーフ、辛さ3段階、ケバブ丼あり</dd>
+      </dl>
+      <span class="stamp">Cashless OK</span>
+    </div>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>次は、どこで会おう。</h2>
+  <p>最新の出店スケジュールはInstagramで告知中。フォローしておけば、あの味を逃しません。</p>
+  <a class="btn-y" href="#schedule">出店スケジュールを確認する</a>
+</section>
+
+<footer>
+  <div class="mark">MaNa · KEBAB</div>
+  <p style="margin-top:10px;">福岡市城南区 七隈｜ケバブ・トルコ料理｜テイクアウト＆イベント出店</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
