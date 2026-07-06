@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>しっとう家｜福岡・福大近くの定食屋｜ごはん・カレーおかわり自由</title>
+<meta name="description" content="福岡大学近く、梅林駅から徒歩8分の定食屋しっとう家。定食を頼めばごはん・味噌汁・カレーがおかわり自由。メニュー40種以上、500円台から。からあげ定食・チキン南蛮丼・オムチーズ豚丼。学生も現場職も満腹の、福大界隈の満腹店。">
+<meta property="og:title" content="しっとう家｜1000円で、ハラいっぱい。">
+<meta property="og:description" content="福岡・福大近くの定食屋。ごはん・カレーおかわり自由、メニュー40種以上。学生の財布の味方。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="sittouya-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"しっとう家",
+  "servesCuisine":["定食","丼もの"],
+  "image":"sittouya-hero.png",
+  "priceRange":"¥500〜¥1300",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Passion+One:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+:root{
+  --yellow:#ffd21e;
+  --yellow-d:#f2b200;
+  --black:#1c1a14;
+  --white:#fffdf3;
+  --ketchup:#e5352a;
+  --ketchup-d:#c72519;
+  --ink:#1c1a14;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--white);line-height:1.8;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Mochiy Pop One',sans-serif;font-weight:400;line-height:1.4;}
+.num{font-family:'Passion One',sans-serif;}
+
+/* テープ帯 */
+.tape-band{background:repeating-linear-gradient(-45deg,var(--black) 0 24px,var(--yellow) 24px 48px);height:14px;}
+
+/* 上部バー */
+.bar{position:sticky;top:0;z-index:60;background:var(--yellow);border-bottom:4px solid var(--black);
+  display:flex;align-items:center;justify-content:space-between;padding:11px clamp(14px,4vw,40px);}
+.bar .lg{font-family:'Mochiy Pop One',sans-serif;font-size:1.2rem;color:var(--black);}
+.bar .lg .r{color:var(--ketchup);}
+.bar a.cta{background:var(--ketchup);color:#fff;font-family:'Mochiy Pop One',sans-serif;font-size:0.82rem;
+  padding:8px 16px;border:3px solid var(--black);border-radius:4px;box-shadow:2px 2px 0 var(--black);}
+
+/* ヒーロー */
+.hero{padding:clamp(36px,6vw,72px) clamp(16px,5vw,44px) clamp(46px,7vw,80px);position:relative;
+  background:radial-gradient(circle at 82% 22%,rgba(229,53,42,0.1),transparent 44%),var(--yellow);}
+.hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(24px,4vw,52px);align-items:center;}
+.tape-label{display:inline-block;background:var(--black);color:var(--yellow);font-family:'Mochiy Pop One',sans-serif;
+  font-size:0.84rem;padding:6px 16px;transform:rotate(-2deg);margin-bottom:18px;}
+.hero h1{font-family:'Mochiy Pop One',sans-serif;font-size:clamp(2rem,6vw,3.4rem);color:var(--black);line-height:1.25;}
+.hero .price-hero{margin:10px 0 8px;display:flex;align-items:baseline;gap:6px;}
+.hero .price-hero .yen{font-family:'Passion One',sans-serif;font-weight:900;font-size:clamp(1.8rem,6vw,3rem);color:var(--ketchup);}
+.hero .price-hero .big{font-family:'Passion One',sans-serif;font-weight:900;font-size:clamp(5rem,20vw,11rem);color:var(--ketchup);line-height:0.8;text-shadow:5px 5px 0 var(--black);letter-spacing:-0.02em;}
+.hero .price-hero .unit{font-family:'Mochiy Pop One',sans-serif;font-size:clamp(1rem,3vw,1.6rem);color:var(--black);}
+.hero .sub{font-size:1.08rem;color:var(--black);max-width:32ch;margin:14px 0 26px;font-weight:500;}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{font-family:'Mochiy Pop One',sans-serif;padding:14px 26px;border:3px solid var(--black);border-radius:6px;font-size:1rem;
+  transition:transform .15s,box-shadow .15s;display:inline-block;}
+.btn-k{background:var(--ketchup);color:#fff;box-shadow:4px 4px 0 var(--black);}
+.btn-k:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--black);}
+.btn-w{background:#fff;color:var(--black);box-shadow:4px 4px 0 var(--black);}
+.btn-w:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--black);}
+.hero-photo{position:relative;}
+.hero-photo img{border:6px solid var(--black);border-radius:12px;box-shadow:8px 8px 0 var(--ketchup);aspect-ratio:4/3;object-fit:cover;width:100%;}
+.hero-photo .pop{position:absolute;bottom:-18px;left:-12px;background:#fff;border:4px solid var(--black);border-radius:50%;
+  width:96px;height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-8deg);
+  box-shadow:3px 3px 0 var(--black);text-align:center;}
+.hero-photo .pop .n{font-family:'Passion One',sans-serif;font-weight:900;font-size:1.6rem;color:var(--ketchup);line-height:0.9;}
+.hero-photo .pop .t{font-family:'Mochiy Pop One',sans-serif;font-size:0.6rem;}
+
+/* おかわり自由 */
+.free{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--black);color:var(--white);text-align:center;}
+.free .inf{font-family:'Passion One',sans-serif;font-weight:900;font-size:clamp(4rem,14vw,8rem);color:var(--yellow);line-height:0.8;}
+.free h2{font-size:clamp(1.8rem,5vw,2.8rem);color:#fff;margin:10px 0 8px;}
+.free h2 .y{color:var(--yellow);}
+.free .f-sub{color:#d8d4c4;max-width:40ch;margin:0 auto 36px;}
+.free-grid{max-width:820px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.free-item{background:#26241c;border:3px solid var(--yellow);border-radius:12px;padding:24px 14px;}
+.free-item .ic{font-family:'Mochiy Pop One',sans-serif;font-size:1.3rem;color:var(--yellow);margin-bottom:6px;}
+.free-item p{font-size:0.86rem;color:#d8d4c4;}
+
+/* メニュー40種 */
+.menu{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);}
+.menu-inner{max-width:1160px;margin:0 auto;}
+.menu .head{text-align:center;margin-bottom:40px;}
+.menu h2{font-size:clamp(1.9rem,5.5vw,3rem);color:var(--black);}
+.menu h2 .count{color:var(--ketchup);}
+.menu .m-sub{color:var(--ink);opacity:0.75;margin-top:6px;}
+.tray-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
+.tray{background:#fff;border:3px solid var(--black);border-radius:10px;padding:18px 16px;position:relative;
+  box-shadow:4px 4px 0 rgba(28,26,20,0.15);transition:transform .15s;}
+.tray:hover{transform:translateY(-3px);}
+.tray.star{background:var(--yellow);}
+.tray .badge{position:absolute;top:-10px;right:10px;background:var(--ketchup);color:#fff;font-family:'Mochiy Pop One',sans-serif;
+  font-size:0.66rem;padding:3px 10px;border:2px solid var(--black);border-radius:20px;}
+.tray .n{font-family:'Mochiy Pop One',sans-serif;font-size:1.02rem;margin-bottom:2px;}
+.tray .d{font-size:0.78rem;color:#6a6656;margin-bottom:10px;}
+.tray .p{font-family:'Passion One',sans-serif;font-weight:900;font-size:1.8rem;color:var(--ketchup);line-height:0.9;}
+.tray .p small{font-family:'Mochiy Pop One',sans-serif;font-size:0.68rem;color:var(--black);}
+.menu-note{text-align:center;margin-top:26px;font-size:0.88rem;color:#6a6656;}
+
+/* コスパの証明 */
+.proof{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--ketchup);color:#fff;}
+.proof-inner{max-width:1000px;margin:0 auto;text-align:center;}
+.proof h2{color:#fff;font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:36px;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.stat .v{font-family:'Passion One',sans-serif;font-weight:900;font-size:clamp(2.8rem,8vw,4.6rem);line-height:0.85;color:var(--yellow);text-shadow:3px 3px 0 var(--ketchup-d);}
+.stat .l{font-family:'Mochiy Pop One',sans-serif;font-size:0.92rem;margin-top:8px;}
+.stat .s{font-size:0.82rem;opacity:0.9;}
+
+/* 口コミ */
+.voices{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--yellow);}
+.voices h2{text-align:center;font-size:clamp(1.9rem,5.5vw,2.8rem);color:var(--black);margin-bottom:8px;}
+.voices .v-sub{text-align:center;color:var(--black);opacity:0.7;margin-bottom:40px;}
+.v-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.v-card{background:#fff;border:4px solid var(--black);border-radius:14px;padding:24px 22px;box-shadow:5px 5px 0 var(--black);}
+.v-card .star{color:var(--ketchup);font-weight:900;margin-bottom:10px;}
+.v-card p{font-size:0.98rem;}
+.v-card .who{margin-top:14px;font-family:'Mochiy Pop One',sans-serif;font-size:0.78rem;color:var(--ketchup-d);}
+
+/* 利用案内 */
+.guide{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);}
+.guide-inner{max-width:900px;margin:0 auto;}
+.guide h2{text-align:center;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--black);margin-bottom:10px;}
+.guide .g-sub{text-align:center;color:#6a6656;margin-bottom:40px;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:34px;}
+.step{background:#fff;border:3px solid var(--black);border-radius:12px;padding:22px 18px;text-align:center;}
+.step .no{font-family:'Passion One',sans-serif;font-weight:900;font-size:2.4rem;color:var(--yellow-d);line-height:0.9;-webkit-text-stroke:2px var(--black);}
+.step h3{font-size:1.02rem;margin:8px 0 4px;}
+.step p{font-size:0.82rem;color:#6a6656;}
+.guide dl{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:12px 22px;background:var(--yellow);border:3px solid var(--black);border-radius:14px;padding:24px 28px;box-shadow:5px 5px 0 var(--black);}
+.guide dt{font-family:'Mochiy Pop One',sans-serif;color:var(--ketchup-d);white-space:nowrap;}
+.guide dd{color:var(--black);}
+
+/* フッターCTA */
+.foot-cta{padding:clamp(52px,8vw,110px) clamp(16px,5vw,44px);text-align:center;background:var(--black);color:#fff;}
+.foot-cta h2{font-size:clamp(2rem,6vw,3.4rem);color:#fff;}
+.foot-cta h2 .y{color:var(--yellow);}
+.foot-cta p{margin:16px auto 30px;max-width:38ch;color:#d8d4c4;}
+.foot-cta .btn-y{background:var(--yellow);color:var(--black);font-family:'Mochiy Pop One',sans-serif;padding:16px 34px;
+  border:3px solid var(--yellow);border-radius:8px;font-size:1.05rem;display:inline-block;box-shadow:5px 5px 0 var(--ketchup);transition:transform .15s,box-shadow .15s;}
+.foot-cta .btn-y:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ketchup);}
+footer{background:#111;color:#9a9686;text-align:center;padding:28px 20px;font-size:0.82rem;}
+footer .lg{font-family:'Mochiy Pop One',sans-serif;color:var(--yellow);font-size:1.05rem;}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-photo{max-width:440px;margin:10px auto 0;}
+  .free-grid{grid-template-columns:1fr;}
+  .proof-grid{grid-template-columns:1fr;gap:32px;}
+}
+@media(max-width:480px){.btn{width:100%;text-align:center;}}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="tape-band"></div>
+<div class="bar">
+  <div class="lg">しっとう<span class="r">家</span></div>
+  <a class="cta" href="#menu">メニューを見る</a>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="fade vis">
+      <span class="tape-label">福大近く・梅林駅から徒歩8分</span>
+      <h1>だいたい</h1>
+      <div class="price-hero">
+        <span class="yen">¥</span><span class="big num">1000</span><span class="unit">で</span>
+      </div>
+      <h1>ハラ、いっぱい。</h1>
+      <p class="sub">ごはん・味噌汁・カレーはおかわり自由。学生も、部活帰りも、現場帰りも。財布にやさしい満腹の定食屋です。</p>
+      <div class="btns">
+        <a class="btn btn-k" href="#menu">メニュー40種以上</a>
+        <a class="btn btn-w" href="#guide">はじめての方へ</a>
+      </div>
+    </div>
+    <div class="hero-photo fade vis">
+      <img src="sittouya-hero.png" alt="からあげ・ごはん・味噌汁・カレーがのったしっとう家のボリューム定食トレー">
+      <div class="pop"><span class="n">40+</span><span class="t">メニュー</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- おかわり自由 -->
+<section class="free">
+  <div class="inf num">∞</div>
+  <h2>ごはん・味噌汁・<span class="y">カレー</span>、おかわり自由。</h2>
+  <p class="f-sub">定食を頼めば、この3つは食べ放題。もう一杯、遠慮はいりません。</p>
+  <div class="free-grid">
+    <div class="free-item fade"><div class="ic">ごはん</div><p>山口県産「しきゆたか」。ふっくら炊きたて。</p></div>
+    <div class="free-item fade"><div class="ic">味噌汁</div><p>定食にはうれしいセルフの一杯。</p></div>
+    <div class="free-item fade"><div class="ic">カレー</div><p>意外とイケる、と評判。ごはんにかけてどうぞ。</p></div>
+  </div>
+</section>
+
+<!-- メニュー -->
+<section class="menu" id="menu">
+  <div class="menu-inner">
+    <div class="head fade">
+      <h2>メニュー<span class="count">40種</span>以上</h2>
+      <p class="m-sub">500円台から。定食も、丼も、鉄板ものも。</p>
+    </div>
+    <div class="tray-grid">
+      <div class="tray star fade"><span class="badge">看板</span><div class="n">しっとう家定食</div><div class="d">いろんなおかずが満載</div><div class="p">950<small>円</small></div></div>
+      <div class="tray fade"><span class="badge">人気</span><div class="n">からあげ定食</div><div class="d">外カリッ中ジューシー</div><div class="p">〜<small>円台</small></div></div>
+      <div class="tray fade"><div class="n">チキン南蛮丼</div><div class="d">甘酸っぱいタルタル</div><div class="p">〜<small>円台</small></div></div>
+      <div class="tray fade"><div class="n">オムチーズ豚丼</div><div class="d">若者の胃袋担当</div><div class="p">〜<small>円台</small></div></div>
+      <div class="tray fade"><div class="n">ホルモン鉄板定食</div><div class="d">がっつり鉄板もの</div><div class="p">1180<small>円</small></div></div>
+      <div class="tray fade"><div class="n">焼肉定食</div><div class="d">満腹まちがいなし</div><div class="p">1280<small>円</small></div></div>
+      <div class="tray fade"><div class="n">日替わり定食</div><div class="d">その日のおすすめ</div><div class="p">500<small>円台〜</small></div></div>
+      <div class="tray fade"><div class="n">ほか多数</div><div class="d">丼もの・定食いろいろ</div><div class="p">40+<small>種</small></div></div>
+    </div>
+    <p class="menu-note fade">※価格は目安です。定食はごはん・味噌汁・カレーおかわり自由。</p>
+  </div>
+</section>
+
+<!-- コスパの証明 -->
+<section class="proof">
+  <div class="proof-inner">
+    <h2 class="fade">数字で見る、しっとう家。</h2>
+    <div class="proof-grid">
+      <div class="stat fade"><div class="v num">40<small>+</small></div><div class="l">メニュー種類</div><div class="s">定食も丼も、選び放題</div></div>
+      <div class="stat fade"><div class="v num">500<small>〜</small></div><div class="l">円台から</div><div class="s">学生の財布にやさしい</div></div>
+      <div class="stat fade"><div class="v num">∞</div><div class="l">おかわり自由</div><div class="s">ごはん・味噌汁・カレー</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2 class="fade">食べた人の、声。</h2>
+  <p class="v-sub fade">Googleクチコミより実際の声を引用しています。</p>
+  <div class="v-grid">
+    <div class="v-card fade"><div class="star">★★★★★</div><p>コスパが非常に優れている。お腹いっぱいになること間違いなしのボリュームに対し、財布に優しい価格設定は、学生やサラリーマンにとって特に嬉しいポイント。</p><div class="who">よく通う方</div></div>
+    <div class="v-card fade"><div class="star">★★★★★</div><p>からあげは外はカリッと中はジューシーで、にんにく醤油の風味が食欲をそそる。ご飯・味噌汁・カレーがセルフでおかわり自由という太っ腹なサービスも魅力。</p><div class="who">はじめて来た方</div></div>
+    <div class="v-card fade"><div class="star">★★★★★</div><p>大和家と並ぶ、福大界隈の2大満腹店。定食頼むとカレー・ご飯・味噌汁おかわり自由。味より量を優先の人にはオススメ。</p><div class="who">学生の方</div></div>
+  </div>
+</section>
+
+<!-- 利用案内 -->
+<section class="guide" id="guide">
+  <div class="guide-inner">
+    <h2 class="fade">はじめての方へ。</h2>
+    <p class="g-sub fade">学食スタイル。気楽にどうぞ。</p>
+    <div class="steps">
+      <div class="step fade"><div class="no num">1</div><h3>食券を買う</h3><p>券売機で先に食券を購入します。</p></div>
+      <div class="step fade"><div class="no num">2</div><h3>番号を待つ</h3><p>番号を呼ばれたら、自分で取りに行きます。</p></div>
+      <div class="step fade"><div class="no num">3</div><h3>おかわり</h3><p>ごはん・味噌汁・カレーは自由に。</p></div>
+      <div class="step fade"><div class="no num">4</div><h3>片付け</h3><p>食べ終わったら自分で片付けて完了。</p></div>
+    </div>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡大学近く（梅林駅から徒歩約8分）</dd>
+      <dt>席</dt><dd>中央にロの字12席＋4人テーブル10卓。広々</dd>
+      <dt>客層</dt><dd>学生・部活生・サラリーマン・現場職の方まで</dd>
+      <dt>お支払い</dt><dd>食券制。旧札対応の券売機の場合あり（現地でご確認を）</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>腹ペコで、来て。<span class="y">損はさせん。</span></h2>
+  <p>1000円くらいで、ハラいっぱい。おかわり自由で、もう一杯いける。</p>
+  <a class="btn-y" href="#menu">メニューをもう一度見る</a>
+</section>
+
+<footer>
+  <div class="lg">しっとう家</div>
+  <p style="margin-top:8px;">福岡市城南区｜定食・丼もの｜福大近く・梅林駅徒歩8分</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
