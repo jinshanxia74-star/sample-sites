@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>さとうの豚丼｜福岡・福大近くの炙り豚丼｜並500円・坊主割引あり</title>
+<meta name="description" content="福岡市城南区、福大近くの「さとうの豚丼」。炭火で炙った香ばしい豚に、甘辛タレと生卵。炙り豚丼 並500円のリーズナブルさ。名物は炙りマヨトッピング。坊主頭は100円割引。学生街の老舗がっつり丼。">
+<meta property="og:title" content="さとうの豚丼｜炙って、がっつり。並500円。">
+<meta property="og:description" content="福岡・福大近くの炙り豚丼。炭火の香ばしさと甘辛タレ、生卵。名物は炙りマヨ。坊主割引あり。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="satou-butadon-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"さとうの豚丼",
+  "servesCuisine":["豚丼","丼もの"],
+  "image":"satou-butadon-hero.png",
+  "priceRange":"¥500〜¥900",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=RocknRoll+One&family=DotGothic16&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root{
+  --cream:#fff3db;
+  --cream2:#ffe9c2;
+  --red:#f0473b;        /* 明るいレトロ赤 */
+  --red-d:#cf2f24;
+  --pink:#ff8fb0;       /* IGアイコンのぶたピンク */
+  --pink-d:#f56894;
+  --brown:#5a3820;      /* 焦げ茶 */
+  --ink:#3a2417;
+  --gold:#ffcf4d;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--cream);line-height:1.85;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'RocknRoll One',sans-serif;line-height:1.35;}
+.rampart{font-family:'Rampart One',sans-serif;}
+.dot{font-family:'DotGothic16',sans-serif;}
+
+/* 暖簾バー */
+.noren{
+  position:sticky;top:0;z-index:60;background:var(--red);color:var(--cream);
+  display:flex;align-items:center;justify-content:space-between;padding:11px clamp(14px,4vw,40px);
+  border-bottom:5px double var(--gold);
+}
+.noren .lg{font-family:'RocknRoll One',sans-serif;font-size:1.15rem;letter-spacing:0.03em;}
+.noren .lg b{color:var(--gold);}
+.noren .p{font-family:'DotGothic16',sans-serif;font-size:0.86rem;color:var(--gold);}
+
+/* ヒーロー */
+.hero{position:relative;padding:clamp(40px,7vw,84px) clamp(16px,5vw,44px);overflow:hidden;
+  background:
+    repeating-linear-gradient(45deg,transparent 0 22px,rgba(255,143,176,0.14) 22px 44px),
+    var(--cream);
+}
+.hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,56px);align-items:center;}
+.retro-badge{display:inline-block;background:var(--pink);color:#fff;font-family:'RocknRoll One',sans-serif;
+  border:3px solid var(--ink);border-radius:30px;padding:6px 18px;font-size:0.86rem;margin-bottom:20px;
+  box-shadow:3px 3px 0 var(--ink);transform:rotate(-2deg);}
+.hero h1{font-family:'Rampart One',sans-serif;font-size:clamp(2.8rem,9vw,5.4rem);line-height:1.05;color:var(--red);}
+.hero h1 .pink{color:var(--pink-d);}
+.hero .lead{font-size:1.12rem;margin:22px 0 10px;max-width:32ch;}
+.hero .sub{color:var(--brown);max-width:34ch;margin-bottom:26px;}
+.price-tag{display:inline-flex;align-items:baseline;gap:8px;background:var(--gold);border:4px solid var(--ink);
+  border-radius:16px;padding:10px 20px;margin-bottom:26px;box-shadow:4px 4px 0 var(--ink);}
+.price-tag .n{font-family:'DotGothic16',sans-serif;font-size:0.82rem;}
+.price-tag .v{font-family:'Rampart One',sans-serif;font-size:2rem;color:var(--red-d);}
+.price-tag .v small{font-size:1rem;}
+.btns{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{font-family:'RocknRoll One',sans-serif;padding:14px 26px;border-radius:14px;font-size:1rem;
+  border:3px solid var(--ink);transition:transform .15s,box-shadow .15s;display:inline-block;}
+.btn-r{background:var(--red);color:#fff;box-shadow:4px 4px 0 var(--ink);}
+.btn-r:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+.btn-c{background:#fff;color:var(--ink);box-shadow:4px 4px 0 var(--ink);}
+.btn-c:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+.hero-photo{position:relative;}
+.hero-photo img{border:6px solid var(--ink);border-radius:24px;box-shadow:8px 8px 0 var(--pink);aspect-ratio:1/1;object-fit:cover;width:100%;}
+.hero-photo .stamp{position:absolute;top:-16px;right:-10px;background:var(--red);color:#fff;font-family:'Rampart One',sans-serif;
+  width:88px;height:88px;border-radius:50%;border:4px solid var(--ink);display:flex;align-items:center;justify-content:center;
+  text-align:center;font-size:0.82rem;transform:rotate(10deg);box-shadow:3px 3px 0 var(--ink);}
+
+/* 券売機／番付メニュー */
+.ticket-sec{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--brown);position:relative;}
+.ticket-sec h2{text-align:center;font-family:'Rampart One',sans-serif;color:var(--gold);font-size:clamp(2rem,6vw,3.4rem);margin-bottom:6px;}
+.ticket-sec .t-sub{text-align:center;color:var(--cream2);font-family:'DotGothic16',sans-serif;margin-bottom:38px;font-size:0.9rem;}
+.machine{max-width:960px;margin:0 auto;background:var(--ink);border-radius:20px;padding:clamp(20px,4vw,36px);border:5px solid #221208;box-shadow:inset 0 3px 10px rgba(0,0,0,0.5);}
+.ticket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.tk{background:var(--cream);border:3px solid #221208;border-radius:12px;padding:18px 14px;text-align:center;position:relative;
+  transition:transform .15s;}
+.tk:hover{transform:translateY(-3px);}
+.tk.hot{background:var(--red);color:#fff;}
+.tk.hot .price{color:#fff;}
+.tk .rank{position:absolute;top:8px;left:10px;font-family:'DotGothic16',sans-serif;font-size:0.66rem;color:var(--pink-d);}
+.tk.hot .rank{color:var(--gold);}
+.tk .name{font-family:'RocknRoll One',sans-serif;font-size:1.05rem;margin-top:10px;}
+.tk .desc{font-size:0.76rem;color:var(--brown);margin:4px 0 8px;}
+.tk.hot .desc{color:var(--cream2);}
+.tk .price{font-family:'Rampart One',sans-serif;font-size:1.5rem;color:var(--red-d);}
+.tk .price small{font-size:0.8rem;}
+.machine-note{margin-top:20px;background:var(--gold);border:3px solid #221208;border-radius:12px;padding:12px 18px;text-align:center;
+  font-family:'RocknRoll One',sans-serif;color:var(--ink);font-size:0.92rem;}
+.self-note{max-width:960px;margin:16px auto 0;text-align:center;color:var(--cream2);font-family:'DotGothic16',sans-serif;font-size:0.82rem;}
+
+/* 炙りの話 */
+.aburi{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);}
+.aburi-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(24px,4vw,52px);align-items:center;}
+.aburi-photo img{border:6px solid var(--ink);border-radius:24px;box-shadow:8px 8px 0 var(--gold);aspect-ratio:4/3;object-fit:cover;width:100%;}
+.aburi h2{font-family:'Rampart One',sans-serif;color:var(--red);font-size:clamp(2rem,5.5vw,3.2rem);margin-bottom:18px;}
+.aburi p{font-size:1.05rem;margin-bottom:14px;}
+.aburi p b{color:var(--red-d);}
+.aburi .pts{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;}
+.aburi .pts span{background:var(--pink);color:#fff;font-family:'RocknRoll One',sans-serif;border:3px solid var(--ink);
+  border-radius:24px;padding:6px 16px;font-size:0.84rem;box-shadow:2px 2px 0 var(--ink);}
+
+/* 店長 */
+.master{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--pink);position:relative;overflow:hidden;}
+.master-inner{max-width:840px;margin:0 auto;text-align:center;color:#fff;}
+.master .badge{display:inline-block;background:#fff;color:var(--pink-d);font-family:'RocknRoll One',sans-serif;
+  border:3px solid var(--ink);border-radius:30px;padding:6px 18px;font-size:0.84rem;margin-bottom:18px;box-shadow:3px 3px 0 var(--ink);}
+.master h2{font-family:'Rampart One',sans-serif;font-size:clamp(2rem,5.5vw,3.2rem);color:#fff;margin-bottom:20px;text-shadow:3px 3px 0 var(--pink-d);}
+.master p{font-size:1.08rem;margin-bottom:14px;}
+.master .coupon{display:inline-block;margin-top:22px;background:var(--gold);color:var(--ink);font-family:'RocknRoll One',sans-serif;
+  border:4px dashed var(--ink);border-radius:16px;padding:14px 26px;font-size:1.05rem;box-shadow:4px 4px 0 var(--ink);}
+
+/* 口コミ（吹き出し） */
+.voices{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);}
+.voices h2{text-align:center;font-family:'Rampart One',sans-serif;color:var(--red);font-size:clamp(2rem,5.5vw,3rem);margin-bottom:8px;}
+.voices .v-sub{text-align:center;color:var(--brown);font-family:'DotGothic16',sans-serif;margin-bottom:40px;font-size:0.86rem;}
+.v-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;}
+.v-card{background:#fff;border:4px solid var(--ink);border-radius:20px;padding:24px 22px;position:relative;box-shadow:5px 5px 0 var(--pink);}
+.v-card::after{content:"";position:absolute;bottom:-16px;left:36px;width:24px;height:24px;background:#fff;border-right:4px solid var(--ink);border-bottom:4px solid var(--ink);transform:rotate(45deg);}
+.v-card .star{color:var(--red);font-family:'DotGothic16',sans-serif;margin-bottom:10px;}
+.v-card p{font-size:0.98rem;}
+.v-card .who{margin-top:14px;font-family:'RocknRoll One',sans-serif;font-size:0.82rem;color:var(--pink-d);}
+
+/* アクセス */
+.access{padding:clamp(46px,7vw,90px) clamp(16px,5vw,44px);background:var(--cream2);}
+.access-inner{max-width:860px;margin:0 auto;text-align:center;}
+.access h2{font-family:'Rampart One',sans-serif;color:var(--red);font-size:clamp(2rem,5.5vw,3rem);margin-bottom:26px;}
+.access dl{display:inline-grid;grid-template-columns:auto 1fr;gap:14px 22px;text-align:left;background:#fff;border:4px solid var(--ink);border-radius:20px;padding:26px 30px;box-shadow:6px 6px 0 var(--pink);}
+.access dt{font-family:'RocknRoll One',sans-serif;color:var(--red-d);white-space:nowrap;}
+.access dd{color:var(--ink);}
+
+/* フッターCTA */
+.foot-cta{padding:clamp(54px,8vw,110px) clamp(16px,5vw,44px);text-align:center;background:var(--red);color:#fff;position:relative;}
+.foot-cta h2{font-family:'Rampart One',sans-serif;font-size:clamp(2.4rem,7vw,4rem);color:#fff;text-shadow:4px 4px 0 var(--red-d);}
+.foot-cta p{margin:18px auto 28px;max-width:36ch;font-size:1.08rem;}
+.foot-cta .btn-y{background:var(--gold);color:var(--ink);font-family:'RocknRoll One',sans-serif;border:4px solid var(--ink);
+  border-radius:16px;padding:16px 34px;font-size:1.1rem;display:inline-block;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s;}
+.foot-cta .btn-y:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink);}
+footer{background:var(--ink);color:var(--cream2);text-align:center;padding:28px 20px;font-size:0.82rem;}
+footer .lg{font-family:'RocknRoll One',sans-serif;color:var(--gold);font-size:1.05rem;}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-photo{max-width:400px;margin:0 auto;}
+  .aburi-inner{grid-template-columns:1fr;}
+  .aburi-photo{max-width:440px;margin:0 auto;}
+  .ticket-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .ticket-grid{grid-template-columns:1fr;}
+  .btn{width:100%;text-align:center;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="noren">
+  <div class="lg">さとうの<b>豚丼</b></div>
+  <div class="p">福大近く｜炙り豚丼 並500円</div>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="fade vis">
+      <span class="retro-badge">学生街の老舗どんぶり屋</span>
+      <h1>炙って、<span class="pink">がっつり。</span></h1>
+      <p class="lead">炭火で炙った香ばしい豚に、甘辛のタレ。生卵をおとして、かきこむ一杯です。</p>
+      <p class="sub">昔ながらの、ちょっと甘辛い味付け。学生も、現場帰りも、腹いっぱいに。</p>
+      <div class="price-tag"><span class="n">炙り豚丼 並</span><span class="v">¥<span class="dot">500</span></span></div>
+      <div class="btns">
+        <a class="btn btn-r" href="#menu">メニューを見る</a>
+        <a class="btn btn-c" href="#access">お店の場所</a>
+      </div>
+    </div>
+    <div class="hero-photo fade vis">
+      <span class="stamp">炭火<br>炙り</span>
+      <img src="satou-butadon-hero.png" alt="炭火で炙った豚に生卵をのせたさとうの豚丼">
+    </div>
+  </div>
+</header>
+
+<!-- 券売機メニュー -->
+<section class="ticket-sec" id="menu">
+  <h2 class="fade">お品書き番付</h2>
+  <p class="t-sub fade">食券を選ぶ気分で、今日の一杯を。</p>
+  <div class="machine fade">
+    <div class="ticket-grid">
+      <div class="tk hot"><span class="rank">横綱</span><div class="name">炙り豚丼 並</div><div class="desc">まずはこれ。生卵付き</div><div class="price">¥<span class="dot">500</span></div></div>
+      <div class="tk"><span class="rank">大関</span><div class="name">大盛</div><div class="desc">しっかり食べたい日に</div><div class="price">¥<span class="dot">650</span></div></div>
+      <div class="tk"><span class="rank">大関</span><div class="name">特盛</div><div class="desc">腹ペコ学生の本気</div><div class="price">¥<span class="dot">800</span></div></div>
+      <div class="tk hot"><span class="rank">名物</span><div class="name">炙りマヨ</div><div class="desc">店長の必殺トッピング</div><div class="price">+¥<span class="dot">100</span></div></div>
+      <div class="tk"><span class="rank">関脇</span><div class="name">肉盛</div><div class="desc">とにかく肉を増やす</div><div class="price">+¥<span class="dot">200</span></div></div>
+      <div class="tk"><span class="rank">小結</span><div class="name">生卵 追加</div><div class="desc">とろっと味変に</div><div class="price">+¥<span class="dot">50</span></div></div>
+    </div>
+    <div class="machine-note">坊主頭は、なんと ¥100 割引！ 坊主同士で喜びを共感できます。</div>
+  </div>
+  <p class="self-note fade">味噌汁・ちょっとした惣菜・お水はセルフサービス。※価格は目安です。</p>
+</section>
+
+<!-- 炙りの話 -->
+<section class="aburi">
+  <div class="aburi-inner">
+    <div class="aburi-photo fade">
+      <img src="satou-butadon-aburi.png" alt="バーナーで炙る豚肉。香ばしい直火焼き">
+    </div>
+    <div class="fade">
+      <h2>香ばしさは、直火から。</h2>
+      <p>豚は薄くスライスして、<b>炭火やバーナーで直火焼き</b>。かなり香ばしい香りと味が、この一杯の主役です。</p>
+      <p>タレは、いい感じに酸味の効いた甘辛味。生卵をおとせば、とろっとまろやかに。名物の炙りマヨは、<b>「この日本に勝てる人はいない」</b>とまで言われる店長の必殺技です。</p>
+      <div class="pts">
+        <span>炭火の香ばしさ</span><span>甘辛の酸味タレ</span><span>とろっと生卵</span><span>炙りマヨ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 店長 -->
+<section class="master">
+  <div class="master-inner fade">
+    <span class="badge">店主のこと</span>
+    <h2>強面だけど、大好きな店長。</h2>
+    <p>愛嬌のある優しそうな顔に、長いあご髭のご主人。スキンヘッドで強面ですが、大変謙虚。ハキハキと大きな声での対応に、なんだか元気をもらえます。</p>
+    <p>毎日バーナーを握り続けて、たどり着いた炙りの境地。ファンが「店長大好き！」と言うのも、わかる気がします。</p>
+    <div class="coupon">坊主頭で ¥100 引き ／ 一人で切り盛りの元気なお店</div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2 class="fade">食べた人の、声。</h2>
+  <p class="v-sub fade">GOOGLEクチコミより実際の声を引用</p>
+  <div class="v-grid">
+    <div class="v-card fade"><div class="star">★★★★★</div><p>店長大好き！おすすめは炙りマヨネーズトッピング。マヨネーズと豚を炙らせたら、ここの店長に勝てる人はこの日本にはいません。また行きます！</p><div class="who">定期的に通う方</div></div>
+    <div class="v-card fade"><div class="star">★★★★★</div><p>薄くスライスされた豚を直火で焼いてあり、かなり香ばしい香りと味。タレも良い感じに酸味の効いたタレで、食欲をそそります。学生街でお値段もリーズナブル。</p><div class="who">はじめて訪れた方</div></div>
+    <div class="v-card fade"><div class="star">★★★★★</div><p>炙り豚丼 並を500円。坊主頭は100円割引が受けられます！豚丼はちょっと甘辛いいい味付けで、生卵をおとして食します。美味しいです。会社近くなので又行きます。</p><div class="who">近所で働く方</div></div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section class="access" id="access">
+  <div class="access-inner">
+    <h2 class="fade">お店の場所。</h2>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡市城南区（福大近く・学生街）</dd>
+      <dt>おすすめ</dt><dd>炙り豚丼＋炙りマヨ／坊主頭は100円割引</dd>
+      <dt>セルフ</dt><dd>味噌汁・惣菜・お水はセルフサービス</dd>
+      <dt>駐車場</dt><dd>店の隣にコインパーキングあり</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>きょうは、豚丼。</h2>
+  <p>炭火の香ばしさと、甘辛のタレ。腹を空かせて、かきこみに来てください。</p>
+  <a class="btn-y" href="#menu">お品書きをもう一度見る</a>
+</section>
+
+<footer>
+  <div class="lg">さとうの豚丼</div>
+  <p style="margin-top:8px;">福岡市城南区｜炙り豚丼・丼もの｜福大近く・学生街の老舗</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
