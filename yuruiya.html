@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ユルイヤ｜福岡・祖原の創作料理居酒屋｜豆皿で、ちょっとずつ、ぜんぶ</title>
+<meta name="description" content="福岡市早良区・祖原の創作料理居酒屋「ユルイヤ」。和・洋・中、ジャンルを問わない多彩な料理。豆皿メニューで一人でも種類を楽しめる、住宅街の隠れ家。ワンオペ店主の丁寧な一皿を、ゆっくりどうぞ。">
+<meta property="og:title" content="ユルイヤ｜豆皿で、ちょっとずつ、ぜんぶ。">
+<meta property="og:description" content="和・洋・中、ぜんぶが当たり。豆皿で少しずつ楽しむ、祖原の創作料理居酒屋。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="yuruiya-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"ユルイヤ",
+  "servesCuisine":["創作料理","居酒屋","和食","洋食","中華"],
+  "image":"yuruiya-hero.png",
+  "telephone":"092-688-2144",
+  "priceRange":"¥2000〜¥4000",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市早良区 祖原","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&family=Noto+Sans+JP:wght@300;400;500;700&family=Karla:wght@400;500;700&display=swap');
+
+:root{
+  --bg:#FCFBF7;        /* 白（アイコン背景） */
+  --surface:#F3F0E8;   /* 卓の色 */
+  --primary:#3A3F35;   /* 墨緑がかった黒 */
+  --accent:#C96F4A;    /* お通しカレーの暖色 */
+  --accent2:#7C8A5E;   /* 若草 */
+  --text:#2E2C27;
+  --muted:#90897B;
+  --line:#E5E0D3;
+  --plate:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Zen Kurenaido',sans-serif;font-weight:400;line-height:1.5;}
+.en{font-family:'Karla',sans-serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px);}
+
+/* ヘッダー */
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,5vw,40px);}
+.top .mark{font-family:'Zen Kurenaido',sans-serif;font-size:1.5rem;color:var(--primary);letter-spacing:0.12em;}
+.top .nav{display:flex;gap:22px;font-size:0.88rem;color:var(--muted);}
+.top .nav a:hover{color:var(--accent);}
+
+/* ヒーロー：卓上俯瞰 */
+.hero{padding:clamp(30px,5vw,56px) 0 clamp(50px,8vw,90px);}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,56px);align-items:center;}
+.hero-copy .kicker{font-family:'Karla',sans-serif;font-weight:700;letter-spacing:0.24em;font-size:0.78rem;color:var(--accent);text-transform:uppercase;}
+.hero-copy h1{font-size:clamp(2.2rem,6vw,3.6rem);color:var(--primary);letter-spacing:0.05em;margin:16px 0;line-height:1.35;}
+.hero-copy h1 .u{background:linear-gradient(transparent 66%, #EBD3C3 66%);}
+.hero-copy p{color:var(--text);font-size:1.04rem;max-width:44ch;}
+.hero-copy .sub{color:var(--muted);font-size:0.94rem;margin-top:14px;}
+.hero-photo{position:relative;}
+.hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 30px 60px rgba(58,63,53,0.18);}
+.hero-photo .ring{position:absolute;inset:-14px;border:1px solid var(--line);border-radius:50%;pointer-events:none;}
+
+/* 卓上テクスチャのセクション */
+.section{padding:clamp(56px,9vw,100px) 0;}
+.eyebrow{font-family:'Karla',sans-serif;font-weight:700;letter-spacing:0.2em;font-size:0.74rem;color:var(--accent);text-transform:uppercase;text-align:center;}
+.section h2{text-align:center;font-size:clamp(1.7rem,4.6vw,2.5rem);color:var(--primary);letter-spacing:0.05em;margin:12px 0 10px;}
+.section .lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 48px;font-size:0.98rem;}
+
+/* 豆皿グリッド */
+.mame{background:var(--surface);}
+.dish-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:clamp(18px,3vw,30px);}
+.dish{background:var(--plate);border-radius:50%;aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px;box-shadow:0 10px 22px rgba(58,63,53,0.08),inset 0 0 0 1px var(--line),inset 0 0 0 8px rgba(0,0,0,0.015);transition:transform .3s ease,box-shadow .3s ease;}
+.dish:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(58,63,53,0.14),inset 0 0 0 1px var(--accent);}
+.dish .cat{font-family:'Karla',sans-serif;font-weight:700;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;}
+.dish.wa .cat{color:var(--accent2);}
+.dish.yo .cat{color:var(--accent);}
+.dish.chu .cat{color:#B08A3C;}
+.dish .n{font-family:'Zen Kurenaido',sans-serif;font-size:1.14rem;color:var(--primary);line-height:1.4;}
+.dish .d{font-size:0.78rem;color:var(--muted);margin-top:8px;line-height:1.6;}
+
+/* 名物・煮込み */
+.signature .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,56px);align-items:center;}
+.sig-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:0 26px 48px rgba(58,63,53,0.16);}
+.sig-copy .eyebrow{text-align:left;}
+.sig-copy h2{text-align:left;margin-top:10px;}
+.sig-copy p{color:var(--text);margin-bottom:16px;}
+.sig-copy p .em{color:var(--accent);font-weight:700;}
+.sig-list{margin-top:8px;display:flex;flex-direction:column;gap:10px;}
+.sig-list .li{display:flex;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px dotted var(--line);}
+.sig-list .li .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:0 0 auto;transform:translateY(2px);}
+.sig-list .li .t{font-family:'Zen Kurenaido',sans-serif;color:var(--primary);}
+.sig-list .li .p{margin-left:auto;font-family:'Karla',sans-serif;font-weight:700;color:var(--muted);font-size:0.9rem;}
+
+/* 声（丸皿カード） */
+.voices{background:var(--primary);color:#F3F0E8;}
+.voices h2{color:#fff;}
+.voices .eyebrow{color:#E0A588;}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.v-card{background:rgba(255,255,255,0.06);border:1px solid rgba(243,240,232,0.15);border-radius:22px;padding:28px;}
+.v-card .st{color:var(--accent);letter-spacing:2px;margin-bottom:10px;}
+.v-card p{font-size:0.97rem;color:#EEE9DE;line-height:1.95;}
+.v-card .who{margin-top:14px;font-family:'Karla',sans-serif;font-weight:700;font-size:0.78rem;color:#E0A588;letter-spacing:0.06em;}
+
+/* ご案内 */
+.info .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,56px);align-items:start;}
+.info .eyebrow,.info h2{text-align:left;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:16px 24px;margin-top:8px;}
+.info dt{font-family:'Zen Kurenaido',sans-serif;color:var(--accent2);white-space:nowrap;}
+.info dd{color:var(--text);}
+.reserve{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,4vw,40px);text-align:center;}
+.reserve .k{font-family:'Karla',sans-serif;font-weight:700;letter-spacing:0.18em;font-size:0.74rem;color:var(--accent);text-transform:uppercase;}
+.reserve h3{color:var(--primary);font-size:clamp(1.3rem,3.4vw,1.7rem);margin:10px 0 6px;}
+.reserve p{color:var(--muted);font-size:0.9rem;margin-bottom:22px;}
+.reserve .tel{display:inline-block;font-family:'Karla',sans-serif;font-weight:700;font-size:clamp(1.4rem,5vw,1.9rem);color:#fff;background:var(--accent);border-radius:100px;padding:13px 34px;transition:transform .25s;}
+.reserve .tel:hover{transform:translateY(-3px);}
+
+footer{background:#26241F;color:rgba(243,240,232,0.6);text-align:center;padding:34px 20px;font-size:0.82rem;}
+footer .m{font-family:'Zen Kurenaido',sans-serif;color:#F3F0E8;font-size:1.15rem;letter-spacing:0.14em;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero .wrap,.signature .wrap,.info .wrap{grid-template-columns:1fr;}
+  .top .nav{display:none;}
+  .sig-photo{order:-1;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="mark">ユルイヤ</div>
+  <nav class="nav">
+    <a href="#mame">豆皿</a>
+    <a href="#sig">煮込み</a>
+    <a href="#voice">お客様の声</a>
+    <a href="#info">ご案内</a>
+  </nav>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-copy fade vis">
+      <span class="kicker">Sohara · Creative Izakaya</span>
+      <h1>豆皿で、<br>ちょっとずつ、<span class="u">ぜんぶ。</span></h1>
+      <p>和・洋・中、ジャンルを問わない多彩な創作料理。豆皿メニューがあるから、一人でもいろんな味を楽しめる。</p>
+      <p class="sub">住宅街にひっそり佇む、ゆるくて確かな隠れ家。</p>
+    </div>
+    <div class="hero-photo fade vis">
+      <img src="yuruiya-hero.png" alt="豆皿がたくさん並ぶ、真上から見た食卓">
+      <span class="ring"></span>
+    </div>
+  </div>
+</header>
+
+<!-- 豆皿グリッド -->
+<section class="section mame" id="mame">
+  <div class="wrap">
+    <p class="eyebrow fade">Mamezara — Little Dishes</p>
+    <h2 class="fade">和・洋・中、ぜんぶが当たり。</h2>
+    <p class="lead fade">「皆の好きな料理がバラけるくらい、どれもハズレなし」。お通しから、じっくり煮込みまで。少しずつ、卓いっぱいに。</p>
+    <div class="dish-grid">
+      <div class="dish wa fade"><span class="cat">和</span><span class="n">お通しの<br>芋カレー</span><span class="d">ピリ辛で美味すぎる名物</span></div>
+      <div class="dish yo fade"><span class="cat">洋</span><span class="n">牛すじと豆腐<br>の煮込み</span><span class="d">牛すじたっぷりボリューミー</span></div>
+      <div class="dish wa fade"><span class="cat">和</span><span class="n">揚げたて<br>あつあげ</span><span class="d">表面ザクザク、薬味のせ</span></div>
+      <div class="dish chu fade"><span class="cat">中</span><span class="n">ピリ辛<br>ナポリタン</span><span class="d">めちゃめちゃ美味い</span></div>
+      <div class="dish wa fade"><span class="cat">和</span><span class="n">ササミと<br>野沢菜わさび</span><span class="d">さっぱり、酒がすすむ</span></div>
+      <div class="dish yo fade"><span class="cat">洋</span><span class="n">鯛と桜海老<br>の炊き込み</span><span class="d">季節の炊き込みごはん</span></div>
+      <div class="dish chu fade"><span class="cat">中</span><span class="n">つくね</span><span class="d">この日の一皿</span></div>
+      <div class="dish wa fade"><span class="cat">和</span><span class="n">刺身<br>盛り合わせ</span><span class="d">その日の鮮魚を少しずつ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 煮込み -->
+<section class="section signature" id="sig">
+  <div class="wrap">
+    <div class="sig-photo fade"><img src="yuruiya-menu-01.png" alt="牛すじと豆腐のじっくり煮込み料理"></div>
+    <div class="sig-copy fade">
+      <p class="eyebrow">Slow-cooked</p>
+      <h2>まろやかな、酸味と甘み。</h2>
+      <p>お酒やごはんが進む、絶妙なバランス。<span class="em">ゆっくりサシ飲みしたいときも、家族でご飯にも</span>、どんな状況にも合います。</p>
+      <p>相談すれば、人数にあわせて豆皿の量も調整してもらえます。ワンオペで店を回す店主さんの、丁寧なひと皿。</p>
+      <div class="sig-list">
+        <div class="li"><span class="dot"></span><span class="t">牛すじと豆腐の煮込み</span><span class="p">名物</span></div>
+        <div class="li"><span class="dot"></span><span class="t">スペアリブのトマト煮込み</span><span class="p">人気</span></div>
+        <div class="li"><span class="dot"></span><span class="t">日替わりの創作一皿</span><span class="p">その日</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="section voices" id="voice">
+  <div class="wrap">
+    <p class="eyebrow fade">Voices</p>
+    <h2 class="fade">どれも、ハズレなし。</h2>
+    <p class="lead fade" style="color:#C9C2B4;">お客様が、そのまま言葉にしてくれました。</p>
+    <div class="v-grid">
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>何を食べても美味しくて、次回は新しいものに挑戦したい気持ちと、リピートしたい気持ちで葛藤があります。家族の好きな料理がバラけるくらい、どれもハズレなし。お通しから美味い。</p>
+        <div class="who">— 家族で来店の方</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>和・洋・中ジャンルを問わず多彩な創作料理。豆皿メニューがあり一人でも種類を楽しめるのも魅力。お通しの芋カレーがピリ辛で美味すぎた。あつあげも表面ザクザク。</p>
+        <div class="who">— カウンターで一人飲みの方</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>狭くない店内がほぼ満席なのに、店主さんが一人で回していて驚きました。お料理はどれも美味しく、会計はお手頃。また行きたいなと思うお店でした。</p>
+        <div class="who">— 平日に再訪した方</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="section info" id="info">
+  <div class="wrap">
+    <div class="fade">
+      <p class="eyebrow">Access</p>
+      <h2>ご案内</h2>
+      <dl>
+        <dt>場所</dt><dd>福岡市早良区・祖原（住宅街の隠れ家）</dd>
+        <dt>お席</dt><dd>広々としたカウンター・テーブル席</dd>
+        <dt>お料理</dt><dd>和・洋・中の創作料理／豆皿メニュー</dd>
+        <dt>お酒</dt><dd>日本酒・焼酎・ハイボール・ワイン</dd>
+        <dt>ご予約</dt><dd>近くに代替の少ない隠れ家。空席確認の上でどうぞ</dd>
+        <dt>駐車場</dt><dd>斜向かいにコインパーキングあり</dd>
+      </dl>
+    </div>
+    <div class="reserve fade">
+      <span class="k">Reservation</span>
+      <h3>ゆっくり、楽しんで。</h3>
+      <p>予約なしで入れることもありますが、確認してからが安心です。</p>
+      <a class="tel" href="tel:092-688-2144">092-688-2144</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">ユルイヤ</div>
+  <p>福岡市早良区・祖原｜和・洋・中の創作料理居酒屋｜豆皿でちょっとずつ</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
