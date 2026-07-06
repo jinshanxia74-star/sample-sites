@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神戸サンド屋｜福岡・七隈のフルーツサンド専門店｜元祖の生クリーム</title>
+<meta name="description" content="福岡市七隈の神戸サンド屋。生クリームたっぷり、フルーツまるごとのフルーツサンドは元祖の味。いちご・キウイ・みかん、断面が主役。食事系サンドやホットドッグも。西南の杜公園そば、青い看板が目印。">
+<meta property="og:title" content="神戸サンド屋｜断面が、ごちそう。">
+<meta property="og:description" content="福岡・七隈のフルーツサンド専門店。元祖の生クリームと、まるごとフルーツ。太陽の下で食べたくなる一切れ。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="kobe-sandoya-strawberry.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Bakery",
+  "name":"神戸サンド屋",
+  "servesCuisine":["フルーツサンド","サンドイッチ"],
+  "image":"kobe-sandoya-strawberry.png",
+  "priceRange":"¥250〜¥500",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区 七隈","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=DM+Serif+Display:ital@0;1&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root{
+  --cream:#fffaf0;
+  --ink:#40372c;
+  --muted:#8a7d6c;
+  --straw:#ff8fa8;      /* いちごピンク */
+  --straw-d:#e85f7d;
+  --kiwi:#8bc34a;       /* キウイグリーン */
+  --kiwi-d:#5f9a2c;
+  --mikan:#ffab40;      /* みかんオレンジ */
+  --mikan-d:#f08a1d;
+  --sun:#ffd54a;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--ink);background:var(--cream);line-height:1.85;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:800;line-height:1.28;}
+.serif{font-family:'DM Serif Display',serif;}
+
+/* ヘッダー */
+header.nav{
+  position:sticky;top:0;z-index:60;background:rgba(255,250,240,0.9);backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:space-between;padding:13px clamp(16px,4vw,44px);
+  border-bottom:1px solid rgba(64,55,44,0.08);
+}
+.brand{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:800;font-size:1.15rem;}
+.brand .b{color:var(--straw-d);}
+.nav-cta{background:var(--ink);color:var(--cream);font-weight:700;padding:9px 18px;border-radius:30px;font-size:0.84rem;transition:transform .2s;}
+.nav-cta:hover{transform:translateY(-2px);}
+
+/* ヒーロー：太陽・クリーム */
+.hero{position:relative;padding:clamp(50px,9vw,120px) clamp(16px,5vw,44px) clamp(60px,9vw,110px);text-align:center;overflow:hidden;}
+.hero .sun{position:absolute;top:-90px;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;
+  background:radial-gradient(circle,var(--sun) 0%,rgba(255,213,74,0.35) 45%,transparent 70%);z-index:0;}
+.hero-inner{position:relative;z-index:1;max-width:820px;margin:0 auto;}
+.hero .eyebrow{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;color:var(--straw-d);margin-bottom:14px;}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);letter-spacing:0.01em;}
+.hero h1 .straw{color:var(--straw-d);}
+.hero h1 .kiwi{color:var(--kiwi-d);}
+.hero h1 .mikan{color:var(--mikan-d);}
+.hero p.lead{font-size:1.15rem;margin:24px auto 12px;max-width:34ch;}
+.hero p.sub{color:var(--muted);max-width:38ch;margin:0 auto 32px;}
+.hero .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;padding:15px 30px;border-radius:40px;font-size:1rem;transition:transform .2s,box-shadow .2s;display:inline-block;}
+.btn-p{background:var(--ink);color:var(--cream);box-shadow:0 8px 20px rgba(64,55,44,0.2);}
+.btn-p:hover{transform:translateY(-3px);}
+.btn-o{background:#fff;color:var(--ink);box-shadow:0 4px 14px rgba(64,55,44,0.1);}
+.btn-o:hover{transform:translateY(-3px);}
+.hero .marker{margin-top:34px;font-size:0.86rem;color:var(--muted);}
+.hero .marker b{color:#3a86c8;}
+
+/* フルーツ・スプリットスクリーン */
+.fruit{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;}
+.fruit .side{padding:clamp(40px,7vw,90px) clamp(24px,5vw,72px);}
+.fruit .side.text{color:#fff;}
+.fruit .photo{height:100%;min-height:340px;position:relative;overflow:hidden;}
+.fruit .photo img{width:100%;height:100%;object-fit:cover;}
+.fruit .tag{font-family:'DM Serif Display',serif;font-style:italic;font-size:1.2rem;opacity:0.92;margin-bottom:12px;}
+.fruit h2{font-size:clamp(2.2rem,6vw,4rem);color:#fff;margin-bottom:8px;}
+.fruit .big-en{font-family:'DM Serif Display',serif;font-size:clamp(1.1rem,3vw,1.6rem);opacity:0.85;margin-bottom:20px;}
+.fruit p{font-size:1.05rem;max-width:38ch;}
+.fruit .price{display:inline-block;margin-top:22px;background:rgba(255,255,255,0.22);border:2px solid rgba(255,255,255,0.5);
+  border-radius:30px;padding:8px 20px;font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;}
+/* いちご */
+.fruit.strawberry{background:var(--straw);}
+.fruit.strawberry .side.text{}
+/* キウイ（反転レイアウト） */
+.fruit.kiwi{background:var(--kiwi);}
+.fruit.kiwi .photo{order:-1;}
+/* みかん */
+.fruit.mikan{background:var(--mikan);}
+
+/* 他メニュー */
+.more{padding:clamp(50px,8vw,100px) clamp(16px,5vw,44px);text-align:center;}
+.more h2{font-size:clamp(1.9rem,5vw,3rem);margin-bottom:10px;}
+.more .m-lead{color:var(--muted);max-width:46ch;margin:0 auto 40px;}
+.more-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;}
+.more-item{border-radius:20px;padding:28px 20px;background:#fff;box-shadow:0 8px 22px rgba(64,55,44,0.08);}
+.more-item .ic{width:52px;height:52px;border-radius:16px;margin:0 auto 14px;}
+.more-item:nth-child(1) .ic{background:var(--straw);}
+.more-item:nth-child(2) .ic{background:var(--kiwi);}
+.more-item:nth-child(3) .ic{background:var(--mikan);}
+.more-item:nth-child(4) .ic{background:var(--sun);}
+.more-item h3{font-size:1.15rem;margin-bottom:4px;}
+.more-item .p{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;color:var(--straw-d);}
+.more-item small{color:var(--muted);display:block;font-size:0.82rem;}
+
+/* 元祖の話 */
+.story{padding:clamp(50px,8vw,110px) clamp(16px,5vw,44px);background:var(--ink);color:var(--cream);text-align:center;}
+.story-inner{max-width:720px;margin:0 auto;}
+.story .eyebrow{font-family:'DM Serif Display',serif;font-style:italic;color:var(--sun);font-size:1.2rem;margin-bottom:14px;}
+.story h2{color:#fff;font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:22px;}
+.story p{font-size:1.08rem;color:#e8e0d4;margin-bottom:16px;}
+.story p b{color:#fff;}
+
+/* 口コミ */
+.voices{padding:clamp(50px,8vw,100px) clamp(16px,5vw,44px);}
+.voices h2{text-align:center;font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:8px;}
+.voices .v-sub{text-align:center;color:var(--muted);margin-bottom:40px;}
+.v-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.v-card{background:#fff;border-radius:22px;padding:28px 26px;box-shadow:0 10px 26px rgba(64,55,44,0.08);position:relative;}
+.v-card .dot{width:40px;height:6px;border-radius:8px;margin-bottom:16px;}
+.v-card:nth-child(1) .dot{background:var(--straw);}
+.v-card:nth-child(2) .dot{background:var(--kiwi);}
+.v-card:nth-child(3) .dot{background:var(--mikan);}
+.v-card p{font-size:0.98rem;}
+.v-card .who{margin-top:14px;font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;font-size:0.82rem;color:var(--muted);}
+
+/* アクセス */
+.access{padding:clamp(50px,8vw,100px) clamp(16px,5vw,44px);background:linear-gradient(135deg,#eaf6ff,#fffaf0);}
+.access-inner{max-width:900px;margin:0 auto;text-align:center;}
+.access h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:8px;}
+.access .sign{font-family:'DM Serif Display',serif;font-style:italic;color:#3a86c8;font-size:1.2rem;margin-bottom:28px;}
+.access dl{display:inline-grid;grid-template-columns:auto 1fr;gap:14px 22px;text-align:left;}
+.access dt{font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;color:var(--straw-d);white-space:nowrap;}
+.access dd{color:var(--ink);}
+
+/* フッターCTA */
+.foot-cta{padding:clamp(56px,9vw,120px) clamp(16px,5vw,44px);text-align:center;
+  background:linear-gradient(120deg,var(--straw) 0%,var(--mikan) 55%,var(--sun) 100%);color:#fff;}
+.foot-cta h2{font-size:clamp(2.2rem,6vw,3.8rem);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,0.12);}
+.foot-cta p{margin:16px auto 30px;max-width:38ch;font-size:1.08rem;}
+.foot-cta .btn-w{background:#fff;color:var(--ink);font-family:'M PLUS Rounded 1c',sans-serif;font-weight:700;padding:16px 36px;border-radius:40px;display:inline-block;box-shadow:0 12px 30px rgba(0,0,0,0.18);transition:transform .2s;}
+.foot-cta .btn-w:hover{transform:translateY(-3px);}
+footer{background:var(--ink);color:#a99e8e;text-align:center;padding:28px 20px;font-size:0.82rem;}
+footer .brand{color:#fff;}
+
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .fruit{grid-template-columns:1fr;min-height:auto;}
+  .fruit .photo{min-height:320px;order:0!important;}
+  .fruit.kiwi .photo{order:0;}
+  .fruit .side{text-align:center;}
+  .fruit p{margin-left:auto;margin-right:auto;}
+}
+@media(max-width:520px){.btn{width:100%;text-align:center;}}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">神戸サンド<span class="b">屋</span></div>
+  <a href="#access" class="nav-cta">お店の場所</a>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="sun"></div>
+  <div class="hero-inner">
+    <p class="eyebrow fade vis">since 元祖のフルーツサンド</p>
+    <h1 class="fade vis">断面が、<span class="straw">ご</span><span class="kiwi">ち</span><span class="mikan">そう</span>。</h1>
+    <p class="lead fade vis">生クリームたっぷり、フルーツまるごと。太陽の下で食べたくなる、元祖の一切れです。</p>
+    <p class="sub fade vis">いちご、キウイ、みかん。切った瞬間の断面が、いちばんのメニュー表。</p>
+    <div class="btns fade vis">
+      <a class="btn btn-p" href="#lineup">ラインナップを見る</a>
+      <a class="btn btn-o" href="#access">お店の場所</a>
+    </div>
+    <p class="marker fade vis">目印は<b>青い看板</b>。西南の杜公園のすぐそば。</p>
+  </div>
+</section>
+
+<!-- いちご -->
+<section class="fruit strawberry" id="lineup">
+  <div class="side text fade">
+    <div class="tag">Strawberry</div>
+    <h2>いちご</h2>
+    <div class="big-en serif">まるごと、ころん。</div>
+    <p>甘さちょうどよしの生クリームに、いちごをごろっと。ひと口で笑顔になる、いちばん人気の断面です。</p>
+    <span class="price">フルーツサンド ¥350〜</span>
+  </div>
+  <div class="photo fade"><img src="kobe-sandoya-strawberry.png" alt="いちごをまるごと包んだ神戸サンド屋のフルーツサンドの断面"></div>
+</section>
+
+<!-- キウイ（反転） -->
+<section class="fruit kiwi">
+  <div class="side text fade">
+    <div class="tag">Kiwi</div>
+    <h2>キウイ</h2>
+    <div class="big-en serif">まるっと一個。</div>
+    <p>「キウイが丸ごと一個入ってた」——そんな声が名物の証。みずみずしい果肉と、やさしいクリームのハーモニー。</p>
+    <span class="price">季節のフルーツサンド</span>
+  </div>
+  <div class="photo fade"><img src="kobe-sandoya-kiwi.png" alt="キウイをまるごと包んだフルーツサンドの断面"></div>
+</section>
+
+<!-- みかん -->
+<section class="fruit mikan">
+  <div class="side text fade">
+    <div class="tag">Mikan</div>
+    <h2>みかん</h2>
+    <div class="big-en serif">つやつや、房ならび。</div>
+    <p>並んだみかんの房が、断面をぱっと明るく。素材の味がしっかり生きる、素朴なおいしさです。</p>
+    <span class="price">季節のフルーツサンド</span>
+  </div>
+  <div class="photo fade"><img src="kobe-sandoya-mikan.png" alt="みかんの房を並べたフルーツサンドの断面"></div>
+</section>
+
+<!-- 他メニュー -->
+<section class="more">
+  <h2 class="fade">フルーツだけじゃ、ない。</h2>
+  <p class="m-lead fade">食事系サンドからホットドッグまで。毎日の「ちょっと食べたい」に応えます。</p>
+  <div class="more-grid">
+    <div class="more-item fade"><div class="ic"></div><h3>たまごサンド</h3><div class="p">¥300〜</div><small>ふんわり定番</small></div>
+    <div class="more-item fade"><div class="ic"></div><h3>調理パン各種</h3><div class="p">日替わり</div><small>ツナ・マスタード香る</small></div>
+    <div class="more-item fade"><div class="ic"></div><h3>ホットドッグ</h3><div class="p">¥250〜</div><small>お手ごろの人気者</small></div>
+    <div class="more-item fade"><div class="ic"></div><h3>パンの耳</h3><div class="p">無料</div><small>午前中だけの嬉しいおまけ</small></div>
+  </div>
+</section>
+
+<!-- 元祖の話 -->
+<section class="story">
+  <div class="story-inner">
+    <p class="eyebrow fade">The Original</p>
+    <h2 class="fade">「元祖」の、変わらない味。</h2>
+    <div class="fade">
+      <p>フルーツサンドは今どこにでもあります。でも、<b>ここは元祖</b>。生クリームやフルーツたっぷりのサンドを、ずっと手作りで続けてきました。</p>
+      <p>マーガリンは使いません。子どもの頃に食べた人が、10年経っても「昔と変わらない」と言ってくれる。子ども病院の売店にも卸す、街の味です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 口コミ -->
+<section class="voices">
+  <h2 class="fade">食べた人の、声。</h2>
+  <p class="v-sub fade">Googleクチコミより実際の声を引用しています。</p>
+  <div class="v-grid">
+    <div class="v-card fade"><div class="dot"></div><p>名物の生クリームたっぷりで、キウイが丸ごと一個入ってました。ここは元祖。フルーツサンドの種類が豊富なのも嬉しいです。</p><div class="who">長年のファンの方</div></div>
+    <div class="v-card fade"><div class="dot"></div><p>手作りって感じで凄くいい。マーガリンの表示がなく嬉しすぎる、もうリピします！ずっとお店してくださいっ！</p><div class="who">はじめて買った方</div></div>
+    <div class="v-card fade"><div class="dot"></div><p>フルーツサンドの果物が美味しくて！クリームも丁度良い甘さで美味しかった。調理パンも美味しかった。それに！安い！</p><div class="who">ご近所の方</div></div>
+  </div>
+</section>
+
+<!-- アクセス -->
+<section class="access" id="access">
+  <div class="access-inner">
+    <h2 class="fade">お店の場所。</h2>
+    <p class="sign fade">青い看板が、目印です。</p>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡市城南区 七隈（七隈四角から干隈方面へ車で2〜3分）</dd>
+      <dt>そば</dt><dd>西南の杜公園のすぐ近く。ランチやピクニックのお供に</dd>
+      <dt>メニュー</dt><dd>フルーツサンド・食事系サンド・ホットドッグ・デザート系</dd>
+      <dt>おまけ</dt><dd>午前中はパンの耳が無料</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>今日のおやつ、決まり。</h2>
+  <p>切りたての断面を、太陽の下で。西南の杜公園で食べるのもおすすめです。</p>
+  <a class="btn-w" href="#lineup">ラインナップをもう一度見る</a>
+</section>
+
+<footer>
+  <div class="brand">神戸サンド屋</div>
+  <p style="margin-top:8px;">福岡市城南区 七隈｜フルーツサンド・サンドイッチ｜西南の杜公園そば</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
