@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カレー屋もりぞう｜福岡・城南区のボリューム満点カレー｜福大近く</title>
+<meta name="description" content="福岡市城南区・城南市民センター隣接のカレー屋もりぞう。丁寧に炒めた玉ねぎのアットホームなカレーは、小400g・中800g・大1200gのボリューム。NPO法人運営、心のこもった接客。テイクアウトOK・PayPay対応。">
+<meta property="og:title" content="カレー屋もりぞう｜おかわりみたいな、一皿。">
+<meta property="og:description" content="福岡・城南区のアットホームなカレー屋さん。丁寧に炒めた玉ねぎ、選べるトッピング、そしてびっくりするボリューム。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="morizou-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"カレー屋もりぞう",
+  "servesCuisine":"カレー",
+  "image":"morizou-hero.png",
+  "priceRange":"¥500〜¥1000",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市城南区","addressRegion":"福岡県","addressCountry":"JP"},
+  "paymentAccepted":"現金, PayPay, ネクスペイ",
+  "openingHours":"Mo-Sa 11:30-15:30"
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+:root{
+  --paper:#e9dcbe;        /* クラフト紙ベージュ（黄土寄り） */
+  --paper2:#f4ead0;
+  --paper3:#dccba3;
+  --turmeric:#e2a01c;     /* ターメリック黄 */
+  --turmeric-d:#c2820a;
+  --spice:#a8501b;        /* スパイス茶 */
+  --spice-d:#6f320d;
+  --ink:#2e2214;          /* 温かい焦げ茶の文字 */
+  --muted:#7c6a4d;
+  --tape:rgba(226,160,28,0.55);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Zen Maru Gothic',sans-serif;color:var(--ink);line-height:1.85;
+  background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='0.05'/%3E%3C/svg%3E");
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Yusei Magic',sans-serif;font-weight:400;line-height:1.35;}
+
+/* マスキングテープ */
+.tape{
+  position:absolute;width:118px;height:32px;background:var(--tape);
+  box-shadow:0 1px 3px rgba(0,0,0,0.12);
+}
+.tape::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 6px,rgba(255,255,255,0.25) 6px 8px);}
+
+/* 上部：ちぎれた紙のバー */
+.topbar{
+  position:sticky;top:0;z-index:60;background:var(--spice);color:var(--paper2);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px clamp(16px,4vw,40px);
+}
+.topbar .logo{font-family:'Yusei Magic',sans-serif;font-size:1.15rem;letter-spacing:0.02em;}
+.topbar .logo b{color:var(--turmeric);}
+.topbar .hours{font-size:0.78rem;opacity:0.92;}
+.topbar .hours span{color:var(--turmeric);}
+
+/* ヒーロー：壁に貼られたチラシ */
+.hero{
+  padding:clamp(40px,7vw,90px) clamp(16px,5vw,56px) clamp(50px,8vw,90px);
+  position:relative;
+}
+.hero-inner{
+  max-width:1140px;margin:0 auto;display:grid;
+  grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,60px);align-items:center;
+}
+.flyer{position:relative;}
+.badge-hand{
+  display:inline-block;font-family:'Yusei Magic',sans-serif;
+  color:var(--spice);border:2px solid var(--spice);border-radius:22px;
+  padding:5px 16px;font-size:0.86rem;transform:rotate(-2deg);margin-bottom:22px;
+}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--ink);}
+.hero h1 em{color:var(--turmeric-d);font-style:normal;position:relative;}
+.hero h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:-6px;height:8px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 8'%3E%3Cpath d='M0 4 Q10 0 20 4 T40 4 T60 4 T80 4' stroke='%23e2a01c' stroke-width='2.5' fill='none'/%3E%3C/svg%3E") repeat-x;
+}
+.hero .lead{font-size:1.12rem;margin:22px 0 12px;max-width:34ch;}
+.hero .sub{color:var(--muted);max-width:36ch;margin-bottom:28px;}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  font-family:'Yusei Magic',sans-serif;padding:14px 26px;border-radius:30px;
+  font-size:1rem;transition:transform .2s,box-shadow .2s;display:inline-block;
+}
+.btn-p{background:var(--spice);color:var(--paper2);box-shadow:0 4px 0 var(--spice-d);}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--spice-d);}
+.btn-o{background:transparent;color:var(--spice);border:2px dashed var(--spice);}
+.btn-o:hover{background:rgba(168,80,27,0.08);transform:translateY(-2px);}
+
+.hero-photo{position:relative;transform:rotate(2deg);}
+.hero-photo img{
+  border:10px solid #fff;box-shadow:0 14px 34px rgba(46,34,20,0.28);
+  aspect-ratio:4/5;object-fit:cover;width:100%;
+}
+.hero-photo .tape{top:-16px;left:50%;transform:translateX(-50%) rotate(-3deg);}
+.hero-photo .memo{
+  position:absolute;bottom:-24px;left:-18px;background:var(--turmeric);
+  font-family:'Yusei Magic',sans-serif;color:var(--ink);padding:12px 16px;
+  transform:rotate(-5deg);box-shadow:2px 3px 6px rgba(0,0,0,0.2);font-size:0.92rem;max-width:180px;
+}
+
+/* お品書き：ボリューム表 */
+.menu{padding:clamp(46px,8vw,92px) clamp(16px,5vw,56px);position:relative;}
+.paper-card{
+  max-width:940px;margin:0 auto;background:var(--paper2);
+  border-radius:4px;box-shadow:0 18px 40px rgba(46,34,20,0.16);
+  padding:clamp(30px,5vw,56px);position:relative;
+}
+.paper-card::before,.paper-card::after{content:"";position:absolute;top:-14px;width:118px;height:32px;background:var(--tape);}
+.paper-card::before{left:34px;transform:rotate(-4deg);}
+.paper-card::after{right:34px;transform:rotate(3deg);}
+.menu h2{font-size:clamp(1.9rem,5.5vw,3rem);color:var(--spice-d);margin-bottom:6px;}
+.menu .m-note{color:var(--muted);margin-bottom:30px;}
+.size-line{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px;
+}
+.size-box{
+  border:2px solid var(--paper3);border-radius:10px;text-align:center;padding:20px 10px;background:#fff;
+}
+.size-box.big{border-color:var(--turmeric);background:rgba(226,160,28,0.1);position:relative;}
+.size-box .lbl{font-family:'Yusei Magic',sans-serif;font-size:1.3rem;color:var(--spice);}
+.size-box .g{font-size:2rem;font-family:'Yusei Magic',sans-serif;color:var(--ink);line-height:1;margin:4px 0;}
+.size-box .g small{font-size:0.9rem;}
+.size-box .cap{font-size:0.78rem;color:var(--muted);}
+.size-box.big .flag{
+  position:absolute;top:-14px;right:-10px;background:var(--turmeric);color:var(--ink);
+  font-family:'Yusei Magic',sans-serif;font-size:0.72rem;padding:3px 10px;border-radius:14px;transform:rotate(6deg);
+}
+.dish-list{border-top:2px dashed var(--paper3);}
+.dish{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:14px 0;border-bottom:2px dashed var(--paper3);}
+.dish .d-n{font-weight:700;font-size:1.06rem;}
+.dish .d-n small{display:block;font-weight:400;font-size:0.8rem;color:var(--muted);}
+.dish .d-p{font-family:'Yusei Magic',sans-serif;font-size:1.25rem;color:var(--spice-d);white-space:nowrap;}
+.topping{margin-top:24px;font-size:0.92rem;color:var(--muted);}
+.topping b{color:var(--spice);font-family:'Yusei Magic',sans-serif;font-weight:400;}
+
+/* こだわりメモ（付箋）*/
+.notes{padding:clamp(40px,7vw,86px) clamp(16px,5vw,56px);background:var(--paper3);position:relative;}
+.notes h2{text-align:center;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--spice-d);margin-bottom:38px;}
+.note-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;}
+.note{
+  background:var(--paper2);padding:28px 24px 26px;position:relative;
+  box-shadow:0 8px 20px rgba(46,34,20,0.18);
+}
+.note:nth-child(1){transform:rotate(-1.5deg);}
+.note:nth-child(2){transform:rotate(1.2deg);}
+.note:nth-child(3){transform:rotate(-0.8deg);}
+.note .pin{position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--spice);box-shadow:0 2px 4px rgba(0,0,0,0.3);}
+.note h3{font-size:1.2rem;color:var(--spice);margin-bottom:8px;}
+.note p{font-size:0.96rem;}
+
+/* お客さんの声：張り紙 */
+.voices{padding:clamp(46px,8vw,92px) clamp(16px,5vw,56px);position:relative;}
+.voices h2{text-align:center;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--spice-d);margin-bottom:8px;}
+.voices .v-sub{text-align:center;color:var(--muted);margin-bottom:40px;}
+.v-wall{max-width:1100px;margin:0 auto;column-gap:26px;}
+.v-note{
+  background:#fff;padding:22px 22px 20px;margin-bottom:26px;break-inside:avoid;
+  box-shadow:0 6px 16px rgba(46,34,20,0.16);position:relative;
+}
+.v-note:nth-child(odd){transform:rotate(-1.2deg);}
+.v-note:nth-child(even){transform:rotate(1deg);}
+.v-note .tp{position:absolute;top:-13px;left:24px;width:70px;height:26px;background:var(--tape);transform:rotate(-4deg);}
+.v-note p{font-size:0.98rem;}
+.v-note .who{margin-top:12px;font-family:'Yusei Magic',sans-serif;font-size:0.82rem;color:var(--spice);}
+
+/* 営業案内 */
+.info{padding:clamp(44px,7vw,88px) clamp(16px,5vw,56px);background:var(--spice);color:var(--paper2);}
+.info-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:center;}
+.info h2{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--turmeric);margin-bottom:20px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 18px;}
+.info dt{font-family:'Yusei Magic',sans-serif;color:var(--paper);white-space:nowrap;}
+.info dd{color:var(--paper2);}
+.info .warn{
+  margin-top:22px;background:var(--turmeric);color:var(--ink);font-family:'Yusei Magic',sans-serif;
+  padding:12px 18px;border-radius:8px;transform:rotate(-1deg);display:inline-block;font-size:0.94rem;
+}
+.info-photo img{border:8px solid var(--paper2);transform:rotate(-2deg);box-shadow:0 12px 30px rgba(0,0,0,0.3);aspect-ratio:4/3;object-fit:cover;width:100%;}
+
+/* フッターCTA */
+.foot-cta{padding:clamp(52px,8vw,100px) clamp(16px,5vw,56px);text-align:center;background:var(--turmeric);color:var(--ink);}
+.foot-cta h2{font-size:clamp(2rem,6vw,3.4rem);}
+.foot-cta p{margin:16px auto 28px;max-width:40ch;font-size:1.05rem;}
+.foot-cta .btn-dark{background:var(--spice);color:var(--paper2);font-family:'Yusei Magic',sans-serif;padding:16px 34px;border-radius:30px;display:inline-block;box-shadow:0 5px 0 var(--spice-d);transition:transform .2s,box-shadow .2s;}
+.foot-cta .btn-dark:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--spice-d);}
+footer{background:var(--ink);color:var(--paper3);text-align:center;padding:28px 20px;font-size:0.82rem;}
+footer .logo{font-family:'Yusei Magic',sans-serif;color:var(--turmeric);font-size:1.05rem;}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero-inner{grid-template-columns:1fr;gap:48px;}
+  .hero-photo{max-width:400px;margin:0 auto;}
+  .info-inner{grid-template-columns:1fr;}
+  .info-photo{max-width:440px;margin:0 auto;}
+  .v-wall{column-count:1;}
+}
+@media(min-width:821px) and (max-width:1100px){.v-wall{column-count:2;}}
+@media(min-width:1101px){.v-wall{column-count:3;}}
+@media(max-width:520px){
+  .size-line{grid-template-columns:1fr;}
+  .btn{width:100%;text-align:center;}
+  .topbar .hours{display:none;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo">カレー屋<b>もりぞう</b></div>
+  <div class="hours">昼のみ営業 <span>11:30〜15:30</span>／日祝休</div>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="flyer fade vis">
+      <span class="badge-hand">福岡・城南区／福大近く</span>
+      <h1>おかわりみたいな、<em>一皿。</em></h1>
+      <p class="lead">丁寧に炒めた玉ねぎの、ほどよい辛さ。ごはんがどんどんすすむ、アットホームなカレー屋です。</p>
+      <p class="sub">小でも400g、大なら1200g。「おなかすいた」を、まるごと受け止めます。</p>
+      <div class="cta-row">
+        <a class="btn btn-p" href="#menu">メニューを見る</a>
+        <a class="btn btn-o" href="#info">お店の場所・時間</a>
+      </div>
+    </div>
+    <div class="hero-photo fade vis">
+      <span class="tape"></span>
+      <img src="morizou-hero.png" alt="ボリューム満点のカレーライスにトンカツをトッピングしたもりぞうの一皿">
+      <div class="memo">タバスコで<br>味変もおすすめ！</div>
+    </div>
+  </div>
+</header>
+
+<!-- お品書き -->
+<section class="menu" id="menu">
+  <div class="paper-card fade">
+    <h2>お品書き</h2>
+    <p class="m-note">ごはんの量は3サイズから。食べる量にあわせて選んでください。</p>
+    <div class="size-line">
+      <div class="size-box"><div class="lbl">小</div><div class="g">400<small>g</small></div><div class="cap">ふつうサイズ</div></div>
+      <div class="size-box"><div class="lbl">中</div><div class="g">800<small>g</small></div><div class="cap">しっかり食べたい日に</div></div>
+      <div class="size-box big"><span class="flag">名物</span><div class="lbl">大</div><div class="g">1200<small>g</small></div><div class="cap">腹ペコ学生の定番</div></div>
+    </div>
+    <div class="dish-list">
+      <div class="dish"><span class="d-n">カレーライス<small>ほどよい辛さ／丁寧に炒めた玉ねぎ</small></span><span class="d-p">¥500〜</span></div>
+      <div class="dish"><span class="d-n">焼きカレー<small>香ばしく焼き上げた人気の一皿</small></span><span class="d-p">¥700〜</span></div>
+      <div class="dish"><span class="d-n">トッピング各種<small>トンカツ・唐揚げ・ほうれん草 ほか</small></span><span class="d-p">¥100〜</span></div>
+      <div class="dish"><span class="d-n">ミニカレー＋ウインナー<small>16時以降の裏メニュー</small></span><span class="d-p">¥600</span></div>
+    </div>
+    <p class="topping"><b>豆知識</b>：辛さは選べませんが、その分ちょうどいい。甘みのあるカレーなので、辛いのが苦手な人も大丈夫です。</p>
+  </div>
+</section>
+
+<!-- こだわりメモ -->
+<section class="notes">
+  <h2 class="fade">もりぞうの、ちいさなこだわり。</h2>
+  <div class="note-grid">
+    <div class="note fade"><span class="pin"></span><h3>玉ねぎ、丁寧に。</h3><p>時間をかけて炒めた玉ねぎの甘み。辛さの中にやさしさがある、そんなカレーです。</p></div>
+    <div class="note fade"><span class="pin"></span><h3>とにかく、量。</h3><p>大盛りを頼んだら1.2kg。学生の町の食堂として、腹いっぱいを本気で追求しています。</p></div>
+    <div class="note fade"><span class="pin"></span><h3>心のこもった接客。</h3><p>NPO法人が運営するお店。スタッフの丁寧な接客と、口直しのアメひとつにも心遣いがあります。</p></div>
+  </div>
+</section>
+
+<!-- お客さんの声 -->
+<section class="voices">
+  <h2 class="fade">お客さんの、貼り紙。</h2>
+  <p class="v-sub fade">Googleクチコミより実際の声を引用しています。</p>
+  <div class="v-wall">
+    <div class="v-note fade"><span class="tp"></span><p>ほどよい辛さで、ご飯がすすむ美味しさ！丁寧にタマネギを炒めて作ってあるのがわかるカレーで、辛さの中に甘みもあって。</p><div class="who">— テイクアウト常連さん</div></div>
+    <div class="v-note fade"><span class="tp"></span><p>焼きカレーを注文。とても美味しかったです。タバスコがトレイに載って来たので試してみましたが、味変になってとても良かった。</p><div class="who">— 初訪問の方</div></div>
+    <div class="v-note fade"><span class="tp"></span><p>知的障害者の方が働いてますが凄く丁寧な接客で好感が持てます。ボリュームがあって、がっつり食べたい人には向いてるお店。</p><div class="who">— 城南市民センター近くの方</div></div>
+    <div class="v-note fade"><span class="tp"></span><p>口直しのアメも一つ一つコメント入りのラッピングしてあり、心遣いが嬉しいなと思いました。ペイペイやネクスペイ使えます。</p><div class="who">— リピーターの方</div></div>
+  </div>
+</section>
+
+<!-- 営業案内 -->
+<section class="info" id="info">
+  <div class="info-inner">
+    <div class="fade">
+      <h2>お店のこと</h2>
+      <dl>
+        <dt>場所</dt><dd>福岡市城南区（城南市民センター隣接／福大近く）</dd>
+        <dt>営業</dt><dd>平日 11:30〜15:30（昼のみ）</dd>
+        <dt>定休</dt><dd>日曜・祝日</dd>
+        <dt>支払い</dt><dd>現金・PayPay・ネクスペイ</dd>
+        <dt>持ち帰り</dt><dd>テイクアウトOK（電話確認がおすすめ）</dd>
+      </dl>
+      <div class="warn">営業時間が短めです。お昼を逃さずどうぞ！</div>
+    </div>
+    <div class="info-photo fade">
+      <img src="morizou-food.png" alt="もりぞうの香ばしい焼きカレー">
+    </div>
+  </div>
+</section>
+
+<!-- フッターCTA -->
+<section class="foot-cta">
+  <h2>きょうのお昼、決まり。</h2>
+  <p>丁寧なカレーと、びっくりするボリューム。おなかを空かせて来てください。</p>
+  <a class="btn-dark" href="#menu">メニューをもう一度見る</a>
+</section>
+
+<footer>
+  <div class="logo">カレー屋もりぞう</div>
+  <p style="margin-top:8px;">福岡市城南区｜カレー・焼きカレー｜昼のみ営業／テイクアウトOK</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
