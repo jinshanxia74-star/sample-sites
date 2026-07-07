@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>遊食酒場 ひびき｜藤崎駅すぐ・緑のタイルカウンターの居酒屋（福岡市早良区祖原）</title>
+<meta name="description" content="藤崎駅から歩いてすぐ、福岡市早良区祖原の遊食酒場ひびき。和も洋も、肉も魚もなんでも来い。ごまカンパチ、ラムチョップ、タンタン麺、〆は10種以上。緑のタイルカウンターでどうぞ。">
+<meta property="og:title" content="遊食酒場 ひびき｜藤崎・祖原の和洋遊食居酒屋">
+<meta property="og:description" content="和も洋も、肉も魚も、なんでも来い。緑のタイルカウンターと日本酒、〆は10種以上の遊食酒場。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hibiki-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "遊食酒場 ひびき",
+  "servesCuisine": ["居酒屋", "創作料理", "日本酒"],
+  "telephone": "092-831-2167",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市早良区",
+    "streetAddress": "祖原",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&family=Noto+Sans+JP:wght@300;400;500;700&family=Comfortaa:wght@400;600;700&display=swap');
+
+:root{
+  --color-bg:#0c2b25;        /* 夜の深緑 */
+  --color-grout:#07201b;     /* タイルの目地 */
+  --color-tile:#155043;      /* 緑タイル */
+  --color-tile-deep:#0f3d33; /* 濃い緑タイル */
+  --color-primary:#dd9a3e;   /* ランプの琥珀 */
+  --color-accent:#f0b45c;    /* 琥珀ハイライト */
+  --color-cream:#f5eedd;     /* のれんの白 */
+  --color-text:#f0ead9;
+  --color-text-muted:#9dbbae;
+  --grout-w:7px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:400;
+  line-height:1.8;
+  letter-spacing:0.05em;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Yomogi',cursive;font-weight:400;line-height:1.4;}
+.en{font-family:'Comfortaa',sans-serif;}
+
+/* ── タイルの質感 ── */
+.tile{
+  position:relative;
+  border-radius:6px;
+  background:linear-gradient(145deg,#1a5c4d 0%,var(--color-tile) 45%,#113c32 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.18),
+    inset 0 -2px 3px rgba(0,0,0,.35),
+    0 1px 2px rgba(0,0,0,.5);
+  overflow:hidden;
+}
+.tile::before{
+  content:'';
+  position:absolute;
+  top:-30%;left:-20%;
+  width:70%;height:60%;
+  background:radial-gradient(ellipse at center,rgba(255,255,255,.14),transparent 70%);
+  transform:rotate(-15deg);
+  pointer-events:none;
+}
+.tile.deep{background:linear-gradient(145deg,#144639 0%,var(--color-tile-deep) 50%,#0b2f27 100%);}
+.tile.cream{
+  background:linear-gradient(150deg,#fdf7e9 0%,var(--color-cream) 55%,#e8ddc4 100%);
+  color:#211d14;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    inset 0 -2px 3px rgba(120,100,60,.25),
+    0 1px 2px rgba(0,0,0,.5);
+}
+.tile.amber{
+  background:linear-gradient(150deg,#f0b45c 0%,var(--color-primary) 55%,#b87a26 100%);
+  color:#2a1c08;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.45),
+    inset 0 -2px 3px rgba(90,55,10,.4),
+    0 1px 2px rgba(0,0,0,.5);
+}
+.tile.photo{padding:0;}
+.tile.photo img{width:100%;height:100%;object-fit:cover;}
+
+/* ── ヘッダー ── */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;
+  background:rgba(7,32,27,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(221,154,62,.25);
+}
+header .logo{font-family:'Yomogi',cursive;font-size:1.25rem;letter-spacing:.14em;color:var(--color-cream);}
+header .logo small{font-size:.7rem;color:var(--color-text-muted);display:block;letter-spacing:.28em;line-height:1;}
+.tel-head{
+  font-family:'Comfortaa',sans-serif;
+  font-size:.95rem;font-weight:600;
+  color:var(--color-accent);
+  border:1px solid rgba(221,154,62,.5);
+  border-radius:999px;
+  padding:8px 18px;
+  transition:background .3s ease,color .3s ease;
+}
+.tel-head:hover{background:var(--color-primary);color:#2a1c08;}
+
+/* ── ヒーローモザイク ── */
+.mosaic{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-auto-rows:minmax(104px,auto);
+  gap:var(--grout-w);
+  padding:var(--grout-w);
+  background:var(--color-grout);
+}
+.t-brand{grid-column:1/3;grid-row:1/3;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;}
+.t-brand .noren{font-size:.85rem;letter-spacing:.5em;margin-bottom:8px;color:#4a4232;}
+.t-brand h1{font-size:clamp(2.4rem,4.5vw,3.6rem);letter-spacing:.1em;color:#1d1913;}
+.t-photo-hero{grid-column:3/5;grid-row:1/4;}
+.t-copy{grid-column:5/7;grid-row:1/3;display:flex;flex-direction:column;justify-content:center;padding:26px;}
+.t-copy h2{font-size:clamp(1.5rem,2.2vw,1.9rem);color:var(--color-cream);margin-bottom:14px;}
+.t-copy p{font-size:.9rem;color:var(--color-text-muted);line-height:1.9;}
+.t-loc{grid-column:5/7;grid-row:3/4;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;}
+.t-loc p{font-size:.92rem;font-weight:500;line-height:1.6;}
+.t-loc .en{font-size:.68rem;letter-spacing:.2em;display:block;opacity:.75;}
+.t-f1{grid-column:1/2;grid-row:3/4;}
+.t-f2{grid-column:2/3;grid-row:3/4;display:flex;align-items:center;justify-content:center;}
+.t-f2 span{font-family:'Yomogi',cursive;font-size:1.5rem;color:rgba(245,238,221,.55);}
+.t-cta{grid-column:1/3;grid-row:4/5;}
+.t-shime{grid-column:3/5;grid-row:4/5;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;}
+.t-shime p{font-family:'Yomogi',cursive;font-size:1.25rem;color:var(--color-accent);}
+.t-shime p small{display:block;font-family:'Noto Sans JP',sans-serif;font-size:.75rem;color:var(--color-text-muted);letter-spacing:.1em;}
+.t-f3{grid-column:5/6;grid-row:4/5;}
+.t-f4{grid-column:6/7;grid-row:4/5;display:flex;align-items:center;justify-content:center;}
+.t-f4 span{font-family:'Yomogi',cursive;font-size:1.5rem;color:rgba(240,180,92,.6);}
+.cta-link{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;height:100%;
+  font-weight:700;font-size:1.05rem;letter-spacing:.08em;
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.cta-link:hover{transform:translateY(-2px);}
+.cta-link:active{transform:scale(.98);}
+
+/* ── カウンターの話 ── */
+.counter{padding:96px 22px 90px;max-width:1080px;margin:0 auto;}
+.counter blockquote{
+  font-family:'Yomogi',cursive;
+  font-size:clamp(1.7rem,3.4vw,2.6rem);
+  color:var(--color-cream);
+  text-align:center;
+  line-height:1.7;
+  margin-bottom:14px;
+}
+.counter .src{text-align:center;font-size:.8rem;color:var(--color-text-muted);margin-bottom:64px;}
+.counter-body{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:center;}
+.counter-photo{border-radius:6px;overflow:hidden;border:var(--grout-w) solid var(--color-grout);box-shadow:0 18px 44px rgba(0,0,0,.45);}
+.counter-photo img{width:100%;height:100%;object-fit:cover;}
+.counter-text h2{font-size:1.6rem;color:var(--color-accent);margin-bottom:20px;}
+.counter-text p{margin-bottom:18px;font-size:.95rem;color:var(--color-text);font-weight:300;}
+.counter-text strong{color:var(--color-accent);font-weight:500;}
+
+/* ── お品書きモザイク ── */
+.menu{background:var(--color-grout);padding:90px 0 0;}
+.menu-head{text-align:center;padding:0 22px 56px;}
+.menu-head h2{font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--color-cream);margin-bottom:12px;}
+.menu-head p{color:var(--color-text-muted);font-size:.9rem;}
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:minmax(150px,auto);
+  gap:var(--grout-w);
+  padding:0 var(--grout-w) var(--grout-w);
+  max-width:1180px;margin:0 auto;
+}
+.m-item{display:flex;flex-direction:column;justify-content:center;padding:24px 22px;}
+.m-item h3{font-size:1.3rem;color:var(--color-cream);margin-bottom:8px;}
+.m-item p{font-size:.82rem;color:var(--color-text-muted);line-height:1.7;}
+.m-item.cream h3{color:#1d1913;}
+.m-item.cream p{color:#5c5340;}
+.m-wide{grid-column:span 2;}
+.m-photo{grid-row:span 2;}
+.m-cta{grid-column:span 2;}
+.m-cta .cta-link{font-size:1.1rem;}
+.m-sake h3 span{font-family:'Comfortaa',sans-serif;font-size:.75rem;letter-spacing:.15em;display:block;color:rgba(29,25,19,.55);margin-bottom:4px;}
+
+/* ── 声 ── */
+.voices{padding:96px 22px;max-width:1080px;margin:0 auto;}
+.voices h2{font-size:clamp(1.8rem,3vw,2.4rem);color:var(--color-cream);text-align:center;margin-bottom:56px;}
+.voice-grid{display:grid;grid-template-columns:7fr 5fr;gap:var(--grout-w);}
+.voice{padding:34px 32px;}
+.voice.main{grid-row:span 2;display:flex;flex-direction:column;justify-content:center;}
+.voice .stars{color:var(--color-primary);font-size:.95rem;letter-spacing:.2em;margin-bottom:14px;}
+.voice p{font-size:.95rem;line-height:2;color:#332c1e;}
+.voice.main p{font-family:'Yomogi',cursive;font-size:1.35rem;line-height:1.9;}
+.voice .who{margin-top:16px;font-size:.75rem;color:#8a7d5f;}
+.voices .note{text-align:center;margin-top:26px;font-size:.78rem;color:var(--color-text-muted);}
+
+/* ── 店舗情報 ── */
+.info{background:var(--color-grout);padding:var(--grout-w);}
+.info-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:var(--grout-w);
+  max-width:1080px;margin:0 auto;
+}
+.info-box{padding:48px 40px;}
+.info-box h2{font-size:1.7rem;color:var(--color-cream);margin-bottom:24px;}
+.info-box dl{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:.92rem;}
+.info-box dt{color:var(--color-text-muted);font-weight:500;white-space:nowrap;}
+.info-box dd{color:var(--color-text);}
+.info-cta{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:48px 30px;}
+.info-cta p.lead{font-family:'Yomogi',cursive;font-size:1.35rem;color:#2a1c08;margin-bottom:8px;}
+.info-cta p.sub{font-size:.82rem;color:#4a3413;margin-bottom:22px;}
+.tel-big{
+  font-family:'Comfortaa',sans-serif;
+  font-size:clamp(1.9rem,4vw,2.5rem);
+  font-weight:700;letter-spacing:.04em;
+  color:#2a1c08;
+  border-bottom:3px solid rgba(42,28,8,.5);
+  padding-bottom:4px;
+  transition:transform .3s ease;
+  display:inline-block;
+}
+.tel-big:hover{transform:translateY(-2px);}
+
+footer{padding:36px 22px 44px;text-align:center;background:var(--color-bg);}
+footer .m{font-family:'Yomogi',cursive;font-size:1.15rem;color:var(--color-cream);margin-bottom:8px;letter-spacing:.12em;}
+footer p{font-size:.75rem;color:var(--color-text-muted);}
+
+/* ── フェードイン ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+  .cta-link,.tel-big,.tel-head{transition:none;}
+}
+
+/* ── レスポンシブ ── */
+@media (max-width:1024px){
+  .counter-body{gap:32px;}
+  .menu-grid{grid-template-columns:repeat(3,1fr);}
+  .m-cta{grid-column:span 3;}
+}
+@media (max-width:768px){
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;}
+  .t-brand{grid-column:1/3;grid-row:auto;padding:44px 20px;}
+  .t-photo-hero{grid-column:1/3;grid-row:auto;aspect-ratio:4/3;}
+  .t-copy{grid-column:1/3;grid-row:auto;padding:32px 24px;}
+  .t-loc{grid-column:1/2;grid-row:auto;}
+  .t-f2{display:none;}
+  .t-f1{display:none;}
+  .t-f3{display:none;}
+  .t-f4{grid-column:2/3;grid-row:auto;}
+  .t-shime{grid-column:1/3;grid-row:auto;padding:24px;}
+  .t-cta{grid-column:1/3;grid-row:auto;min-height:74px;}
+  .counter{padding:72px 20px 64px;}
+  .counter-body{grid-template-columns:1fr;}
+  .menu-grid{grid-template-columns:repeat(2,1fr);}
+  .m-wide{grid-column:span 2;}
+  .m-cta{grid-column:span 2;}
+  .voice-grid{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  header{padding:12px 16px;}
+  .tel-head{font-size:.82rem;padding:7px 13px;}
+  .menu-grid{grid-template-columns:1fr;}
+  .m-wide,.m-cta{grid-column:span 1;}
+  .m-photo{grid-row:span 1;aspect-ratio:4/3;}
+  .info-box{padding:36px 26px;}
+  .info-box dl{grid-template-columns:1fr;gap:2px;}
+  .info-box dt{margin-top:14px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">遊食酒場 ひびき<small>YUSHOKU SAKABA HIBIKI</small></div>
+  <a class="tel-head" href="tel:092-831-2167">092-831-2167</a>
+</header>
+
+<!-- ヒーロー：タイルモザイク -->
+<section class="mosaic" aria-label="遊食酒場ひびきの紹介">
+  <div class="tile cream t-brand fade">
+    <p class="noren">ゆうしょくさかば</p>
+    <h1>ひびき</h1>
+  </div>
+  <div class="tile photo t-photo-hero fade">
+    <!-- Canva生成画像 -->
+    <img src="hibiki-hero.png" alt="緑のタイルカウンターに並ぶひびきの小皿料理" loading="eager">
+  </div>
+  <div class="tile deep t-copy fade">
+    <h2>和も洋も、肉も魚も、<br>なんでも来い。</h2>
+    <p>白いのれんの向こうは、緑のタイルカウンター。鮮魚も、ラムチョップも、〆のタンタン麺も。今夜の一皿がきっと見つかる遊食酒場です。</p>
+  </div>
+  <div class="tile t-f1 fade"></div>
+  <div class="tile deep t-f2 fade"><span>肴</span></div>
+  <div class="tile amber t-loc fade">
+    <p><span class="en">FUJISAKI</span>藤崎駅から歩いてすぐ<br>福岡市早良区祖原</p>
+  </div>
+  <div class="tile amber t-cta fade">
+    <a class="cta-link" href="tel:092-831-2167">今夜の席を電話でおさえる</a>
+  </div>
+  <div class="tile deep t-shime fade">
+    <p>〆は10種以上<small>ラーメン・炒飯・お茶漬け・キセキのTKG</small></p>
+  </div>
+  <div class="tile t-f3 fade"></div>
+  <div class="tile t-f4 fade"><span>酒</span></div>
+</section>
+
+<!-- タイルカウンターの話 -->
+<section class="counter">
+  <blockquote class="fade">「タイルのカウンターは、珍しいですね。」</blockquote>
+  <p class="src fade">Googleの口コミより</p>
+  <div class="counter-body">
+    <div class="counter-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="hibiki-menu-01.png" alt="緑のタイルの上に置かれた一皿" loading="lazy">
+    </div>
+    <div class="counter-text fade">
+      <h2>一番奥のカウンターへ、どうぞ。</h2>
+      <p>ひびきの自慢は、この緑のタイルカウンター。一人でふらりと座れば、店主が気さくに相手をしてくれます。「短い時間でしたが楽しく過ごせました」そんな声をいただくのが、なにより嬉しいお店です。</p>
+      <p>フードは<strong>鮮魚、肉系、和食、洋食、そして〆まで幅広く</strong>。イタリアン系の皿が多いのに、実は<strong>日本酒が充実</strong>しているのもひびきらしさ。お得な飲み比べセットで、ごまカンパチをつまむ夜はいかがですか。</p>
+      <p>ちょっとだけ贅沢で、でも気取らない。大人の晩酌に、ちょうどいい場所です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- お品書きモザイク -->
+<section class="menu">
+  <div class="menu-head fade">
+    <h2>今夜は、どのタイルから。</h2>
+    <p>口コミで愛される、ひびきの看板たち</p>
+  </div>
+  <div class="menu-grid">
+    <div class="tile m-item fade">
+      <h3>ごまカンパチ</h3>
+      <p>魚はもちろん、ごまだれが絶品。これで日本酒が飲めちゃいます。</p>
+    </div>
+    <div class="tile deep m-item fade">
+      <h3>ラムチョップ</h3>
+      <p>甘辛の粒マスタードソース。カット済みで食べやすいのもポイント。</p>
+    </div>
+    <div class="tile photo m-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="hibiki-hero.png" alt="タイルカウンターに並ぶ本日の肴" loading="lazy" style="object-position:center 70%;">
+    </div>
+    <div class="tile cream m-item m-sake fade">
+      <h3><span>SAKE</span>日本酒 飲み比べセット</h3>
+      <p>イタリアン系が多いけど、日本酒が意外と充実。お得なセットで。</p>
+    </div>
+    <div class="tile deep m-item fade">
+      <h3>雲丹とシラスのピザ</h3>
+      <p>名物「チーズ無しおつまみピザ」。薄い生地で一人でもペロリ。</p>
+    </div>
+    <div class="tile m-item fade">
+      <h3>カニクリーミーコロッケ</h3>
+      <p>トロットロ。お酒も箸も止まらなくなる一品です。</p>
+    </div>
+    <div class="tile m-item fade">
+      <h3>アヒージョ</h3>
+      <p>ついついバケットをおかわりしてしまう、と評判。</p>
+    </div>
+    <div class="tile deep m-item fade">
+      <h3>タンタン麺</h3>
+      <p>濃厚で胡麻の効いたスープに中太麺。煮玉子とひき肉がアクセント。</p>
+    </div>
+    <div class="tile deep m-item m-wide fade">
+      <h3>〆だけで、10種以上。</h3>
+      <p>ラーメン、炒飯、お茶漬け。ふわっふわの卵かけごはんに煮玉子が乗った「キセキのTKG」もどうぞ。</p>
+    </div>
+    <div class="tile amber m-cta fade">
+      <a class="cta-link" href="tel:092-831-2167">予約の電話をかける</a>
+    </div>
+  </div>
+</section>
+
+<!-- お客様の声 -->
+<section class="voices">
+  <h2 class="fade">のれんをくぐった人の声</h2>
+  <div class="voice-grid">
+    <div class="tile cream voice main fade">
+      <p class="stars">★★★★★</p>
+      <p>「お刺身もあれば、がっつりお肉料理もあり、和洋・肉魚なんでも来いな、おいしいものたくさん出してくれるお店です。」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="tile cream voice fade">
+      <p class="stars">★★★★</p>
+      <p>「タンタン麺は中太麺で濃厚で胡麻が効いたスープがよく絡みます。辛さもちょうど良くてめちゃくちゃ好みでした。」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="tile cream voice fade">
+      <p class="stars">★★★★★</p>
+      <p>「どの料理もとても美味しかったです。特にアヒージョが美味しくてついついバケットをおかわりしちゃいました。」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+  </div>
+  <p class="note fade">口コミは実際にいただいた声を引用しています。</p>
+</section>
+
+<!-- 店舗情報・予約 -->
+<section class="info">
+  <div class="info-grid">
+    <div class="tile deep info-box fade">
+      <h2>店舗のご案内</h2>
+      <dl>
+        <dt>店名</dt><dd>遊食酒場 ひびき</dd>
+        <dt>場所</dt><dd>福岡市早良区祖原（藤崎駅から歩いてすぐ）</dd>
+        <dt>電話</dt><dd>092-831-2167</dd>
+        <dt>営業時間</dt><dd>お電話にてご確認ください</dd>
+        <dt>お席</dt><dd>タイルカウンター・テーブル席</dd>
+      </dl>
+    </div>
+    <div class="tile amber info-cta fade">
+      <p class="lead">カウンターは、早い者勝ちです。</p>
+      <p class="sub">「予約してませんでしたが、なんとかカウンター席に座れました」という夜も。確実なのはお電話です。</p>
+      <a class="tel-big" href="tel:092-831-2167">092-831-2167</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">遊食酒場 ひびき</div>
+  <p>福岡市早良区祖原｜藤崎駅すぐ｜和洋遊食と日本酒、〆は10種以上</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
