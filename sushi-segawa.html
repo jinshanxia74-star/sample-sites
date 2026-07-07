@@ -1,0 +1,377 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>すし 酒 おつまみ 瀬川｜二階にあがると、寿司と魔法の水。｜藤崎の隠れ家寿司</title>
+<meta name="description" content="福岡・藤崎駅前、商店街を入ってすぐ2階の隠れ家。木製L字カウンター7席で、気楽に寿司で飲める『すし 酒 おつまみ 瀬川』。名店で腕を振るった大将の握りと、小ポーションのつまみセット、こだわりの日本酒『魔法の水』。煮あなごの握りが評判。7席のため予約がおすすめ。" />
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="すし 酒 おつまみ 瀬川｜二階にあがると、寿司と魔法の水。" />
+<meta property="og:description" content="藤崎2階のL字カウンター7席。気楽に寿司で飲む隠れ家。煮あなごの握りと、魔法の水（日本酒）。" />
+<meta property="og:image" content="https://jinshanxia74-star.github.io/sample-sites/sushi-segawa-hero.png" />
+<meta name="theme-color" content="#1C2126" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "すし 酒 おつまみ 瀬川",
+  "servesCuisine": ["寿司", "居酒屋", "日本酒"],
+  "image": "https://jinshanxia74-star.github.io/sample-sites/sushi-segawa-hero.png",
+  "priceRange": "￥4,500〜￥10,000",
+  "telephone": "+81-90-4487-3208",
+  "acceptsReservations": "True",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "福岡県",
+    "addressLocality": "福岡市早良区",
+    "streetAddress": "藤崎（商店街入ってすぐ・2階）",
+    "addressCountry": "JP"
+  }
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600&family=Cormorant+SC:wght@500;600&display=swap');
+
+  :root {
+    --bg: #1C2126;
+    --surface: #262D33;
+    --surface-2: #2E363D;
+    --primary: #C8A45D;
+    --accent: #6E8B9E;
+    --text: #F0EBE1;
+    --muted: #97A0A6;
+    --line: #3A434B;
+    --head: 'Kaisei Opti', serif;
+    --serif: 'Noto Serif JP', serif;
+    --en: 'Cormorant SC', serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow-x: hidden; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.95;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .en { font-family: var(--en); letter-spacing: 0.12em; }
+
+  /* ===== 2分割レイアウト ===== */
+  .split { display: grid; grid-template-columns: 340px 1fr; }
+
+  /* 左：固定パネル */
+  .aside {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    padding: clamp(2rem, 3vw, 2.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  .aside::before {
+    content: "";
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(circle at 80% 0%, rgba(200,164,93,0.10), transparent 55%);
+    pointer-events: none;
+  }
+  .aside > * { position: relative; z-index: 1; }
+  .brand .en-sm { font-family: var(--en); color: var(--primary); letter-spacing: 0.3em; font-size: 0.72rem; text-transform: uppercase; }
+  .brand h1 {
+    font-family: var(--head);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    margin: 0.6rem 0 0.4rem;
+  }
+  .brand .tag { color: var(--accent); font-size: 0.92rem; letter-spacing: 0.06em; }
+
+  .aside-nav { display: flex; flex-direction: column; gap: 0.1rem; margin: 1.4rem 0; }
+  .aside-nav a {
+    font-family: var(--head);
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.14em;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: baseline;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+  }
+  .aside-nav a:hover { color: var(--primary); padding-left: 0.4rem; }
+  .aside-nav a .n { font-family: var(--en); color: var(--muted); font-size: 0.8rem; }
+
+  .aside-info { font-size: 0.86rem; color: var(--muted); line-height: 1.85; }
+  .aside-info b { color: var(--text); font-weight: 500; font-family: var(--head); }
+  .reserve {
+    display: block;
+    text-align: center;
+    margin-top: 1.1rem;
+    font-family: var(--head);
+    letter-spacing: 0.1em;
+    background: var(--primary);
+    color: #20140A;
+    text-decoration: none;
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .reserve:hover { background: #D8B771; transform: translateY(-1px); }
+  .reserve small { display: block; font-family: var(--en); font-size: 0.72rem; letter-spacing: 0.14em; opacity: 0.8; }
+
+  /* 右：スクロール本文 */
+  .main { min-width: 0; }
+  .panel { padding: clamp(2.4rem, 5vw, 5rem) clamp(1.4rem, 4vw, 4rem); border-bottom: 1px solid var(--line); }
+  .kicker { font-family: var(--en); color: var(--primary); letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.74rem; display: inline-block; margin-bottom: 0.8rem; }
+  h2.title { font-family: var(--head); font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.5; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  h2.title .g { color: var(--primary); }
+  p.body { color: #D7D3C8; }
+  p.body + p.body { margin-top: 1rem; }
+  .muted { color: var(--muted); }
+
+  /* オープニング */
+  .opening { padding: 0; border-bottom: 1px solid var(--line); }
+  .opening .photo { position: relative; }
+  .opening img { display: block; width: 100%; height: min(62vh, 560px); object-fit: cover; }
+  .opening .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(28,33,38,0.25), rgba(28,33,38,0.85)); }
+  .opening .over {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: clamp(1.6rem, 4vw, 3rem);
+  }
+  .opening .over h2 {
+    font-family: var(--head); font-weight: 500;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    line-height: 1.5; letter-spacing: 0.06em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  }
+  .opening .over h2 .g { color: var(--primary); }
+  .opening .over p { color: #E8E3D8; margin-top: 0.6rem; max-width: 40ch; }
+
+  /* つまみリスト */
+  .dish-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-top: 1.6rem; }
+  .dish { background: var(--surface); padding: 1.3rem 1.4rem; }
+  .dish h3 { font-family: var(--head); font-weight: 500; font-size: 1.12rem; margin-bottom: 0.3rem; }
+  .dish h3 .star { color: var(--primary); font-size: 0.8rem; margin-left: 0.3rem; }
+  .dish p { font-size: 0.88rem; color: var(--muted); }
+  .setbox {
+    margin-top: 1.6rem;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 1.4rem 1.5rem;
+  }
+  .setbox h3 { font-family: var(--head); font-weight: 500; color: var(--accent); margin-bottom: 0.4rem; }
+  .setbox p { color: #D7D3C8; font-size: 0.94rem; }
+
+  /* 寿司 */
+  .sushi { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+  .sushi figure { border-radius: 8px; overflow: hidden; border: 1px solid var(--line); }
+  .sushi figure img { display: block; width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .sushi .fq { font-family: var(--head); font-weight: 500; color: var(--primary); font-size: clamp(1.15rem, 3vw, 1.5rem); line-height: 1.7; margin: 0.6rem 0 1rem; }
+  .course-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 1.4rem; }
+  .course {
+    border: 1px solid var(--line); border-radius: 6px; padding: 0.9rem 1.2rem; background: var(--surface);
+  }
+  .course .p { font-family: var(--en); font-size: 1.4rem; color: var(--primary); }
+  .course .l { display: block; font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; }
+
+  /* 酒 */
+  .sake { background: var(--surface); }
+  .sake-quote { font-family: var(--head); font-weight: 500; font-size: clamp(1.3rem, 3.6vw, 1.9rem); line-height: 1.7; letter-spacing: 0.05em; }
+  .sake-quote .g { color: var(--primary); }
+  .sake-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
+  .sake-tag { font-family: var(--en); font-size: 0.9rem; letter-spacing: 0.06em; border: 1px solid var(--accent); color: var(--accent); border-radius: 999px; padding: 0.35rem 0.95rem; }
+
+  /* 声 */
+  .voices { display: grid; gap: 1.1rem; margin-top: 1.6rem; }
+  .voice { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1.4rem 1.5rem; }
+  .voice .stars { font-family: var(--en); color: var(--primary); letter-spacing: 0.14em; margin-bottom: 0.4rem; }
+  .voice p { color: #D7D3C8; font-size: 0.95rem; }
+  .voice .from { display: block; margin-top: 0.7rem; font-family: var(--en); font-size: 0.82rem; color: var(--muted); letter-spacing: 0.08em; }
+
+  /* アクセス */
+  .access dl { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem 1.3rem; margin-top: 0.6rem; }
+  .access dt { font-family: var(--head); font-weight: 500; color: var(--primary); }
+  .access dd { color: #D7D3C8; }
+  .access .en { color: var(--muted); }
+  .access .note { margin-top: 1.2rem; font-size: 0.85rem; color: var(--muted); }
+  .signature { text-align: center; font-family: var(--en); color: var(--muted); letter-spacing: 0.2em; padding: 1.6rem; font-size: 0.82rem; }
+
+  .fade { opacity: 0; transform: translateY(18px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .fade.in { opacity: 1; transform: none; }
+
+  @media (max-width: 860px) {
+    .split { grid-template-columns: 1fr; }
+    .aside { position: static; height: auto; flex-direction: column; gap: 1.4rem; border-right: 0; border-bottom: 1px solid var(--line); }
+    .sushi { grid-template-columns: 1fr; }
+    .aside-nav { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade { opacity: 1; transform: none; transition: none; }
+    .reserve, .aside-nav a { transition: none; }
+  }
+</style>
+
+<div class="split">
+  <!-- ===== 左：固定パネル ===== -->
+  <aside class="aside">
+    <div class="brand">
+      <span class="en-sm">Sushi &amp; Sake</span>
+      <h1>すし 酒 おつまみ<br />瀬川</h1>
+      <p class="tag">気楽に、寿司で飲む。</p>
+    </div>
+
+    <nav class="aside-nav">
+      <a href="#tsumami">おつまみ <span class="n">01</span></a>
+      <a href="#sushi">すし <span class="n">02</span></a>
+      <a href="#sake">魔法の水 <span class="n">03</span></a>
+      <a href="#access">お店のこと <span class="n">04</span></a>
+    </nav>
+
+    <div>
+      <p class="aside-info">
+        <b>藤崎</b>／商店街を入ってすぐ、2階。<br />
+        木製L字カウンター <b>7席</b> のみ。<br />
+        目の前に地下鉄の入り口。<br />
+        <span class="muted">7席の小さなお店です。当日でも、まずはお電話を。</span>
+      </p>
+      <a class="reserve" href="tel:+819044873208">予約・お問い合わせ<small>090-4487-3208</small></a>
+    </div>
+  </aside>
+
+  <!-- ===== 右：スクロール本文 ===== -->
+  <main class="main">
+    <!-- オープニング -->
+    <section class="opening">
+      <div class="photo">
+        <img src="sushi-segawa-hero.png" alt="木のカウンターに寿司下駄と青磁の酒器" />
+        <div class="over">
+          <h2>二階にあがると、<br /><span class="g">寿司と、魔法の水。</span></h2>
+          <p>木の扉を開けて、L字カウンターへ。名店で腕を磨いた大将の握りを、気楽に、一杯とともに。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 大将 -->
+    <section class="panel">
+      <span class="kicker">The chef</span>
+      <h2 class="title">寿司屋の握りを、<span class="g">居酒屋の気楽さで。</span></h2>
+      <p class="body">大将・瀬川大平さんは、シーホークホテルの和食店から天神・警固の名店へと、腕を振るってきた料理人。その握りとつまみを、肩肘張らずに楽しめるのが、この店のいいところ。</p>
+      <p class="body">「寿司屋のそれ」とまではいかなくても、居酒屋でちゃんとしたお寿司が食べられる——そんな、ちょうどいい距離感。家族的で、なじみやすい二階の隠れ家です。</p>
+    </section>
+
+    <!-- おつまみ -->
+    <section class="panel" id="tsumami">
+      <span class="kicker">01 ・ Otsumami</span>
+      <h2 class="title">まずは、つまみで一献。</h2>
+      <div class="setbox">
+        <h3>小ポーションのつまみセット</h3>
+        <p>「寿司の前につまみを、でも決めかねて…」そんな時は、小ポーションのつまみセットを。手際よく美しく盛られたそれは、いかにも日本酒に合うものばかり。こういう気配りが、うれしい。</p>
+      </div>
+      <div class="dish-list">
+        <div class="dish"><h3>舞茸土瓶蒸し<span class="star">◎ この日の優勝</span></h3><p>香り立つ土瓶蒸し。滋味深い、秋の一品。</p></div>
+        <div class="dish"><h3>白子天ぷら</h3><p>とろりと濃厚な白子を、さっと天ぷらで。</p></div>
+        <div class="dish"><h3>おでん（白子入り）</h3><p>じんわり出汁のしみた、あたたかいおでん。</p></div>
+        <div class="dish"><h3>タイ刺し・焼き魚</h3><p>鯛の刺身に、いわしの塩焼き。酒がすすむ。</p></div>
+      </div>
+    </section>
+
+    <!-- 寿司 -->
+    <section class="panel" id="sushi">
+      <span class="kicker">02 ・ Sushi</span>
+      <div class="sushi">
+        <figure>
+          <img src="sushi-segawa-menu-01.png" alt="つめを塗った煮あなごの握り" />
+        </figure>
+        <div>
+          <h2 class="title">この日の、<span class="g">煮あなご。</span></h2>
+          <p class="fq">「煮あなごの握りが、めちゃ美味しかった。」</p>
+          <p class="body">ふっくらと炊いた穴子に、艶やかなつめ。サーモンは炙りで、香ばしく。1貫ずつでも、3貫・4貫のセットでも。今日の気分で、好きなだけ。</p>
+          <div class="course-row">
+            <div class="course"><span class="p en">¥4,500</span><span class="l">おまかせコース</span></div>
+            <div class="course"><span class="p en">¥8,800</span><span class="l">上コース（要予約）</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 酒 -->
+    <section class="panel sake" id="sake">
+      <span class="kicker">03 ・ Sake</span>
+      <p class="sake-quote">日本酒を、ここでは<br /><span class="g">「魔法の水」</span>と呼ぶ。</p>
+      <p class="body" style="margin-top:1rem;">大将のこだわりが詰まった日本酒。握りとつまみに合わせて、一杯、また一杯。「初めて飲んだ肥前蔵心が美味かった」——そんな出会いも、ここにはあります。</p>
+      <div class="sake-tags">
+        <span class="sake-tag">肥前蔵心</span>
+        <span class="sake-tag">季節の地酒</span>
+        <span class="sake-tag">生ビール</span>
+        <span class="sake-tag">ジントニック</span>
+      </div>
+      <p class="muted" style="margin-top:1.2rem;font-size:0.88rem;">※ 昼飲みセット（そうめんと5貫セット）も。あとから、ずしりと効いてくる、心地よさ。</p>
+    </section>
+
+    <!-- 声 -->
+    <section class="panel">
+      <span class="kicker">Reviews</span>
+      <h2 class="title">通った人の、声。</h2>
+      <div class="voices">
+        <div class="voice">
+          <div class="stars">★★★★★</div>
+          <p>気楽に寿司で飲めるお店。小ポーションのつまみセットを作ってくれて、美しく、いかにも日本酒に合うものばかり。1貫ずつもよし、セットもある。目の前に地下鉄入り口があるのもありがたい。</p>
+          <span class="from">— Google の口コミより</span>
+        </div>
+        <div class="voice">
+          <div class="stars">★★★★★</div>
+          <p>煮あなごの握りがめちゃ美味しかったのと、サーモンも炙ってあってうまっとなりました。日本酒にもこだわってあって、初めて飲んだ肥前蔵心という日本酒が美味かったです。</p>
+          <span class="from">— Google の口コミより</span>
+        </div>
+        <div class="voice">
+          <div class="stars">★★★★☆</div>
+          <p>木製のL字カウンター7席のみ。行く時は予約した方がいいでしょう。この日はアラカルトで、舞茸土瓶蒸しがこの日の優勝。居酒屋でちゃんとしたお寿司が食べられるのはよいと思います。</p>
+          <span class="from">— Google の口コミより</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="panel access" id="access">
+      <span class="kicker">04 ・ Access</span>
+      <h2 class="title">二階で、お待ちしています。</h2>
+      <p class="body">藤崎商店街を入ってすぐ、階段を上がって木の扉の向こう。隣は同じ2階のバーですので、お間違いなく。7席の小さな店ゆえ、当日でも、まずはお電話を。</p>
+      <dl>
+        <dt>店名</dt><dd>すし 酒 おつまみ 瀬川</dd>
+        <dt>所在</dt><dd>福岡市早良区 藤崎（商店街入ってすぐ・2階）</dd>
+        <dt>電話</dt><dd class="en">090-4487-3208</dd>
+        <dt>席数</dt><dd>木製L字カウンター 7席</dd>
+        <dt>コース</dt><dd class="en">¥4,500 / ¥8,800（要予約）</dd>
+        <dt>最寄</dt><dd>地下鉄 藤崎駅（目の前に入り口）</dd>
+      </dl>
+      <p class="note">※ 7席のみのため、ご予約がおすすめです。当日のご予約も、お気軽にお電話ください。</p>
+    </section>
+
+    <p class="signature">SUSHI ・ SAKE ・ SEGAWA ／ FUJISAKI</p>
+  </main>
+</div>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.fade');
+    if (reduce || !('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>
