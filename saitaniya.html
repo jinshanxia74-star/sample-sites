@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラーメン処 西谷家｜福岡・西区のド豚骨ラーメン｜骨の髄まで、絞り出す。</title>
+<meta name="description" content="福岡市西区のラーメン処 西谷家。豚骨100%、骨の髄まで煮込んだ「ド豚骨」スープ。ストレート細麺、肉厚チャーシュー、無料の辛子高菜。替え玉は60秒、チャーハンもちゃんと美味い。行列でも回転が早い、おやじの店。">
+<meta property="og:title" content="ラーメン処 西谷家｜骨の髄まで、絞り出す。">
+<meta property="og:description" content="豚骨100%、骨の髄まで煮込んだド豚骨スープ。福岡市西区、行列でも回転の早いおやじの店。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="saitaniya-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"ラーメン処 西谷家",
+  "servesCuisine":["ラーメン","豚骨ラーメン"],
+  "image":"saitaniya-hero.png",
+  "telephone":"092-812-0121",
+  "priceRange":"¥700〜¥1200",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市西区","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Noto+Sans+JP:wght@400;500;700;900&family=Archivo+Narrow:wght@400;500;600;700&display=swap');
+
+:root{
+  --yellow:#F5C400;    /* 看板の黄 */
+  --cream:#FFF8E1;
+  --black:#191512;     /* 黒文字 */
+  --red:#C41E1E;       /* 谷の赤 */
+  --text:#191512;
+  --muted:#6B5E4A;
+  --line:#2A241E;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--yellow);line-height:1.8;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'RocknRoll One',sans-serif;font-weight:400;line-height:1.35;}
+.mono{font-family:'Archivo Narrow',sans-serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px);}
+.hazard{height:14px;background:repeating-linear-gradient(-45deg,var(--black),var(--black) 16px,var(--yellow) 16px,var(--yellow) 32px);}
+
+/* ヘッダー */
+.top{background:var(--black);color:var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:14px clamp(18px,5vw,40px);position:sticky;top:0;z-index:30;}
+.top .mark{font-family:'RocknRoll One',sans-serif;font-size:1.4rem;letter-spacing:0.08em;}
+.top .mark .r{color:var(--red);}
+.top .spec{font-family:'Archivo Narrow',sans-serif;font-weight:600;letter-spacing:0.1em;font-size:0.85rem;color:#E8DFC8;}
+
+/* ヒーロー */
+.hero{padding:clamp(34px,6vw,64px) 0 clamp(40px,7vw,70px);}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(24px,5vw,50px);align-items:center;}
+.hero .tagblk .no{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.16em;font-size:0.9rem;background:var(--black);color:var(--yellow);display:inline-block;padding:4px 14px;}
+.hero h1{font-size:clamp(2.6rem,8vw,5rem);color:var(--black);letter-spacing:0.02em;margin:16px 0;line-height:1.1;}
+.hero h1 .r{color:var(--red);}
+.hero .lede{font-size:1.05rem;color:var(--black);font-weight:500;max-width:38ch;}
+.hero-photo{position:relative;border:4px solid var(--black);}
+.hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+.hero-photo .stamp{position:absolute;bottom:12px;right:12px;background:var(--red);color:#fff;font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.08em;font-size:0.82rem;padding:6px 14px;transform:rotate(-4deg);border:2px solid #fff;}
+
+/* 濃度メーター */
+.meter-block{background:var(--black);color:var(--yellow);padding:clamp(40px,7vw,72px) 0;}
+.meter-block .hd{text-align:center;margin-bottom:38px;}
+.meter-block .hd .no{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.2em;color:var(--red);font-size:0.9rem;}
+.meter-block h2{color:var(--yellow);font-size:clamp(1.6rem,4.6vw,2.4rem);margin-top:6px;}
+.meter{max-width:720px;margin:0 auto;}
+.meter-scale{display:flex;justify-content:space-between;font-family:'Archivo Narrow',sans-serif;font-weight:600;font-size:0.85rem;color:#E8DFC8;margin-bottom:10px;letter-spacing:0.06em;}
+.meter-bar{height:26px;border:2px solid var(--yellow);background:linear-gradient(90deg,#5C4A2A 0%,#8A6A2E 30%,#C99A2E 60%,var(--red) 100%);position:relative;}
+.meter-ticks{display:flex;margin-top:8px;}
+.meter-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;margin-top:24px;background:var(--yellow);border:2px solid var(--yellow);}
+.mm{background:var(--black);padding:18px 16px;}
+.mm .lvl{font-family:'Archivo Narrow',sans-serif;font-weight:700;color:var(--red);font-size:0.8rem;letter-spacing:0.1em;}
+.mm h3{color:var(--yellow);font-size:1.05rem;margin:6px 0 4px;}
+.mm p{font-size:0.82rem;color:#C7BDA4;line-height:1.6;}
+
+/* 製法（工程） */
+.process{padding:clamp(50px,8vw,90px) 0;}
+.process .hd{margin-bottom:40px;}
+.process .hd .no{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.2em;color:var(--red);font-size:0.9rem;}
+.process h2{color:var(--black);font-size:clamp(1.8rem,5vw,2.8rem);margin-top:6px;}
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:3px solid var(--black);}
+.proc-step{padding:clamp(20px,3vw,30px);border-right:3px solid var(--black);position:relative;background:var(--cream);}
+.proc-step:last-child{border-right:none;}
+.proc-step .pn{font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:3rem;color:var(--red);line-height:1;}
+.proc-step h3{font-size:1.3rem;color:var(--black);margin:10px 0 8px;}
+.proc-step p{font-size:0.9rem;color:var(--muted);line-height:1.7;}
+
+/* サイド（チャーハン・トッピング） */
+.sides{background:var(--cream);padding:clamp(50px,8vw,90px) 0;border-top:3px solid var(--black);border-bottom:3px solid var(--black);}
+.sides .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,50px);align-items:center;}
+.sides-photo{border:4px solid var(--black);}
+.sides-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.sides .no{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.2em;color:var(--red);font-size:0.9rem;}
+.sides h2{color:var(--black);font-size:clamp(1.7rem,4.6vw,2.5rem);margin:6px 0 18px;}
+.sides p{color:var(--text);margin-bottom:20px;font-weight:500;}
+.spec-list{display:flex;flex-direction:column;gap:10px;}
+.spec-list .s{display:flex;align-items:center;gap:14px;background:var(--yellow);border:2px solid var(--black);padding:12px 18px;}
+.spec-list .s .k{font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:1.4rem;color:var(--red);white-space:nowrap;}
+.spec-list .s .v{font-weight:700;color:var(--black);}
+
+/* 声 */
+.voices{padding:clamp(50px,8vw,90px) 0;}
+.voices .hd{margin-bottom:40px;}
+.voices .hd .no{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.2em;color:var(--red);font-size:0.9rem;}
+.voices h2{color:var(--black);font-size:clamp(1.8rem,5vw,2.6rem);margin-top:6px;}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.v-card{background:var(--black);color:var(--cream);border:3px solid var(--black);padding:26px;}
+.v-card .st{color:var(--yellow);letter-spacing:2px;margin-bottom:10px;}
+.v-card p{font-size:0.96rem;line-height:1.85;color:#EDE6D4;}
+.v-card .who{margin-top:14px;font-family:'Archivo Narrow',sans-serif;font-weight:700;color:var(--red);letter-spacing:0.06em;font-size:0.9rem;}
+
+/* 案内 */
+.info{background:var(--black);color:var(--cream);padding:clamp(50px,8vw,90px) 0;}
+.info .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,50px);align-items:center;}
+.info h2{color:var(--yellow);font-size:clamp(1.7rem,4.6vw,2.4rem);margin-bottom:22px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;}
+.info dt{font-family:'RocknRoll One',sans-serif;color:var(--red);white-space:nowrap;}
+.info dd{color:#EDE6D4;}
+.info .cta{background:var(--yellow);color:var(--black);border:3px solid var(--yellow);padding:clamp(26px,4vw,40px);text-align:center;}
+.info .cta .k{font-family:'Archivo Narrow',sans-serif;font-weight:700;letter-spacing:0.2em;font-size:0.9rem;}
+.info .cta .telbig{display:block;font-family:'Archivo Narrow',sans-serif;font-weight:700;font-size:clamp(2rem,7vw,3rem);margin:8px 0 6px;letter-spacing:0.02em;}
+.info .cta p{font-weight:500;font-size:0.9rem;}
+
+footer{background:var(--black);color:rgba(245,196,0,0.75);text-align:center;padding:30px 20px;font-size:0.82rem;border-top:2px solid var(--red);}
+footer .m{font-family:'RocknRoll One',sans-serif;color:var(--yellow);font-size:1.15rem;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero .wrap,.sides .wrap,.info .wrap{grid-template-columns:1fr;}
+  .proc-grid{grid-template-columns:1fr;}
+  .proc-step{border-right:none;border-bottom:3px solid var(--black);}
+  .proc-step:last-child{border-bottom:none;}
+  .hero-photo{order:-1;}
+  .top .spec{display:none;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="mark">西<span class="r">谷</span>家</div>
+  <div class="spec">DO-TONKOTSU / SINCE OYAJI</div>
+</div>
+<div class="hazard"></div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="wrap">
+    <div class="tagblk fade vis">
+      <span class="no mono">NO.01 — DO-TONKOTSU</span>
+      <h1>骨の髄まで、<br><span class="r">絞り出す。</span></h1>
+      <p class="lede">豚骨100%。素材が砂状になるまで、骨の髄液まで煮込んだ「ド豚骨」。福岡市西区、行列でも回転の早い、おやじの店。</p>
+    </div>
+    <div class="hero-photo fade vis">
+      <img src="saitaniya-hero.png" alt="濃厚なド豚骨スープのラーメンを俯瞰">
+      <span class="stamp mono">PORK BONE 100%</span>
+    </div>
+  </div>
+</header>
+
+<!-- 濃度メーター -->
+<section class="meter-block">
+  <div class="wrap">
+    <div class="hd">
+      <span class="no mono">NO.02 — CONCENTRATION</span>
+      <h2>濃度で、選ぶ。</h2>
+    </div>
+    <div class="meter">
+      <div class="meter-scale"><span>あっさり</span><span>こってり</span><span>ド豚骨</span></div>
+      <div class="meter-bar"></div>
+      <div class="meter-menu">
+        <div class="mm fade"><div class="lvl mono">LV.1</div><h3>あっさり塩豚骨</h3><p>豚骨の旨みはそのままに、後味すっきり。</p></div>
+        <div class="mm fade"><div class="lvl mono">LV.2</div><h3>ラーメン（並）</h3><p>ストレート細麺との相性はバッチリ。定番。</p></div>
+        <div class="mm fade"><div class="lvl mono">LV.3</div><h3>こってり</h3><p>口の中でしっかり味が残る、濃厚な一杯。</p></div>
+        <div class="mm fade"><div class="lvl mono">LV.MAX</div><h3>特濃・ド豚骨</h3><p>これぞド豚骨。濃ゆいの好きな人へ。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 製法 -->
+<section class="process">
+  <div class="wrap">
+    <div class="hd fade">
+      <span class="no mono">NO.03 — HOW IT'S MADE</span>
+      <h2>髄とんこつが、できるまで。</h2>
+    </div>
+    <div class="proc-grid fade">
+      <div class="proc-step">
+        <div class="pn mono">01</div>
+        <h3>炊く</h3>
+        <p>豚骨100%を、長時間ひたすら炊き上げる。ここから全てが始まる。</p>
+      </div>
+      <div class="proc-step">
+        <div class="pn mono">02</div>
+        <h3>砕く</h3>
+        <p>骨が砂状になるまで。骨髄液まで、余さずスープへ溶かし込む。</p>
+      </div>
+      <div class="proc-step">
+        <div class="pn mono">03</div>
+        <h3>継ぐ</h3>
+        <p>絶やさず継ぎ足し、濃度を保つ。芳しい豚骨の香りは、店の前から。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サイド -->
+<section class="sides">
+  <div class="wrap">
+    <div class="sides-photo fade"><img src="saitaniya-menu-01.png" alt="西谷家のちゃんと美味いチャーハン"></div>
+    <div class="fade">
+      <span class="no mono">NO.04 — SIDE & TOPPING</span>
+      <h2>チャーハンが、ちゃんと美味い。</h2>
+      <p>「サイドメニューが強いラーメン屋は、息が長い」。味濃いめのチャーハンは、ド豚骨と並ぶ実力。</p>
+      <div class="spec-list">
+        <div class="s"><span class="k mono">60s</span><span class="v">替え玉、約60秒でご提供</span></div>
+        <div class="s"><span class="k mono">¥0</span><span class="v">辛子高菜・にんにく、無料で味変</span></div>
+        <div class="s"><span class="k mono">厚</span><span class="v">肉厚でジューシーなチャーシュー</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <div class="wrap">
+    <div class="hd fade">
+      <span class="no mono">NO.05 — VOICES</span>
+      <h2>食べた人の、記録。</h2>
+    </div>
+    <div class="v-grid">
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>これぞ「ド豚骨」といった濃厚なスープ。骨髄液まで煮込んでスープを作ってるらしい。ストレート細麺との相性もバッチリ。肉厚チャーシューも絶品です。</p>
+        <div class="who mono">西区で食べた方</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>店前に着いた時から芳しいこの豚骨の匂いは間違いない、と。結果大当たり。嬉しかったのがチャーハンがちゃんと美味い！サイドが強いラーメン屋は息が長い。</p>
+        <div class="who mono">大阪から来た方</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>ちょっと熱めの麺でしたが替え玉まで60秒ちょっと。無料の辛子高菜とにんにくで味変して2回目の替え玉。人気店だけど回転率が早いので、待ちも苦じゃない。西区で5本の指に入る最高のお店。</p>
+        <div class="who mono">常連の方</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 案内 -->
+<section class="info">
+  <div class="wrap">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>場所</dt><dd>福岡市西区</dd>
+        <dt>看板</dt><dd>豚骨100%のド豚骨・ストレート細麺</dd>
+        <dt>味変</dt><dd>辛子高菜・にんにく（無料・セルフ）</dd>
+        <dt>回転</dt><dd>行列でも回転が早く、替え玉は約60秒</dd>
+        <dt>駐車場</dt><dd>奥まで停められ、10台以上</dd>
+      </dl>
+    </div>
+    <div class="cta fade">
+      <span class="k mono">CALL / ORDER</span>
+      <a class="telbig" href="tel:092-812-0121">092-812-0121</a>
+      <p>まずはお電話で。骨の髄まで、お待ちしています。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">ラーメン処 西谷家</div>
+  <p>福岡市西区｜ド豚骨ラーメン・骨の髄まで｜替え玉60秒・無料辛子高菜</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
