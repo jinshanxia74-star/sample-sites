@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>春華苑｜福岡・次郎丸の町中華｜創業昭和44年、次郎丸の本気中華。</title>
+<meta name="description" content="福岡市早良区・次郎丸の町中華「春華苑」。創業昭和44年、驚きのコスパを誇る本気の中華。日替わり定食、パリパリ皿うどん、あんかけ焼きそば。2階には80名収容の宴会場「宴会三国志」、送迎バスもご用意。地元に愛される老舗です。">
+<meta property="og:title" content="春華苑｜創業昭和44年、次郎丸の本気中華。">
+<meta property="og:description" content="驚きのコスパの町中華。日替わり定食・パリパリ皿うどん・80名宴会場「宴会三国志」・送迎バス。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="shunkaen-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"春華苑",
+  "servesCuisine":["中華料理","町中華"],
+  "image":"shunkaen-hero.png",
+  "telephone":"092-861-4581",
+  "priceRange":"¥800〜¥2000",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市早良区 次郎丸","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&family=Noto+Sans+JP:wght@400;500;700;900&family=Ma+Shan+Zheng&display=swap');
+
+:root{
+  --red:#8E1F1F;       /* 看板の赤 */
+  --red-dk:#6E1414;
+  --cream:#FBF6EC;
+  --gold:#D4AF37;      /* 金 */
+  --yellow:#F2C14E;    /* 雲紋の黄 */
+  --dark:#33251C;
+  --muted:#B08D6A;
+  --line:#E4D8BE;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--dark);background:var(--cream);line-height:1.85;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Yuji Boku',serif;font-weight:400;line-height:1.4;}
+.ma{font-family:'Ma Shan Zheng',cursive;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px);}
+
+/* 雲紋ボーダー */
+.cloud-border{height:10px;background:
+  radial-gradient(circle at 10px 12px, var(--yellow) 6px, transparent 7px) repeat-x;
+  background-size:26px 20px;background-color:var(--red-dk);}
+
+/* ヘッダー */
+.top{background:var(--red);color:var(--yellow);display:flex;align-items:center;justify-content:space-between;padding:14px clamp(18px,5vw,40px);position:sticky;top:0;z-index:30;border-bottom:2px solid var(--gold);}
+.top .mark{font-family:'Yuji Boku',serif;font-size:1.6rem;color:var(--gold);letter-spacing:0.18em;}
+.top .est{font-family:'Ma Shan Zheng',cursive;font-size:1.1rem;color:var(--yellow);letter-spacing:0.06em;}
+
+/* ヒーロー */
+.hero{background:var(--red);color:var(--cream);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(242,193,78,0.16),transparent 55%);}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,50px);align-items:center;padding-top:clamp(40px,7vw,74px);padding-bottom:clamp(40px,7vw,74px);}
+.hero .est-b{font-family:'Ma Shan Zheng',cursive;font-size:1.3rem;color:var(--yellow);letter-spacing:0.08em;}
+.hero h1{font-family:'Yuji Boku',serif;font-size:clamp(2.4rem,7vw,4.2rem);color:var(--gold);letter-spacing:0.05em;margin:14px 0;line-height:1.35;}
+.hero p{color:var(--cream);font-size:1.05rem;max-width:40ch;}
+.hero .kv{display:inline-flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
+.hero .kv span{background:var(--yellow);color:var(--red-dk);font-weight:700;font-size:0.86rem;padding:6px 16px;border-radius:100px;}
+.hero-photo{position:relative;border:4px solid var(--gold);}
+.hero-photo img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+
+/* 円卓メニュー */
+.round{background:var(--cream);padding:clamp(50px,8vw,96px) 0;text-align:center;}
+.round .banner{display:inline-block;background:var(--red);color:var(--gold);font-family:'Yuji Boku',serif;font-size:1.05rem;letter-spacing:0.16em;padding:8px 30px;position:relative;margin-bottom:14px;}
+.round .banner::before,.round .banner::after{content:'';position:absolute;top:0;width:0;height:0;border:19px solid transparent;}
+.round .banner::before{left:-24px;border-right-color:var(--red);}
+.round .banner::after{right:-24px;border-left-color:var(--red);}
+.round h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--red);margin-bottom:8px;letter-spacing:0.06em;}
+.round .lead{color:var(--muted);max-width:48ch;margin:0 auto 40px;}
+/* 回転円卓 */
+.lazy{position:relative;width:min(500px,90vw);height:min(500px,90vw);margin:0 auto;}
+.lazy .plate{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle,var(--red) 0%,var(--red-dk) 100%);border:6px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold);box-shadow:0 20px 44px rgba(110,20,20,0.3);}
+.lazy .plate .ma{font-size:clamp(1.8rem,6vw,3rem);color:var(--gold);}
+.lazy .plate small{color:var(--yellow);font-size:0.8rem;letter-spacing:0.14em;margin-top:6px;}
+.lazy .dish{position:absolute;top:50%;left:50%;width:118px;margin:-59px 0 0 -59px;height:118px;border-radius:50%;background:var(--cream);border:2px solid var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;box-shadow:0 8px 18px rgba(51,37,28,0.16);}
+.lazy .dish .n{font-family:'Yuji Boku',serif;font-size:0.92rem;color:var(--red);line-height:1.3;}
+.lazy .dish .p{font-family:'Ma Shan Zheng',cursive;font-size:0.9rem;color:var(--dark);margin-top:2px;}
+.lazy .d1{transform:translate(0,-190px);}
+.lazy .d2{transform:translate(165px,-95px);}
+.lazy .d3{transform:translate(165px,95px);}
+.lazy .d4{transform:translate(0,190px);}
+.lazy .d5{transform:translate(-165px,95px);}
+.lazy .d6{transform:translate(-165px,-95px);}
+/* モバイル：円卓→グリッド */
+.dish-grid{display:none;}
+
+/* 宴会三国志 */
+.banquet{background:var(--red);color:var(--cream);padding:clamp(50px,8vw,96px) 0;position:relative;}
+.banquet::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(242,193,78,0.12),transparent 55%);}
+.banquet .wrap{position:relative;display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(28px,5vw,54px);align-items:center;}
+.banquet .drape{display:inline-block;font-family:'Ma Shan Zheng',cursive;font-size:1.2rem;color:var(--yellow);letter-spacing:0.1em;}
+.banquet h2{font-family:'Yuji Boku',serif;color:var(--gold);font-size:clamp(2rem,5.4vw,3rem);margin:8px 0 18px;letter-spacing:0.06em;}
+.banquet p{color:var(--cream);margin-bottom:16px;}
+.banquet .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;}
+.banquet .stat{background:rgba(0,0,0,0.16);border:1px solid var(--gold);padding:16px 10px;text-align:center;border-radius:6px;}
+.banquet .stat .num{font-family:'Ma Shan Zheng',cursive;font-size:1.9rem;color:var(--yellow);line-height:1;}
+.banquet .stat .lb{font-size:0.78rem;color:var(--cream);margin-top:6px;}
+.banquet-photo{border:4px solid var(--gold);}
+.banquet-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+
+/* コスパ（皿うどん） */
+.cospa{background:var(--cream);padding:clamp(50px,8vw,96px) 0;}
+.cospa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,54px);align-items:center;}
+.cospa-photo{border:4px solid var(--gold);}
+.cospa-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.cospa .banner{display:inline-block;background:var(--red);color:var(--gold);font-family:'Yuji Boku',serif;padding:6px 22px;letter-spacing:0.12em;font-size:0.95rem;margin-bottom:12px;}
+.cospa h2{color:var(--red);font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:16px;letter-spacing:0.05em;}
+.cospa p{color:var(--dark);margin-bottom:18px;}
+.cospa .price-list{border-top:2px solid var(--line);}
+.cospa .pr{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px dotted var(--line);}
+.cospa .pr .n{font-family:'Yuji Boku',serif;font-size:1.12rem;color:var(--dark);}
+.cospa .pr .v{font-family:'Ma Shan Zheng',cursive;font-size:1.3rem;color:var(--red);}
+
+/* 声 */
+.voices{background:var(--red-dk);color:var(--cream);padding:clamp(50px,8vw,96px) 0;}
+.voices h2{text-align:center;font-family:'Yuji Boku',serif;color:var(--gold);font-size:clamp(1.8rem,5vw,2.6rem);margin-bottom:44px;letter-spacing:0.06em;}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.v-card{background:rgba(251,246,236,0.06);border:1px solid var(--gold);border-radius:8px;padding:26px;}
+.v-card .st{color:var(--yellow);letter-spacing:2px;margin-bottom:10px;}
+.v-card p{font-size:0.96rem;line-height:1.85;color:#F1E9D9;}
+.v-card .who{margin-top:14px;font-family:'Ma Shan Zheng',cursive;font-size:1.05rem;color:var(--yellow);}
+
+/* 案内 */
+.info{background:var(--cream);padding:clamp(50px,8vw,96px) 0;}
+.info .wrap{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,54px);align-items:center;}
+.info h2{font-family:'Yuji Boku',serif;color:var(--red);font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:22px;letter-spacing:0.06em;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;}
+.info dt{font-family:'Yuji Boku',serif;color:var(--red);white-space:nowrap;}
+.info dd{color:var(--dark);}
+.info .cta{background:var(--red);color:var(--cream);border:3px solid var(--gold);padding:clamp(26px,4vw,40px);text-align:center;}
+.info .cta .k{font-family:'Ma Shan Zheng',cursive;font-size:1.2rem;color:var(--yellow);}
+.info .cta .telbig{display:block;font-family:'Ma Shan Zheng',cursive;font-size:clamp(2rem,7vw,2.8rem);color:var(--gold);margin:8px 0 6px;}
+.info .cta p{color:var(--cream);font-size:0.9rem;}
+
+footer{background:var(--red-dk);color:rgba(251,246,236,0.7);text-align:center;padding:30px 20px;font-size:0.82rem;border-top:2px solid var(--gold);}
+footer .m{font-family:'Yuji Boku',serif;color:var(--gold);font-size:1.3rem;letter-spacing:0.14em;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero .wrap,.banquet .wrap,.cospa .wrap,.info .wrap{grid-template-columns:1fr;}
+  .hero-photo{order:-1;}
+  .banquet-photo,.cospa-photo{order:-1;}
+  .top .est{display:none;}
+}
+@media(max-width:560px){
+  .lazy{display:none;}
+  .dish-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:420px;margin:0 auto;}
+  .dish-grid .d{background:var(--cream);border:2px solid var(--gold);border-radius:12px;padding:18px;text-align:center;}
+  .dish-grid .d .n{font-family:'Yuji Boku',serif;color:var(--red);font-size:1.05rem;}
+  .dish-grid .d .p{font-family:'Ma Shan Zheng',cursive;color:var(--dark);}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="mark">春華苑</div>
+  <div class="est">創業 昭和四十四年</div>
+</div>
+<div class="cloud-border"></div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="wrap">
+    <div class="fade vis">
+      <span class="est-b">since 昭和44年・次郎丸</span>
+      <h1>創業昭和44年、<br>次郎丸の本気中華。</h1>
+      <p>「この値段でいいの？」と驚くほどのコスパ。熟練の技で一気に炒め上げる、地元に愛される町中華です。</p>
+      <div class="kv">
+        <span>驚きのコスパ</span>
+        <span>宴会80名</span>
+        <span>送迎バス</span>
+      </div>
+    </div>
+    <div class="hero-photo fade vis">
+      <img src="shunkaen-hero.png" alt="中華鍋を炎で振る、春華苑の力強い調理">
+    </div>
+  </div>
+</header>
+
+<!-- 円卓メニュー -->
+<section class="round">
+  <div class="wrap">
+    <div class="banner fade">お品書き</div>
+    <h2 class="fade">円卓を、囲んで。</h2>
+    <p class="lead fade">日替わり定食から名物の皿うどんまで。回転円卓を囲むように、みんなで少しずつ。</p>
+    <div class="lazy fade">
+      <div class="dish d1"><span class="n">日替わり定食</span><span class="p">コスパ◎</span></div>
+      <div class="dish d2"><span class="n">パリパリ皿うどん</span><span class="p">名物</span></div>
+      <div class="dish d3"><span class="n">あんかけ焼きそば</span><span class="p">もちもち</span></div>
+      <div class="dish d4"><span class="n">中華そば＋ミニ中華丼</span><span class="p">人気</span></div>
+      <div class="dish d5"><span class="n">マーボー豆腐</span><span class="p">マイルド</span></div>
+      <div class="dish d6"><span class="n">杏仁豆腐</span><span class="p">〆に</span></div>
+      <div class="plate"><span class="ma">春華苑</span><small>次郎丸の町中華</small></div>
+    </div>
+    <div class="dish-grid fade">
+      <div class="d"><div class="n">日替わり定食</div><div class="p">コスパ◎</div></div>
+      <div class="d"><div class="n">パリパリ皿うどん</div><div class="p">名物</div></div>
+      <div class="d"><div class="n">あんかけ焼きそば</div><div class="p">もちもち</div></div>
+      <div class="d"><div class="n">中華そば＋ミニ中華丼</div><div class="p">人気</div></div>
+      <div class="d"><div class="n">マーボー豆腐</div><div class="p">マイルド</div></div>
+      <div class="d"><div class="n">杏仁豆腐</div><div class="p">〆に</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 宴会三国志 -->
+<section class="banquet">
+  <div class="wrap">
+    <div class="fade">
+      <span class="drape">— 宴会三国志 —</span>
+      <h2>二階は、宴の間。</h2>
+      <p>店内に入ると、まず目に飛び込む「宴会三国志」の垂れ幕。嫌でも気分があがります。昔から、2階で懇親会。低予算でたっぷり飲んで食べられると、地元で使われてきました。</p>
+      <p>送迎バスもご用意。大人数の宴会も、お任せください。</p>
+      <div class="stats">
+        <div class="stat"><div class="num">80</div><div class="lb">名収容 宴会場</div></div>
+        <div class="stat"><div class="num">2F</div><div class="lb">宴会三国志の間</div></div>
+        <div class="stat"><div class="num">送迎</div><div class="lb">バスあり</div></div>
+      </div>
+    </div>
+    <div class="banquet-photo fade">
+      <img src="shunkaen-interior.png" alt="春華苑2階の円卓が並ぶ宴会場">
+    </div>
+  </div>
+</section>
+
+<!-- コスパ -->
+<section class="cospa">
+  <div class="wrap">
+    <div class="cospa-photo fade"><img src="shunkaen-menu-01.png" alt="春華苑名物のパリパリ皿うどん"></div>
+    <div class="fade">
+      <span class="banner">名物</span>
+      <h2>パリパリ皿うどん。</h2>
+      <p>市販の麺よりもしっかりした歯ごたえで、パリッと香ばしく、最後まで美味しい。具材との相性も良く、満足度の高い一皿です。安くて、早くて、何より美味しい。</p>
+      <div class="price-list">
+        <div class="pr"><span class="n">あんかけ焼きそば＋ミニ中華丼</span><span class="v">¥1,060</span></div>
+        <div class="pr"><span class="n">日替わり定食</span><span class="v">驚きの価格</span></div>
+        <div class="pr"><span class="n">ソフトドリンク</span><span class="v">フリー</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <div class="wrap">
+    <h2 class="fade">お客様の声</h2>
+    <div class="v-grid">
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>春華苑さんでパリパリ皿うどんを。市販の麺よりもしっかりした歯ごたえで、パリッと香ばしく、最後まで美味しくいただけました。満足度の高い一皿でした。</p>
+        <div class="who">皿うどんの客</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>この値段でいいの？と驚くほどリーズナブルなのに、味は本格派。日替わり定食は、メイン料理にスープ、副菜まで付いて満足度200%！どのお料理もハズレなし。</p>
+        <div class="who">ランチの常連</div>
+      </div>
+      <div class="v-card fade">
+        <div class="st">★★★★★</div>
+        <p>老舗で人気店。昔、2階で懇親会とか低予算でたっぷり飲んで食べられて使ってました。優しい感じの女性店長さんもグッドポイント。</p>
+        <div class="who">宴会で利用の方</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 案内 -->
+<section class="info">
+  <div class="wrap">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>場所</dt><dd>福岡市早良区・次郎丸（次郎丸駅 徒歩圏内）</dd>
+        <dt>創業</dt><dd>昭和44年の老舗町中華</dd>
+        <dt>名物</dt><dd>パリパリ皿うどん・日替わり定食・あんかけ焼きそば</dd>
+        <dt>宴会</dt><dd>2階「宴会三国志」80名収容・送迎バスあり</dd>
+        <dt>その他</dt><dd>入口に灰皿（椅子付）・お一人様も歓迎</dd>
+      </dl>
+    </div>
+    <div class="cta fade">
+      <span class="k">ご予約・お問い合わせ</span>
+      <a class="telbig" href="tel:092-861-4581">092-861-4581</a>
+      <p>宴会のご相談も、お電話で。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">春華苑</div>
+  <p>福岡市早良区・次郎丸｜創業昭和44年の町中華｜宴会80名・送迎バス・宴会三国志</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.1});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
