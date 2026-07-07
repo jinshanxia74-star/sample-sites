@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>焼鳥はっとり｜夜は焼鳥、昼はラーメン。福岡市早良区の神コスパ焼鳥店</title>
+<meta name="description" content="福岡市早良区・室住団地そばの焼鳥はっとり。夜は大ぶりの炭火焼鳥、昼（火・木・土）は特製しょうゆとんこつと鶏しおの2種のラーメン。天神や西新に行くより満足度MAXと評判のお店です。">
+<meta property="og:title" content="焼鳥はっとり｜夜は焼鳥、昼はラーメン。">
+<meta property="og:description" content="ネタが大きい炭火焼鳥と、火・木・土だけの昼ラーメン。この物価高に神みたいなお店、と評判です。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hattori-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "焼鳥はっとり",
+  "servesCuisine": ["焼鳥", "ラーメン", "居酒屋"],
+  "telephone": "092-518-8830",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市早良区",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Noto+Sans+JP:wght@300;400;500;700&family=Rubik:wght@400;500;700&display=swap');
+
+/* ── 夜の顔（デフォルト） ── */
+:root{
+  --color-bg:#141110;
+  --color-surface:#1e1916;
+  --color-primary:#c73e2d;   /* 提灯赤 */
+  --color-accent:#e8a13a;    /* 炎の金 */
+  --color-text:#f2ead9;
+  --color-text-muted:#a08f7a;
+  --color-line:rgba(232,161,58,.25);
+}
+/* ── 昼の顔 ── */
+body.day{
+  --color-bg:#faf5ea;
+  --color-surface:#f1e7d2;
+  --color-primary:#7a4a26;   /* 醤油茶 */
+  --color-accent:#c98a2e;    /* 鶏しお金 */
+  --color-text:#33291d;
+  --color-text-muted:#8a7960;
+  --color-line:rgba(122,74,38,.25);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:'Noto Sans JP',sans-serif;
+  line-height:1.8;
+  letter-spacing:.05em;
+  transition:background .6s ease,color .6s ease;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Potta One',cursive;font-weight:400;line-height:1.4;}
+.en{font-family:'Rubik',sans-serif;}
+
+/* 昼夜で表示を切り替える要素 */
+.only-day{display:none;}
+body.day .only-day{display:block;}
+body.day .only-night{display:none;}
+
+/* ── ヘッダー ── */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 20px;
+  background:color-mix(in srgb,var(--color-bg) 88%,transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--color-line);
+  transition:background .6s ease;
+}
+.logo{font-family:'Potta One',cursive;font-size:1.2rem;letter-spacing:.1em;}
+.logo small{display:block;font-size:.62rem;letter-spacing:.3em;color:var(--color-text-muted);font-family:'Rubik',sans-serif;}
+.tel-head{
+  font-family:'Rubik',sans-serif;font-weight:500;font-size:.92rem;
+  border:1px solid var(--color-line);border-radius:999px;padding:8px 16px;
+  color:var(--color-accent);
+  transition:background .3s ease,color .3s ease;
+}
+.tel-head:hover{background:var(--color-accent);color:var(--color-bg);}
+
+/* ── 昼夜トグル ── */
+.face-toggle{
+  display:flex;border:2px solid var(--color-accent);border-radius:999px;overflow:hidden;
+  font-size:.85rem;font-weight:700;
+}
+.face-toggle button{
+  font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:.85rem;
+  padding:8px 18px;border:none;cursor:pointer;
+  background:transparent;color:var(--color-text-muted);
+  transition:background .3s ease,color .3s ease;
+}
+.face-toggle button.on{background:var(--color-accent);color:#1c1408;}
+body.day .face-toggle button.on{color:#fff8ec;}
+
+/* ── ヒーロー ── */
+.hero{
+  display:grid;grid-template-columns:5fr 6fr;min-height:78vh;
+  border-bottom:1px solid var(--color-line);
+}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:64px 6vw;}
+.hero-copy .kicker{
+  font-size:.85rem;color:var(--color-accent);font-weight:700;letter-spacing:.2em;margin-bottom:18px;
+}
+.hero-copy h1{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-bottom:22px;}
+.hero-copy h1 .swap{color:var(--color-primary);}
+body:not(.day) .hero-copy h1 .swap{color:var(--color-accent);}
+.hero-copy p{color:var(--color-text-muted);font-size:.97rem;max-width:34em;margin-bottom:30px;}
+.hero-photo{position:relative;min-height:340px;}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+body:not(.day) .hero-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--color-bg) 0%,transparent 24%);
+}
+body.day .hero-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--color-bg) 0%,transparent 24%);
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--color-primary);color:#fff6ea;
+  font-weight:700;font-size:1rem;letter-spacing:.08em;
+  padding:15px 34px;border-radius:999px;
+  transition:transform .3s ease,box-shadow .3s ease;
+  align-self:flex-start;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px color-mix(in srgb,var(--color-primary) 45%,transparent);}
+.btn:active{transform:scale(.98);}
+
+/* ── 二つの顔の帯 ── */
+.two-faces{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--color-line);
+}
+.face-card{padding:56px 5vw;}
+.face-card + .face-card{border-left:1px solid var(--color-line);}
+.face-card h2{font-size:1.5rem;margin-bottom:12px;color:var(--color-accent);}
+.face-card p{font-size:.92rem;color:var(--color-text-muted);}
+.face-card .when{
+  display:inline-block;margin-top:16px;font-size:.8rem;font-weight:700;
+  border:1px solid var(--color-line);border-radius:999px;padding:4px 14px;
+  color:var(--color-text);
+}
+
+/* ── おしながき ── */
+.menu{padding:96px 6vw;max-width:1100px;margin:0 auto;}
+.menu h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:10px;}
+.menu .lead{color:var(--color-text-muted);font-size:.92rem;margin-bottom:52px;}
+.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;}
+.menu-item{
+  padding:26px 4px;border-bottom:1px dashed var(--color-line);
+  display:flex;flex-direction:column;gap:6px;
+}
+.menu-item h3{font-size:1.15rem;}
+.menu-item p{font-size:.84rem;color:var(--color-text-muted);}
+.menu-note{margin-top:36px;font-size:.85rem;color:var(--color-text-muted);}
+.menu-note strong{color:var(--color-accent);font-weight:700;}
+
+/* ── 声 ── */
+.voices{
+  background:var(--color-surface);
+  padding:96px 6vw;
+  transition:background .6s ease;
+}
+.voices-inner{max-width:1000px;margin:0 auto;}
+.voices h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:56px;text-align:center;}
+.voice-row{display:grid;grid-template-columns:1fr 1fr;gap:44px 56px;}
+.voice{border-left:3px solid var(--color-primary);padding-left:22px;}
+.voice p{font-size:.95rem;line-height:2;}
+.voice .who{margin-top:10px;font-size:.75rem;color:var(--color-text-muted);}
+.voice.big{grid-column:1/-1;}
+.voice.big p{font-family:'Potta One',cursive;font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.9;}
+.mid-cta{text-align:center;margin-top:64px;}
+.mid-cta .btn{align-self:center;}
+
+/* ── ご案内 ── */
+.info{padding:96px 6vw;max-width:1100px;margin:0 auto;}
+.info h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:44px;}
+.info-cols{display:grid;grid-template-columns:6fr 5fr;gap:56px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;font-size:.94rem;}
+.info dt{color:var(--color-text-muted);white-space:nowrap;font-weight:500;}
+.head-warning{
+  margin-top:28px;padding:16px 20px;border:1px dashed var(--color-line);border-radius:10px;
+  font-size:.85rem;color:var(--color-text-muted);
+}
+.head-warning strong{color:var(--color-accent);}
+.tel-panel{
+  background:var(--color-surface);border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:48px 28px;gap:10px;
+  border:1px solid var(--color-line);
+  transition:background .6s ease;
+}
+.tel-panel .lead{font-family:'Potta One',cursive;font-size:1.25rem;}
+.tel-panel .sub{font-size:.82rem;color:var(--color-text-muted);}
+.tel-big{
+  font-family:'Rubik',sans-serif;font-weight:700;
+  font-size:clamp(1.9rem,4vw,2.4rem);letter-spacing:.03em;
+  color:var(--color-accent);
+  border-bottom:3px solid var(--color-line);padding-bottom:4px;
+  transition:transform .3s ease;
+}
+.tel-big:hover{transform:translateY(-2px);}
+
+footer{padding:34px 20px 44px;text-align:center;border-top:1px solid var(--color-line);}
+footer .m{font-family:'Potta One',cursive;font-size:1.1rem;margin-bottom:6px;}
+footer p{font-size:.75rem;color:var(--color-text-muted);}
+
+/* ── フェード ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+  body,.voices,.tel-panel,header{transition:none;}
+}
+
+/* ── レスポンシブ ── */
+@media (max-width:1024px){
+  .hero{grid-template-columns:1fr 1fr;}
+  .menu-list{gap:0 36px;}
+}
+@media (max-width:768px){
+  header{flex-wrap:wrap;}
+  .face-toggle{order:3;width:100%;justify-content:center;}
+  .face-toggle button{flex:1;}
+  .hero{grid-template-columns:1fr;min-height:0;}
+  .hero-photo{min-height:300px;order:-1;}
+  body:not(.day) .hero-photo::after,body.day .hero-photo::after{
+    background:linear-gradient(0deg,var(--color-bg) 0%,transparent 30%);
+  }
+  .hero-copy{padding:44px 6vw 56px;}
+  .two-faces{grid-template-columns:1fr;}
+  .face-card + .face-card{border-left:none;border-top:1px solid var(--color-line);}
+  .menu-list{grid-template-columns:1fr;}
+  .voice-row{grid-template-columns:1fr;gap:36px;}
+  .info-cols{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  .hero-copy h1{font-size:1.9rem;}
+  .menu,.voices,.info{padding-left:5vw;padding-right:5vw;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">焼鳥はっとり<small>YAKITORI HATTORI</small></div>
+  <div class="face-toggle" role="group" aria-label="昼と夜の表示切替">
+    <button type="button" id="btn-night" class="on">夜の焼鳥</button>
+    <button type="button" id="btn-day">昼のラーメン</button>
+  </div>
+  <a class="tel-head" href="tel:092-518-8830">092-518-8830</a>
+</header>
+
+<!-- ヒーロー：昼夜で丸ごと入れ替わる -->
+<section class="hero">
+  <div class="hero-copy">
+    <div class="only-night">
+      <p class="kicker">夜、18時から。売り切れ仕舞い。</p>
+      <h1>ネタが、<span class="swap">でかい。</span><br>値段は、やさしい。</h1>
+      <p>焼きおにぎりまで大きい炭火焼鳥。「この物価高なのに神みたいなお店」と言われる室住団地そばの一軒です。天神や西新に出るより、満足度はこちらが上かもしれません。</p>
+    </div>
+    <div class="only-day">
+      <p class="kicker">昼は火・木・土だけ。11:30〜13:30。</p>
+      <h1>焼鳥屋が本気で<br>つくる<span class="swap">昼ラーメン。</span></h1>
+      <p>特製しょうゆとんこつと鶏しお、スープだけでもメニューになるくらいの2本立て。つるつるモチモチの平打ち麺は、ずっと噛んでいたくなる評判の一杯です。</p>
+    </div>
+    <a class="btn" href="tel:092-518-8830">電話で席をたしかめる</a>
+  </div>
+  <div class="hero-photo">
+    <div class="only-night" style="position:absolute;inset:0;">
+      <!-- Canva生成画像 -->
+      <img src="hattori-hero.png" alt="炭火の上で焼かれる大ぶりの焼鳥" loading="eager">
+    </div>
+    <div class="only-day" style="position:absolute;inset:0;">
+      <!-- Canva生成画像 -->
+      <img src="hattori-menu-01.png" alt="特製しょうゆとんこつラーメン" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- 二つの顔 -->
+<section class="two-faces">
+  <div class="face-card fade">
+    <h2>夜の顔は、炭火焼鳥。</h2>
+    <p>まず串が大きい。焼きおにぎりも大きい。それでいて価格はお手頃。家族連れなら奥の席へどうぞ。</p>
+    <span class="when">18:00ごろから・売り切れ仕舞い・日曜定休</span>
+  </div>
+  <div class="face-card fade">
+    <h2>昼の顔は、ラーメン。</h2>
+    <p>週3日だけ現れるもうひとつの顔。2種類のラーメンはどちらもこだわりの丁寧な味、と評判です。</p>
+    <span class="when">火・木・土のみ 11:30〜13:30</span>
+  </div>
+</section>
+
+<!-- おしながき -->
+<section class="menu">
+  <h2 class="only-night">夜のおしながき</h2>
+  <h2 class="only-day">昼のおしながき</h2>
+  <p class="lead only-night">大きなネタの炭火焼鳥を中心に。仕入れで変わるので、当日のお楽しみもあります。</p>
+  <p class="lead only-day">昼は潔く、麺で勝負。2つのスープはどちらも主役です。</p>
+
+  <div class="only-night">
+    <div class="menu-list">
+      <div class="menu-item fade"><h3>炭火焼鳥 いろいろ</h3><p>とにかくネタが大きい、と口コミで評判の看板。おまかせでどうぞ。</p></div>
+      <div class="menu-item fade"><h3>大きな焼きおにぎり</h3><p>串と同じく「大きい！」の声多数。〆の定番です。</p></div>
+      <div class="menu-item fade"><h3>季節の一品</h3><p>その日の仕入れでご用意。カウンターで大将に聞くのが早いです。</p></div>
+      <div class="menu-item fade"><h3>お酒 各種</h3><p>焼鳥に合う定番をひと通り。</p></div>
+    </div>
+    <p class="menu-note"><strong>神コスパ宣言。</strong>「この物価高なのに価格もお手頃でホント神みたいなお店」…口コミのこの一文が、夜のはっとりの全部です。</p>
+  </div>
+
+  <div class="only-day">
+    <div class="menu-list">
+      <div class="menu-item fade"><h3>特製しょうゆとんこつラーメン</h3><p>コクのあるスープに、つるつるモチモチの平打ち麺。チャーシューと煮卵も評判です。</p></div>
+      <div class="menu-item fade"><h3>鶏しおラーメン</h3><p>もう一本の柱。「スープだけでもメニューになるくらい」と言われる丁寧な味。</p></div>
+    </div>
+    <p class="menu-note"><strong>2杯はしごの人、います。</strong>「2種類のラーメンが食べられて、どちらもこだわりが感じられる」という口コミも。麺はそれぞれ違います。</p>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <div class="voices-inner">
+    <h2>のれんをくぐった人の声</h2>
+    <div class="voice-row">
+      <div class="voice big fade">
+        <p>「天神や西新行くより、こちらのお店に行った方が満足度MAX間違えないです！」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「焼鳥のネタがまず大きい！焼きおにぎり含め大きい！！そして、美味しい！」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「麺は自家製麺とのことで、平打ち細麺でつるつるモチモチして、ずっと噛んでいたいくらい」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「店主さんも優しい方で感じ良かったです。又、行きたいお店です。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「ただ入り口が低いのが難点です(笑)」</p>
+        <p class="who">Googleの口コミより。頭上にはご注意を。</p>
+      </div>
+    </div>
+    <div class="mid-cta fade">
+      <a class="btn" href="tel:092-518-8830">今夜の焼鳥を予約する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <h2>ご案内</h2>
+  <div class="info-cols">
+    <div class="fade">
+      <dl>
+        <dt>店名</dt><dd>焼鳥はっとり</dd>
+        <dt>場所</dt><dd>福岡市早良区（室住団地そば）</dd>
+        <dt>夜</dt><dd>18:00ごろから・売り切れ仕舞い</dd>
+        <dt>昼</dt><dd>火・木・土のみ 11:30〜13:30（ラーメン）</dd>
+        <dt>定休日</dt><dd>日曜（最新の営業はお電話でご確認ください）</dd>
+        <dt>駐車場</dt><dd>店舗裏に3台</dd>
+        <dt>お席</dt><dd>カウンターほか、奥に家族で使える席も</dd>
+      </dl>
+      <div class="head-warning">
+        <strong>ご来店のコツ：</strong>入り口が低いのが名物です。くぐるとき、頭にだけご注意ください。それも「特別感があってイイ感じ」と言われています。
+      </div>
+    </div>
+    <div class="tel-panel fade">
+      <p class="lead">売り切れる前に、一本。</p>
+      <p class="sub">夜は売り切れ仕舞いです。確実なのはお電話。</p>
+      <a class="tel-big" href="tel:092-518-8830">092-518-8830</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">焼鳥はっとり</div>
+  <p>福岡市早良区｜夜は炭火焼鳥・昼（火木土）はラーメン｜日曜定休</p>
+</footer>
+
+<script>
+// 昼夜切替
+const body=document.body;
+const bn=document.getElementById('btn-night');
+const bd=document.getElementById('btn-day');
+function setFace(day){
+  body.classList.toggle('day',day);
+  bn.classList.toggle('on',!day);
+  bd.classList.toggle('on',day);
+}
+bn.addEventListener('click',()=>setFace(false));
+bd.addEventListener('click',()=>setFace(true));
+
+// フェードイン
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
