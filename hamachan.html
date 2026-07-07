@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>居酒屋はまちゃん｜藤崎駅徒歩1分・季節ごとにメニューが変わる家庭派居酒屋（福岡市早良区祖原）</title>
+<meta name="description" content="藤崎駅から徒歩1分、福岡市早良区祖原の居酒屋はまちゃん。卵黄で食べる胡麻カンパチ、お任せ串、季節ごとに変わる旬のメニュー。子供メニューもあり家族でも。宴会は最大20名。">
+<meta property="og:title" content="居酒屋はまちゃん｜季節が変わると、はまちゃんも変わる。">
+<meta property="og:description" content="卵黄で食べる胡麻カンパチと、季節ごとに替わる品書き。藤崎駅徒歩1分の明るい居酒屋です。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hamachan-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "居酒屋はまちゃん",
+  "servesCuisine": ["居酒屋", "串焼き", "海鮮"],
+  "telephone": "092-600-2160",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市早良区",
+    "streetAddress": "祖原",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Noto+Sans+JP:wght@300;400;500;700&family=Fredoka:wght@400;500;600&display=swap');
+
+:root{
+  --color-bg:#f8f4ec;      /* 生成り */
+  --color-surface:#efe8d9;
+  --color-primary:#b5653a; /* 柿茶 */
+  --color-text:#2b2723;    /* 墨 */
+  --color-text-muted:#847a6a;
+  --color-line:rgba(43,39,35,.18);
+  --season:#4a8ba6;        /* 季節差し色（初期=夏） */
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:'Noto Sans JP',sans-serif;
+  line-height:1.85;
+  letter-spacing:.05em;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Darumadrop One',cursive;font-weight:400;line-height:1.45;}
+.en{font-family:'Fredoka',sans-serif;}
+
+/* ── ヘッダー ── */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:13px 22px;
+  background:rgba(248,244,236,.93);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--color-line);
+}
+.logo{font-family:'Darumadrop One',cursive;font-size:1.3rem;letter-spacing:.08em;}
+.logo small{display:block;font-size:.6rem;letter-spacing:.28em;color:var(--color-text-muted);font-family:'Fredoka',sans-serif;}
+.tel-head{
+  font-family:'Fredoka',sans-serif;font-weight:500;font-size:.95rem;
+  border:1.5px solid var(--color-primary);border-radius:999px;padding:7px 17px;
+  color:var(--color-primary);
+  transition:background .3s ease,color .3s ease;
+}
+.tel-head:hover{background:var(--color-primary);color:#fdf9f1;}
+
+/* ── ヒーロー ── */
+.hero{display:grid;grid-template-columns:6fr 5fr;min-height:74vh;border-bottom:1px solid var(--color-line);}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 6vw;}
+.hero-copy .kicker{
+  display:inline-block;align-self:flex-start;
+  font-size:.8rem;font-weight:700;letter-spacing:.12em;
+  background:var(--color-primary);color:#fdf9f1;
+  border-radius:999px;padding:5px 16px;margin-bottom:22px;
+}
+.hero-copy h1{font-size:clamp(2.1rem,4.6vw,3.3rem);margin-bottom:22px;}
+.hero-copy h1 span{color:var(--color-primary);}
+.hero-copy p{color:var(--color-text-muted);font-size:.97rem;max-width:33em;margin-bottom:30px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--color-primary);color:#fdf9f1;
+  font-weight:700;font-size:1rem;letter-spacing:.08em;
+  padding:15px 34px;border-radius:999px;
+  transition:transform .3s ease,box-shadow .3s ease;
+  align-self:flex-start;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(181,101,58,.4);}
+.btn:active{transform:scale(.98);}
+.hero-photo{position:relative;min-height:340px;}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo .caption{
+  position:absolute;left:0;bottom:0;
+  background:rgba(43,39,35,.82);color:#f5efe3;
+  font-size:.8rem;padding:10px 18px;border-radius:0 10px 0 0;
+}
+
+/* ── 看板の定番 ── */
+.teiban{padding:96px 6vw;max-width:1100px;margin:0 auto;}
+.teiban-grid{display:grid;grid-template-columns:6fr 5fr;gap:56px;align-items:center;}
+.teiban h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:24px;}
+.teiban ul{list-style:none;}
+.teiban li{padding:17px 4px;border-bottom:1px dashed var(--color-line);}
+.teiban li strong{font-family:'Darumadrop One',cursive;font-size:1.15rem;display:block;}
+.teiban li span{font-size:.85rem;color:var(--color-text-muted);}
+.teiban-photo{border-radius:14px;overflow:hidden;box-shadow:0 16px 40px rgba(43,39,35,.2);}
+
+/* ── 四季の暦 ── */
+.koyomi{background:var(--color-surface);padding:100px 6vw;}
+.koyomi-inner{max-width:1000px;margin:0 auto;text-align:center;}
+.koyomi h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:12px;}
+.koyomi .lead{color:var(--color-text-muted);font-size:.92rem;margin-bottom:48px;}
+.season-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap;}
+.season-tabs button{
+  font-family:'Darumadrop One',cursive;font-size:1.1rem;letter-spacing:.1em;
+  padding:12px 30px;border-radius:999px;cursor:pointer;
+  border:2px solid var(--color-line);
+  background:#fdfaf3;color:var(--color-text-muted);
+  transition:all .3s ease;
+}
+.season-tabs button.on{
+  border-color:var(--season);
+  background:var(--season);
+  color:#fdfaf3;
+  transform:translateY(-2px);
+}
+.koyomi-card{
+  background:#fdfaf3;
+  border:2px solid var(--season);
+  border-radius:18px;
+  padding:52px 6vw 44px;
+  text-align:left;
+  max-width:760px;margin:0 auto;
+  position:relative;
+  transition:border-color .4s ease;
+}
+.koyomi-card .stamp{
+  position:absolute;top:-24px;left:32px;
+  font-family:'Darumadrop One',cursive;font-size:1.3rem;
+  background:var(--season);color:#fdfaf3;
+  border-radius:12px;padding:6px 22px;
+  transition:background .4s ease;
+}
+.season-panel{display:none;}
+.season-panel.on{display:block;}
+.season-panel h3{font-size:1.35rem;margin-bottom:14px;color:var(--color-text);}
+.season-panel h3 b{color:var(--season);transition:color .4s ease;}
+.season-panel p{font-size:.93rem;color:var(--color-text-muted);margin-bottom:12px;}
+.season-panel .quote{
+  border-left:3px solid var(--season);
+  padding-left:16px;margin-top:18px;
+  font-size:.9rem;line-height:2;color:var(--color-text);
+  transition:border-color .4s ease;
+}
+.season-panel .quote small{display:block;color:var(--color-text-muted);font-size:.72rem;margin-top:4px;}
+.koyomi-note{margin-top:34px;font-size:.85rem;color:var(--color-text-muted);}
+
+/* ── 声 ── */
+.voices{padding:96px 6vw;max-width:1000px;margin:0 auto;}
+.voices h2{font-size:clamp(1.7rem,3.2vw,2.4rem);text-align:center;margin-bottom:56px;}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 52px;}
+.voice{background:#fdfaf3;border-radius:14px;padding:28px 26px;border:1px solid var(--color-line);}
+.voice.wide{grid-column:1/-1;text-align:center;border:none;background:none;}
+.voice.wide p{font-family:'Darumadrop One',cursive;font-size:clamp(1.3rem,2.8vw,1.8rem);line-height:1.9;}
+.voice p{font-size:.93rem;line-height:2;}
+.voice .who{margin-top:10px;font-size:.74rem;color:var(--color-text-muted);}
+
+/* ── 家族・宴会帯 ── */
+.family{
+  background:var(--color-primary);color:#fdf6ec;
+  padding:64px 6vw;
+}
+.family-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:36px;}
+.family-item h3{font-size:1.2rem;margin-bottom:8px;}
+.family-item p{font-size:.86rem;opacity:.85;}
+
+/* ── ご案内 ── */
+.info{padding:96px 6vw;max-width:1080px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:6fr 5fr;gap:56px;}
+.info h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:36px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;font-size:.94rem;}
+.info dt{color:var(--color-text-muted);white-space:nowrap;}
+.nabe-note{
+  margin-top:28px;padding:18px 22px;
+  background:#fdfaf3;border:1.5px dashed var(--color-primary);border-radius:14px;
+  font-size:.86rem;color:var(--color-text-muted);
+}
+.nabe-note strong{color:var(--color-primary);}
+.tel-panel{
+  background:#2b2723;color:#f5efe3;border-radius:18px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:52px 30px;gap:10px;
+}
+.tel-panel .lead{font-family:'Darumadrop One',cursive;font-size:1.3rem;}
+.tel-panel .sub{font-size:.8rem;opacity:.7;}
+.tel-big{
+  font-family:'Fredoka',sans-serif;font-weight:600;
+  font-size:clamp(1.9rem,4vw,2.4rem);letter-spacing:.03em;
+  color:#e8b46a;
+  border-bottom:3px solid rgba(232,180,106,.45);padding-bottom:4px;
+  transition:transform .3s ease;
+}
+.tel-big:hover{transform:translateY(-2px);}
+
+footer{padding:34px 20px 46px;text-align:center;border-top:1px solid var(--color-line);}
+footer .m{font-family:'Darumadrop One',cursive;font-size:1.2rem;margin-bottom:6px;}
+footer p{font-size:.75rem;color:var(--color-text-muted);}
+
+/* ── フェード ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+  .season-tabs button,.koyomi-card,.koyomi-card .stamp{transition:none;}
+}
+
+/* ── レスポンシブ ── */
+@media (max-width:1024px){
+  .teiban-grid,.info-grid{gap:36px;}
+  .family-inner{gap:24px;}
+}
+@media (max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:0;}
+  .hero-photo{min-height:300px;order:-1;}
+  .hero-copy{padding:44px 6vw 56px;}
+  .teiban-grid{grid-template-columns:1fr;}
+  .teiban-photo{order:-1;}
+  .voice-grid{grid-template-columns:1fr;}
+  .family-inner{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+  .koyomi-card{padding:44px 24px 36px;}
+}
+@media (max-width:480px){
+  .hero-copy h1{font-size:1.9rem;}
+  .season-tabs button{padding:10px 20px;font-size:1rem;}
+  .teiban,.voices,.info,.koyomi{padding-left:5vw;padding-right:5vw;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">居酒屋はまちゃん<small>IZAKAYA HAMACHAN</small></div>
+  <a class="tel-head" href="tel:092-600-2160">092-600-2160</a>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-copy">
+    <span class="kicker">藤崎駅から徒歩1分</span>
+    <h1>季節が変わると、<br><span>はまちゃん</span>も変わる。</h1>
+    <p>旬のメニューが季節ごとに替わるから、「毎回行くのが楽しみ」と言われる居酒屋です。入口を開けるなり明るい大将と、何を頼んでも外さない品書きでお待ちしています。</p>
+    <a class="btn" href="tel:092-600-2160">今夜の席を電話で聞く</a>
+  </div>
+  <div class="hero-photo">
+    <!-- Canva生成画像 -->
+    <img src="hamachan-hero.png" alt="卵黄で食べる胡麻カンパチ" loading="eager">
+    <span class="caption">名物・卵黄で食べる胡麻カンパチ</span>
+  </div>
+</section>
+
+<!-- 看板の定番 -->
+<section class="teiban">
+  <div class="teiban-grid">
+    <div class="fade">
+      <h2>季節が替わっても、これは残る。</h2>
+      <ul>
+        <li><strong>卵黄で食べる胡麻カンパチ</strong><span>「特に美味しい」「めちゃくちゃ美味しい」と口コミが集中する看板。まずはこれ。</span></li>
+        <li><strong>串焼き おまかせ</strong><span>普通の串よりひと工夫。おまかせ10本でどうぞ。</span></li>
+        <li><strong>キンキンのビール</strong><span>「グラスがこれでもかとキンキンに冷えてて最高」。乾杯はぜひ。</span></li>
+        <li><strong>〆いろいろ</strong><span>焼きおにぎり、お茶漬け、子供にも人気の塩ラーメン。</span></li>
+      </ul>
+    </div>
+    <div class="teiban-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="hamachan-menu-01.png" alt="おまかせの串焼きと冷えたビール" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 四季の暦 -->
+<section class="koyomi" id="koyomi">
+  <div class="koyomi-inner">
+    <h2 class="fade">口コミでたどる、はまちゃんの四季。</h2>
+    <p class="lead fade">実際に来た人の声から、季節の楽しみを拾いました。今の品書きはカウンターでどうぞ。</p>
+
+    <div class="season-tabs fade" role="tablist" aria-label="季節の切替">
+      <button type="button" data-s="spring">春</button>
+      <button type="button" data-s="summer" class="on">夏</button>
+      <button type="button" data-s="autumn">秋</button>
+      <button type="button" data-s="winter">冬</button>
+    </div>
+
+    <div class="koyomi-card fade">
+      <span class="stamp" id="stamp">夏</span>
+
+      <div class="season-panel" data-s="spring">
+        <h3>春は、<b>替わりたての品書き</b>から。</h3>
+        <p>旬のメニューが替わる季節の始まり。「季節によってメニューが変わるので、私の好きなニラ豚はありませんでした！が！」と、お目当てが替わっていてもすぐ次の推しが見つかるのがはまちゃんです。</p>
+        <div class="quote">「旬のメニューもあり季節ごとに変わるので、毎回行くのが楽しみです♪」<small>Googleの口コミより</small></div>
+      </div>
+
+      <div class="season-panel on" data-s="summer">
+        <h3>夏は、<b>キンキンのビール</b>と。</h3>
+        <p>これでもかと冷えたグラスのビールに、トマトスライスやナスの煮浸しのような、するっと入る一品を。串は夏も変わらずおまかせで。</p>
+        <div class="quote">「ビールのグラスがこれでもかとキンキンに冷えてて最高でした！！」<small>Googleの口コミより</small></div>
+      </div>
+
+      <div class="season-panel" data-s="autumn">
+        <h3>秋は、<b>大根の唐揚げ</b>という発見。</h3>
+        <p>「大根…？特に好きじゃないな…と思っていた私を殴りたい！なんなら1番美味しかった！」という口コミを生んだ一品も、季節の品書きから生まれました。次の意外な主役を探しに来てください。</p>
+        <div class="quote">「おすすめメニューは絶対頼んだ方がいいと思います！」<small>Googleの口コミより</small></div>
+      </div>
+
+      <div class="season-panel" data-s="winter">
+        <h3>冬は、<b>ねぎしゃぶ鍋</b>の予約から。</h3>
+        <p>2日前までの予約制。「ネギがネギ臭くなくて最高に美味しい」と評判の冬の主役です。湯豆腐やおでんの盛り合わせ、正月限定の刺身盛りも冬の楽しみ。〆はうどんか雑炊で。</p>
+        <div class="quote">「ねぎしゃぶ鍋を予約して実食しましたがネギがネギ臭くなくて最高に美味しい❗」<small>Googleの口コミより</small></div>
+      </div>
+    </div>
+
+    <p class="koyomi-note fade">季節の品書きは仕入れで替わります。「今、何がおすすめ？」の一言から始めてください。</p>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <h2 class="fade">のれんをくぐった人の声</h2>
+  <div class="voice-grid">
+    <div class="voice wide fade">
+      <p>「何を食べても美味しく、大正解なお店でした！」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「一品一品盛り付けがキレイで食べるのがもったいないくらい。とても美味しかったです」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「とにかくお店の方が入口を開けるなり明るくて感じが良く、誰もが釣られて入店しそうです」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「からあげの味付けすごく美味しくてびっくりしました。子供も食べれるメニューがあるのは大変助かります！！」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「ニラ豚（普通の串より工夫してあるのが嬉しい）がめちゃくちゃ美味しかったです！」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+  </div>
+</section>
+
+<!-- 家族・宴会帯 -->
+<section class="family">
+  <div class="family-inner">
+    <div class="family-item fade">
+      <h3>家族で。</h3>
+      <p>ポテト・からあげ・麺と、子供が食べられるメニューがあります。塩ラーメンをおかわりした子も。</p>
+    </div>
+    <div class="family-item fade">
+      <h3>ふたりで。</h3>
+      <p>カウンターで大将と話しながら。胡麻カンパチと日本酒の相性は口コミお墨付きです。</p>
+    </div>
+    <div class="family-item fade">
+      <h3>宴会で。</h3>
+      <p>掘りごたつ・座敷で最大20名まで。ねぎしゃぶ鍋の宴会は2日前までにご予約を。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <div class="info-grid">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>店名</dt><dd>居酒屋はまちゃん</dd>
+        <dt>場所</dt><dd>福岡市早良区祖原（藤崎駅から徒歩1分）</dd>
+        <dt>電話</dt><dd>092-600-2160</dd>
+        <dt>営業</dt><dd>夜営業（詳しくはお電話でご確認ください）</dd>
+        <dt>お席</dt><dd>カウンター・掘りごたつ・座敷（宴会最大20名）</dd>
+      </dl>
+      <div class="nabe-note">
+        <strong>ねぎしゃぶ鍋は2日前まで。</strong>冬の看板鍋は予約制です。日にちが決まったら、先にお電話ください。
+      </div>
+    </div>
+    <div class="tel-panel fade">
+      <p class="lead">今の季節の品書き、聞いてみませんか。</p>
+      <p class="sub">席の確認も、鍋の予約も、一本で。</p>
+      <a class="tel-big" href="tel:092-600-2160">092-600-2160</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">居酒屋はまちゃん</div>
+  <p>福岡市早良区祖原｜藤崎駅徒歩1分｜季節替わりの品書きと串焼き・胡麻カンパチ</p>
+</footer>
+
+<script>
+// 季節タブ
+const seasons={spring:'#d98ba3',summer:'#4a8ba6',autumn:'#c07a2e',winter:'#5c6b8a'};
+const names={spring:'春',summer:'夏',autumn:'秋',winter:'冬'};
+const tabs=document.querySelectorAll('.season-tabs button');
+const panels=document.querySelectorAll('.season-panel');
+const stamp=document.getElementById('stamp');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  const s=t.dataset.s;
+  document.documentElement.style.setProperty('--season',seasons[s]);
+  tabs.forEach(b=>b.classList.toggle('on',b===t));
+  panels.forEach(p=>p.classList.toggle('on',p.dataset.s===s));
+  stamp.textContent=names[s];
+}));
+
+// フェードイン
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
