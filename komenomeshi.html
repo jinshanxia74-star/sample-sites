@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>いつも月よに米のめし｜西新・祖原の魚と酒の小箱居酒屋（朝まで営業）</title>
+<meta name="description" content="福岡市早良区祖原・西新エリアの寿司居酒屋「いつも月よに米のめし」。店主が旬の魚を持ってきて、刺身・半生フライ・握りと食べ方を選べる小さなお店。名物アジフライと自家製タルタル。朝まで営業。">
+<meta property="og:title" content="いつも月よに米のめし｜一尾の魚に、食べ方は三つ。">
+<meta property="og:description" content="店主が「このお魚、旬です」と持ってくる。刺身か、半生フライか、握りか。西新の小箱居酒屋。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="komenomeshi-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "いつも月よに米のめし",
+  "servesCuisine": ["寿司", "居酒屋", "海鮮"],
+  "telephone": "092-831-5121",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市早良区",
+    "streetAddress": "祖原",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  }
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=Noto+Serif+JP:wght@300;400;500&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+  --color-bg:#f7f2e7;       /* 生成り */
+  --color-surface:#efe6d2;  /* 白木 */
+  --color-primary:#2b4a66;  /* 藍のれん */
+  --color-accent:#e3b23c;   /* タルタル黄 */
+  --color-text:#2a2620;     /* 墨 */
+  --color-text-muted:#7d7462;
+  --color-line:rgba(43,74,102,.28);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:'Noto Serif JP',serif;
+  font-weight:400;
+  line-height:1.9;
+  letter-spacing:.05em;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Kaisei HarunoUmi',serif;font-weight:700;line-height:1.5;}
+.en{font-family:'Spectral',serif;}
+
+/* ── ヘッダー ── */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 22px;
+  background:rgba(247,242,231,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--color-line);
+}
+.logo{font-family:'Kaisei HarunoUmi',serif;font-weight:700;font-size:1.05rem;letter-spacing:.12em;}
+.logo small{display:block;font-size:.6rem;letter-spacing:.26em;color:var(--color-text-muted);font-family:'Spectral',serif;}
+.tel-head{
+  font-family:'Spectral',serif;font-size:.95rem;
+  border:1px solid var(--color-primary);border-radius:999px;padding:7px 18px;
+  color:var(--color-primary);
+  transition:background .3s ease,color .3s ease;
+}
+.tel-head:hover{background:var(--color-primary);color:#f7f2e7;}
+
+/* ── ヒーロー ── */
+.hero{display:grid;grid-template-columns:6fr 5fr;min-height:74vh;border-bottom:1px solid var(--color-line);}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 6vw;}
+.hero-copy .kicker{font-size:.82rem;letter-spacing:.24em;color:var(--color-primary);margin-bottom:20px;}
+.hero-copy h1{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:24px;}
+.hero-copy h1 em{font-style:normal;color:var(--color-primary);}
+.hero-copy p{color:var(--color-text-muted);font-size:.96rem;max-width:32em;margin-bottom:32px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--color-primary);color:#f7f2e7;
+  font-family:'Noto Serif JP',serif;font-weight:500;font-size:.98rem;letter-spacing:.1em;
+  padding:15px 36px;border-radius:4px;
+  transition:transform .3s ease,box-shadow .3s ease;
+  align-self:flex-start;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(43,74,102,.35);}
+.btn:active{transform:scale(.98);}
+.hero-photo{position:relative;min-height:340px;}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+
+/* ── 分岐フローチャート ── */
+.flow{padding:100px 6vw 90px;max-width:1080px;margin:0 auto;text-align:center;}
+.flow h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:14px;}
+.flow .lead{color:var(--color-text-muted);font-size:.92rem;margin-bottom:60px;}
+.node{
+  display:inline-block;
+  background:#fffdf6;
+  border:1.5px solid var(--color-primary);
+  border-radius:10px;
+  padding:22px 40px;
+  box-shadow:3px 4px 0 rgba(43,74,102,.18);
+  position:relative;
+}
+.node.today{transform:rotate(-1deg);}
+.node.today .en{display:block;font-size:.7rem;letter-spacing:.22em;color:var(--color-text-muted);}
+.node.today strong{font-family:'Kaisei HarunoUmi',serif;font-size:1.5rem;}
+/* 目印の付箋 */
+.node.today::after{
+  content:'旬';
+  position:absolute;top:-16px;right:-16px;
+  width:38px;height:38px;border-radius:50%;
+  background:var(--color-accent);color:#3a2f12;
+  font-family:'Kaisei HarunoUmi',serif;font-weight:700;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+  transform:rotate(8deg);
+}
+/* 接続線 */
+.trunk{width:2px;height:44px;margin:0 auto;background:none;border-left:2px dashed var(--color-line);}
+.spread{position:relative;height:34px;max-width:720px;margin:0 auto;}
+.spread::before{
+  content:'';position:absolute;top:0;left:16.6%;right:16.6%;
+  border-top:2px dashed var(--color-line);
+}
+.spread::after{content:'';}
+.spread .drop{
+  position:absolute;top:0;width:2px;height:34px;border-left:2px dashed var(--color-line);
+}
+.spread .d1{left:16.6%;}
+.spread .d2{left:50%;}
+.spread .d3{right:16.6%;margin-right:-2px;}
+.branches{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;max-width:860px;margin:0 auto;}
+.branch{
+  background:#fffdf6;
+  border:1.5px solid var(--color-line);
+  border-radius:10px;
+  padding:28px 22px;
+  box-shadow:3px 4px 0 rgba(43,74,102,.12);
+  text-align:left;
+}
+.branch:nth-child(1){transform:rotate(-.6deg);}
+.branch:nth-child(2){transform:rotate(.5deg);border-color:var(--color-accent);box-shadow:3px 4px 0 rgba(227,178,60,.35);}
+.branch:nth-child(3){transform:rotate(-.4deg);}
+.branch h3{font-size:1.2rem;margin-bottom:8px;color:var(--color-primary);}
+.branch:nth-child(2) h3{color:#9a7314;}
+.branch p{font-size:.84rem;color:var(--color-text-muted);}
+.flow-note{
+  margin:56px auto 0;max-width:40em;
+  font-size:.94rem;
+  border-top:1px solid var(--color-line);
+  padding-top:26px;
+}
+.flow-note strong{color:var(--color-primary);}
+
+/* ── アジフライ特集 ── */
+.ajifry{background:var(--color-surface);padding:100px 6vw;}
+.ajifry-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center;}
+.ajifry-photo{border-radius:8px;overflow:hidden;box-shadow:0 16px 40px rgba(42,38,32,.22);}
+.ajifry h2{font-size:clamp(1.7rem,3.2vw,2.4rem);margin-bottom:20px;}
+.ajifry blockquote{
+  font-family:'Kaisei HarunoUmi',serif;
+  font-size:1.15rem;line-height:2;
+  border-left:3px solid var(--color-accent);
+  padding-left:20px;margin-bottom:16px;
+}
+.ajifry .src{font-size:.75rem;color:var(--color-text-muted);margin-bottom:24px;}
+.ajifry p.body{font-size:.94rem;color:var(--color-text-muted);}
+
+/* ── 小さなお品書き ── */
+.kobako{padding:100px 6vw;max-width:1080px;margin:0 auto;}
+.kobako-grid{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center;}
+.kobako-photo{border-radius:8px;overflow:hidden;box-shadow:0 16px 40px rgba(42,38,32,.18);}
+.kobako h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:24px;}
+.kobako ul{list-style:none;}
+.kobako li{
+  padding:16px 4px;border-bottom:1px dashed var(--color-line);
+  font-size:.95rem;display:flex;flex-direction:column;gap:2px;
+}
+.kobako li strong{font-family:'Kaisei HarunoUmi',serif;font-size:1.05rem;}
+.kobako li span{font-size:.82rem;color:var(--color-text-muted);}
+.kobako .mid-cta{margin-top:34px;}
+
+/* ── 声 ── */
+.voices{background:var(--color-surface);padding:96px 6vw;}
+.voices-inner{max-width:960px;margin:0 auto;}
+.voices h2{font-size:clamp(1.6rem,3vw,2.2rem);text-align:center;margin-bottom:56px;}
+.voice-list{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px;}
+.voice{border-top:2px solid var(--color-primary);padding-top:18px;}
+.voice p{font-size:.93rem;line-height:2;}
+.voice .who{margin-top:10px;font-size:.74rem;color:var(--color-text-muted);}
+.voice.wide{grid-column:1/-1;text-align:center;border-top:none;}
+.voice.wide p{font-family:'Kaisei HarunoUmi',serif;font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:2;}
+
+/* ── ご案内 ── */
+.info{padding:100px 6vw;max-width:1080px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:6fr 5fr;gap:56px;}
+.info h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:36px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;font-size:.94rem;}
+.info dt{color:var(--color-text-muted);white-space:nowrap;}
+.night-owl{
+  margin-top:28px;padding:18px 22px;
+  background:#fffdf6;border:1.5px dashed var(--color-line);border-radius:10px;
+  font-size:.86rem;color:var(--color-text-muted);
+}
+.night-owl strong{color:var(--color-primary);}
+.tel-panel{
+  background:var(--color-primary);color:#f2ede0;border-radius:12px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:52px 30px;gap:10px;
+}
+.tel-panel .lead{font-family:'Kaisei HarunoUmi',serif;font-size:1.25rem;}
+.tel-panel .sub{font-size:.8rem;opacity:.75;}
+.tel-big{
+  font-family:'Spectral',serif;font-weight:500;
+  font-size:clamp(1.9rem,4vw,2.4rem);letter-spacing:.03em;
+  color:var(--color-accent);
+  border-bottom:2px solid rgba(227,178,60,.5);padding-bottom:4px;
+  transition:transform .3s ease;
+}
+.tel-big:hover{transform:translateY(-2px);}
+
+footer{padding:34px 20px 46px;text-align:center;border-top:1px solid var(--color-line);}
+footer .m{font-family:'Kaisei HarunoUmi',serif;font-weight:700;font-size:1.05rem;margin-bottom:6px;}
+footer p{font-size:.75rem;color:var(--color-text-muted);}
+
+/* ── フェード ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ── レスポンシブ ── */
+@media (max-width:1024px){
+  .ajifry-inner,.kobako-grid{gap:36px;}
+}
+@media (max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:0;}
+  .hero-photo{min-height:300px;order:-1;}
+  .hero-copy{padding:44px 6vw 56px;}
+  .spread{display:none;}
+  .branches{grid-template-columns:1fr;max-width:420px;}
+  .branch{transform:none !important;}
+  .branch + .branch{margin-top:6px;}
+  .trunk{height:32px;}
+  .ajifry-inner,.kobako-grid{grid-template-columns:1fr;}
+  .voice-list{grid-template-columns:1fr;gap:32px;}
+  .info-grid{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  .hero-copy h1{font-size:1.8rem;}
+  .node{padding:18px 26px;}
+  .flow,.ajifry,.kobako,.voices,.info{padding-left:5vw;padding-right:5vw;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">いつも月よに米のめし<small>NISHIJIN SOHARA</small></div>
+  <a class="tel-head" href="tel:092-831-5121">092-831-5121</a>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-copy">
+    <p class="kicker">西新・祖原の小箱居酒屋</p>
+    <h1>一尾の魚に、<br>食べ方は<em>三つ</em>。</h1>
+    <p>店主が「このお魚、旬です」と席まで持ってきます。刺身にするか、半生のフライにするか、握りにするか。そこから相談が始まる、カウンター中心の小さなお店です。</p>
+    <a class="btn" href="tel:092-831-5121">今夜の席を電話で聞く</a>
+  </div>
+  <div class="hero-photo">
+    <!-- Canva生成画像 -->
+    <img src="komenomeshi-hero.png" alt="名物アジフライと自家製タルタル" loading="eager">
+  </div>
+</section>
+
+<!-- 調理法の分岐図 -->
+<section class="flow">
+  <h2 class="fade">今日の一尾、どうします？</h2>
+  <p class="lead fade">プロの職人が、同じ魚を2〜3の食べ方に仕立てます。</p>
+
+  <div class="fade">
+    <div class="node today"><span class="en">TODAY'S FISH</span><strong>今日の一尾</strong></div>
+    <div class="trunk"></div>
+    <div class="spread"><span class="drop d1"></span><span class="drop d2"></span><span class="drop d3"></span></div>
+    <div class="branches">
+      <div class="branch">
+        <h3>刺身で</h3>
+        <p>まずは鮮度をそのまま。「お魚どれも美味しかった」の声はここから生まれます。</p>
+      </div>
+      <div class="branch">
+        <h3>半生フライで</h3>
+        <p>生で食べられる鮮度だから、半生に揚げられる。外ザクッ、中ふんわり。自家製タルタルをたっぷりと。</p>
+      </div>
+      <div class="branch">
+        <h3>握りで</h3>
+        <p>〆は小ぶりの握りを一貫から。「握りも小ぶりに握ってくれてジャスト！」</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="flow-note fade"><strong>お酒も、選ぶ楽しさを小さく。</strong>日本酒も焼酎も飲み切りサイズで頼めるので、一尾の魚に合わせて少しずつ変えていけます。</p>
+</section>
+
+<!-- アジフライ特集 -->
+<section class="ajifry">
+  <div class="ajifry-inner">
+    <div class="ajifry-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="komenomeshi-hero.png" alt="外ザクッ中ふんわりの半生アジフライ" loading="lazy">
+    </div>
+    <div class="fade">
+      <h2>一番感動するのが、アジフライ。</h2>
+      <blockquote>「生で食べれる鮮度抜群のアジだから半生に揚げて外はザクッと中はふんわり！自家製のタルタルをたっぷり掛けて頂くと昇天する旨さ！」</blockquote>
+      <p class="src">Googleの口コミより</p>
+      <p class="body">タルタルが旨すぎて「カレイのフライにも付けて食べた」という人まで現れる名物です。まず一皿、だまされたと思ってどうぞ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 小さなお品書き -->
+<section class="kobako">
+  <div class="kobako-grid">
+    <div class="fade">
+      <h2>小箱の、お品書き。</h2>
+      <ul>
+        <li class="fade"><strong>お通しの小鉢</strong><span>バイ貝の甘い煮付けなど、最初の一手から評判です。</span></li>
+        <li class="fade"><strong>旬魚の刺身</strong><span>その日の仕入れから。正月には限定の刺身盛りも。</span></li>
+        <li class="fade"><strong>名物アジフライ</strong><span>半生×自家製タルタル。当店の看板です。</span></li>
+        <li class="fade"><strong>握り 一貫から</strong><span>並寿司もバッテラも。〆に小ぶりをジャストで。</span></li>
+        <li class="fade"><strong>季節の天ぷら・だし巻き玉子</strong><span>やりいかと季節野菜、玉ねぎときのこ、など。</span></li>
+        <li class="fade"><strong>日本酒・焼酎 飲み切りサイズ</strong><span>セット料金なし。少しずつ、いろいろ。</span></li>
+      </ul>
+      <div class="mid-cta fade">
+        <a class="btn" href="tel:092-831-5121">席をたしかめて向かう</a>
+      </div>
+    </div>
+    <div class="kobako-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="komenomeshi-menu-01.png" alt="小ぶりの握りと飲み切りサイズの酒" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <div class="voices-inner">
+    <h2 class="fade">のれんをくぐった人の声</h2>
+    <div class="voice-list">
+      <div class="voice wide fade">
+        <p>「天神のいい感じのお魚食べるんだったら、ここにきた方がいいです。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「まずコスパ最高。料理は全部最高に美味い。プロ職人の料理の数々を堪能させて頂きます。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「大ベテランの方がされてると思ってたら若い方だったのが印象的。落ち着いた接客で良かったです。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「店員さんがとってもとっても温かみがあって良いんです。何を注文しても外さない。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+      <div class="voice fade">
+        <p>「他のお店がやってない時間（朝まで）にやってるのは有難いです。」</p>
+        <p class="who">Googleの口コミより</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <div class="info-grid">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>店名</dt><dd>いつも月よに米のめし</dd>
+        <dt>場所</dt><dd>福岡市早良区祖原（西新エリア）</dd>
+        <dt>電話</dt><dd>092-831-5121</dd>
+        <dt>営業</dt><dd>夜から朝まで（詳しくはお電話でご確認ください）</dd>
+        <dt>お席</dt><dd>カウンター中心の小箱。少人数がちょうどいいお店です</dd>
+      </dl>
+      <div class="night-owl">
+        <strong>夜ふかしの味方です。</strong>まわりのお店が閉まったあとも、ここは開いています。深夜メニューの唐揚げやフライドポテトという誘惑もあります。
+      </div>
+    </div>
+    <div class="tel-panel fade">
+      <p class="lead">席は多くありません。</p>
+      <p class="sub">小箱ゆえ、確実なのはお電話です。</p>
+      <a class="tel-big" href="tel:092-831-5121">092-831-5121</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">いつも月よに米のめし</div>
+  <p>福岡市早良区祖原｜旬の魚と酒の小箱居酒屋｜朝まで営業</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
