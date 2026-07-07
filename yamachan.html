@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>唐揚げ研究所 YAMACHAN｜福岡・西新の立ち飲み唐揚げ｜唐揚げは、研究できる。</title>
+<meta name="description" content="福岡市早良区・西新の「唐揚げ研究所 YAMACHAN」。元ホテルバーテンダーが営む、テイクアウトと立ち飲みの唐揚げ専門店。鶏むねホットチリ400円、自家製の生姜で仕込むモスコミュール。気軽に一杯、唐揚げをつまみに。">
+<meta property="og:title" content="唐揚げ研究所 YAMACHAN｜唐揚げは、研究できる。">
+<meta property="og:description" content="西新の立ち飲み唐揚げ研究所。鶏むねホットチリ、自家製モスコミュール。元バーテンダーの一杯。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="yamachan-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"唐揚げ研究所 YAMACHAN",
+  "servesCuisine":["唐揚げ","立ち飲み","バー"],
+  "image":"yamachan-hero.png",
+  "priceRange":"¥400〜¥2000",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市早良区 西新","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Stick&family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root{
+  --bg:#FFFDF5;        /* 方眼紙の白 */
+  --surface:#FFF3C4;
+  --primary:#E8A200;   /* 山吹色 */
+  --primary-dk:#C98600;
+  --accent:#17427A;    /* 研究ノートの青ペン */
+  --text:#23211C;
+  --muted:#8A8271;
+  --line:#E4DEC8;
+  --grid:rgba(35,33,28,0.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Stick',sans-serif;font-weight:400;line-height:1.4;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,5vw,40px);}
+
+/* ヘッダー */
+.top{display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,5vw,40px);background:var(--bg);border-bottom:2px solid var(--text);position:sticky;top:0;z-index:30;}
+.top .mark{font-family:'Stick',sans-serif;font-size:1.4rem;color:var(--text);letter-spacing:0.04em;}
+.top .mark .y{color:var(--primary-dk);}
+.top .code{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--accent);letter-spacing:0.06em;}
+
+/* ヒーロー */
+.hero{padding:clamp(36px,6vw,66px) 0;}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(24px,5vw,50px);align-items:center;}
+.hero .fileno{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--accent);border:1.5px solid var(--accent);display:inline-block;padding:4px 12px;letter-spacing:0.08em;}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);color:var(--text);letter-spacing:0.03em;margin:16px 0;line-height:1.2;}
+.hero h1 .u{color:var(--primary-dk);border-bottom:4px solid var(--primary);}
+.hero p{color:var(--text);font-size:1.04rem;max-width:40ch;}
+.hero .abstract{margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--muted);border-left:3px solid var(--primary);padding-left:14px;line-height:1.7;}
+.hero-photo{position:relative;background:#fff;border:2px solid var(--text);padding:12px;box-shadow:6px 6px 0 rgba(35,33,28,0.12);}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.hero-photo .cap{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--muted);margin-top:8px;display:flex;justify-content:space-between;}
+.hero-photo .stamp{position:absolute;top:-14px;right:16px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:0.78rem;color:#fff;background:var(--accent);padding:6px 14px;transform:rotate(3deg);}
+
+/* 検体（メニュー） */
+.specimens{padding:clamp(50px,8vw,90px) 0;}
+.sec-head{margin-bottom:38px;}
+.sec-head .no{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--accent);letter-spacing:0.1em;}
+.sec-head h2{font-size:clamp(1.8rem,5vw,2.7rem);color:var(--text);margin-top:6px;}
+.sec-head p{color:var(--muted);font-size:0.96rem;margin-top:8px;}
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.card{background:#fff;border:2px solid var(--text);padding:20px;position:relative;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:16px 16px;}
+.card .head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px dashed var(--line);padding-bottom:10px;margin-bottom:12px;}
+.card .head .id{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:0.8rem;color:var(--accent);}
+.card .head .price{font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--primary-dk);}
+.card h3{font-size:1.4rem;color:var(--text);margin-bottom:8px;letter-spacing:0.02em;}
+.card .memo{font-size:0.86rem;color:var(--muted);line-height:1.65;}
+.card .memo b{color:var(--text);font-weight:700;}
+.card.hot::after{content:'★人気検体';position:absolute;top:14px;right:14px;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:#fff;background:var(--primary-dk);padding:3px 8px;transform:rotate(4deg);}
+
+/* 立ち飲みラボ */
+.labnote{background:var(--surface);border-top:2px solid var(--text);border-bottom:2px solid var(--text);padding:clamp(50px,8vw,90px) 0;}
+.labnote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,54px);align-items:center;}
+.labnote .no{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--accent);letter-spacing:0.1em;}
+.labnote h2{font-size:clamp(1.8rem,5vw,2.6rem);color:var(--text);margin:6px 0 18px;}
+.labnote p{color:var(--text);margin-bottom:16px;}
+.labnote p .em{color:var(--primary-dk);font-weight:700;}
+.labnote .drink-photo{background:#fff;border:2px solid var(--text);padding:12px;box-shadow:6px 6px 0 rgba(35,33,28,0.12);}
+.labnote .drink-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;}
+.labnote .drink-photo .cap{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--muted);margin-top:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.tag{font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--accent);border:1.5px solid var(--accent);padding:6px 14px;background:#fff;}
+
+/* 観察記録（声） */
+.obs{padding:clamp(50px,8vw,90px) 0;}
+.obs .sec-head{text-align:center;}
+.obs .sec-head .no{display:block;}
+.v-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.v-card{background:#fff;border:2px solid var(--text);padding:24px;}
+.v-card .rec{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);margin-bottom:10px;}
+.v-card p{font-size:0.96rem;line-height:1.85;}
+.v-card .who{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--muted);}
+
+/* 案内 */
+.info{background:var(--text);color:var(--bg);padding:clamp(50px,8vw,90px) 0;
+  background-image:linear-gradient(rgba(255,253,245,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,253,245,0.05) 1px,transparent 1px);background-size:24px 24px;background-color:var(--text);}
+.info .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,54px);align-items:center;}
+.info h2{color:var(--primary);font-size:clamp(1.8rem,5vw,2.5rem);margin-bottom:20px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;font-family:'IBM Plex Mono',monospace;font-size:0.92rem;}
+.info dt{color:var(--primary);white-space:nowrap;}
+.info dd{color:#F3EED9;}
+.info .card2{background:var(--primary);color:var(--text);padding:clamp(26px,4vw,40px);}
+.info .card2 h3{font-size:1.6rem;margin-bottom:10px;}
+.info .card2 p{font-family:'IBM Plex Mono',monospace;font-size:0.9rem;line-height:1.7;}
+
+footer{background:var(--text);color:rgba(255,253,245,0.65);text-align:center;padding:30px 20px;font-size:0.8rem;font-family:'IBM Plex Mono',monospace;border-top:2px solid var(--primary);}
+footer .m{font-family:'Stick',sans-serif;color:var(--bg);font-size:1.2rem;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:820px){
+  .hero .wrap,.labnote .wrap,.info .wrap{grid-template-columns:1fr;}
+  .hero-photo{order:-1;}
+  .top .code{display:none;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="mark">唐揚げ研究所 <span class="y">YAMACHAN</span></div>
+  <div class="code">KARAAGE LABORATORY / NISHIJIN</div>
+</div>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <div class="wrap">
+    <div class="fade vis">
+      <span class="fileno mono">FILE.001 — THESIS</span>
+      <h1>唐揚げは、<br><span class="u">研究できる。</span></h1>
+      <p>元ホテルバーテンダーが営む、テイクアウトと立ち飲みの唐揚げ専門店。ソースも、生姜も、自家製で。</p>
+      <p class="abstract mono">ABSTRACT: 鶏むね・手羽先を対象に、九州醤油とスパイスの最適配合を日々検証。副産物として、自家製モスコミュールを提供中。</p>
+    </div>
+    <div class="hero-photo fade vis">
+      <span class="stamp mono">SPECIMEN</span>
+      <img src="yamachan-hero.png" alt="山吹色の背景に映える、揚げたての唐揚げのクローズアップ">
+      <div class="cap mono"><span>FIG.1 — KARAAGE</span><span>NISHIJIN LAB</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 検体（メニュー） -->
+<section class="specimens">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="no mono">SECTION 01 — SPECIMENS</span>
+      <h2>本日の、検体。</h2>
+      <p>唐揚げも、立ち飲み用の一品も。飽きずに飲める品揃え。</p>
+    </div>
+    <div class="spec-grid">
+      <div class="card hot fade">
+        <div class="head"><span class="id mono">No.01</span><span class="price mono">¥400</span></div>
+        <h3>鶏むね からあげ ホットチリ</h3>
+        <p class="memo">絶妙なスパイシー感で、<b>お酒が進む味</b>。まずはこの一検体から、と常連は言う。</p>
+      </div>
+      <div class="card fade">
+        <div class="head"><span class="id mono">No.02</span><span class="price mono">名物</span></div>
+        <h3>手羽先</h3>
+        <p class="memo">唐揚げと並ぶ看板。つまみに、ちょうどいい。</p>
+      </div>
+      <div class="card fade">
+        <div class="head"><span class="id mono">No.03</span><span class="price mono">定番</span></div>
+        <h3>各種 からあげ</h3>
+        <p class="memo">ここの唐揚げは、本当に美味しい。テイクアウトされる方も多数。</p>
+      </div>
+      <div class="card fade">
+        <div class="head"><span class="id mono">No.04</span><span class="price mono">立呑</span></div>
+        <h3>立ち飲み専用 小皿</h3>
+        <p class="memo">立ち飲み専用のメニューも結構あって、<b>飽きずに飲める</b>。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 立ち飲みラボ -->
+<section class="labnote">
+  <div class="wrap">
+    <div class="fade">
+      <span class="no mono">SECTION 02 — THE LAB</span>
+      <h2>元バーテンダーの、立ち飲み研究室。</h2>
+      <p>お店で生姜を漬け込み、<span class="em">自家製のモスコミュール</span>を。元ホテルバーテンダーの一杯は、唐揚げと驚くほど合います。</p>
+      <p>立ち飲みだから、なんとなく入店できる。店員さんもフレンドリーで、一人でも楽しく過ごせる。常連さんが多いのも、頷けます。</p>
+      <div class="tags">
+        <span class="tag mono">自家製モスコミュール</span>
+        <span class="tag mono">ハイボール ¥500</span>
+        <span class="tag mono">立ち飲みスタイル</span>
+        <span class="tag mono">タチノミスト歓迎</span>
+      </div>
+    </div>
+    <div class="drink-photo fade">
+      <img src="yamachan-menu-02.png" alt="ハイボールと手羽先が並ぶ、立ち飲みカウンター">
+      <div class="cap mono">FIG.2 — HIGHBALL &amp; TEBASAKI</div>
+    </div>
+  </div>
+</section>
+
+<!-- 観察記録 -->
+<section class="obs">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="no mono">SECTION 03 — OBSERVATIONS</span>
+      <h2>観察記録</h2>
+    </div>
+    <div class="v-grid">
+      <div class="v-card fade">
+        <div class="rec mono">REC.01 ★★★★★</div>
+        <p>立呑のお店で、からあげ、手羽先どれもおいしかったです。お店で生姜を漬けていて、自家製のモスコミュールも美味しかった！</p>
+        <div class="who mono">— OBSERVER: 立ち飲み客</div>
+      </div>
+      <div class="v-card fade">
+        <div class="rec mono">REC.02 ★★★★★</div>
+        <p>鶏むねのホットチリだけ頂きましたが、これが大正解。絶妙なスパイシー感でお酒が進む味。店員さんも凄くフレンドリーで、1人でも楽しく過ごせました。</p>
+        <div class="who mono">— OBSERVER: イベント初訪問</div>
+      </div>
+      <div class="v-card fade">
+        <div class="rec mono">REC.03 ★★★★★</div>
+        <p>カウンターのみの立ち飲みスタイル。唐揚げをつまみに飲むお店。ここの唐揚げは本当に美味しい。テイクアウトされてる方も多いです。</p>
+        <div class="who mono">— OBSERVER: 常連観察</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 案内 -->
+<section class="info">
+  <div class="wrap">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>LOCATION</dt><dd>福岡市早良区・西新</dd>
+        <dt>STYLE</dt><dd>テイクアウト＆立ち飲み（カウンター）</dd>
+        <dt>PAYMENT</dt><dd>PayPay / 現金</dd>
+        <dt>CLOSED</dt><dd>水曜定休</dd>
+        <dt>SIGNATURE</dt><dd>鶏むねホットチリ ¥400 / 自家製モスコミュール</dd>
+      </dl>
+    </div>
+    <div class="card2 fade">
+      <h3>ふらっと、一杯。</h3>
+      <p>立ち飲みなので、なんとなく入店OK。<br>唐揚げをつまみに、研究成果を味わいに。<br>西新の路地の一角で、お待ちしています。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">唐揚げ研究所 YAMACHAN</div>
+  <p>FUKUOKA NISHIJIN / KARAAGE + STANDING BAR / 唐揚げは、研究できる。</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
