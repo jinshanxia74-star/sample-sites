@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鵜来巣｜福岡・西入部の古民家ジビエと地鶏｜明治の家で、三代目が焼く。</title>
+<meta name="description" content="福岡市早良区・西入部、室見川と田園を望む移築された明治の古民家。昭和39年から親子三代でつづく鵜来巣。炭火で焼く地鶏は皮カリカリ・身フワフワ。ジビエ、ばくだんおにぎりも。出来立てを味わっていただくため、完全予約制です。">
+<meta property="og:title" content="鵜来巣｜明治の家で、三代目が焼く。">
+<meta property="og:description" content="室見川のほとり、移築された明治の古民家。昭和39年から三代つづく、炭火の地鶏とジビエ。完全予約制。">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:image" content="ugurusu-hero.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Restaurant",
+  "name":"鵜来巣",
+  "servesCuisine":["地鶏","ジビエ","炭火焼き","和食"],
+  "image":"ugurusu-hero.png",
+  "telephone":"092-804-2703",
+  "priceRange":"¥1000〜¥2500",
+  "acceptsReservations":"required",
+  "address":{"@type":"PostalAddress","addressLocality":"福岡市早良区 西入部","addressRegion":"福岡県","addressCountry":"JP"}
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Noto+Serif+JP:wght@200;300;400;500;600&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root{
+  --bg:#F4F1E8;        /* 生成り */
+  --surface:#E9E3D3;
+  --green:#4A5D3A;     /* 森緑 */
+  --green2:#3A4A2E;
+  --wood:#8C5B2E;      /* 古民家の木・囲炉裏 */
+  --text:#2E2B22;
+  --muted:#7D7A6B;
+  --line:#D8D1BE;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{font-family:'Noto Serif JP',serif;color:var(--text);background:var(--bg);line-height:2.05;font-weight:300;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'New Tegomin',serif;font-weight:400;line-height:1.5;}
+.cr{font-family:'Crimson Pro',serif;}
+.wrap{max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,44px);}
+
+/* 序（ヒーロー） */
+.hero{position:relative;min-height:96vh;display:flex;align-items:flex-end;
+  background:linear-gradient(to top,rgba(46,43,34,0.82) 0%,rgba(46,43,34,0.28) 45%,rgba(46,43,34,0.4) 100%),url('ugurusu-hero.png') center/cover no-repeat;
+  color:var(--bg);padding-bottom:clamp(50px,9vw,100px);}
+.hero .wrap{width:100%;}
+.hero .era{font-family:'Crimson Pro',serif;font-style:italic;letter-spacing:0.22em;color:#D8C9A0;font-size:0.95rem;}
+.hero h1{font-family:'New Tegomin',serif;font-size:clamp(2.6rem,8vw,5rem);letter-spacing:0.08em;color:#F4F1E8;margin:16px 0;line-height:1.3;text-shadow:0 3px 20px rgba(0,0,0,0.4);}
+.hero p{max-width:38ch;color:#EDE7D6;font-size:1.05rem;}
+.hero .scrollcue{position:absolute;top:34px;left:50%;transform:translateX(-50%);font-family:'Crimson Pro',serif;font-style:italic;letter-spacing:0.2em;color:rgba(244,241,232,0.7);font-size:0.8rem;}
+
+/* 章 共通（タイムライン） */
+.chapter{position:relative;padding:clamp(64px,10vw,120px) 0;}
+.chapter .wrap{position:relative;}
+.chap-mark{display:flex;align-items:baseline;gap:18px;margin-bottom:24px;}
+.chap-mark .yr{font-family:'Crimson Pro',serif;font-weight:500;font-size:clamp(2.4rem,6vw,3.6rem);color:var(--wood);line-height:1;}
+.chap-mark .cap{font-family:'Crimson Pro',serif;font-style:italic;letter-spacing:0.18em;color:var(--muted);font-size:0.9rem;}
+.chapter h2{font-size:clamp(1.8rem,4.8vw,2.7rem);color:var(--green);letter-spacing:0.06em;margin-bottom:26px;}
+.chapter p{font-size:1.05rem;margin-bottom:20px;max-width:60ch;}
+.chapter p .em{color:var(--wood);font-weight:500;}
+.chapter .fig{margin-top:36px;}
+.chapter .fig img{width:100%;object-fit:cover;}
+.chapter .fig .cap{font-family:'Crimson Pro',serif;font-style:italic;color:var(--muted);font-size:0.9rem;margin-top:12px;text-align:center;}
+
+/* 章の背景交互 */
+.chapter.alt{background:var(--surface);}
+.chapter.dark{background:var(--green);color:#EDE7D6;}
+.chapter.dark h2{color:#F4F1E8;}
+.chapter.dark .chap-mark .yr{color:#C99A5E;}
+.chapter.dark .chap-mark .cap{color:#B9BBA6;}
+.chapter.dark p .em{color:#D8C9A0;}
+
+/* 今日の食卓（メニュー） */
+.table-menu{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,44px);align-items:start;margin-top:12px;}
+.menu-list{border-top:1px solid var(--line);}
+.mrow{padding:18px 0;border-bottom:1px solid var(--line);}
+.mrow h3{font-family:'New Tegomin',serif;font-size:1.3rem;color:var(--green2);margin-bottom:4px;letter-spacing:0.04em;}
+.mrow p{font-size:0.94rem;color:var(--muted);margin:0;}
+.gibier-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 20px 40px rgba(46,43,34,0.18);}
+
+/* 声 */
+.voices{background:var(--surface);padding:clamp(60px,10vw,110px) 0;}
+.voices h2{text-align:center;font-size:clamp(1.7rem,4.6vw,2.4rem);color:var(--green);margin-bottom:44px;letter-spacing:0.06em;}
+.v-item{max-width:660px;margin:0 auto;padding:28px 0;border-bottom:1px solid var(--line);}
+.v-item:last-child{border-bottom:none;}
+.v-item p{font-size:1.06rem;line-height:2.1;margin:0;}
+.v-item .who{margin-top:12px;font-family:'Crimson Pro',serif;font-style:italic;color:var(--wood);font-size:0.95rem;letter-spacing:0.06em;}
+
+/* ご予約 */
+.reserve{text-align:center;padding:clamp(64px,10vw,120px) 0;}
+.reserve .yr{font-family:'Crimson Pro',serif;font-style:italic;letter-spacing:0.2em;color:var(--wood);margin-bottom:12px;}
+.reserve h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--green);letter-spacing:0.06em;margin-bottom:20px;}
+.reserve .why{max-width:48ch;margin:0 auto 40px;color:var(--text);font-size:1.05rem;}
+.reserve dl{display:inline-grid;grid-template-columns:auto 1fr;gap:14px 28px;text-align:left;margin-bottom:38px;}
+.reserve dt{font-family:'New Tegomin',serif;color:var(--wood);white-space:nowrap;}
+.reserve dd{color:var(--text);}
+.reserve .tel{display:inline-block;font-family:'Crimson Pro',serif;font-weight:500;font-size:clamp(1.6rem,5vw,2.2rem);letter-spacing:0.06em;color:#fff;background:var(--green);border-radius:2px;padding:14px 40px;transition:transform .3s,background .3s;}
+.reserve .tel:hover{transform:translateY(-3px);background:var(--green2);}
+.reserve .note{margin-top:16px;color:var(--muted);font-size:0.9rem;}
+
+footer{background:var(--green2);color:rgba(244,241,232,0.7);text-align:center;padding:40px 20px;font-size:0.82rem;letter-spacing:0.06em;}
+footer .m{font-family:'New Tegomin',serif;color:#F4F1E8;font-size:1.3rem;letter-spacing:0.16em;margin-bottom:8px;}
+
+.fade{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:720px){
+  .table-menu{grid-template-columns:1fr;}
+  .gibier-photo{order:-1;}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<!-- 序 -->
+<header class="hero">
+  <div class="scrollcue">一頁ずつ、時をさかのぼる</div>
+  <div class="wrap">
+    <p class="era fade vis">Meiji — Shōwa — Now</p>
+    <h1 class="fade vis">明治の家で、<br>三代目が焼く。</h1>
+    <p class="fade vis">室見川と田園を望む、移築された明治の古民家。昭和三十九年から、親子三代でつづく一軒。</p>
+  </div>
+</header>
+
+<!-- 章一：明治の家 -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chap-mark fade"><span class="yr cr">明治</span><span class="cap">the old house</span></div>
+    <h2 class="fade">移築された、明治の古民家。</h2>
+    <p class="fade">屋根の形、少し上がったところにある玄関。どこか物語の中に迷い込んだような佇まい。店内はとにかくレトロで、<span class="em">ゆっくりと時間が流れます。</span></p>
+    <p class="fade">料理の提供に多少時間がかかっても、気にならない。そういう場所です。</p>
+  </div>
+</section>
+
+<!-- 章二：昭和39年創業 -->
+<section class="chapter alt">
+  <div class="wrap">
+    <div class="chap-mark fade"><span class="yr cr">昭和39</span><span class="cap">since 1964</span></div>
+    <h2 class="fade">この地で、はじまった。</h2>
+    <p class="fade">昭和三十九年の創業から、この場所で暖簾を守りつづけてきました。おじいさまから、お父さまへ。そして——。</p>
+    <p class="fade">変わらないのは、目の前の<span class="em">室見川と田園の景色</span>と、出来立てを出したいという想いだけ。</p>
+  </div>
+</section>
+
+<!-- 章三：三代目が焼く -->
+<section class="chapter dark">
+  <div class="wrap">
+    <div class="chap-mark fade"><span class="yr cr">三代目</span><span class="cap">charcoal fire</span></div>
+    <h2 class="fade">炭火で、焼く。</h2>
+    <p class="fade">看板は、鶏もも肉の塩焼き。<span class="em">皮の部分はカリカリ、身の部分はフワフワ。</span>何本でも食べられそうな一皿です。</p>
+    <p class="fade">お手製のお酢に柚子胡椒を溶いて。添えられたレモンのフルーティーさまで、印象に残ります。</p>
+    <div class="fig fade">
+      <img src="ugurusu-menu-01.png" alt="炭火でじっくり焼く、鵜来巣の地鶏">
+      <p class="cap">炭火でじっくり。皮はカリカリ、身はフワフワ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 章四：今日の食卓 -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="chap-mark fade"><span class="yr cr">今日</span><span class="cap">today's table</span></div>
+    <h2 class="fade">今日の、食卓。</h2>
+    <div class="table-menu">
+      <div class="menu-list fade">
+        <div class="mrow"><h3>ばくだん定食</h3><p>前菜二品・サラダ・おむすび・鶏ももの塩焼き・デザート。もりもりのサラダが嬉しい。</p></div>
+        <div class="mrow"><h3>ばくだんおにぎり</h3><p>中に北海道産の昆布の旨みが、じんわり染みる。</p></div>
+        <div class="mrow"><h3>唐揚定食・とり天定食</h3><p>味がしっかり、付け合せまで美味しい。とり天は柔らかく、酢醤油と柚子胡椒でさっぱり。</p></div>
+        <div class="mrow"><h3>ジビエ料理</h3><p>鹿肉など、その日その時のジビエを。景観の良い早良区で味わう贅沢。</p></div>
+        <div class="mrow"><h3>自家製プリン</h3><p>ケーキとアイスの良いとこ取り。クリーミィで好みの味。</p></div>
+      </div>
+      <div class="gibier-photo fade"><img src="ugurusu-exterior.png" alt="室見川と田園の景色を望む鵜来巣の周辺"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <div class="wrap">
+    <h2 class="fade">訪れた方の、言葉。</h2>
+    <div class="v-item fade">
+      <p>鶏ももの塩焼きが最高でした。皮の部分がカリカリで、身の部分はフワフワ。つけダレと鶏肉の相性がバッチリ。目の前の川と田園風景に癒されながら、ステキなランチタイムを過ごせました。</p>
+      <div class="who">— ばくだん定食を頂いた方</div>
+    </div>
+    <div class="v-item fade">
+      <p>店内はとにかくレトロ。昭和な雰囲気で、ゆっくり時間が流れます。唐揚定食は味がしっかり、付け合せの煮卵・ポテサラ・鶏レバーの生姜煮も全部が美味しい。次は炭火焼にチャレンジしたい。</p>
+      <div class="who">— ランチで立ち寄った方</div>
+    </div>
+    <div class="v-item fade">
+      <p>完全予約制なのは、じっくり火を入れるものもあるため。出来立てを食べてもらいたいという店主さんのこだわり。都会から離れ、景色を楽しみながら味わう——そんな時間でした。</p>
+      <div class="who">— ジビエを目当てに訪れた方</div>
+    </div>
+  </div>
+</section>
+
+<!-- ご予約 -->
+<section class="reserve">
+  <div class="wrap">
+    <p class="yr cr">reservation</p>
+    <h2 class="fade">出来立てを、あなたに。</h2>
+    <p class="why fade">メニューによっては、じっくり火を入れるため二十分ほどお待たせします。出来立てを召し上がっていただきたいから、<strong>完全予約制</strong>にしています。まずは、お電話でご予約を。</p>
+    <dl class="fade">
+      <dt>場所</dt><dd>福岡市早良区・西入部（室見川のほとり）</dd>
+      <dt>ご予約</dt><dd>完全予約制（空席があれば当日も相談可）</dd>
+      <dt>お時間</dt><dd>お食事は90分以内で、ごゆっくり</dd>
+      <dt>お品</dt><dd>炭火の地鶏・ジビエ・ばくだん定食・自家製プリン</dd>
+    </dl>
+    <div class="fade">
+      <a class="tel" href="tel:092-804-2703">092-804-2703</a>
+      <p class="note">ご高齢のご主人が焼いています。急な休業の場合もございます。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">鵜来巣</div>
+  <p>福岡市早良区・西入部｜明治の古民家・炭火の地鶏とジビエ｜昭和39年から三代｜完全予約制</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
