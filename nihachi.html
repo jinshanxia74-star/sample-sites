@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>中華麺 二八｜高取2-2-8・深夜3時までの中華そばとちょい飲み（藤崎駅徒歩1分）</title>
+<meta name="description" content="福岡市早良区高取2-2-8、店名の由来は住所から。豚骨だらけの福岡で貴重な非豚骨の中華そば（醤油・塩）と餃子で、18時から深夜3時までちょい飲みできるお店です。藤崎駅徒歩1分。">
+<meta property="og:title" content="中華麺 二八｜店名は、住所から。二丁目2-8のちょい飲み処。">
+<meta property="og:description" content="福岡では珍しい中華そばと餃子。夜18時から深夜3時まで、今夜の〆に間に合います。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="nihachi-hero.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "中華麺 二八",
+  "servesCuisine": ["ラーメン", "中華そば", "居酒屋"],
+  "telephone": "092-846-4215",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "福岡市早良区",
+    "streetAddress": "高取2-2-8",
+    "addressRegion": "福岡県",
+    "addressCountry": "JP"
+  },
+  "openingHours": "We-Mo 18:00-03:00"
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Noto+Sans+JP:wght@300;400;500;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+
+:root{
+  --color-bg:#101216;       /* 夜黒 */
+  --color-plate:#1e3a5f;    /* 琺瑯紺 */
+  --color-white:#eef2f5;    /* 琺瑯白 */
+  --color-shoyu:#c98a2e;    /* 醤油琥珀 */
+  --color-shio:#8fb8cc;     /* 塩の薄青 */
+  --color-text:#e9ecef;
+  --color-text-muted:#8c94a1;
+  --color-line:rgba(238,242,245,.16);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--color-bg);
+  color:var(--color-text);
+  font-family:'Noto Sans JP',sans-serif;
+  line-height:1.85;
+  letter-spacing:.05em;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{font-family:'Monomaniac One',sans-serif;font-weight:400;line-height:1.4;}
+.en{font-family:'Barlow Condensed',sans-serif;}
+
+/* ── 琺瑯プレート ── */
+.plate{
+  display:inline-block;
+  background:linear-gradient(160deg,#26476f 0%,var(--color-plate) 55%,#16293f 100%);
+  border:3px solid var(--color-white);
+  outline:2px solid var(--color-plate);
+  border-radius:8px;
+  color:var(--color-white);
+  box-shadow:inset 0 2px 6px rgba(255,255,255,.18),0 4px 14px rgba(0,0,0,.5);
+}
+
+/* ── ヘッダー ── */
+header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;
+  background:rgba(16,18,22,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--color-line);
+}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo .plate{padding:4px 12px;font-family:'Monomaniac One',sans-serif;font-size:1.05rem;letter-spacing:.14em;}
+.logo small{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;letter-spacing:.3em;color:var(--color-text-muted);}
+.tel-head{
+  font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.06em;
+  border:1px solid var(--color-line);border-radius:999px;padding:7px 17px;
+  color:var(--color-shoyu);
+  transition:background .3s ease,color .3s ease;
+}
+.tel-head:hover{background:var(--color-shoyu);color:#16130a;}
+
+/* ── ヒーロー ── */
+.hero{display:grid;grid-template-columns:6fr 5fr;min-height:80vh;border-bottom:1px solid var(--color-line);}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:72px 6vw;}
+.addr-plate{
+  padding:22px 30px 18px;margin-bottom:34px;align-self:flex-start;
+  text-align:center;
+}
+.addr-plate .town{font-size:.95rem;letter-spacing:.5em;display:block;border-bottom:1px solid rgba(238,242,245,.4);padding-bottom:6px;margin-bottom:8px;}
+.addr-plate .num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(3rem,7vw,4.6rem);letter-spacing:.06em;line-height:1;display:block;}
+.hero-copy h1{font-size:clamp(1.9rem,4.2vw,3rem);margin-bottom:20px;}
+.hero-copy h1 span{color:var(--color-shoyu);}
+.hero-copy p{color:var(--color-text-muted);font-size:.96rem;max-width:34em;margin-bottom:30px;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  background:var(--color-shoyu);color:#16130a;
+  font-weight:700;font-size:1rem;letter-spacing:.08em;
+  padding:15px 34px;border-radius:6px;
+  transition:transform .3s ease,box-shadow .3s ease;
+  align-self:flex-start;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,138,46,.4);}
+.btn:active{transform:scale(.98);}
+.hero-photo{position:relative;min-height:360px;}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,var(--color-bg) 0%,transparent 26%);
+}
+
+/* ── 由来の帯 ── */
+.yurai{
+  border-bottom:1px solid var(--color-line);
+  padding:52px 6vw;text-align:center;
+}
+.yurai p{max-width:44em;margin:0 auto;font-size:.95rem;color:var(--color-text-muted);}
+.yurai strong{color:var(--color-white);font-weight:500;}
+
+/* ── 二本柱 ── */
+.pillars{padding:96px 6vw 40px;max-width:1120px;margin:0 auto;}
+.pillars h2{font-size:clamp(1.8rem,3.6vw,2.6rem);text-align:center;margin-bottom:14px;}
+.pillars .lead{text-align:center;color:var(--color-text-muted);font-size:.92rem;margin-bottom:56px;}
+.pillar-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+.pillar{
+  border-radius:12px;padding:44px 38px;
+  border:1px solid var(--color-line);
+  position:relative;overflow:hidden;
+}
+.pillar.shoyu{background:linear-gradient(170deg,rgba(201,138,46,.16),rgba(201,138,46,.04));border-color:rgba(201,138,46,.45);}
+.pillar.shio{background:linear-gradient(170deg,rgba(143,184,204,.14),rgba(143,184,204,.03));border-color:rgba(143,184,204,.4);}
+.pillar .tag{
+  font-family:'Monomaniac One',sans-serif;font-size:2rem;line-height:1;
+  display:block;margin-bottom:14px;
+}
+.pillar.shoyu .tag{color:var(--color-shoyu);}
+.pillar.shio .tag{color:var(--color-shio);}
+.pillar h3{font-size:1.25rem;margin-bottom:10px;}
+.pillar p{font-size:.88rem;color:var(--color-text-muted);}
+
+/* ── アテと〆 ── */
+.ate{padding:64px 6vw 96px;max-width:1120px;margin:0 auto;}
+.ate-grid{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:center;}
+.ate-photo{border-radius:12px;overflow:hidden;border:1px solid var(--color-line);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.ate h2{font-size:clamp(1.6rem,3.2vw,2.3rem);margin-bottom:16px;}
+.ate blockquote{
+  border-left:3px solid var(--color-shoyu);padding-left:18px;
+  font-size:1.02rem;line-height:2;margin-bottom:8px;
+}
+.ate .src{font-size:.74rem;color:var(--color-text-muted);margin-bottom:24px;}
+.ate ul{list-style:none;}
+.ate li{
+  display:flex;justify-content:space-between;gap:16px;
+  padding:13px 2px;border-bottom:1px dashed var(--color-line);
+  font-size:.92rem;
+}
+.ate li span{color:var(--color-text-muted);font-size:.82rem;}
+.ate .mid-cta{margin-top:32px;}
+
+/* ── 深夜タイムライン ── */
+.timeline{
+  background:#0b0d10;border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line);
+  padding:96px 6vw;
+}
+.tl-inner{max-width:960px;margin:0 auto;text-align:center;}
+.tl-inner h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:12px;}
+.tl-inner .lead{color:var(--color-text-muted);font-size:.92rem;margin-bottom:64px;}
+.tl-bar{
+  position:relative;height:6px;border-radius:3px;
+  background:linear-gradient(90deg,var(--color-shoyu),#7a5a1e 55%,var(--color-plate));
+  margin:0 24px;
+}
+.tl-stops{display:flex;justify-content:space-between;margin:0 24px;padding-top:22px;}
+.tl-stop{position:relative;flex:1;text-align:center;}
+.tl-stop::before{
+  content:'';position:absolute;top:-32px;left:50%;transform:translateX(-50%);
+  width:14px;height:14px;border-radius:50%;
+  background:var(--color-white);border:3px solid var(--color-plate);
+}
+.tl-stop .t{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;color:var(--color-white);display:block;line-height:1.2;}
+.tl-stop .d{font-size:.8rem;color:var(--color-text-muted);}
+.tl-note{margin-top:56px;font-size:.95rem;}
+.tl-note strong{color:var(--color-shoyu);font-family:'Monomaniac One',sans-serif;font-weight:400;font-size:1.2rem;}
+
+/* ── 声 ── */
+.voices{padding:96px 6vw;max-width:1000px;margin:0 auto;}
+.voices h2{font-size:clamp(1.7rem,3.2vw,2.3rem);text-align:center;margin-bottom:56px;}
+.voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 52px;}
+.voice{border-top:2px solid var(--color-plate);padding-top:18px;}
+.voice.wide{grid-column:1/-1;text-align:center;border-top:none;}
+.voice.wide p{font-family:'Monomaniac One',sans-serif;font-size:clamp(1.25rem,2.6vw,1.7rem);line-height:1.9;}
+.voice p{font-size:.93rem;line-height:2;}
+.voice .who{margin-top:10px;font-size:.74rem;color:var(--color-text-muted);}
+
+/* ── ご案内 ── */
+.info{padding:0 6vw 100px;max-width:1080px;margin:0 auto;}
+.info-grid{display:grid;grid-template-columns:6fr 5fr;gap:56px;}
+.info h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:36px;}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:12px 26px;font-size:.94rem;}
+.info dt{color:var(--color-text-muted);white-space:nowrap;}
+.tel-panel{
+  border-radius:12px;
+  background:linear-gradient(160deg,#26476f 0%,var(--color-plate) 55%,#16293f 100%);
+  border:3px solid var(--color-white);
+  box-shadow:inset 0 2px 6px rgba(255,255,255,.18),0 8px 24px rgba(0,0,0,.5);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:52px 30px;gap:10px;color:var(--color-white);
+}
+.tel-panel .lead{font-family:'Monomaniac One',sans-serif;font-size:1.3rem;}
+.tel-panel .sub{font-size:.8rem;opacity:.75;}
+.tel-big{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:clamp(2rem,4.2vw,2.6rem);letter-spacing:.05em;
+  color:var(--color-white);
+  border-bottom:3px solid rgba(238,242,245,.4);padding-bottom:2px;
+  transition:transform .3s ease;
+}
+.tel-big:hover{transform:translateY(-2px);}
+
+footer{padding:34px 20px 46px;text-align:center;border-top:1px solid var(--color-line);}
+footer .m{font-family:'Monomaniac One',sans-serif;font-size:1.15rem;margin-bottom:6px;}
+footer p{font-size:.75rem;color:var(--color-text-muted);}
+
+/* ── フェード ── */
+.fade{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.fade.vis{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){
+  .fade{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ── レスポンシブ ── */
+@media (max-width:1024px){
+  .ate-grid,.info-grid{gap:36px;}
+}
+@media (max-width:768px){
+  .hero{grid-template-columns:1fr;min-height:0;}
+  .hero-photo{min-height:320px;order:-1;}
+  .hero-photo::after{background:linear-gradient(0deg,var(--color-bg) 0%,transparent 30%);}
+  .hero-copy{padding:44px 6vw 56px;}
+  .pillar-grid{grid-template-columns:1fr;}
+  .ate-grid{grid-template-columns:1fr;}
+  .ate-photo{order:-1;}
+  .tl-stops{padding-top:20px;}
+  .tl-stop .t{font-size:1.2rem;}
+  .voice-grid{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+}
+@media (max-width:480px){
+  .addr-plate{padding:16px 20px 14px;}
+  .hero-copy h1{font-size:1.7rem;}
+  .pillars,.ate,.voices,.timeline{padding-left:5vw;padding-right:5vw;}
+  .tl-bar,.tl-stops{margin:0 4px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><span class="plate">二八</span><small>CHUKAMEN NIHACHI</small></div>
+  <a class="tel-head" href="tel:092-846-4215">092-846-4215</a>
+</header>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-copy">
+    <div class="plate addr-plate fade">
+      <span class="town">高　取</span>
+      <span class="num">2-2-8</span>
+    </div>
+    <h1>店名は、住所から。<br>二丁目2-8の、<span>ちょい飲み処</span>。</h1>
+    <p>豚骨だらけの福岡で、珍しい非豚骨の中華そば。醤油と塩の二本柱に、ビールに合う餃子。夜18時から深夜3時まで、この番地の灯りはついています。</p>
+    <a class="btn" href="tel:092-846-4215">今夜の一杯を電話で聞く</a>
+  </div>
+  <div class="hero-photo">
+    <!-- Canva生成画像 -->
+    <img src="nihachi-hero.png" alt="深夜の中華そば（醤油）" loading="eager">
+  </div>
+</section>
+
+<!-- 由来 -->
+<section class="yurai">
+  <p class="fade"><strong>「二八」は、そば粉の割合ではありません。</strong>ここ、高取二丁目2-8の番地がそのまま屋号です。街の住所を名乗る店として、街の夜に付き合います。</p>
+</section>
+
+<!-- 二本柱 -->
+<section class="pillars">
+  <h2 class="fade">スープは、二本柱。</h2>
+  <p class="lead fade">福岡では貴重な、非豚骨の中華そばです。</p>
+  <div class="pillar-grid">
+    <div class="pillar shoyu fade">
+      <span class="tag">醤油</span>
+      <h3>鶏ガラ×豚骨の醤油スープ</h3>
+      <p>コクのある琥珀色のスープに、するする入る麺。飲んだ後の一杯にも、最初の一杯にも。中華そば・ワンタン麺でどうぞ。</p>
+    </div>
+    <div class="pillar shio fade">
+      <span class="tag">塩</span>
+      <h3>魚介の塩スープ</h3>
+      <p>魚介を効かせた、澄んだ塩。もう一本の柱です。こちらもワンタン麺にできます。気分で選んでください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- アテと〆 -->
+<section class="ate">
+  <div class="ate-grid">
+    <div class="ate-photo fade">
+      <!-- Canva生成画像 -->
+      <img src="nihachi-menu-01.png" alt="焼き餃子とビール" loading="lazy">
+    </div>
+    <div class="fade">
+      <h2>まず餃子、それからビール。</h2>
+      <blockquote>「餃子がめっちゃ美味かった。ビールにも合ってサイコー♪」</blockquote>
+      <p class="src">Googleの口コミより</p>
+      <ul>
+        <li>焼き餃子<span>ちょい飲みの主役</span></li>
+        <li>中華そば（醤油・塩）<span>〆の本命</span></li>
+        <li>ワンタン麺（醤油・塩）<span>つるんと二杯目にも</span></li>
+        <li>ちゃんぽん・皿うどん<span>麺居酒屋のもう一手</span></li>
+      </ul>
+      <div class="mid-cta">
+        <a class="btn" href="tel:092-846-4215">席をたしかめて向かう</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 深夜タイムライン -->
+<section class="timeline">
+  <div class="tl-inner">
+    <h2 class="fade">この番地、深夜3時まで。</h2>
+    <p class="lead fade">まわりの店が閉まってからが、二八の本番です。</p>
+    <div class="fade">
+      <div class="tl-bar"></div>
+      <div class="tl-stops">
+        <div class="tl-stop"><span class="t">18:00</span><span class="d">のれんが出る</span></div>
+        <div class="tl-stop"><span class="t">22:00</span><span class="d">一軒目の帰り道に</span></div>
+        <div class="tl-stop"><span class="t">1:00</span><span class="d">まだやってます</span></div>
+        <div class="tl-stop"><span class="t">3:00</span><span class="d">閉店</span></div>
+      </div>
+    </div>
+    <p class="tl-note fade">終電を逃した夜も、飲み足りない夜も。<strong>〆の中華そばに、間に合う。</strong></p>
+  </div>
+</section>
+
+<!-- 声 -->
+<section class="voices">
+  <h2 class="fade">夜ふかしの人たちの声</h2>
+  <div class="voice-grid">
+    <div class="voice wide fade">
+      <p>「豚骨ラーメン店が異常に多い中、たまに食べたくなる中華そば。深夜まで営業していることも嬉しい。」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「福岡では珍しい中華そば屋さん。西新界隈で非豚骨系は貴重なのでがんばってください！」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+    <div class="voice fade">
+      <p>「女性スタッフの接客最高✨」</p>
+      <p class="who">Googleの口コミより</p>
+    </div>
+  </div>
+</section>
+
+<!-- ご案内 -->
+<section class="info">
+  <div class="info-grid">
+    <div class="fade">
+      <h2>ご案内</h2>
+      <dl>
+        <dt>店名</dt><dd>中華麺 二八</dd>
+        <dt>住所</dt><dd>福岡市早良区高取2-2-8（店名の由来です）</dd>
+        <dt>最寄り</dt><dd>地下鉄 藤崎駅から徒歩約1分</dd>
+        <dt>営業</dt><dd>18:00〜翌3:00</dd>
+        <dt>定休日</dt><dd>火曜ほか不定休（最新はお電話でご確認ください）</dd>
+        <dt>スタイル</dt><dd>ちょい飲み＋〆の麺。おひとりさま歓迎の夜の店です</dd>
+      </dl>
+    </div>
+    <div class="tel-panel fade">
+      <p class="lead">今夜、開いてる？</p>
+      <p class="sub">不定休があるので、遠くから来る夜は一本どうぞ。</p>
+      <a class="tel-big" href="tel:092-846-4215">092-846-4215</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="m">中華麺 二八</div>
+  <p>福岡市早良区高取2-2-8｜非豚骨の中華そばとちょい飲み｜18:00〜翌3:00・火曜ほか不定休</p>
+</footer>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
