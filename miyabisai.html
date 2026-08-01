@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第28回 雅祭 | 彩雅 | 福岡大学</title>
+  <meta name="description" content="第28回 雅祭「彩雅」。福岡大学七隈キャンパスで開催。みんなが主役！心から楽しめる学園祭。">
+  <meta property="og:title" content="第28回 雅祭 | 彩雅">
+  <meta property="og:description" content="みんなが主役！心から楽しめる学園祭。福岡大学七隈キャンパス。">
+  <meta property="og:type" content="website">
+<link rel="canonical" href="https://jinshanxia74-star.github.io/sample-sites/miyabisai.html">
+<meta property="og:url" content="https://jinshanxia74-star.github.io/sample-sites/miyabisai.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { overflow-x: hidden; font-family: 'Noto Sans JP', sans-serif; background: #0A0A0A; color: #FAFAF8; }
+
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --bg-dark: #0A0A0A;
+      --bg-dark2: #111111;
+      --bg-light: #FAFAF8;
+      --bg-light2: #F0EDE8;
+      --red: #D91F26;
+      --red-dark: #A8181E;
+      --gold: #C9A84C;
+      --text-dark: #0A0A0A;
+      --text-light: #FAFAF8;
+      --text-muted: rgba(250,250,248,0.55);
+      --text-muted-dark: rgba(10,10,10,0.5);
+      --ff-display: 'Bebas Neue', sans-serif;
+      --ff-serif: 'Noto Serif JP', serif;
+      --ff-sans: 'Noto Sans JP', sans-serif;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .rv.on { opacity: 1; transform: none; }
+    .rv-left { opacity: 0; transform: translateX(-32px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .rv-left.on { opacity: 1; transform: none; }
+    .rv-right { opacity: 0; transform: translateX(32px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .rv-right.on { opacity: 1; transform: none; }
+    .rv-d1 { transition-delay: 0.1s; }
+    .rv-d2 { transition-delay: 0.2s; }
+    .rv-d3 { transition-delay: 0.3s; }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2.5rem;
+      background: rgba(10,10,10,0.92);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(201,168,76,0.18);
+    }
+    .nav-logo {
+      font-family: var(--ff-serif);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--ff-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: rgba(250,250,248,0.75);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-ham {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-ham span {
+      display: block; width: 24px; height: 2px;
+      background: var(--text-light);
+      transition: all 0.3s;
+    }
+    .nav-ham.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-ham.open span:nth-child(2) { opacity: 0; }
+    .nav-ham.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 6rem 2.5rem 5rem;
+      background: var(--bg-dark);
+      overflow: hidden;
+    }
+    .hero-bg-kanji {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--ff-serif);
+      font-size: clamp(10rem, 28vw, 30rem);
+      font-weight: 900;
+      color: rgba(217,31,38,0.05);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .hero-accent-line {
+      width: 56px; height: 2px;
+      background: var(--red);
+      margin-bottom: 1.75rem;
+    }
+    .hero-edition {
+      font-family: var(--ff-display);
+      font-size: clamp(0.85rem, 1.8vw, 1rem);
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .hero-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(3.8rem, 13vw, 11rem);
+      font-weight: 900;
+      line-height: 1.0;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title .accent-red { color: var(--red); }
+    .hero-catch {
+      font-family: var(--ff-sans);
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      line-height: 1.9;
+      margin-bottom: 3rem;
+      max-width: 30rem;
+    }
+    .hero-meta {
+      display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;
+    }
+    .hero-date {
+      font-family: var(--ff-display);
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      letter-spacing: 0.04em;
+      color: var(--text-light);
+      line-height: 1;
+    }
+    .hero-date-sub {
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      margin-top: 0.3rem;
+    }
+    .hero-vdivider {
+      width: 1px; height: 52px;
+      background: rgba(250,250,248,0.18);
+    }
+    .hero-venue {
+      font-family: var(--ff-serif);
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1.4;
+    }
+    .hero-venue-sub {
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+    .hero-scroll-cue {
+      position: absolute;
+      bottom: 2.25rem; right: 2.5rem;
+      display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+      font-family: var(--ff-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      color: rgba(250,250,248,0.3);
+    }
+    .hero-scroll-cue::after {
+      content: '';
+      width: 1px; height: 44px;
+      background: linear-gradient(to bottom, rgba(250,250,248,0.25), transparent);
+    }
+
+    /* ===== INFO BAR ===== */
+    .info-bar {
+      background: var(--red);
+      padding: 1.4rem 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .info-bar-item {
+      display: flex; flex-direction: column; gap: 0.2rem;
+      padding: 0 2rem;
+      border-right: 1px solid rgba(250,250,248,0.22);
+    }
+    .info-bar-item:first-child { padding-left: 0; }
+    .info-bar-item:last-child { border-right: none; }
+    .info-label {
+      font-family: var(--ff-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      color: rgba(250,250,248,0.65);
+      text-transform: uppercase;
+    }
+    .info-value {
+      font-family: var(--ff-sans);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-light);
+    }
+
+    /* ===== SECTION UTILITIES ===== */
+    .section-dark { background: var(--bg-dark); }
+    .section-dark2 { background: var(--bg-dark2); }
+    .section-light { background: var(--bg-light); }
+    .section-light2 { background: var(--bg-light2); }
+    .sec-pad { padding: 6rem 2.5rem; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .sec-label {
+      font-family: var(--ff-display);
+      font-size: 0.72rem;
+      letter-spacing: 0.35em;
+      color: var(--red);
+      text-transform: uppercase;
+      display: flex; align-items: center; gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .sec-label::before {
+      content: '';
+      width: 28px; height: 1px;
+      background: currentColor;
+    }
+    .sec-label.gold-label { color: var(--gold); }
+
+    .sec-h2-light {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text-light);
+      line-height: 1.25;
+      margin-bottom: 2.75rem;
+    }
+    .sec-h2-dark {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 2.75rem;
+    }
+
+    /* ===== ACCESS ===== */
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .map-wrapper {
+      aspect-ratio: 4/3;
+      border-radius: 3px;
+      overflow: hidden;
+      background: #c8c3bc;
+    }
+    .map-wrapper iframe { width: 100%; height: 100%; border: none; display: block; }
+    .map-cta {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      margin-top: 1.25rem;
+      font-family: var(--ff-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid var(--red);
+      padding-bottom: 1px;
+    }
+    .access-list { list-style: none; }
+    .access-item {
+      display: flex; gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(10,10,10,0.08);
+    }
+    .access-icon {
+      width: 38px; height: 38px; flex-shrink: 0;
+      background: var(--red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0;
+    }
+    .access-info strong {
+      display: block;
+      font-family: var(--ff-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.2rem;
+    }
+    .access-info span {
+      font-family: var(--ff-sans);
+      font-size: 0.8rem;
+      color: var(--text-muted-dark);
+      line-height: 1.7;
+    }
+
+    /* ===== THEME ===== */
+    .theme-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.7fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .theme-kanji {
+      font-family: var(--ff-serif);
+      font-size: clamp(7rem, 17vw, 14rem);
+      font-weight: 900;
+      line-height: 0.88;
+      background: linear-gradient(135deg, var(--red) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .theme-meaning {
+      font-family: var(--ff-sans);
+      font-size: 0.88rem;
+      color: rgba(250,250,248,0.7);
+      letter-spacing: 0.05em;
+      line-height: 2.1;
+      margin-bottom: 2.5rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--red);
+    }
+    .chairman-card {
+      background: rgba(250,250,248,0.04);
+      border: 1px solid rgba(201,168,76,0.22);
+      border-radius: 3px;
+      padding: 1.75rem 2rem;
+    }
+    .chairman-card-label {
+      font-family: var(--ff-display);
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .chairman-message {
+      font-family: var(--ff-sans);
+      font-size: 0.88rem;
+      line-height: 2.1;
+      color: rgba(250,250,248,0.78);
+    }
+    .chairman-name {
+      margin-top: 1.5rem;
+      font-family: var(--ff-serif);
+      font-size: 0.95rem;
+      color: var(--gold);
+      text-align: right;
+    }
+
+    /* ===== EVENTS ===== */
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+    }
+    .event-card {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #161616;
+      cursor: pointer;
+    }
+    .event-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.38;
+      transition: opacity 0.45s, transform 0.65s;
+      display: block;
+    }
+    .event-card:hover .event-img { opacity: 0.55; transform: scale(1.05); }
+    .event-overlay {
+      position: absolute; inset: 0;
+      padding: 2rem;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.2) 55%, transparent 100%);
+    }
+    .event-tag {
+      font-family: var(--ff-display);
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .event-name {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--text-light);
+      line-height: 1.3;
+      margin-bottom: 0.65rem;
+    }
+    .event-desc {
+      font-family: var(--ff-sans);
+      font-size: 0.8rem;
+      color: rgba(250,250,248,0.62);
+      line-height: 1.75;
+    }
+    .event-badge {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      background: var(--red);
+      color: white;
+      font-family: var(--ff-display);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      padding: 0.3rem 0.7rem;
+      border-radius: 2px;
+    }
+
+    /* ===== TIMETABLE ===== */
+    .tab-row {
+      display: flex;
+      border-bottom: 2px solid rgba(10,10,10,0.1);
+      margin-bottom: 2.75rem;
+    }
+    .tab-btn {
+      font-family: var(--ff-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: rgba(10,10,10,0.38);
+      background: none; border: none; cursor: pointer;
+      padding: 0.9rem 1.75rem;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.22s;
+      letter-spacing: 0.06em;
+    }
+    .tab-btn.active { color: var(--red); border-bottom-color: var(--red); }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+    table.tt { width: 100%; border-collapse: collapse; }
+    table.tt thead th {
+      font-family: var(--ff-display);
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      color: var(--red);
+      text-align: left;
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid rgba(10,10,10,0.14);
+    }
+    table.tt tbody tr {
+      border-bottom: 1px solid rgba(10,10,10,0.06);
+      transition: background 0.18s;
+    }
+    table.tt tbody tr:hover { background: rgba(217,31,38,0.03); }
+    table.tt td {
+      font-family: var(--ff-sans);
+      font-size: 0.86rem;
+      color: var(--text-dark);
+      padding: 1rem;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    table.tt .tt-time {
+      font-family: var(--ff-display);
+      font-size: 1.08rem;
+      color: var(--red);
+      white-space: nowrap;
+      width: 6.5rem;
+    }
+    table.tt .tt-bold { font-weight: 700; }
+    .tt-note {
+      margin-top: 1.25rem;
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      color: rgba(10,10,10,0.38);
+    }
+
+    /* ===== CAMPUS MAP ===== */
+    .campus-map-placeholder {
+      width: 100%;
+      min-height: 420px;
+      background: rgba(250,250,248,0.04);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      color: var(--text-muted);
+    }
+    /* 要Canva差し替え: キャンパスマップ画像 */
+
+    /* ===== FAQ ===== */
+    .faq-list { max-width: 820px; }
+    details.faq-item { border-bottom: 1px solid rgba(10,10,10,0.09); }
+    summary.faq-q {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1.5rem 0;
+      cursor: pointer; list-style: none;
+      font-family: var(--ff-sans);
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+    summary.faq-q::-webkit-details-marker { display: none; }
+    summary.faq-q:hover { color: var(--red); }
+    .faq-plus {
+      width: 28px; height: 28px; flex-shrink: 0;
+      background: var(--red); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.1rem; line-height: 1;
+      transition: transform 0.28s;
+    }
+    details[open] .faq-plus { transform: rotate(45deg); }
+    .faq-answer {
+      font-family: var(--ff-sans);
+      font-size: 0.86rem;
+      color: rgba(10,10,10,0.58);
+      line-height: 1.95;
+      padding-bottom: 1.5rem;
+      padding-right: 2.5rem;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-inner { text-align: center; }
+    .contact-sub {
+      font-family: var(--ff-sans);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 3rem;
+    }
+    .sns-row {
+      display: flex; justify-content: center; gap: 1.25rem;
+      flex-wrap: wrap; margin-bottom: 4.5rem;
+    }
+    .sns-btn {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      padding: 0.85rem 1.85rem;
+      border: 1px solid rgba(250,250,248,0.18);
+      border-radius: 2px;
+      font-family: var(--ff-sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: all 0.22s;
+    }
+    .sns-btn:hover { background: var(--red); border-color: var(--red); }
+    .contact-form {
+      max-width: 560px; margin: 0 auto;
+      text-align: left;
+    }
+    .form-row { margin-bottom: 1.1rem; }
+    .form-label {
+      display: block;
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+    }
+    .form-input,
+    .form-textarea {
+      width: 100%;
+      background: rgba(250,250,248,0.06);
+      border: 1px solid rgba(250,250,248,0.14);
+      border-radius: 2px;
+      padding: 0.85rem 1rem;
+      font-family: var(--ff-sans);
+      font-size: 0.86rem;
+      color: var(--text-light);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: rgba(250,250,248,0.25); }
+    .form-input:focus,
+    .form-textarea:focus { border-color: var(--gold); }
+    .form-textarea { resize: vertical; min-height: 115px; }
+    .form-btn {
+      width: 100%; margin-top: 0.5rem;
+      padding: 1rem;
+      background: var(--red); border: none; border-radius: 2px;
+      font-family: var(--ff-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .form-btn:hover { background: var(--red-dark); }
+    .form-btn:active { transform: scale(0.99); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #050505;
+      padding: 1.75rem 2.5rem;
+      border-top: 1px solid rgba(201,168,76,0.14);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-logo {
+      font-family: var(--ff-serif);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+    .footer-copy {
+      font-family: var(--ff-sans);
+      font-size: 0.72rem;
+      color: rgba(250,250,248,0.3);
+    }
+
+    /* ===== RESPONSIVE 1024px ===== */
+    @media (max-width: 1024px) {
+      nav { padding: 0.9rem 1.5rem; }
+      .sec-pad { padding: 5rem 1.5rem; }
+      .info-bar { padding: 1.25rem 1.5rem; }
+      .theme-grid { gap: 3rem; }
+      .access-grid { gap: 2.5rem; }
+    }
+
+    /* ===== RESPONSIVE 768px ===== */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
+        flex-direction: column;
+        background: rgba(10,10,10,0.97);
+        backdrop-filter: blur(18px);
+        padding: 3rem 2rem;
+        align-items: center; justify-content: center;
+        gap: 2.25rem; z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.15rem; }
+      .nav-ham { display: flex; }
+
+      .hero {
+        padding: 5rem 1.25rem 3.5rem;
+        justify-content: center;
+        gap: 0;
+      }
+      .hero-accent-line { margin-bottom: 1.25rem; }
+      .hero-catch { margin-bottom: 2rem; max-width: 100%; }
+      .hero-meta { gap: 1.25rem; }
+      .hero-scroll-cue { display: none; }
+
+      .info-bar { grid-template-columns: 1fr; padding: 0; }
+      .info-bar-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(250,250,248,0.15);
+        padding: 1rem 1.25rem;
+      }
+      .info-bar-item:last-child { border-bottom: none; }
+
+      .sec-pad { padding: 4rem 1.25rem; }
+
+      .theme-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+      .theme-kanji { font-size: clamp(6rem, 28vw, 10rem); }
+
+      .access-grid { grid-template-columns: 1fr; }
+
+      .events-grid { grid-template-columns: 1fr; gap: 3px; }
+      .event-card { aspect-ratio: 16/9; }
+    }
+
+    /* ===== RESPONSIVE 480px ===== */
+    @media (max-width: 480px) {
+      .hero { padding: 5rem 1rem 3rem; }
+      .hero-vdivider { display: none; }
+      .hero-meta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .sec-pad { padding: 3.5rem 1rem; }
+      footer { padding: 1.5rem 1rem; }
+      .tab-btn { padding: 0.8rem 1.1rem; font-size: 0.8rem; }
+      table.tt td { padding: 0.75rem 0.5rem; font-size: 0.78rem; }
+      table.tt .tt-time { font-size: 0.95rem; width: 5.5rem; }
+      .chairman-card { padding: 1.25rem; }
+      .contact-form { max-width: 100%; }
+      .sns-btn { padding: 0.75rem 1.25rem; font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== NAV ==================== -->
+  <nav>
+    <a href="#top" class="nav-logo">雅祭 第28回</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#theme">テーマ</a></li>
+      <li><a href="#events">企画</a></li>
+      <li><a href="#timetable">タイムテーブル</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+    <button class="nav-ham" id="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="top">
+    <div class="hero-bg-kanji">彩雅</div>
+    <div class="hero-accent-line rv"></div>
+    <p class="hero-edition rv rv-d1">THE 28TH MIYABISAI — FUKUOKA UNIVERSITY</p>
+    <h1 class="hero-title rv rv-d2">
+      第28回<br>
+      <span class="accent-red">雅祭</span>
+    </h1>
+    <p class="hero-catch rv rv-d3">みんなが主役！心から楽しめる学園祭</p>
+    <div class="hero-meta rv">
+      <div>
+        <div class="hero-date">2024.XX.XX – XX</div><!-- 要更新: 開催日程 -->
+        <div class="hero-date-sub">DAY 1 / DAY 2 OPEN</div>
+      </div>
+      <div class="hero-vdivider"></div>
+      <div>
+        <div class="hero-venue">福岡大学<br>七隈キャンパス</div>
+        <div class="hero-venue-sub">FUKUOKA UNIV. NANAKUMA</div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue">SCROLL</div>
+  </section>
+
+  <!-- ==================== INFO BAR ==================== -->
+  <div class="info-bar">
+    <div class="info-bar-item">
+      <span class="info-label">Venue</span>
+      <span class="info-value">福岡大学 七隈キャンパス</span>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-label">Theme</span>
+      <span class="info-value">彩雅</span>
+    </div>
+    <div class="info-bar-item">
+      <span class="info-label">Joint Festival</span>
+      <span class="info-value">七隈祭と合同開催</span>
+    </div>
+  </div>
+
+  <!-- ==================== ACCESS ==================== -->
+  <section class="section-light sec-pad" id="access">
+    <div class="container">
+      <p class="sec-label rv">02 — Access</p>
+      <h2 class="sec-h2-dark rv">開催概要・アクセス</h2>
+      <div class="access-grid">
+        <div class="rv-left">
+          <div class="map-wrapper">
+            <!-- 要確認: Googleマップ埋め込みURLは実際のものに更新 -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.5!2d130.36!3d33.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191f0!2z56aP5bKh5aSn5a2m!5e0!3m2!1sja!2sjp!4v1"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <a href="https://maps.google.com/?q=福岡大学+七隈キャンパス" target="_blank" rel="noopener" class="map-cta">
+            Google マップで開く →
+          </a>
+        </div>
+        <div class="rv-right">
+          <ul class="access-list">
+            <li class="access-item">
+              <div class="access-icon">地</div>
+              <div class="access-info">
+                <strong>地下鉄七隈線</strong>
+                <span>「福大前駅」下車すぐ<br>天神南駅から約14分</span>
+              </div>
+            </li>
+            <li class="access-item">
+              <div class="access-icon">住</div>
+              <div class="access-info">
+                <strong>会場住所</strong>
+                <span>福岡県福岡市城南区七隈8丁目19−1<br>福岡大学 七隈キャンパス</span>
+              </div>
+            </li>
+            <li class="access-item">
+              <div class="access-icon">合</div>
+              <div class="access-info">
+                <strong>七隈祭と合同開催</strong>
+                <span>雅祭と七隈祭が同時開催。<br>2つの学園祭を一度に楽しめます。</span>
+              </div>
+            </li>
+            <li class="access-item">
+              <div class="access-icon">入</div>
+              <div class="access-info">
+                <strong>入場</strong>
+                <span>入場無料<br>（一部企画はチケット制）</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THEME ==================== -->
+  <section class="section-dark sec-pad" id="theme">
+    <div class="container">
+      <p class="sec-label rv">03 — Theme</p>
+      <div class="theme-grid">
+        <div class="rv-left">
+          <div class="theme-kanji">彩雅</div>
+        </div>
+        <div class="rv-right">
+          <h2 class="sec-h2-light">テーマ「彩雅」と<br>実行委員の想い</h2>
+          <p class="theme-meaning">
+            「彩雅」とは、色彩（彩）と雅やかさ（雅）が交わる言葉。<br>
+            多様な個性が集まり、それぞれの色が輝く場所——。<br>
+            第28回雅祭は、一人ひとりが自分らしく輝ける学園祭を目指します。
+          </p>
+          <div class="chairman-card">
+            <div class="chairman-card-label">CHAIRMAN'S MESSAGE — 委員長挨拶</div>
+            <p class="chairman-message">
+              今年のテーマ「彩雅」には、みんなが主役という想いを込めました。学生・来場者・実行委員、すべての人が「自分らしさ」を持ち寄り、この場所でかけがえのない時間を作り上げてほしいと願っています。第28回雅祭、どうぞ心ゆくまでお楽しみください。
+            </p>
+            <!-- 要更新: 委員長名 -->
+            <p class="chairman-name">第28回 雅祭実行委員長</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EVENTS ==================== -->
+  <section class="section-dark2 sec-pad" id="events">
+    <div class="container">
+      <p class="sec-label gold-label rv">04 — Programs</p>
+      <h2 class="sec-h2-light rv">企画紹介</h2>
+    </div>
+    <div style="max-width:1200px; margin:0 auto; padding: 0 2.5rem;">
+      <div class="events-grid">
+
+        <!-- ゲストライブ -->
+        <div class="event-card rv">
+          <!-- 要Canva差し替え: ゲストライブ写真 -->
+          <img src="https://picsum.photos/seed/miyabi-live/800/600" alt="ゲストライブ" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Guest Live</span>
+            <h3 class="event-name">ゲストライブ</h3>
+            <p class="event-desc">豪華ゲストによるスペシャルライブ。チケット制。詳細は公式SNSで随時発表。</p>
+          </div>
+          <span class="event-badge">TICKET</span>
+        </div>
+
+        <!-- お化け屋敷 -->
+        <div class="event-card rv rv-d1">
+          <!-- 要Canva差し替え: お化け屋敷イメージ -->
+          <img src="https://picsum.photos/seed/miyabi-horror/800/600" alt="お化け屋敷" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Horror</span>
+            <h3 class="event-name">お化け屋敷</h3>
+            <p class="event-desc">実行委員渾身のホラー体験。あなたは最後まで歩ける？恐怖と感動の連続。</p>
+          </div>
+        </div>
+
+        <!-- ダーツ企画 -->
+        <div class="event-card rv rv-d2">
+          <!-- 要Canva差し替え: ダーツ写真 -->
+          <img src="https://picsum.photos/seed/miyabi-darts/800/600" alt="ダーツ企画" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Challenge</span>
+            <h3 class="event-name">ダーツ企画</h3>
+            <p class="event-desc">参加型ダーツ大会。初心者も楽しめる仕掛け満載。優勝者には豪華景品が！</p>
+          </div>
+        </div>
+
+        <!-- 模擬店 -->
+        <div class="event-card rv rv-d3">
+          <!-- 要Canva差し替え: 模擬店・フードコート写真 -->
+          <img src="https://picsum.photos/seed/miyabi-food/800/600" alt="模擬店" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Food Court</span>
+            <h3 class="event-name">模擬店</h3>
+            <p class="event-desc">学生が腕をふるう多彩なフードブース。学祭名物グルメをお楽しみください。</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TIMETABLE ==================== -->
+  <section class="section-light2 sec-pad" id="timetable">
+    <div class="container">
+      <p class="sec-label rv">05 — Schedule</p>
+      <h2 class="sec-h2-dark rv">タイムテーブル</h2>
+      <div class="tab-row">
+        <button class="tab-btn active" data-tab="day1">DAY 1</button>
+        <button class="tab-btn" data-tab="day2">DAY 2</button>
+      </div>
+
+      <div class="tab-pane active" id="day1">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">開会式・オープニング</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:30</td>
+              <td>模擬店オープン</td>
+              <td>各ブース</td>
+            </tr>
+            <tr>
+              <td class="tt-time">11:00</td>
+              <td>お化け屋敷 オープン</td>
+              <td>A棟（要整理券）</td>
+            </tr>
+            <tr>
+              <td class="tt-time">12:00</td>
+              <td>ダーツ企画スタート</td>
+              <td>体育館</td>
+            </tr>
+            <tr>
+              <td class="tt-time">13:30</td>
+              <td>サークル・部活パフォーマンス</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">15:00</td>
+              <td class="tt-bold">ゲストライブ 第1部</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:30</td>
+              <td>Day 1 フィナーレ</td>
+              <td>メインステージ</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="tt-note">※ スケジュールは変更になる場合があります。最新情報は公式SNSをご確認ください。</p>
+      </div>
+
+      <div class="tab-pane" id="day2">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td>模擬店 Day 2 オープン</td>
+              <td>各ブース</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:30</td>
+              <td>お化け屋敷 Day 2</td>
+              <td>A棟</td>
+            </tr>
+            <tr>
+              <td class="tt-time">12:00</td>
+              <td class="tt-bold">ダーツ決勝トーナメント</td>
+              <td>体育館</td>
+            </tr>
+            <tr>
+              <td class="tt-time">13:30</td>
+              <td>展示・ステージパフォーマンス</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">15:00</td>
+              <td class="tt-bold">ゲストライブ フィナーレ</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:00</td>
+              <td class="tt-bold">閉会式・エンディング</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:30</td>
+              <td>撤収・終了</td>
+              <td>全会場</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="tt-note">※ スケジュールは変更になる場合があります。最新情報は公式SNSをご確認ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAMPUS MAP ==================== -->
+  <section class="section-dark sec-pad" id="campusmap">
+    <div class="container">
+      <p class="sec-label rv">06 — Campus Map</p>
+      <h2 class="sec-h2-light rv">キャンパスマップ</h2>
+      <!-- 要Canva差し替え: キャンパスマップ画像をここに配置 -->
+      <div class="campus-map-placeholder rv">
+        CAMPUS MAP — 要Canva差し替え
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="section-light sec-pad" id="faq">
+    <div class="container">
+      <p class="sec-label rv">07 — FAQ</p>
+      <h2 class="sec-h2-dark rv">よくある質問</h2>
+      <div class="faq-list">
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            入場は無料ですか？
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">基本入場は無料です。ただし、ゲストライブ等の一部企画はチケット制となります。詳細は公式SNSにてご確認ください。</p>
+        </details>
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            チケットはどこで購入できますか？
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">チケットの販売方法・販売場所は公式Instagram・X（旧Twitter）にてご案内します。フォローしてお待ちください。</p>
+        </details>
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            アクセス方法を教えてください。
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">地下鉄七隈線「福大前駅」下車すぐです。天神南駅から約14分でアクセスできます。お車でのご来場はご遠慮ください。</p>
+        </details>
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            七隈祭とはどういった関係ですか？
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">雅祭と七隈祭は福岡大学の2つの学園祭です。今年は合同開催のため、同一会場で両祭の企画を一度に楽しめます。</p>
+        </details>
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            雨天の場合は開催されますか？
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">原則として雨天決行です。荒天により内容が変更になる場合は、公式SNSにてご連絡します。最新情報をフォローしてご確認ください。</p>
+        </details>
+
+        <details class="faq-item rv">
+          <summary class="faq-q">
+            お問い合わせはどこに連絡すればよいですか？
+            <span class="faq-plus">+</span>
+          </summary>
+          <p class="faq-answer">ページ下部のお問い合わせフォーム、または公式SNSのDMにてご連絡ください。</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section-dark sec-pad" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <p class="sec-label gold-label rv" style="justify-content:center;">08 — Contact &amp; SNS</p>
+        <h2 class="sec-h2-light rv" style="text-align:center;">SNS・お問い合わせ</h2>
+        <p class="contact-sub rv">最新情報はSNSで随時発信中。フォローしてチェックしてください。</p>
+
+        <div class="sns-row rv">
+          <!-- 要更新: 実際のSNS URLに差し替え -->
+          <a href="#" class="sns-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram
+          </a>
+          <a href="#" class="sns-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            X (Twitter)
+          </a>
+        </div>
+
+        <div class="contact-form rv">
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <label class="form-label">お名前</label>
+              <input type="text" class="form-input" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">メールアドレス</label>
+              <input type="email" class="form-input" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label">お問い合わせ内容</label>
+              <textarea class="form-textarea" placeholder="ご質問・ご意見をご記入ください" required></textarea>
+            </div>
+            <button type="submit" class="form-btn">送信する</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer>
+    <div class="footer-logo">第28回 雅祭 — 彩雅</div>
+    <p class="footer-copy">© 2024 雅祭実行委員会 / 福岡大学</p>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const ham = document.getElementById('ham');
+    const navLinks = document.getElementById('nav-links');
+    ham.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      ham.classList.toggle('open', isOpen);
+      ham.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        ham.classList.remove('open');
+        ham.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('on');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv, .rv-left, .rv-right').forEach(el => revealObs.observe(el));
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Contact form
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-btn');
+      btn.textContent = '送信しました！ありがとうございます';
+      btn.style.background = '#1a6e3a';
+      btn.disabled = true;
+    }
+  </script>
+</body>
+</html>

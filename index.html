@@ -1,392 +1,219 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>いろは寿司 | 高級寿司レストラン</title>
-  <meta name="description" content="東京の高級寿司レストラン「いろは寿司」。新鮮なネタと熟練職人の技が光る寿司をお楽しみください。">
-  <meta property="og:title" content="いろは寿司">
-  <meta property="og:description" content="高級寿司レストラン">
-  <meta property="og:image" content="">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>制作実績｜ホームページ制作</title>
+<meta name="description" content="福岡の飲食店・電気工事店を中心としたホームページ制作実績44件。ラーメン店・居酒屋・定食屋・焼肉・カフェ・寿司・職人まで、業種ごとに実際のサイトをご覧いただけます。">
+<link rel="canonical" href="https://jinshanxia74-star.github.io/sample-sites/">
+<meta property="og:title" content="制作実績｜ホームページ制作">
+<meta property="og:description" content="福岡の飲食店・職人を中心とした制作実績44件。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinshanxia74-star.github.io/sample-sites/">
+<meta property="og:image" content="https://jinshanxia74-star.github.io/sample-sites/thumbs/hamachan-hero.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+:root{
+  --paper:#faf8f5; --ink:#1a1815; --muted:#6b6560;
+  --line:#e3ddd4; --accent:#b8442c; --card:#fff;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper); color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",YuGothic,"Noto Sans JP",system-ui,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1140px;margin:0 auto;padding:0 18px}
 
-    body {
-      font-family: "Noto Sans JP", sans-serif;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
+/* header */
+header{padding:44px 0 26px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-size:11px;letter-spacing:.22em;color:var(--accent);
+  font-weight:700;text-transform:uppercase;margin-bottom:14px
+}
+h1{
+  font-size:clamp(26px,7vw,44px);line-height:1.24;
+  letter-spacing:-.02em;font-weight:700
+}
+h1 .thin{display:block;font-size:.52em;letter-spacing:.01em;color:var(--muted);font-weight:500;margin-top:12px;line-height:1.7}
+.count{
+  margin-top:22px;display:inline-flex;align-items:baseline;gap:9px;
+  padding:9px 16px;background:var(--ink);color:var(--paper);border-radius:999px
+}
+.count b{font-size:20px;letter-spacing:.01em}
+.count span{font-size:12px;opacity:.8}
 
-    /* ヘッダー */
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+/* filters */
+.filterbar{
+  position:sticky;top:0;z-index:20;background:rgba(250,248,245,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  padding:12px 0
+}
+.chips{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:0 0 auto;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);font-size:13px;font-family:inherit;
+  padding:8px 15px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  transition:background .16s,color .16s,border-color .16s
+}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
+/* grid */
+main{padding:26px 0 70px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:359px){.grid{grid-template-columns:1fr}}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #d4af37;
-    }
+.card{
+  display:block;text-decoration:none;color:inherit;
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;transition:transform .18s ease,box-shadow .18s ease
+}
+.card:active{transform:scale(.985)}
+@media(hover:hover){.card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(26,24,21,.10)}}
+.thumb{aspect-ratio:4/3;background:#eee9e2;overflow:hidden;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb.noimg{
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,#2b2724,#4a423b);
+}
+.thumb.noimg span{
+  color:#f0ebe4;font-size:13px;letter-spacing:.14em;font-weight:600;
+  padding:0 14px;text-align:center;line-height:1.6
+}
+.body{padding:12px 13px 14px}
+.name{font-size:14px;font-weight:700;letter-spacing:-.01em;line-height:1.45}
+.tag{margin-top:5px;font-size:11.5px;color:var(--muted);line-height:1.5}
+@media(min-width:700px){.name{font-size:15.5px}.tag{font-size:12.5px}.body{padding:14px 16px 17px}}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 30px;
-      font-size: 14px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    /* メインビジュアル */
-    .hero {
-      height: 500px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 1;
-    }
-
-    .hero-text {
-      text-align: center;
-      color: #fff;
-      z-index: 2;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 72px;
-      margin-bottom: 10px;
-      letter-spacing: 3px;
-      color: #d4af37;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero p {
-      font-size: 24px;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    /* セクション共通 */
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      font-size: 48px;
-      text-align: center;
-      margin-bottom: 60px;
-      color: #000;
-      letter-spacing: 2px;
-      border-bottom: 3px solid #d4af37;
-      padding-bottom: 20px;
-    }
-
-    /* メニュー */
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-    }
-
-    .menu-item {
-      text-align: center;
-      padding: 20px;
-      border: 1px solid #e0e0e0;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-item h3 {
-      font-size: 20px;
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
-
-    .menu-item p {
-      color: #666;
-      font-size: 14px;
-    }
-
-    /* 営業情報 */
-    .info-section {
-      background: #f9f9f9;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-    }
-
-    .info-box h3 {
-      font-size: 24px;
-      color: #d4af37;
-      margin-bottom: 15px;
-    }
-
-    .info-box p {
-      color: #333;
-      margin-bottom: 8px;
-    }
-
-    /* 予約フォーム */
-    .reservation-section {
-      background: #000;
-      color: #fff;
-    }
-
-    .reservation-section h2 {
-      color: #d4af37;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #d4af37;
-      background: #1a1a1a;
-      color: #fff;
-      font-size: 14px;
-      font-family: inherit;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: #888;
-    }
-
-    .submit-btn {
-      background: #d4af37;
-      color: #000;
-      padding: 15px 40px;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-      letter-spacing: 1px;
-    }
-
-    .submit-btn:hover {
-      background: #e6c547;
-    }
-
-    /* フッター */
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      border-top: 3px solid #d4af37;
-    }
-
-    footer p {
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-
-    /* レスポンシブ */
-    @media (max-width: 768px) {
-      .header-content {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      nav a {
-        margin-left: 15px;
-        font-size: 12px;
-      }
-
-      .hero {
-        height: 300px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 32px;
-      }
-
-      .menu-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .info-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.empty{padding:60px 0;text-align:center;color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--muted);font-size:12px;line-height:1.9}
+</style>
 </head>
 <body>
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-content">
-      <div class="logo">いろは寿司</div>
-      <nav>
-        <a href="#menu">メニュー</a>
-        <a href="#info">営業情報</a>
-        <a href="#reservation">予約</a>
-      </nav>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Works</p>
+    <h1>制作実績<span class="thin">福岡の飲食店・職人を中心に制作したホームページです。<br>気になるお店をタップすると、実物がそのまま開きます。</span></h1>
+    <p class="count"><b>44</b><span>サイト</span></p>
+  </div>
+</header>
+
+<div class="filterbar">
+  <div class="wrap">
+    <div class="chips" role="group" aria-label="業種で絞り込む">
+      <button class="chip" data-f="all" aria-pressed="true">すべて</button>
+      <button class="chip" data-f="men" aria-pressed="false">ラーメン・麺</button>
+      <button class="chip" data-f="izakaya" aria-pressed="false">居酒屋・バー</button>
+      <button class="chip" data-f="teishoku" aria-pressed="false">定食・カレー・丼</button>
+      <button class="chip" data-f="yakiniku" aria-pressed="false">焼肉・鉄板</button>
+      <button class="chip" data-f="cafe" aria-pressed="false">カフェ・専門店</button>
+      <button class="chip" data-f="sushi" aria-pressed="false">寿司・和食</button>
+      <button class="chip" data-f="shokunin" aria-pressed="false">職人・工事</button>
+      <button class="chip" data-f="other" aria-pressed="false">その他</button>
     </div>
-  </header>
+  </div>
+</div>
 
-  <!-- メインビジュアル -->
-  <section class="hero" style="background-image: url('irohazushi-hero.jpg');">
-    <div class="hero-text">
-      <h1>いろは寿司</h1>
-      <p>高級寿司レストラン</p>
-    </div>
-  </section>
+<main>
+  <div class="wrap">
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>該当する実績がありません</p>
+  </div>
+</main>
 
-  <!-- メニュー -->
-  <section id="menu">
-    <h2>メニュー</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <h3>マグロ中トロ握り</h3>
-        <p>新鮮なマグロ中トロを職人の技で握った逸品。</p>
-      </div>
-      <div class="menu-item">
-        <h3>サーモンアボカド</h3>
-        <p>塩漬けサーモンとアボカドの組み合わせ。</p>
-      </div>
-      <div class="menu-item">
-        <h3>ウニ</h3>
-        <p>北海道産の濃厚なウニの芳醇な味わい。</p>
-      </div>
-      <div class="menu-item">
-        <h3>エビ握り</h3>
-        <p>プリプリとした甘えびを握った贅沢な一貫。</p>
-      </div>
-    </div>
-  </section>
+<footer>
+  <div class="wrap">
+    掲載しているサイトはすべて実際に制作したものです。<br>
+    店舗の許諾前の提案用サンプルを含みます。無断転載はご遠慮ください。
+  </div>
+</footer>
 
-  <!-- 営業情報 -->
-  <section id="info" class="info-section">
-    <h2>営業情報</h2>
-    <div class="info-grid">
-      <div class="info-box">
-        <h3>営業時間</h3>
-        <p><strong>ランチ:</strong> 11:30 〜 15:00</p>
-        <p><strong>ディナー:</strong> 17:00 〜 23:00</p>
-        <p><strong>定休日:</strong> 月曜日</p>
-      </div>
-      <div class="info-box">
-        <h3>アクセス</h3>
-        <p>〒100-0001</p>
-        <p>東京都千代田区丸の内1-1-1</p>
-        <p><strong>電話:</strong> 03-XXXX-XXXX</p>
-      </div>
-      <div class="info-box">
-        <h3>お問い合わせ</h3>
-        <p>ご質問やご予約に関しては、</p>
-        <p>お気軽にお電話またはメールでお問い合わせください。</p>
-        <p><strong>Email:</strong> info@irohazushi.jp</p>
-      </div>
-    </div>
-  </section>
+<script>
+const WORKS=[
+ {f:"chanpon-tamanegi",n:"ちゃんぽん 玉ねぎ",t:"創作ちゃんぽん／福岡・野方",i:"chanpon-tamanegi-hero",c:"men"},
+ {f:"karamen-saburo",n:"辛麺 三郎",t:"辛麺専門・深夜営業／西新",i:"karamen-saburo-hero",c:"men"},
+ {f:"kikujiro",n:"麺家 菊二朗",t:"二郎系ラーメン／早良区",i:"kikujiro-hero",c:"men"},
+ {f:"ramen-peace",n:"ラーメンピース",t:"二郎系ラーメン／七隈",i:"ramen-peace-hero",c:"men"},
+ {f:"saitaniya",n:"ラーメン処 西谷家",t:"ド豚骨ラーメン／西区",i:"saitaniya-hero",c:"men"},
+ {f:"sanki",n:"博多三氣",t:"あっさりとんこつ・替え玉10円",i:"sanki-hero",c:"men"},
+ {f:"senryu",n:"麺処 博多 閃龍",t:"背脂とんこつ／城南区田島",i:"senryu-hero",c:"men"},
+ {f:"rasarotei",n:"らさろ亭",t:"よもぎ麺・個性派ラーメン／早良区",i:"rasaro-hero",c:"men"},
+ {f:"nihachi",n:"中華麺 二八",t:"中華そば・深夜3時まで／藤崎",i:"nihachi-hero",c:"men"},
+ {f:"soba-ito",n:"そば処 いとう",t:"老舗そば処／城南区片江",i:"soba-ito-hero",c:"men"},
+ {f:"glicine",n:"洋風そば食堂 グリチネ",t:"そばコース／西新",i:"glicine-hero",c:"men"},
 
-  <!-- 予約フォーム -->
-  <section id="reservation" class="reservation-section">
-    <h2>来店予約</h2>
-    <form style="max-width: 500px; margin: 0 auto;">
-      <div class="form-group">
-        <label for="name">お名前</label>
-        <input type="text" id="name" name="name" placeholder="田中太郎" required>
-      </div>
-      <div class="form-group">
-        <label for="email">メールアドレス</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="date">来店予定日</label>
-        <input type="date" id="date" name="date" required>
-      </div>
-      <div class="form-group">
-        <label for="time">来店時間</label>
-        <input type="time" id="time" name="time" required>
-      </div>
-      <div class="form-group">
-        <label for="people">人数</label>
-        <input type="number" id="people" name="people" min="1" max="8" placeholder="2" required>
-      </div>
-      <div class="form-group">
-        <label for="message">備考（アレルギーなど）</label>
-        <textarea id="message" name="message" placeholder="特別なご要望があればお書きください"></textarea>
-      </div>
-      <button type="submit" class="submit-btn">予約する</button>
-    </form>
-  </section>
+ {f:"hamachan",n:"居酒屋はまちゃん",t:"家庭派居酒屋／藤崎駅徒歩1分",i:"hamachan-hero",c:"izakaya"},
+ {f:"hibiki",n:"遊食酒場 ひびき",t:"居酒屋／早良区祖原",i:"hibiki-hero",c:"izakaya"},
+ {f:"komenomeshi",n:"いつも月よに米のめし",t:"魚と酒の小箱居酒屋／西新",i:"komenomeshi-hero",c:"izakaya"},
+ {f:"yuruiya",n:"ユルイヤ",t:"創作料理居酒屋／祖原",i:"yuruiya-hero",c:"izakaya"},
+ {f:"hattori",n:"焼鳥はっとり",t:"夜は焼鳥・昼はラーメン／早良区",i:"hattori-hero",c:"izakaya"},
+ {f:"yamachan",n:"唐揚げ研究所 YAMACHAN",t:"立ち飲み唐揚げ／西新",i:"yamachan-hero",c:"izakaya"},
+ {f:"ugurusu",n:"鵜来巣",t:"古民家ジビエと地鶏／西入部",i:"ugurusu-hero",c:"izakaya"},
+ {f:"jinendo",n:"自然堂",t:"無添加のごはんとお酒／城南区",i:"jinendo-hero",c:"izakaya"},
+ {f:"dining-sho",n:"DINING祥（A案）",t:"ダイニングバー／同一店舗の3案比較",i:"dining-sho-bistro-drink",c:"izakaya"},
+ {f:"dining-sho-bistro",n:"DINING祥（B案）",t:"大人ビストロ／同一店舗の3案比較",i:"dining-sho-bistro-hero",c:"izakaya"},
+ {f:"dining-sho-modern",n:"DINING祥（C案）",t:"モダンダイニング／同一店舗の3案比較",i:"dining-sho-bistro-interior",c:"izakaya"},
 
-  <!-- フッター -->
-  <footer>
-    <p>&copy; 2026 いろは寿司. All rights reserved.</p>
-    <p>東京都千代田区丸の内1-1-1 | 03-XXXX-XXXX</p>
-  </footer>
+ {f:"morizou",n:"カレー屋もりぞう",t:"ボリューム満点カレー／福大近く",i:"morizou-hero",c:"teishoku"},
+ {f:"curry-katz",n:"CURRY KATZ",t:"夜のスープカレー専門／藤崎",i:"curry-katz-hero",c:"teishoku"},
+ {f:"satou-butadon",n:"さとうの豚丼",t:"炙り豚丼・並500円／福大近く",i:"satou-butadon-hero",c:"teishoku"},
+ {f:"sittouya",n:"しっとう家",t:"定食・おかわり自由／福大近く",i:"sittouya-hero",c:"teishoku"},
+ {f:"yamatoya",n:"大和家",t:"定食／福大前",i:"yamatoya-hero",c:"teishoku"},
+ {f:"shunkaen",n:"春華苑",t:"町中華・創業昭和44年／次郎丸",i:"shunkaen-hero",c:"teishoku"},
+
+ {f:"higyu",n:"やきにく飛牛 七隈本店",t:"焼肉／城南区",i:"higyu-hero",c:"yakiniku"},
+ {f:"seiryu",n:"勢龍",t:"昭和の焼肉屋・創業五十年／七隈",i:"seiryu-hero",c:"yakiniku"},
+ {f:"teppankazoku",n:"鉄板家族",t:"鉄板焼肉・鉄板丼／古民家",i:"teppankazoku-hero",c:"yakiniku"},
+ {f:"danke",n:"お好み焼き 暖氣 DANKE",t:"広島流お好み焼き／姪浜",i:"danke-hero",c:"yakiniku"},
+
+ {f:"hayama",n:"葉山珈琲 福大通り店",t:"カフェインレスコーヒー専門／城南区",i:"hayama-hero",c:"cafe"},
+ {f:"nanakuma-cafe",n:"Nanakuma Cafe",t:"カフェ／福大通り・湖畔公園そば",i:"nanakuma-cafe-hero",c:"cafe"},
+ {f:"kobe-sandoya",n:"神戸サンド屋",t:"フルーツサンド専門／七隈",i:"kobe-sandoya-kiwi",c:"cafe"},
+ {f:"mana-kebab",n:"MaNa KEBAB",t:"ケバブ屋台・イベント出店／七隈",i:"mana-kebab-hero",c:"cafe"},
+ {f:"watanabe-nanban",n:"ワタナベナンバン",t:"チキン南蛮サンド専門／平尾",i:"watanabe-nanban-hero",c:"cafe"},
+ {f:"aperitivo",n:"Aperitivo",t:"イタリアンバル／姪浜",i:"aperitivo-hero",c:"cafe"},
+
+ {f:"irohazushi",n:"いろは寿司",t:"江戸前おまかせ・完全予約制／銀座",i:"irohazushi-hero",c:"sushi"},
+ {f:"sushi-segawa",n:"すし 酒 おつまみ 瀬川",t:"隠れ家寿司／藤崎",i:"sushi-segawa-hero",c:"sushi"},
+
+ {f:"electrician",n:"山田電気工業",t:"電気工事専門／福岡市",i:"electrician-hero",c:"shokunin"},
+ {f:"saibi-denki",n:"彩備電気株式会社",t:"電気設備工事・太陽光・LED化／福岡市",i:"",c:"shokunin"},
+
+ {f:"shiina",n:"SHIINA",t:"プロダーツプレイヤー／個人サイト",i:"",c:"other"},
+ {f:"miyabisai",n:"第28回 雅祭「彩雅」",t:"福岡大学 学園祭 公式サイト",i:"",c:"other"}
+];
+
+const grid=document.getElementById("grid"), empty=document.getElementById("empty");
+
+function render(filter){
+  const list = filter==="all" ? WORKS : WORKS.filter(w=>w.c===filter);
+  grid.innerHTML = list.map(w=>{
+    const thumb = w.i
+      ? `<div class="thumb"><img src="thumbs/${w.i}.jpg" alt="${w.n}のホームページ" loading="lazy" decoding="async" width="480" height="360"></div>`
+      : `<div class="thumb noimg"><span>${w.n}</span></div>`;
+    return `<a class="card" href="${w.f}.html">${thumb}<div class="body"><p class="name">${w.n}</p><p class="tag">${w.t}</p></div></a>`;
+  }).join("");
+  empty.hidden = list.length>0;
+}
+
+document.querySelectorAll(".chip").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));
+    btn.setAttribute("aria-pressed","true");
+    render(btn.dataset.f);
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+});
+
+render("all");
+</script>
 </body>
 </html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山田電気工業 | 福岡市の電気工事専門 - 第一種電気工事士在籍</title>
+  <meta name="description" content="福岡市・周辺エリアの電気工事は山田電気工業へ。第一種電気工事士在籍。住宅・店舗の配線工事・分電盤交換・エアコン設置・緊急対応。無料見積もりご相談ください。">
+  <meta property="og:title" content="山田電気工業 | 福岡市の電気工事専門">
+  <meta property="og:description" content="第一種電気工事士在籍。住宅・店舗の電気工事全般に対応。無料見積もり実施中。">
+  <meta property="og:type" content="website">
+<link rel="canonical" href="https://jinshanxia74-star.github.io/sample-sites/electrician.html">
+<meta property="og:url" content="https://jinshanxia74-star.github.io/sample-sites/electrician.html">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:      #F7F9FC;
+      --bg2:     #EBF0F8;
+      --navy:    #0B2545;
+      --navy2:   #1C3E6A;
+      --orange:  #D05A20;
+      --orange-h:#B84D18;
+      --t1:      #0B2545;
+      --t2:      #4A5C72;
+      --t3:      #7A90AA;
+      --border:  #C8D8EE;
+      --white:   #FFFFFF;
+      --r:       8px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--t1);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Skip link */
+    .skip { position: absolute; top: -100%; left: 1rem; background: var(--orange); color: var(--white); padding: .5rem 1rem; border-radius: 0 0 var(--r) var(--r); font-weight: 700; font-size: .875rem; z-index: 9999; transition: top .2s; }
+    .skip:focus { top: 0; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); transition: box-shadow .2s; }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(11,37,69,.1); }
+    .nav-in { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { text-decoration: none; line-height: 1.2; }
+    .logo-en { font-family: 'Space Grotesk', sans-serif; font-size: .62rem; letter-spacing: .12em; color: var(--orange); font-weight: 500; text-transform: uppercase; display: block; }
+    .logo-jp { font-size: 1.05rem; font-weight: 700; color: var(--navy); display: block; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .875rem; font-weight: 500; color: var(--t2); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: .5rem 1.25rem; border-radius: var(--r); font-weight: 700 !important; transition: background .2s !important; }
+    .nav-cta:hover { background: var(--orange-h) !important; }
+    .nav-ham { display: none; flex-direction: column; justify-content: center; gap: 5px; background: none; border: none; cursor: pointer; padding: .5rem; width: 36px; height: 36px; }
+    .nav-ham span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: all .25s; }
+    .nav-ham.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-ham.open span:nth-child(2) { opacity: 0; }
+    .nav-ham.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 55% 45%; min-height: calc(100dvh - 68px); }
+    .hero-text { background: var(--navy); padding: 5rem 4rem 5rem 5rem; display: flex; flex-direction: column; justify-content: center; }
+    .hero-tag { font-size: .72rem; font-weight: 700; color: var(--orange); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .5rem; }
+    .hero-tag::before { content: ''; width: 20px; height: 2px; background: var(--orange); flex-shrink: 0; }
+    h1.hero-h1 { font-size: clamp(1.75rem, 3.5vw, 2.6rem); font-weight: 700; line-height: 1.45; color: var(--white); margin-bottom: 1.25rem; }
+    .hero-h1 span { color: var(--orange); }
+    .hero-sub { font-size: .95rem; line-height: 1.8; color: rgba(255,255,255,.72); max-width: 40ch; margin-bottom: 2.5rem; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn-p { background: var(--orange); color: var(--white); padding: .875rem 2rem; border-radius: var(--r); font-size: .95rem; font-weight: 700; text-decoration: none; display: inline-block; transition: background .2s, transform .1s; }
+    .btn-p:hover { background: var(--orange-h); color: var(--white); }
+    .btn-p:active { transform: scale(.98); }
+    .btn-o { background: transparent; color: rgba(255,255,255,.8); padding: .875rem 2rem; border-radius: var(--r); border: 1.5px solid rgba(255,255,255,.3); font-size: .95rem; font-weight: 500; text-decoration: none; display: inline-block; transition: border-color .2s, color .2s; }
+    .btn-o:hover { border-color: rgba(255,255,255,.7); color: var(--white); }
+    .hero-cert { margin-top: 2.5rem; font-size: .73rem; color: rgba(255,255,255,.45); }
+    .hero-cert strong { color: rgba(255,255,255,.65); }
+    .hero-img { position: relative; overflow: hidden; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Stats */
+    .stats { background: var(--navy2); padding: 2rem 1.5rem; }
+    .stats-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; text-align: center; }
+    .stat-num { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.75rem,3vw,2.5rem); font-weight: 700; color: var(--orange); line-height: 1.1; }
+    .stat-unit { font-size: .72rem; font-weight: 500; }
+    .stat-label { font-size: .72rem; color: rgba(255,255,255,.62); margin-top: .2rem; }
+
+    /* Section base */
+    section { padding: 5rem 1.5rem; }
+    .inner { max-width: 1200px; margin: 0 auto; }
+    .sh2 { font-size: clamp(1.5rem,3vw,2rem); font-weight: 700; line-height: 1.35; }
+    .sbody { font-size: .95rem; color: var(--t2); line-height: 1.75; max-width: 55ch; }
+
+    /* Services */
+    .services { background: var(--white); }
+    .services .sh2 { margin-bottom: .75rem; }
+    .services .sbody { margin-bottom: 3rem; }
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 1.5rem; }
+    .svc-card { background: var(--bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: box-shadow .25s, transform .2s; }
+    .svc-card:hover { box-shadow: 0 8px 32px rgba(11,37,69,.1); transform: translateY(-3px); }
+    .svc-card.feat { grid-row: 1/3; display: flex; flex-direction: column; }
+    .svc-card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .svc-card.feat .svc-card-img { height: 280px; flex: 0 0 280px; }
+    .svc-body { padding: 1.5rem; flex: 1; }
+    .svc-icon { width: 40px; height: 40px; background: rgba(208,90,32,.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: .75rem; }
+    .svc-icon svg { width: 20px; height: 20px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-name { font-size: 1rem; font-weight: 700; color: var(--t1); margin-bottom: .45rem; }
+    .svc-card.feat .svc-name { font-size: 1.15rem; }
+    .svc-desc { font-size: .85rem; color: var(--t2); line-height: 1.65; }
+    .svc-tag { display: inline-block; background: var(--orange); color: var(--white); font-size: .68rem; font-weight: 700; padding: .2rem .6rem; border-radius: 4px; margin-bottom: .65rem; }
+    .svc-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 1.5rem; }
+    .svc-mini { background: var(--bg2); border-radius: var(--r); padding: 1.25rem 1.5rem; border: 1px solid var(--border); display: flex; align-items: flex-start; gap: .875rem; transition: background .2s; }
+    .svc-mini:hover { background: var(--bg); }
+    .svc-mini-icon { flex-shrink: 0; width: 36px; height: 36px; background: var(--white); border-radius: 6px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
+    .svc-mini-icon svg { width: 18px; height: 18px; stroke: var(--orange); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .svc-mini h4 { font-size: .875rem; font-weight: 700; margin-bottom: .2rem; }
+    .svc-mini p { font-size: .8rem; color: var(--t2); line-height: 1.5; }
+
+    /* About */
+    .about { background: var(--bg); }
+    .about-grid { display: grid; grid-template-columns: 45% 55%; gap: 5rem; align-items: center; }
+    .about-pic-wrap { position: relative; }
+    .about-pic-wrap img { width: 100%; height: 440px; object-fit: cover; border-radius: 12px; display: block; }
+    .about-badge { position: absolute; bottom: 1.5rem; right: -1.5rem; background: var(--white); border-radius: var(--r); padding: 1rem 1.25rem; box-shadow: 0 8px 32px rgba(11,37,69,.16); text-align: center; min-width: 110px; }
+    .badge-n { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--orange); line-height: 1; }
+    .badge-l { font-size: .68rem; color: var(--t2); line-height: 1.3; margin-top: .2rem; }
+    .eyebrow { font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-bottom: .75rem; }
+    .about-text .sh2 { margin-bottom: 1.25rem; }
+    .about-text .sbody { margin-bottom: 1.75rem; }
+    .about-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .about-list li { display: flex; align-items: flex-start; gap: .75rem; font-size: .875rem; }
+    .about-list li::before { content: ''; width: 6px; height: 6px; background: var(--orange); border-radius: 50%; margin-top: .55em; flex-shrink: 0; }
+
+    /* Process */
+    .process { background: var(--navy); }
+    .process .sh2 { color: var(--white); margin-bottom: .65rem; }
+    .process .sbody { color: rgba(255,255,255,.62); margin-bottom: 3rem; }
+    .steps { display: grid; grid-template-columns: repeat(5,1fr); position: relative; }
+    .steps::before { content: ''; position: absolute; top: 31px; left: 12%; right: 12%; height: 2px; background: rgba(255,255,255,.12); }
+    .step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 .75rem; }
+    .step-c { width: 62px; height: 62px; border-radius: 50%; background: var(--navy2); border: 2px solid rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; position: relative; z-index: 1; transition: border-color .25s; }
+    .step:hover .step-c { border-color: var(--orange); }
+    .step-c svg { width: 22px; height: 22px; stroke: var(--orange); fill: none; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+    .step-name { font-size: .875rem; font-weight: 700; color: var(--white); margin-bottom: .35rem; }
+    .step-desc { font-size: .75rem; color: rgba(255,255,255,.58); line-height: 1.55; }
+
+    /* Testimonials */
+    .testimonials { background: var(--bg2); }
+    .testimonials .sh2 { margin-bottom: .65rem; }
+    .testimonials .sbody { margin-bottom: 3rem; }
+    .rev-grid { display: grid; grid-template-columns: 55% 1fr; gap: 1.5rem; }
+    .rev-feat { background: var(--white); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--border); display: flex; flex-direction: column; justify-content: space-between; }
+    .rev-stars { display: flex; gap: 3px; margin-bottom: 1.25rem; }
+    .rev-stars svg { width: 17px; height: 17px; fill: var(--orange); }
+    .rev-q { font-size: 1rem; line-height: 1.75; color: var(--t1); margin-bottom: 1.5rem; font-weight: 500; }
+    .rev-attr { display: flex; align-items: center; gap: .75rem; }
+    .rev-av { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+    .rev-name { font-size: .875rem; font-weight: 700; }
+    .rev-role { font-size: .72rem; color: var(--t3); }
+    .rev-compact { display: flex; flex-direction: column; gap: 1.5rem; }
+    .rev-mini { background: var(--white); border-radius: var(--r); padding: 1.5rem; border: 1px solid var(--border); }
+    .rev-mini .rev-q { font-size: .875rem; font-weight: 400; margin-bottom: 1rem; }
+    .rev-mini .rev-stars svg { width: 13px; height: 13px; }
+
+    /* Contact */
+    .contact { background: var(--navy); }
+    .contact-in { max-width: 660px; margin: 0 auto; text-align: center; }
+    .contact .sh2 { color: var(--white); margin-bottom: .65rem; }
+    .contact .sbody { color: rgba(255,255,255,.65); margin: 0 auto 2.5rem; }
+    .cform { display: flex; flex-direction: column; gap: 1rem; text-align: left; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fgroup { display: flex; flex-direction: column; gap: .35rem; }
+    .flabel { font-size: .8rem; font-weight: 700; color: rgba(255,255,255,.82); }
+    .flabel .req { color: var(--orange); margin-left: .2rem; }
+    .finput { background: rgba(255,255,255,.08); border: 1.5px solid rgba(255,255,255,.18); border-radius: var(--r); padding: .75rem 1rem; font-size: .9rem; color: var(--white); font-family: inherit; width: 100%; transition: border-color .2s, background .2s; }
+    .finput::placeholder { color: rgba(255,255,255,.5); }
+    .finput:focus { outline: none; border-color: var(--orange); background: rgba(255,255,255,.1); }
+    textarea.finput { resize: vertical; min-height: 120px; }
+    .fnote { font-size: .73rem; color: rgba(255,255,255,.52); text-align: center; }
+    .btn-sub { background: var(--orange); color: var(--white); border: none; padding: 1rem 2.5rem; border-radius: var(--r); font-size: 1rem; font-weight: 700; font-family: inherit; cursor: pointer; transition: background .2s, transform .1s; align-self: center; min-width: 200px; }
+    .btn-sub:hover { background: var(--orange-h); }
+    .btn-sub:active { transform: scale(.98); }
+
+    /* Footer */
+    footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,.08); padding: 3rem 1.5rem 2rem; }
+    .foot-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 260px 1fr; gap: 4rem; margin-bottom: 2.5rem; }
+    .foot-tagline { font-size: .78rem; color: rgba(255,255,255,.5); margin-top: .75rem; line-height: 1.65; }
+    .foot-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; }
+    .foot-col h4 { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.38); margin-bottom: 1rem; }
+    .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+    .foot-col a { font-size: .85rem; color: rgba(255,255,255,.58); text-decoration: none; transition: color .2s; }
+    .foot-col a:hover { color: var(--white); }
+    .foot-bottom { max-width: 1200px; margin: 0 auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.08); display: flex; justify-content: space-between; align-items: center; }
+    .foot-copy { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .foot-lic { font-size: .7rem; color: rgba(255,255,255,.38); }
+
+    /* Scroll reveal */
+    .rv { opacity: 0; transform: translateY(22px); transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+    .rv.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .2s; }
+    .d3 { transition-delay: .3s; }
+    .d4 { transition-delay: .4s; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text { padding: 4rem 2rem; }
+      .hero-img { height: 340px; }
+      .stats-in { grid-template-columns: repeat(2,1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-badge { right: 1rem; }
+      .steps { grid-template-columns: repeat(3,1fr); row-gap: 2.5rem; }
+      .steps::before { display: none; }
+      .foot-in { grid-template-columns: 1fr; gap: 2rem; }
+      .foot-links { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      section { padding: 3.5rem 1rem; }
+      .nav-ham { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute; top: 68px; left: 0; right: 0;
+        background: var(--white);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 1.5rem 1rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 24px rgba(11,37,69,.1);
+        z-index: 99;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--border); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a { display: block; padding: .875rem 0; font-size: 1rem; }
+      .nav-cta { margin-top: .5rem; text-align: center; border-radius: var(--r) !important; }
+      .svc-grid { grid-template-columns: 1fr; }
+      .svc-card.feat { grid-row: auto; }
+      .svc-row { grid-template-columns: 1fr; }
+      .rev-grid { grid-template-columns: 1fr; }
+      .frow { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: repeat(2,1fr); }
+      .foot-links { grid-template-columns: 1fr; }
+      .foot-bottom { flex-direction: column; gap: .5rem; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      section { padding: 2.5rem .875rem; }
+      .hero-text { padding: 2.5rem 1.25rem; }
+      h1.hero-h1 { font-size: 1.65rem; }
+      .hero-img { height: 240px; }
+      .stats-in { gap: .75rem; }
+      .stat-num { font-size: 1.5rem; }
+      .steps { grid-template-columns: 1fr; gap: 1.75rem; }
+      .steps::before { display: none; }
+      .about-badge { right: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">メインコンテンツへ</a>
+
+<nav class="nav" id="nav" aria-label="メインナビゲーション">
+  <div class="nav-in">
+    <a href="#" class="logo" aria-label="山田電気工業トップ">
+      <span class="logo-en">Yamada Electric</span>
+      <span class="logo-jp">山田電気工業</span>
+    </a>
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#services">施工内容</a></li>
+      <li><a href="#about">当社について</a></li>
+      <li><a href="#process">工事の流れ</a></li>
+      <li><a href="#reviews">お客様の声</a></li>
+      <li><a href="#contact" class="nav-cta">無料見積もり</a></li>
+    </ul>
+    <button class="nav-ham" id="ham" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- Hero: 55/45 split, navy left / image right -->
+  <section class="hero" id="top" aria-label="メインビジュアル">
+    <div class="hero-text">
+      <p class="hero-tag">福岡市 / 周辺エリア対応</p>
+      <h1 class="hero-h1">
+        電気の不安、<br>
+        まず<span>山田</span>に<br>ご相談ください。
+      </h1>
+      <p class="hero-sub">
+        資格保有のプロが迅速・丁寧に対応。無料見積もりから施工まで安心してお任せください。
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-p">無料見積もりを依頼する</a>
+        <a href="#services" class="btn-o">施工内容を見る</a>
+      </div>
+      <p class="hero-cert"><strong>第一種電気工事士</strong> 在籍 / 建設業許可取得 / 損害保険加入</p>
+    </div>
+    <div class="hero-img">
+      <img src="images/electrician-hero.jpg" alt="現場で作業する山田電気工業のプロ電気工事士" loading="eager">
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <div class="stats" aria-label="実績数値">
+    <div class="stats-in">
+      <div class="rv">
+        <div class="stat-num">1,200<span class="stat-unit">件+</span></div>
+        <div class="stat-label">累計施工実績</div>
+      </div>
+      <div class="rv d1">
+        <div class="stat-num">18<span class="stat-unit">年</span></div>
+        <div class="stat-label">施工経験</div>
+      </div>
+      <div class="rv d2">
+        <div class="stat-num">24<span class="stat-unit">時間</span></div>
+        <div class="stat-label">緊急対応受付</div>
+      </div>
+      <div class="rv d3">
+        <div class="stat-num">0<span class="stat-unit">円</span></div>
+        <div class="stat-label">見積もり費用</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services: asymmetric bento (1 featured spanning 2 rows + 2 stacked) + 3 mini cards -->
+  <section class="services" id="services">
+    <div class="inner">
+      <h2 class="sh2 rv">施工内容</h2>
+      <p class="sbody rv d1">住宅・店舗・工場まで、電気まわりの工事を幅広く承ります。まずはお気軽にご相談ください。</p>
+
+      <div class="svc-grid">
+        <!-- Featured: 緊急対応 (spans 2 rows) -->
+        <article class="svc-card feat rv">
+          <img src="images/electrician-hero.jpg" alt="緊急電気工事の対応シーン" class="svc-card-img">
+          <div class="svc-body">
+            <span class="svc-tag">24時間対応</span>
+            <h3 class="svc-name">緊急電気対応</h3>
+            <p class="svc-desc">ブレーカー落ち・停電・漏電など急なトラブルに24時間365日対応。当日の駆けつけも可能です。資格保有の工事士がすぐに原因を特定し、修理まで迅速に対応いたします。</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="svc-card rv d1">
+          <div class="svc-body">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3 class="svc-name">住宅配線工事</h3>
+            <p class="svc-desc">新築・リフォーム・増設に対応。コンセント増設・照明新設など生活スタイルに合わせた配線工事を行います。</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="svc-card rv d2">
+          <div class="svc-body">
+            <div class="svc-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 00-4 0v2M12 12v4M10 14h4"/></svg>
+            </div>
+            <h3 class="svc-name">分電盤・電気容量の増設</h3>
+            <p class="svc-desc">古い分電盤の交換や電気容量の増設に対応。IH調理器・エコキュート導入前にご相談ください。</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Mini cards row (3 items) -->
+      <div class="svc-row">
+        <div class="svc-mini rv">
+          <div class="svc-mini-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9.5 2A2.5 2.5 0 007 4.5v15a2.5 2.5 0 005 0v-15A2.5 2.5 0 009.5 2zM4 8.5A2.5 2.5 0 011.5 11v2A2.5 2.5 0 004 15.5M20 8.5a2.5 2.5 0 012.5 2.5v2a2.5 2.5 0 01-2.5 2.5"/></svg>
+          </div>
+          <div>
+            <h4>エアコン設置工事</h4>
+            <p>新設・移設・取り外しに対応。専用コンセントの新設も承ります。</p>
+          </div>
+        </div>
+        <div class="svc-mini rv d1">
+          <div class="svc-mini-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </div>
+          <div>
+            <h4>照明・LED化工事</h4>
+            <p>ダウンライト取付、蛍光灯のLED切り替えなど節電対策もサポート。</p>
+          </div>
+        </div>
+        <div class="svc-mini rv d2">
+          <div class="svc-mini-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <div>
+            <h4>店舗・オフィス電気工事</h4>
+            <p>テナント工事・動力設備・防犯カメラ配線など業務用工事も対応。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About: image left / text right split -->
+  <section class="about" id="about">
+    <div class="inner">
+      <div class="about-grid">
+        <div class="about-pic-wrap rv">
+          <!-- Canva画像を使用 -->
+          <img src="images/electrician-work.jpg" alt="丁寧に配線作業をする職人の手元" loading="lazy">
+          <div class="about-badge">
+            <div class="badge-n">18</div>
+            <div class="badge-l">年間の<br>施工実績</div>
+          </div>
+        </div>
+        <div class="about-text rv d1">
+          <p class="eyebrow">当社について</p>
+          <h2 class="sh2">資格と経験で、<br>安心を届ける。</h2>
+          <p class="sbody" style="margin-top:.875rem">
+            2006年の創業以来、福岡市を中心に1,200件以上の電気工事を手がけてきました。
+            すべての工事は第一種電気工事士が担当。小さな修理から大規模施設工事まで、
+            お客様の安全を最優先に誠実に取り組んでいます。
+          </p>
+          <ul class="about-list" aria-label="特徴" style="margin-top:1.5rem">
+            <li>第一種電気工事士取得 - 最上位の国家資格保有</li>
+            <li>建設業許可取得 - 公共工事にも対応できる信頼性</li>
+            <li>損害保険加入 - 万が一のトラブルも補償</li>
+            <li>見積もり後の追加費用なし - 透明な料金体系</li>
+            <li>施工後1年間の保証付き - アフターフォローも万全</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process: horizontal strip on dark bg -->
+  <section class="process" id="process">
+    <div class="inner">
+      <h2 class="sh2 rv">工事の流れ</h2>
+      <p class="sbody rv d1">お問い合わせから施工完了まで、5つのステップで丁寧に進めます。</p>
+      <div class="steps" role="list">
+        <div class="step rv" role="listitem">
+          <div class="step-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <p class="step-name">お問い合わせ</p>
+          <p class="step-desc">電話・メール・LINEでお気軽にご連絡ください</p>
+        </div>
+        <div class="step rv d1" role="listitem">
+          <div class="step-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+          </div>
+          <p class="step-name">現地調査・見積もり</p>
+          <p class="step-desc">現場を確認し、無料でお見積もりをご提示</p>
+        </div>
+        <div class="step rv d2" role="listitem">
+          <div class="step-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <p class="step-name">ご契約・日程調整</p>
+          <p class="step-desc">内容にご納得いただいてから契約・日程確定</p>
+        </div>
+        <div class="step rv d3" role="listitem">
+          <div class="step-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <p class="step-name">施工</p>
+          <p class="step-desc">資格保有の工事士が丁寧・安全に施工します</p>
+        </div>
+        <div class="step rv d4" role="listitem">
+          <div class="step-c" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <p class="step-name">完成・アフターフォロー</p>
+          <p class="step-desc">施工後1年間の保証で安心してお使いください</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials: 1 featured large + 2 compact -->
+  <section class="testimonials" id="reviews">
+    <div class="inner">
+      <h2 class="sh2 rv">お客様の声</h2>
+      <p class="sbody rv d1">施工後のお客様より、多くのご評価をいただいています。</p>
+      <div class="rev-grid">
+        <div class="rev-feat rv">
+          <div>
+            <div class="rev-stars" aria-label="5つ星">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="rev-q">
+              「深夜にブレーカーが落ちて真っ暗な中で困り果てていたとき、山田さんに連絡したら1時間以内に来てくれました。原因は分電盤の老朽化で、その場で応急処置をして翌日に本工事。費用も事前に説明していただけて安心でした。」
+            </blockquote>
+          </div>
+          <div class="rev-attr">
+            <img src="https://picsum.photos/seed/tanaka-client/42/42" alt="" class="rev-av" aria-hidden="true">
+            <!-- 要Canva差し替え: クライアント写真 -->
+            <div>
+              <p class="rev-name">田中 美咲さん</p>
+              <p class="rev-role">福岡市南区 / 一般家庭</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rev-compact">
+          <div class="rev-mini rv d1">
+            <div class="rev-stars" aria-label="5つ星">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="rev-q">「店舗オープンに合わせて照明工事をお願いしました。イメージ通りの仕上がりで、工事中の対応も丁寧で信頼できる業者さんです。」</blockquote>
+            <div class="rev-attr">
+              <img src="https://picsum.photos/seed/sato-client/42/42" alt="" class="rev-av" aria-hidden="true"><!-- 要Canva差し替え -->
+              <div>
+                <p class="rev-name">佐藤 健一さん</p>
+                <p class="rev-role">博多区 / 飲食店オーナー</p>
+              </div>
+            </div>
+          </div>
+          <div class="rev-mini rv d2">
+            <div class="rev-stars" aria-label="5つ星">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <blockquote class="rev-q">「IH調理器導入に際して分電盤交換までお願いしました。見積もりが明確で追加費用もなく、安心して依頼できました。」</blockquote>
+            <div class="rev-attr">
+              <img src="https://picsum.photos/seed/nakamura-client/42/42" alt="" class="rev-av" aria-hidden="true"><!-- 要Canva差し替え -->
+              <div>
+                <p class="rev-name">中村 裕子さん</p>
+                <p class="rev-role">早良区 / 一般家庭</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-in rv">
+      <h2 class="sh2">無料見積もりのご依頼</h2>
+      <p class="sbody">現地確認後に正確なお見積もりをご提示。電話でも受け付けています。</p>
+      <form class="cform" action="#" method="post" novalidate aria-label="お問い合わせフォーム">
+        <div class="frow">
+          <div class="fgroup">
+            <label class="flabel" for="name">お名前<span class="req" aria-label="必須">*</span></label>
+            <input class="finput" type="text" id="name" name="name" placeholder="山田 太郎" required autocomplete="name" aria-required="true">
+          </div>
+          <div class="fgroup">
+            <label class="flabel" for="tel">電話番号<span class="req" aria-label="必須">*</span></label>
+            <input class="finput" type="tel" id="tel" name="tel" placeholder="092-000-0000" required autocomplete="tel" aria-required="true">
+          </div>
+        </div>
+        <div class="fgroup">
+          <label class="flabel" for="email">メールアドレス</label>
+          <input class="finput" type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email">
+        </div>
+        <div class="fgroup">
+          <label class="flabel" for="msg">ご要望・お困りの内容<span class="req" aria-label="必須">*</span></label>
+          <textarea class="finput" id="msg" name="msg" placeholder="例：リビングのコンセントを増設したい / 急にブレーカーが落ちて困っている" required aria-required="true"></textarea>
+        </div>
+        <p class="fnote">送信後、1営業日以内にご連絡いたします。お急ぎの場合はお電話ください。</p>
+        <button type="submit" class="btn-sub">見積もり依頼を送信する</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-in">
+    <div>
+      <span class="logo-en" style="font-family:'Space Grotesk',sans-serif;font-size:.62rem;letter-spacing:.12em;color:var(--orange);font-weight:500;text-transform:uppercase;display:block;">Yamada Electric</span>
+      <span class="logo-jp" style="font-size:1.05rem;font-weight:700;color:var(--white);display:block;">山田電気工業</span>
+      <p class="foot-tagline">福岡市を中心に、18年間地域の電気工事を支えてきました。資格と経験で安心をお届けします。</p>
+    </div>
+    <div class="foot-links">
+      <div class="foot-col">
+        <h4>施工内容</h4>
+        <ul>
+          <li><a href="#services">住宅配線工事</a></li>
+          <li><a href="#services">分電盤交換</a></li>
+          <li><a href="#services">エアコン設置</a></li>
+          <li><a href="#services">緊急電気対応</a></li>
+          <li><a href="#services">店舗・オフィス工事</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>会社情報</h4>
+        <ul>
+          <li><a href="#about">当社について</a></li>
+          <li><a href="#process">工事の流れ</a></li>
+          <li><a href="#reviews">お客様の声</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>お問い合わせ</h4>
+        <ul>
+          <li><a href="tel:092-000-0000">TEL: 092-000-0000</a></li>
+          <li><a href="mailto:info@yamada-denki.jp">info@yamada-denki.jp</a></li>
+          <li><a href="#contact">無料見積もり依頼</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p class="foot-copy">2024 山田電気工業. All rights reserved.</p>
+    <p class="foot-lic">第一種電気工事士 / 建設業許可 第XXXXXXXX号</p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Scroll reveal via IntersectionObserver
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  // Smooth anchor scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); navLinks.classList.remove('open'); ham.classList.remove('open'); ham.setAttribute('aria-expanded','false'); }
+    });
+  });
+
+  // Hamburger menu
+  const ham = document.getElementById('ham');
+  const navLinks = document.getElementById('nav-links');
+  ham.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    ham.classList.toggle('open', isOpen);
+    ham.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>
+
+</body>
+</html>
