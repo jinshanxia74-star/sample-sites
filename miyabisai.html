@@ -940,10 +940,140 @@
     <div class="container">
       <p class="sec-label rv">05 — Schedule</p>
       <h2 class="sec-h2-dark rv">タイムテーブル</h2>
-      <div class="rv" style="border:1px dashed rgba(10,10,10,0.25); border-radius:3px; padding:3rem 1.5rem; text-align:center;">
-        <p style="font-family:var(--ff-display); font-size:1.4rem; letter-spacing:0.3em; color:var(--red); margin-bottom:0.8rem;">COMING SOON</p>
-        <p style="font-family:var(--ff-sans); font-size:0.9rem; color:var(--text-muted-dark); line-height:2;">タイムテーブルは現在調整中です。<br>決まり次第、こちらのページと公式SNS・LINEでお知らせします。</p>
+      <div class="tab-row">
+        <button class="tab-btn active" data-tab="day1">DAY 1<span style="display:block;font-size:0.68rem;font-weight:500;">11/1(日)</span></button>
+        <button class="tab-btn" data-tab="day2">DAY 2<span style="display:block;font-size:0.68rem;font-weight:500;">11/2(月)</span></button>
+        <button class="tab-btn" data-tab="day3">DAY 3<span style="display:block;font-size:0.68rem;font-weight:500;">11/3(火・祝)</span></button>
       </div>
+
+      <div class="tab-pane active" id="day1">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">09:45</td>
+              <td>お化け屋敷 受付開始・整理券配布</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">お化け屋敷 オープン（〜17:00）</td>
+              <td>オリオンホール ※高校生以上500円</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">ダーツ企画（トーナメント・プロチャレンジ・スコアチャレンジ／〜17:00）</td>
+              <td>B.B kitchen・学内野外スペース ※参加無料</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">香水作り体験（〜17:00）</td>
+              <td>A101教室 ※11/1のみ開催</td>
+            </tr>
+            <tr>
+              <td class="tt-time">16:45</td>
+              <td>お化け屋敷 最終受付</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:00</td>
+              <td>Day 1 終了</td>
+              <td>各会場</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane" id="day2">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">09:45</td>
+              <td>お化け屋敷 受付開始・整理券配布</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">お化け屋敷（〜17:00）</td>
+              <td>オリオンホール ※高校生以上500円</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">ダーツ企画（〜17:00）</td>
+              <td>B.B kitchen・学内野外スペース ※参加無料</td>
+            </tr>
+            <tr>
+              <td class="tt-time">16:45</td>
+              <td>お化け屋敷 最終受付</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:00</td>
+              <td>Day 2 終了</td>
+              <td>各会場</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane" id="day3">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">09:45</td>
+              <td>お化け屋敷 受付開始・整理券配布</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">お化け屋敷（最終日は15:00まで）</td>
+              <td>オリオンホール ※高校生以上500円</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td class="tt-bold">ダーツ企画（〜17:00）</td>
+              <td>B.B kitchen・学内野外スペース ※参加無料</td>
+            </tr>
+            <tr>
+              <td class="tt-time">15:00</td>
+              <td>お化け屋敷 終了</td>
+              <td>オリオンホール</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:00</td>
+              <td>Day 3 終了・閉幕</td>
+              <td>各会場</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rv" style="margin-top:2rem; border:1px solid rgba(217,31,38,0.3); border-left:4px solid var(--red); border-radius:3px; padding:1.25rem 1.5rem; background:rgba(217,31,38,0.04);">
+        <p style="font-family:var(--ff-display); font-size:0.72rem; letter-spacing:0.28em; color:var(--red); margin-bottom:0.4rem;">SPECIAL — LIVE EVENT</p>
+        <p style="font-family:var(--ff-sans); font-size:0.88rem; color:var(--text-dark); line-height:1.9;"><strong>ライブ企画は10月17日（土）に学外会場で開催！</strong><br>会場：ライブハウス＆Club Peace（福岡市中央区荒戸1丁目3-9）／開場 15:00・開演 16:00<br>出演アーティスト・チケット情報は公式Instagram・LINEで発表します。</p>
+      </div>
+
+      <p class="tt-note">※ 各企画書に基づく暫定スケジュールです。時間・会場は変更になる場合があります。ゲーム大会・模擬店の詳細は調整中で、決まり次第掲載します。</p>
     </div>
   </section>
 
