@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>第28回 雅祭 | 彩雅 | 福岡大学</title>
-  <meta name="description" content="第28回 雅祭「彩雅」。福岡大学七隈キャンパスで開催。みんなが主役！心から楽しめる学園祭。">
+  <meta name="description" content="第28回 雅祭「彩雅」。2026年11月1日〜3日、福岡大学七隈キャンパスで開催。みんなが主役！心から楽しめる学園祭。">
   <meta property="og:title" content="第28回 雅祭 | 彩雅">
-  <meta property="og:description" content="みんなが主役！心から楽しめる学園祭。福岡大学七隈キャンパス。">
+  <meta property="og:description" content="みんなが主役！心から楽しめる学園祭。2026年11月1日〜3日、福岡大学七隈キャンパス。">
   <meta property="og:type" content="website">
 <link rel="canonical" href="https://jinshanxia74-star.github.io/sample-sites/miyabisai.html">
 <meta property="og:url" content="https://jinshanxia74-star.github.io/sample-sites/miyabisai.html">
@@ -651,16 +651,26 @@
     @media (max-width: 768px) {
       .nav-links {
         display: none;
-        position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
         flex-direction: column;
-        background: rgba(10,10,10,0.97);
-        backdrop-filter: blur(18px);
-        padding: 3rem 2rem;
+        background: #0A0A0A;
+        padding: 5rem 1.5rem 3rem;
         align-items: center; justify-content: center;
-        gap: 2.25rem; z-index: 99;
+        gap: 1.5rem; z-index: 99;
+        overflow-y: auto;
       }
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 1.15rem; }
+      .nav-links a {
+        font-size: 1.1rem;
+        color: #FAFAF8;
+        letter-spacing: 0.14em;
+        padding: 0.5rem 1.5rem;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+        border-bottom: 1px solid rgba(201,168,76,0.16);
+      }
+      .nav-links a:last-child { border-bottom: none; }
       .nav-ham { display: flex; }
 
       .hero {
@@ -718,6 +728,7 @@
       <li><a href="#theme">テーマ</a></li>
       <li><a href="#events">企画</a></li>
       <li><a href="#timetable">タイムテーブル</a></li>
+      <li><a href="#sponsor">協賛・広告</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
     </ul>
@@ -738,8 +749,8 @@
     <p class="hero-catch rv rv-d3">みんなが主役！心から楽しめる学園祭</p>
     <div class="hero-meta rv">
       <div>
-        <div class="hero-date">2024.XX.XX – XX</div><!-- 要更新: 開催日程 -->
-        <div class="hero-date-sub">DAY 1 / DAY 2 OPEN</div>
+        <div class="hero-date">2026.11.1 – 11.3</div>
+        <div class="hero-date-sub">日・月・火祝 3DAYS OPEN</div>
       </div>
       <div class="hero-vdivider"></div>
       <div>
@@ -762,7 +773,7 @@
     </div>
     <div class="info-bar-item">
       <span class="info-label">Joint Festival</span>
-      <span class="info-value">七隈祭と合同開催</span>
+      <span class="info-value">七隈祭・医学祭と3団体合同開催</span>
     </div>
   </div>
 
@@ -804,8 +815,8 @@
             <li class="access-item">
               <div class="access-icon">合</div>
               <div class="access-info">
-                <strong>七隈祭と合同開催</strong>
-                <span>雅祭と七隈祭が同時開催。<br>2つの学園祭を一度に楽しめます。</span>
+                <strong>七隈祭・医学祭と3団体合同開催</strong>
+                <span>雅祭・七隈祭・医学祭が同時開催。<br>3つの学園祭を一度に楽しめます。</span>
               </div>
             </li>
             <li class="access-item">
@@ -903,6 +914,28 @@
           </div>
         </div>
 
+        <!-- 香水作り体験 -->
+        <div class="event-card rv">
+          <!-- 要Canva差し替え: 香水作り体験写真 -->
+          <img src="https://picsum.photos/seed/miyabi-perfume/800/600" alt="香水作り体験" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Workshop</span>
+            <h3 class="event-name">香水作り体験</h3>
+            <p class="event-desc">お好みの香りを組み合わせて、世界にひとつだけのオリジナル香水を調合。学祭の思い出を持ち帰れる人気企画です。</p>
+          </div>
+        </div>
+
+        <!-- ゲーム大会 -->
+        <div class="event-card rv rv-d1">
+          <!-- 要Canva差し替え: ゲーム大会写真 -->
+          <img src="https://picsum.photos/seed/miyabi-game/800/600" alt="ゲーム大会" class="event-img">
+          <div class="event-overlay">
+            <span class="event-tag">Game</span>
+            <h3 class="event-name">ゲーム大会</h3>
+            <p class="event-desc">誰でも参加できる白熱のゲーム大会。仲間と競って盛り上がろう！上位入賞者には豪華景品をご用意。</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -913,8 +946,9 @@
       <p class="sec-label rv">05 — Schedule</p>
       <h2 class="sec-h2-dark rv">タイムテーブル</h2>
       <div class="tab-row">
-        <button class="tab-btn active" data-tab="day1">DAY 1</button>
-        <button class="tab-btn" data-tab="day2">DAY 2</button>
+        <button class="tab-btn active" data-tab="day1">DAY 1<span style="display:block;font-size:0.68rem;font-weight:500;">11/1(日)</span></button>
+        <button class="tab-btn" data-tab="day2">DAY 2<span style="display:block;font-size:0.68rem;font-weight:500;">11/2(月)</span></button>
+        <button class="tab-btn" data-tab="day3">DAY 3<span style="display:block;font-size:0.68rem;font-weight:500;">11/3(火・祝)</span></button>
       </div>
 
       <div class="tab-pane active" id="day1">
@@ -941,6 +975,11 @@
               <td class="tt-time">11:00</td>
               <td>お化け屋敷 オープン</td>
               <td>A棟（要整理券）</td>
+            </tr>
+            <tr>
+              <td class="tt-time">11:30</td>
+              <td>香水作り体験 オープン</td>
+              <td>特設ブース</td>
             </tr>
             <tr>
               <td class="tt-time">12:00</td>
@@ -988,13 +1027,68 @@
               <td>A棟</td>
             </tr>
             <tr>
+              <td class="tt-time">11:30</td>
+              <td>香水作り体験 Day 2</td>
+              <td>特設ブース</td>
+            </tr>
+            <tr>
               <td class="tt-time">12:00</td>
               <td class="tt-bold">ダーツ決勝トーナメント</td>
               <td>体育館</td>
             </tr>
             <tr>
               <td class="tt-time">13:30</td>
-              <td>展示・ステージパフォーマンス</td>
+              <td class="tt-bold">ゲーム大会 予選</td>
+              <td>体育館</td>
+            </tr>
+            <tr>
+              <td class="tt-time">15:00</td>
+              <td class="tt-bold">ゲストライブ 第2部</td>
+              <td>メインステージ</td>
+            </tr>
+            <tr>
+              <td class="tt-time">17:30</td>
+              <td>Day 2 フィナーレ</td>
+              <td>メインステージ</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="tt-note">※ スケジュールは変更になる場合があります。最新情報は公式SNSをご確認ください。</p>
+      </div>
+
+      <div class="tab-pane" id="day3">
+        <table class="tt">
+          <thead>
+            <tr>
+              <th>TIME</th>
+              <th>プログラム</th>
+              <th>会場</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tt-time">10:00</td>
+              <td>模擬店 Day 3 オープン</td>
+              <td>各ブース</td>
+            </tr>
+            <tr>
+              <td class="tt-time">10:30</td>
+              <td>お化け屋敷 Day 3</td>
+              <td>A棟</td>
+            </tr>
+            <tr>
+              <td class="tt-time">11:30</td>
+              <td>香水作り体験 Day 3</td>
+              <td>特設ブース</td>
+            </tr>
+            <tr>
+              <td class="tt-time">12:00</td>
+              <td class="tt-bold">ゲーム大会 決勝トーナメント</td>
+              <td>体育館</td>
+            </tr>
+            <tr>
+              <td class="tt-time">13:30</td>
+              <td>サークル・部活パフォーマンス</td>
               <td>メインステージ</td>
             </tr>
             <tr>
@@ -1031,10 +1125,25 @@
     </div>
   </section>
 
+  <!-- ==================== SPONSOR / AD ==================== -->
+  <section class="section-light2 sec-pad" id="sponsor">
+    <div class="container">
+      <p class="sec-label rv">07 — Sponsorship</p>
+      <h2 class="sec-h2-dark rv">パンフレット広告掲載のご案内</h2>
+      <p style="font-family:var(--ff-sans); font-size:0.88rem; color:var(--text-muted-dark); line-height:1.9; margin:-1.5rem 0 2rem; max-width:720px;" class="rv">
+        雅祭の総合パンフレットに広告を掲載いただける企業・店舗さまを募集しています。詳しくは下記の資料をご覧ください。
+      </p>
+      <div class="rv" style="border:1px solid rgba(10,10,10,0.12); border-radius:3px; overflow:hidden; background:#f3f1ea;">
+        <iframe src="miyabisai-ad.html" title="雅祭パンフレット広告 掲載メリットのご説明" loading="lazy" style="display:block; width:100%; height:min(75vh, 720px); border:none;"></iframe>
+      </div>
+      <a href="miyabisai-ad.html" target="_blank" rel="noopener" class="map-cta rv">資料を全画面で見る →</a>
+    </div>
+  </section>
+
   <!-- ==================== FAQ ==================== -->
   <section class="section-light sec-pad" id="faq">
     <div class="container">
-      <p class="sec-label rv">07 — FAQ</p>
+      <p class="sec-label rv">08 — FAQ</p>
       <h2 class="sec-h2-dark rv">よくある質問</h2>
       <div class="faq-list">
 
@@ -1067,7 +1176,7 @@
             七隈祭とはどういった関係ですか？
             <span class="faq-plus">+</span>
           </summary>
-          <p class="faq-answer">雅祭と七隈祭は福岡大学の2つの学園祭です。今年は合同開催のため、同一会場で両祭の企画を一度に楽しめます。</p>
+          <p class="faq-answer">雅祭・七隈祭・医学祭は、いずれも福岡大学の学園祭です。今年はこの3団体による合同開催のため、同一会場で3つの学園祭の企画を一度に楽しめます。</p>
         </details>
 
         <details class="faq-item rv">
@@ -1083,7 +1192,7 @@
             お問い合わせはどこに連絡すればよいですか？
             <span class="faq-plus">+</span>
           </summary>
-          <p class="faq-answer">ページ下部のお問い合わせフォーム、または公式SNSのDMにてご連絡ください。</p>
+          <p class="faq-answer">ページ下部のお問い合わせフォーム、メール（miyabisaizikkouiin@gmail.com）、または公式Instagram（@fu_miyabi_28）のDMにてご連絡ください。</p>
         </details>
 
       </div>
@@ -1094,16 +1203,16 @@
   <section class="section-dark sec-pad" id="contact">
     <div class="container">
       <div class="contact-inner">
-        <p class="sec-label gold-label rv" style="justify-content:center;">08 — Contact &amp; SNS</p>
+        <p class="sec-label gold-label rv" style="justify-content:center;">09 — Contact &amp; SNS</p>
         <h2 class="sec-h2-light rv" style="text-align:center;">SNS・お問い合わせ</h2>
-        <p class="contact-sub rv">最新情報はSNSで随時発信中。フォローしてチェックしてください。</p>
+        <p class="contact-sub rv">最新情報はSNSで随時発信中。フォローしてチェックしてください。<br>メールでのお問い合わせ：<a href="mailto:miyabisaizikkouiin@gmail.com" style="color:var(--gold);">miyabisaizikkouiin@gmail.com</a></p>
 
         <div class="sns-row rv">
-          <!-- 要更新: 実際のSNS URLに差し替え -->
-          <a href="#" class="sns-btn">
+          <a href="https://www.instagram.com/fu_miyabi_28/" target="_blank" rel="noopener" class="sns-btn">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             Instagram
           </a>
+          <!-- 要更新: X（旧Twitter）の実際のURLに差し替え -->
           <a href="#" class="sns-btn">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             X (Twitter)
@@ -1111,18 +1220,24 @@
         </div>
 
         <div class="contact-form rv">
-          <form onsubmit="handleSubmit(event)">
+          <!-- FormSubmit経由で miyabisaizikkouiin@gmail.com に届く（初回のみ認証メールの承認が必要） -->
+          <form action="https://formsubmit.co/miyabisaizikkouiin@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="【雅祭サイト】お問い合わせ">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://jinshanxia74-star.github.io/sample-sites/miyabisai.html?sent=1#contact">
+            <input type="text" name="_honey" style="display:none">
             <div class="form-row">
               <label class="form-label">お名前</label>
-              <input type="text" class="form-input" placeholder="山田 太郎" required>
+              <input type="text" name="お名前" class="form-input" placeholder="山田 太郎" required>
             </div>
             <div class="form-row">
               <label class="form-label">メールアドレス</label>
-              <input type="email" class="form-input" placeholder="example@gmail.com" required>
+              <input type="email" name="email" class="form-input" placeholder="example@gmail.com" required>
             </div>
             <div class="form-row">
               <label class="form-label">お問い合わせ内容</label>
-              <textarea class="form-textarea" placeholder="ご質問・ご意見をご記入ください" required></textarea>
+              <textarea name="お問い合わせ内容" class="form-textarea" placeholder="ご質問・ご意見をご記入ください" required></textarea>
             </div>
             <button type="submit" class="form-btn">送信する</button>
           </form>
@@ -1134,7 +1249,7 @@
   <!-- ==================== FOOTER ==================== -->
   <footer>
     <div class="footer-logo">第28回 雅祭 — 彩雅</div>
-    <p class="footer-copy">© 2024 雅祭実行委員会 / 福岡大学</p>
+    <p class="footer-copy">© 2026 雅祭実行委員会 / 福岡大学</p>
   </footer>
 
   <script>
@@ -1145,12 +1260,14 @@
       const isOpen = navLinks.classList.toggle('open');
       ham.classList.toggle('open', isOpen);
       ham.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navLinks.classList.remove('open');
         ham.classList.remove('open');
         ham.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
     });
 
@@ -1175,13 +1292,13 @@
       });
     });
 
-    // Contact form
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-btn');
-      btn.textContent = '送信しました！ありがとうございます';
-      btn.style.background = '#1a6e3a';
-      btn.disabled = true;
+    // Contact form: 送信完了後（?sent=1で戻ってきたとき）の表示
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      const btn = document.querySelector('.form-btn');
+      if (btn) {
+        btn.textContent = '送信しました！ありがとうございます';
+        btn.style.background = '#1a6e3a';
+      }
     }
   </script>
 </body>

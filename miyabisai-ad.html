@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>雅祭パンフレット広告 — 掲載メリットのご説明</title>
+<style>
+  :root {
+    --bg: #f3f1ea;
+    --surface: #fbfaf5;
+    --surface-2: #efece2;
+    --ink: #211e18;
+    --ink-muted: #6a6357;
+    --ink-faint: #938b7c;
+    --hair: #e3ded1;
+    --hair-strong: #d2ccbb;
+    --indigo: #34407a;
+    --indigo-soft: #4a568f;
+    --gold: #a97c1d;
+    --gold-soft: #c69a3c;
+    --shadow: 0 1px 2px rgba(33,30,24,0.05), 0 12px 34px -20px rgba(33,30,24,0.4);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15151a; --surface: #1e1e25; --surface-2: #26262e;
+      --ink: #efece3; --ink-muted: #a8a293; --ink-faint: #766f61;
+      --hair: #2e2e37; --hair-strong: #3d3d48;
+      --indigo: #8b96d4; --indigo-soft: #7581c6; --gold: #d3ac57; --gold-soft: #e0be74;
+      --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 36px -20px rgba(0,0,0,0.75);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #f3f1ea; --surface: #fbfaf5; --surface-2: #efece2;
+    --ink: #211e18; --ink-muted: #6a6357; --ink-faint: #938b7c;
+    --hair: #e3ded1; --hair-strong: #d2ccbb;
+    --indigo: #34407a; --indigo-soft: #4a568f; --gold: #a97c1d; --gold-soft: #c69a3c;
+    --shadow: 0 1px 2px rgba(33,30,24,0.05), 0 12px 34px -20px rgba(33,30,24,0.4);
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: #15151a; --surface: #1e1e25; --surface-2: #26262e;
+    --ink: #efece3; --ink-muted: #a8a293; --ink-faint: #766f61;
+    --hair: #2e2e37; --hair-strong: #3d3d48;
+    --indigo: #8b96d4; --indigo-soft: #7581c6; --gold: #d3ac57; --gold-soft: #e0be74;
+    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 36px -20px rgba(0,0,0,0.75);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    line-height: 1.85; font-feature-settings: "palt" 1; -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  .mincho { font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "MS PMincho", serif; }
+  .num { font-variant-numeric: tabular-nums; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 clamp(18px,5vw,36px) 80px; }
+  sup.fn { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 0; }
+
+  /* hero */
+  header.hero { text-align: center; padding: clamp(46px,8vw,88px) 0 clamp(28px,5vw,44px); }
+  header.hero .edition {
+    display: inline-block; letter-spacing: 0.32em; font-size: clamp(11px,1.6vw,13px);
+    color: var(--gold); font-weight: 700; margin-bottom: 20px;
+  }
+  header.hero h1 {
+    margin: 0; font-size: clamp(26px,5.6vw,44px); font-weight: 700; letter-spacing: 0.05em;
+    line-height: 1.5; text-wrap: balance;
+  }
+  header.hero h1 .em { color: var(--indigo); }
+  header.hero .sub {
+    margin: 20px auto 0; max-width: 56ch; font-size: clamp(13.5px,1.9vw,15.5px); color: var(--ink-muted);
+  }
+  .rule { width: 44px; height: 3px; background: var(--gold); margin: 30px auto 0; border-radius: 2px; }
+
+  section.block { margin-top: clamp(48px,7vw,70px); }
+  .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .eyebrow .en { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 800; }
+  .eyebrow h2 { margin: 0; font-size: clamp(20px,3vw,27px); font-weight: 700; letter-spacing: 0.03em; }
+  .eyebrow .line { flex: 1; height: 1px; background: var(--hair-strong); }
+
+  /* stat tiles */
+  .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
+  @media (min-width: 640px) { .stats { grid-template-columns: repeat(4,1fr); } }
+  .stat {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 15px;
+    padding: 20px 18px 16px; box-shadow: var(--shadow); text-align: center;
+  }
+  .stat .k { font-size: 12px; font-weight: 700; color: var(--ink-muted); letter-spacing: 0.06em; }
+  .stat .v { font-size: clamp(26px,4.4vw,34px); font-weight: 700; color: var(--indigo); line-height: 1.25; margin-top: 6px; }
+  .stat .v small { font-size: 0.5em; font-weight: 700; }
+  .stat .s { font-size: 11.5px; color: var(--ink-faint); margin-top: 6px; line-height: 1.5; }
+
+  /* merit cards */
+  .merits { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 680px) { .merits { grid-template-columns: 1fr 1fr; } }
+  .merit {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 16px;
+    padding: 24px 22px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .merit .tag {
+    align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: 0.14em;
+    color: var(--gold); border: 1px solid var(--gold-soft); border-radius: 999px; padding: 3px 12px;
+  }
+  .merit h3 { margin: 2px 0 0; font-size: clamp(16.5px,2.3vw,19px); font-weight: 700; letter-spacing: 0.02em; line-height: 1.55; }
+  .merit p { margin: 0; font-size: 13.5px; color: var(--ink-muted); }
+  .merit .evi {
+    margin-top: auto; padding: 12px 14px; background: var(--surface-2); border-radius: 11px;
+    font-size: 12.5px; line-height: 1.7; border-left: 3px solid var(--indigo);
+  }
+  .merit .evi b { color: var(--indigo); }
+
+  /* cost section */
+  .costbox {
+    background: var(--surface); border: 1px solid var(--hair); border-radius: 18px;
+    padding: clamp(24px,4vw,36px); box-shadow: var(--shadow);
+  }
+  .costline { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 8px 14px; text-align: center; }
+  .costline .big { font-size: clamp(38px,8vw,64px); font-weight: 700; color: var(--indigo); line-height: 1.1; }
+  .costline .big small { font-size: 0.38em; }
+  .costline .eq { font-size: clamp(15px,2.4vw,19px); font-weight: 700; color: var(--ink-muted); }
+  .costnote { text-align: center; margin: 16px auto 0; max-width: 58ch; font-size: 13.5px; color: var(--ink-muted); }
+  .costgrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 22px; }
+  @media (min-width: 640px) { .costgrid { grid-template-columns: repeat(3,1fr); } }
+  .costcell { background: var(--surface-2); border-radius: 12px; padding: 14px 16px; text-align: center; }
+  .costcell .t { font-size: 12px; font-weight: 700; color: var(--ink-muted); }
+  .costcell .n { font-size: 21px; font-weight: 700; color: var(--ink); margin-top: 3px; }
+  .costcell .n small { font-size: 0.6em; }
+
+  /* voice / persuasion strip */
+  .strip {
+    margin-top: clamp(48px,7vw,70px);
+    background: var(--indigo); color: #fbfaf5; border-radius: 18px;
+    padding: clamp(26px,4.5vw,40px); text-align: center; box-shadow: var(--shadow);
+  }
+  :root[data-theme="dark"] .strip, [data-theme="dark"] .strip { color: #15151a; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .strip { color: #15151a; } }
+  .strip h2 { margin: 0; font-size: clamp(19px,3vw,26px); font-weight: 700; letter-spacing: 0.04em; line-height: 1.7; text-wrap: balance; }
+  .strip p { margin: 12px auto 0; max-width: 54ch; font-size: 13.5px; opacity: 0.92; }
+
+  /* plan table */
+  .plans { background: var(--surface); border: 1px solid var(--hair); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
+  .prow { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 22px; border-bottom: 1px solid var(--hair); align-items: baseline; }
+  .prow:last-child { border-bottom: none; }
+  .prow .nm { font-weight: 700; font-size: 15px; }
+  .prow .nm small { display: block; font-weight: 400; font-size: 12px; color: var(--ink-faint); }
+  .prow .pr { font-size: 20px; font-weight: 700; color: var(--indigo); white-space: nowrap; }
+  .prow .pr small { font-size: 0.6em; }
+  .prow.reco { background: var(--surface-2); }
+  .prow.reco .nm::after { content: "おすすめ"; margin-left: 10px; font-size: 10.5px; font-weight: 800; color: var(--gold); border: 1px solid var(--gold-soft); border-radius: 999px; padding: 2px 9px; vertical-align: 2px; }
+
+  /* sources */
+  .sources { background: var(--surface); border: 1px solid var(--hair); border-radius: 14px; padding: 20px 24px; box-shadow: var(--shadow); }
+  .sources ol { margin: 0; padding-left: 1.4em; font-size: 12px; color: var(--ink-muted); line-height: 1.9; }
+  .sources ol li { margin: 4px 0; overflow-wrap: anywhere; }
+
+  footer.apply { margin-top: clamp(48px,7vw,70px); text-align: center; }
+  footer.apply .box {
+    background: var(--surface); border: 1px solid var(--hair-strong); border-radius: 18px;
+    padding: clamp(24px,4vw,36px); box-shadow: var(--shadow); display: inline-block; width: 100%;
+  }
+  footer.apply h2 { margin: 0 0 10px; font-size: clamp(18px,2.6vw,23px); font-weight: 700; }
+  footer.apply p { margin: 0; font-size: 14px; color: var(--ink-muted); }
+  footer.apply .ig { font-weight: 700; color: var(--indigo); font-size: 16px; }
+  footer.apply .org { margin-top: 26px; font-size: 12px; color: var(--ink-faint); letter-spacing: 0.06em; }
+
+  @media print {
+    body { background: #fff; }
+    .stat, .merit, .costbox, .plans, .sources, footer.apply .box { box-shadow: none; }
+    .strip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    section.block { margin-top: 34px; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="edition mincho">第28回 雅祭 ─ 広告掲載のご提案</span>
+    <h1 class="mincho">学生2万人のキャンパスに、<br><span class="em">1部1円</span>で届く広告。</h1>
+    <p class="sub">福岡大学の学園祭「雅祭」総合パンフレットの広告枠のご案内です。なぜいま学園祭パンフレットへの掲載が貴社にとって有効なのか、公的な調査データとあわせてご説明します。</p>
+    <div class="rule"></div>
+  </header>
+
+  <!-- 1. numbers -->
+  <section class="block">
+    <div class="eyebrow"><span class="en">Numbers</span><h2 class="mincho">数字で見る「雅祭」</h2><span class="line"></span></div>
+    <div class="stats">
+      <div class="stat">
+        <div class="k">来場見込</div>
+        <div class="v num">約2<small>万人</small></div>
+        <div class="s">3日間・入場無料<sup class="fn">※1</sup></div>
+      </div>
+      <div class="stat">
+        <div class="k">配布部数</div>
+        <div class="v num">5,000<small>部</small></div>
+        <div class="s">会期中に無料配布<sup class="fn">※1</sup></div>
+      </div>
+      <div class="stat">
+        <div class="k">会場の学生数</div>
+        <div class="v num">約2<small>万人</small></div>
+        <div class="s">福岡大学・西日本最大級のワンキャンパス<sup class="fn">※2</sup></div>
+      </div>
+      <div class="stat">
+        <div class="k">会期</div>
+        <div class="v num">11/1<small>〜</small>3</div>
+        <div class="s">2026年・福岡大学にて開催</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. merits with evidence -->
+  <section class="block">
+    <div class="eyebrow"><span class="en">Why</span><h2 class="mincho">掲載をおすすめする4つの根拠</h2><span class="line"></span></div>
+    <div class="merits">
+
+      <div class="merit">
+        <span class="tag">根拠 1</span>
+        <h3>商圏のど真ん中、2万人の若い財布に届く</h3>
+        <p>来場者の中心は福岡大学の学生と近隣にお住まいの方々。つまり貴店の商圏そのものです。大学生の消費力は決して小さくありません。</p>
+        <div class="evi">全国大学生協連の調査では、大学生の消費支出は<b>自宅生で月70,760円、下宿生で月137,788円</b>。娯楽・外食などに使う教養娯楽費だけでも<b>月1.2〜1.3万円</b>にのぼります<sup class="fn">※3</sup>。</div>
+      </div>
+
+      <div class="merit">
+        <span class="tag">根拠 2</span>
+        <h3>「捨てられない広告」— 3日間、手元に残る</h3>
+        <p>本パンフレットは会場マップとイベントスケジュールを兼ねた冊子です。来場者は会期中くり返し開くため、一瞬で流れるSNS広告と違い、広告が何度も目に触れます。</p>
+        <div class="evi">紙媒体への信頼は依然高く、日本新聞協会の調査では情報の信頼度は<b>紙の新聞67.2％で全メディア首位</b>。一方<b>SNSは15.8％</b>にとどまります<sup class="fn">※4</sup>。信頼される紙面に載ること自体が貴社の信用になります。</div>
+      </div>
+
+      <div class="merit">
+        <span class="tag">根拠 3</span>
+        <h3>アルバイト採用の求人媒体としても機能</h3>
+        <p>人手不足のいま、店舗の近くに住む・通う大学生は最良のアルバイト候補です。「スタッフ募集」の一言とQRコードを添えるだけで、求人広告を兼ねられます。</p>
+        <div class="evi">大学生の<b>76.8％がアルバイトに就労</b>しており、過去10年で最多<sup class="fn">※5</sup>。働く意欲のある学生に、住まい・通学圏内の店舗として直接アプローチできます。</div>
+      </div>
+
+      <div class="merit">
+        <span class="tag">根拠 4</span>
+        <h3>「地域の学生を応援するお店」というブランドに</h3>
+        <p>学園祭への協賛は単なる宣伝ではなく、地域貢献の実績です。学生・保護者・地域の方々に「地元を応援する企業」として好意的に記憶されます。</p>
+        <div class="evi">学園祭協賛は<b>PR対象が「学生」と「地域」に絞られる効率的な広告</b>とされ、店舗集客・若年層の認知拡大・採用への波及効果が挙げられています<sup class="fn">※6</sup>。掲載後はパンフレット現物をお届けするため、掲載実績が形に残ります。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. cost -->
+  <section class="block">
+    <div class="eyebrow"><span class="en">Cost</span><h2 class="mincho">費用対効果 — 1部あたり、たった1円</h2><span class="line"></span></div>
+    <div class="costbox">
+      <div class="costline">
+        <span class="big num">¥5,000<small>（税込）</small></span>
+        <span class="eq">で</span>
+        <span class="big num">5,000<small>部</small></span>
+      </div>
+      <p class="costnote">小口広告（1/4〜1/8ページ）は一律5,000円。配布部数で割ると<b>1部あたり1円</b>、開催3日間で割れば<b>1日あたり約1,667円</b>。ポスティングや情報誌掲載と比べても、若年層に絞ってこの単価で届く媒体はほとんどありません。</p>
+      <div class="costgrid">
+        <div class="costcell"><div class="t">1部あたり</div><div class="n num">1<small>円</small></div></div>
+        <div class="costcell"><div class="t">1日あたり</div><div class="n num">約1,667<small>円</small></div></div>
+        <div class="costcell"><div class="t">掲載期間</div><div class="n num">3<small>日間＋保存分</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. plans -->
+  <section class="block">
+    <div class="eyebrow"><span class="en">Plans</span><h2 class="mincho">広告プラン</h2><span class="line"></span></div>
+    <div class="plans">
+      <div class="prow">
+        <div class="nm">1ページ（裏表紙裏）<small>182×257mm・冊子を閉じるたび目に入る特等席</small></div>
+        <div class="pr num">¥55,000<small>（税込）</small></div>
+      </div>
+      <div class="prow">
+        <div class="nm">1/2ページ<small>182×129mm・2枠限定</small></div>
+        <div class="pr num">¥22,000<small>（税込）</small></div>
+      </div>
+      <div class="prow reco">
+        <div class="nm">小口広告（1/4〜1/8ページ）<small>サイズは応募状況に応じて調整・初めての方に</small></div>
+        <div class="pr num">¥5,000<small>（税込・一律）</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- persuasion strip -->
+  <div class="strip">
+    <h2 class="mincho">若いお客さまとの接点は、<br>待っていても生まれません。</h2>
+    <p>雅祭のパンフレットは、貴店から徒歩圏の2万人が集まる3日間に、確実に手に取られる媒体です。まずは5,000円の小口枠から、効果をお試しください。</p>
+  </div>
+
+  <!-- sources -->
+  <section class="block">
+    <div class="eyebrow"><span class="en">Sources</span><h2 class="mincho">出典・調査データ</h2><span class="line"></span></div>
+    <div class="sources">
+      <ol>
+        <li>※1 雅祭実行委員会調べ（第28回雅祭 開催計画・2026年）。来場者数は見込値です。</li>
+        <li>※2 福岡大学公式サイトおよび大学ポートレート（私学版）。9学部31学科・約2万人の学生が七隈の一つのキャンパスで学ぶ、西日本最大級の私立総合大学。</li>
+        <li>※3 全国大学生活協同組合連合会「第61回学生生活実態調査」（2025年10〜11月実施）。1ヶ月の消費支出：自宅生70,760円／下宿生137,788円、教養娯楽費：自宅生13,220円／下宿生12,480円。</li>
+        <li>※4 日本新聞協会 広告委員会「コロナ禍のメディア接触調査」（2020年発表）。情報を「信頼できる・やや信頼できる」の合計：紙の新聞67.2％、テレビ66.2％、ポータルサイト45.5％、SNS15.8％。</li>
+        <li>※5 全国大学生活協同組合連合会「第60回学生生活実態調査」（2024年10〜11月実施）。アルバイト就労率76.8％（過去10年で最多）。</li>
+        <li>※6 ガクセイ協賛「企業が学園祭に協賛するメリット」ほか学生マーケティング業界メディアの解説（2023〜2024年）。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer class="apply">
+    <div class="box">
+      <h2 class="mincho">お申し込み・お問い合わせ</h2>
+      <p>公式Instagram <span class="ig">@fu_miyabi_28</span> のDMまでお気軽にご連絡ください。<br>掲載イメージのご相談だけでも歓迎です。</p>
+    </div>
+    <p class="org">第28回 雅祭 ─ 福岡大学商学部第二部 第二部学友会 雅祭実行委員会</p>
+  </footer>
+
+</div>
+</body>
+</html>
