@@ -1,3 +1,6 @@
 # 素材の動画は容量が大きく、人が映っているのでGitには入れない
 footage/*
 !footage/clips.txt
+
+# 完成動画は100MB近くあり、GitHubの上限に引っかかるので入れない
+endroll.mp4
