@@ -5,9 +5,11 @@
 使い方:
     python3 make_endroll.py                               # 動画なし（左は仮の枠）
     python3 make_endroll.py --video a.mp4 b.mp4 c.mp4     # 左に流す動画（順につなぐ）
+    python3 make_endroll.py --clips footage/clips.txt     # 区間を指定して並べる
     python3 make_endroll.py --duration 90 --audio song.mp3
 """
 import argparse
+import json
 import subprocess
 from pathlib import Path
 
@@ -149,27 +151,90 @@ def frames(base, roll, card, scroll_secs, card_secs):
         yield (bg + (card - bg) * a).astype(np.uint8)
 
 
-def ffmpeg_cmd(a, scroll_secs):
+def probe(path):
+    """幅・高さ（回転後）、長さ、HDR(HLG)かどうかを調べる。"""
+    out = subprocess.run(
+        ["ffprobe", "-v", "error", "-select_streams", "v:0",
+         "-show_entries", "stream=width,height,color_transfer:stream_side_data=rotation"
+         ":format=duration", "-of", "json", str(path)],
+        capture_output=True, text=True, check=True).stdout
+    info = json.loads(out)
+    st = info["streams"][0]
+    w, h = st["width"], st["height"]
+    rot = next((sd.get("rotation", 0) for sd in st.get("side_data_list", [])), 0)
+    if abs(int(rot)) % 180 == 90:
+        w, h = h, w
+    return w, h, float(info["format"]["duration"]), st.get("color_transfer") == "arib-std-b67"
+
+
+def read_clips(path):
+    """clips.txt を (ファイル, 開始秒, 終了秒 or None) のリストにする。"""
+    clips = []
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.split("#", 1)[0].strip()
+        if not line:
+            continue
+        name, *times = line.split()
+        f = Path(name) if Path(name).is_absolute() else path.parent / name
+        start = float(times[0]) if times else 0.0
+        end = float(times[1]) if len(times) > 1 else None
+        clips.append((f, start, end))
+    return clips
+
+
+# iPhone の HDR (HLG) を普通の色 (SDR) に直す
+TONEMAP = ("zscale=tin=arib-std-b67:min=bt2020nc:pin=bt2020:rin=tv:t=linear:npl=203,"
+           "format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=hable:desat=0,"
+           "zscale=t=bt709:m=bt709:r=tv,")
+
+
+def clip_filter(i, clip, bg_hex):
+    """1本の動画を枠 (VW x VH) に収めるフィルタ。縦動画は背景をぼかして埋める。"""
+    f, start, end = clip
+    w, h, dur, hlg = probe(f)
+    length = (end if end is not None else dur) - start
+    src = f"[{i}:v]" + (TONEMAP if hlg else "") + "format=yuv420p,setsar=1"
+    if w * VH < h * VW:  # 枠より縦長
+        chain = (f"{src},split[f{i}][b{i}];"
+                 f"[b{i}]scale={VW}:{VH}:force_original_aspect_ratio=increase,crop={VW}:{VH},"
+                 f"gblur=sigma=40,eq=brightness=-0.12[bb{i}];"
+                 f"[f{i}]scale=-2:{VH}[ff{i}];"
+                 f"[bb{i}][ff{i}]overlay=(W-w)/2:0")
+    else:
+        chain = (f"{src},scale={VW}:{VH}:force_original_aspect_ratio=decrease,"
+                 f"pad={VW}:{VH}:(ow-iw)/2:(oh-ih)/2:color={bg_hex}")
+    # つなぎ目は一瞬暗くしてなめらかに
+    fd = 0.3
+    chain += (f",setsar=1,fps={FPS},format=yuv420p,"
+              f"fade=t=in:st=0:d={fd}:color={bg_hex},"
+              f"fade=t=out:st={length - fd:.3f}:d={fd}:color={bg_hex}[v{i}]")
+    return chain, length
+
+
+def ffmpeg_cmd(a, clips, scroll_secs):
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
-    for v in a.video:
-        cmd += ["-i", str(v)]
-    audio_idx = 1 + len(a.video)
+    for f, start, end in clips:
+        cmd += ["-ss", str(start)] + (["-t", str(end - start)] if end is not None else [])
+        cmd += ["-i", str(f)]
+    audio_idx = 1 + len(clips)
     if a.audio:
         cmd += ["-i", str(a.audio)]
 
-    if a.video:
+    if clips:
         # 各動画を枠に収めてつなぎ、足りなければ最後のコマで止める。
-        # クレジットが流れ終わる1秒前から暗転させ、エンドカードの上には出さない。
+        # クレジットが流れ終わる直前に暗転させ、エンドカードの上には出さない。
         bg_hex = "0x%02X%02X%02X" % BG
-        parts = [f"[{i + 1}:v]scale={VW}:{VH}:force_original_aspect_ratio=decrease,"
-                 f"pad={VW}:{VH}:(ow-iw)/2:(oh-ih)/2:color={bg_hex},setsar=1,fps={FPS}[v{i}]"
-                 for i in range(len(a.video))]
-        joined = "".join(f"[v{i}]" for i in range(len(a.video)))
-        parts.append(f"{joined}concat=n={len(a.video)}:v=1:a=0,"
+        parts, total = [], 0.0
+        for i, clip in enumerate(clips, start=1):
+            chain, length = clip_filter(i, clip, bg_hex)
+            parts.append(chain)
+            total += length
+        print(f"clips total {total:.1f}s / credits scroll {scroll_secs:.1f}s")
+        joined = "".join(f"[v{i}]" for i in range(1, len(clips) + 1))
+        parts.append(f"{joined}concat=n={len(clips)}:v=1:a=0,"
                      f"tpad=stop_mode=clone:stop_duration={a.duration},"
                      f"trim=duration={scroll_secs},"
-                     f"fade=t=in:st=0:d=1:color={bg_hex},"
                      f"fade=t=out:st={scroll_secs - 1.5}:d=1.5:color={bg_hex}[clip]")
         parts.append(f"[0:v][clip]overlay={VX}:{VY}:eof_action=pass[out]")
         cmd += ["-filter_complex", ";".join(parts), "-map", "[out]"]
@@ -189,6 +254,7 @@ def main():
     p.add_argument("--credits", type=Path, default=HERE / "credits.txt")
     p.add_argument("--out", type=Path, default=HERE / "endroll.mp4")
     p.add_argument("--video", type=Path, nargs="*", default=[])
+    p.add_argument("--clips", type=Path, help="使う動画と区間を並べたファイル (clips.txt)")
     p.add_argument("--duration", type=float, default=60)
     p.add_argument("--card-secs", type=float, default=8)
     p.add_argument("--card-main", default="雅祭実行委員会")
@@ -196,12 +262,13 @@ def main():
     p.add_argument("--audio", type=Path)
     a = p.parse_args()
 
+    clips = read_clips(a.clips) if a.clips else [(v, 0.0, None) for v in a.video]
     scroll_secs = a.duration - a.card_secs
-    base = render_base(placeholder=not a.video)
+    base = render_base(placeholder=not clips)
     roll = render_roll(parse(a.credits))
     card = render_end_card(a.card_main, a.card_sub)
 
-    proc = subprocess.Popen(ffmpeg_cmd(a, scroll_secs), stdin=subprocess.PIPE)
+    proc = subprocess.Popen(ffmpeg_cmd(a, clips, scroll_secs), stdin=subprocess.PIPE)
     for f in frames(base, roll, card, scroll_secs, a.card_secs):
         proc.stdin.write(f.tobytes())
     proc.stdin.close()
