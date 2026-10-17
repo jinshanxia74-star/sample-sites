@@ -191,6 +191,15 @@ TONEMAP = ("zscale=tin=arib-std-b67:min=bt2020nc:pin=bt2020:rin=tv:t=linear:npl=
 def clip_filter(i, clip, bg_hex):
     """1本の動画を枠 (VW x VH) に収めるフィルタ。縦動画は背景をぼかして埋める。"""
     f, start, end = clip
+    if is_image(f):
+        # 写真は枠いっぱいに切り抜いて、ゆっくりズームさせる
+        length = end - start
+        n = int(length * FPS)
+        chain = (f"[{i}:v]scale={VW * 2}:{VH * 2}:force_original_aspect_ratio=increase,"
+                 f"crop={VW * 2}:{VH * 2},format=yuv420p,"
+                 f"zoompan=z='1+0.08*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+                 f":d=1:s={VW}x{VH}:fps={FPS}")
+        return chain + fades(i, length, bg_hex), length
     w, h, dur, hlg = probe(f)
     length = (end if end is not None else dur) - start
     src = f"[{i}:v]" + (TONEMAP if hlg else "") + "format=yuv420p,setsar=1"
@@ -203,19 +212,29 @@ def clip_filter(i, clip, bg_hex):
     else:
         chain = (f"{src},scale={VW}:{VH}:force_original_aspect_ratio=decrease,"
                  f"pad={VW}:{VH}:(ow-iw)/2:(oh-ih)/2:color={bg_hex}")
-    # つなぎ目は一瞬暗くしてなめらかに
+    return chain + fades(i, length, bg_hex), length
+
+
+def fades(i, length, bg_hex):
+    """つなぎ目は一瞬暗くしてなめらかに。"""
     fd = 0.3
-    chain += (f",setsar=1,fps={FPS},format=yuv420p,"
-              f"fade=t=in:st=0:d={fd}:color={bg_hex},"
-              f"fade=t=out:st={length - fd:.3f}:d={fd}:color={bg_hex}[v{i}]")
-    return chain, length
+    return (f",setsar=1,fps={FPS},format=yuv420p,"
+            f"fade=t=in:st=0:d={fd}:color={bg_hex},"
+            f"fade=t=out:st={length - fd:.3f}:d={fd}:color={bg_hex}[v{i}]")
+
+
+def is_image(path):
+    return path.suffix.lower() in (".jpg", ".jpeg", ".png", ".heic")
 
 
 def ffmpeg_cmd(a, clips, scroll_secs):
     cmd = ["ffmpeg", "-y", "-loglevel", "error",
            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-"]
     for f, start, end in clips:
-        cmd += ["-ss", str(start)] + (["-t", str(end - start)] if end is not None else [])
+        if is_image(f):
+            cmd += ["-loop", "1", "-framerate", str(FPS), "-t", str(end - start)]
+        else:
+            cmd += ["-ss", str(start)] + (["-t", str(end - start)] if end is not None else [])
         cmd += ["-i", str(f)]
     audio_idx = 1 + len(clips)
     if a.audio:
