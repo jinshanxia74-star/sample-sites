@@ -36,7 +36,9 @@ SECTIONS = [
     (197, 257, 4, "full", None, False),   # 2番
     (257, 321, 2, "full", 16, True),      # 盛り上がり
     (321, 357, 8, "panel", None, False),  # 静かなところからエンドロール
-    (357, 453, 4, "panel", 96, False),    # ラストサビ
+    (357, 441, 4, "panel", 84, False),    # ラストサビ
+    (441, 445, 2, "panel", None, False),  # 最後のカットの前で加速
+    (445, 453, 8, "panel", None, False),  # 最後のカットは長めに
 ]
 END_CARD_BEAT = 453
 
@@ -66,32 +68,45 @@ def build_slots(grid):
 
 
 def assign(slots, clips):
-    """素材の長さに比例してカットを割り当てる（順番はそのまま）。"""
+    """素材をカットに割り当てる。
+
+    写真は1回だけ、動画は長さに応じて何回か（毎回ちがう部分を）使う。
+    撮った順番はほぼ保ったまま、同じ素材が続けて出ないように並べる。
+    """
     lens = [(e if e is not None else er.probe(f)[2]) - s for f, s, e in clips]
-    total_d = sum(sl["n"] for sl in slots) / FPS
-    k = total_d / sum(lens)
-    bounds = np.cumsum([0] + lens) * k
-    t, per_clip = 0.0, [[] for _ in clips]
-    for sl in slots:
+    photos = [er.is_image(f) for f, _, _ in clips]
+    n_free = len(slots) - sum(photos)
+    vids = [i for i, ph in enumerate(photos) if not ph]
+    if n_free < len(vids):
+        raise SystemExit(f"カット {len(slots)} 個に対して素材が多すぎます（{len(clips)} 個）")
+    # 動画の使用回数：最低1回、残りは長さに比例（最大剰余法）
+    counts = [1] * len(clips)
+    extra = n_free - len(vids)
+    total_len = sum(lens[i] for i in vids)
+    raw = {i: extra * lens[i] / total_len for i in vids}
+    for i in vids:
+        counts[i] += int(raw[i])
+    left = extra - sum(int(raw[i]) for i in vids)
+    for i in sorted(vids, key=lambda i: raw[i] - int(raw[i]), reverse=True)[:left]:
+        counts[i] += 1
+
+    # 撮った順に並べてから、同じ素材が隣り合わないように近くのものと入れ替える
+    pending = [(i, j) for i in range(len(clips)) for j in range(counts[i])]
+    order, last = [], None
+    while pending:
+        pick = next((p for p in pending[:6] if p[0] != last), pending[0])
+        pending.remove(pick)
+        order.append(pick)
+        last = pick[0]
+
+    # 動画は使う回数ぶんに区切って、毎回ちがう部分を使う
+    for sl, (i, j) in zip(slots, order):
+        f, s, _ = clips[i]
         d = sl["n"] / FPS
-        i = min(int(np.searchsorted(bounds, t + d / 2, side="right")) - 1, len(clips) - 1)
-        per_clip[i].append(sl)
-        t += d
-    # 素材の中で、使う部分を真ん中寄りに取る。足りなければ少し重ねる
-    for (f, s, e), L, group in zip(clips, lens, per_clip):
-        if not group:
-            continue
-        durs = [sl["n"] / FPS for sl in group]
-        used = sum(durs)
-        if used <= L:
-            off, scale = s + (L - used) / 2, 1.0
-        else:
-            off, scale = s, (L - durs[-1]) / max(used - durs[-1], 1e-6)
-        acc = 0.0
-        for sl, d in zip(group, durs):
-            sl["src"], sl["ss"] = f, off + acc * scale
-            acc += d
-    return [sl for sl in slots if "src" in sl]
+        win = lens[i] / counts[i]
+        start = s + j * win + max(0.0, (win - d) / 2)
+        sl["src"], sl["ss"] = f, max(s, min(start, s + lens[i] - d))
+    return slots
 
 
 def video_filter(sl, w, h):

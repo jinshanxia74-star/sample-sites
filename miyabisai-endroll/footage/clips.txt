@@ -44,6 +44,7 @@ IMG_5300.mov         4    8     # 15:21 スマホを見て笑う
 IMG_5302.mov         0    5.5    # 15:31 START直前 路地でポーズ
 photo_two_staff.jpg  0    3     # ライブ中 スタッフ2人（写真）
 photo_watching_live.jpg 0  3     # ライブ中 扉の窓からライブを見る（写真）
+IMG_5305.mov         0    6.4   # 17:28 ライブ中 ステージと客席
 after_sign.mp4       0    6.3   # 終演後 サイン
 photo_after_1.jpg    0    3     # 終演後 2人でがおーポーズ（写真）
 photo_after_2.jpg    0    3     # 終演後 サイン色紙と2人（写真）
