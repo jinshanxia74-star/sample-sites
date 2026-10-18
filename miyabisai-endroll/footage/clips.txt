@@ -44,3 +44,4 @@ IMG_5302.mov         0    5.5    # 15:31 START直前 路地でポーズ
 after_sign.mp4       0    6.3   # 終演後 サイン
 after_staff.mp4      0    6     # 終演後 スタッフ
 photo_six_selfie.jpg 0    4     # 6人で自撮り（写真）ラスト
+IMG_5420.mov         0    9.1   # 10/18 0:00 打ち上げ後の夜 みんなで（いちばん最後に固定）
