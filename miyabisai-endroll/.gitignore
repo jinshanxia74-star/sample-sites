@@ -5,3 +5,6 @@ footage/*
 # 完成動画は100MB近くあり、GitHubの上限に引っかかるので入れない
 endroll.mp4
 endroll_light.mp4
+build/
+mv.mp4
+mv_light.mp4
