@@ -33,6 +33,7 @@ IMG_5287.mov         1    4     # 13:45 路地でわちゃわちゃ
 IMG_5288.mov         0    4     # 13:54 自撮り
 IMG_5289.mov         2    6     # 14:05 金髪の自撮り
 IMG_5290.mov         0    4     # 14:22 ダンス
+photo_reception.jpg  0    3     # 開場後 受付（写真）
 IMG_5292.mov         0    4.2   # 15:08 満員の客席（最後のぶれをカット）
 IMG_5293.mov         1    4.8   # 15:09 扉から登場
 IMG_5294.mov         0    4.5   # 15:10 2人の顔
@@ -41,12 +42,17 @@ photo_five_a.jpg     0    3     # 15:11 5人の変顔（写真）
 IMG_5299.mov         4    9     # 15:21 ポスターを指さす
 IMG_5300.mov         4    8     # 15:21 スマホを見て笑う
 IMG_5302.mov         0    5.5    # 15:31 START直前 路地でポーズ
+photo_two_staff.jpg  0    3     # ライブ中 スタッフ2人（写真）
+photo_watching_live.jpg 0  3     # ライブ中 扉の窓からライブを見る（写真）
 after_sign.mp4       0    6.3   # 終演後 サイン
 photo_after_1.jpg    0    3     # 終演後 2人でがおーポーズ（写真）
 photo_after_2.jpg    0    3     # 終演後 サイン色紙と2人（写真）
 photo_after_3.jpg    0    3     # 終演後 アーティストとサイン色紙（写真）
 photo_after_4.jpg    0    3     # 終演後 アーティストとサイン色紙2（写真）
 IMG_5412.mov         0    12.5  # 18:17 アーティストとみんなで色紙（最後のぶれをカット）
+photo_stage_board.jpg 0   3     # 終演後 ステージで色紙とみんな（写真）
+photo_thumbsup.jpg   0    3     # 終演後 グッドポーズの2人（写真）
 after_staff.mp4      0    6     # 終演後 スタッフ
 photo_six_selfie.jpg 0    4     # 6人で自撮り（写真）ラスト
+photo_all_group.jpg  0    4     # 終演後 スタッフとアーティスト全員の集合写真
 IMG_5420.mov         0    9.1   # 10/18 0:00 打ち上げ後の夜 みんなで（いちばん最後に固定）
